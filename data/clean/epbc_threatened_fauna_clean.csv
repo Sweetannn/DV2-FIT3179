@@ -1,0 +1,701 @@
+﻿epbc_status,source_group,project_class_direct,epbc_listed_name,accepted_scientific_name,match_name_primary,common_name,effective_date,is_current_threatened,is_scoped_listing
+Extinct,Frogs,,Rheobatrachus silus,Rheobatrachus silus,Rheobatrachus silus,Southern Gastric-brooding Frog,2000-07-16,FALSE,FALSE
+Extinct,Frogs,,Rheobatrachus vitellinus,Rheobatrachus vitellinus,Rheobatrachus vitellinus,"Northern Gastric-brooding Frog, Eungella Gastric-brooding Frog",2000-07-16,FALSE,FALSE
+Extinct,Frogs,,Taudactylus acutirostris,Taudactylus acutirostris,Taudactylus acutirostris,"Sharp-snouted Day Frog, Sharp-snouted Torrent Frog",2000-07-16,FALSE,FALSE
+Extinct,Frogs,,Taudactylus diurnus,Taudactylus diurnus,Taudactylus diurnus,"Southern Day Frog, Mt Glorious Torrent Frog",2000-07-16,FALSE,FALSE
+Extinct,Reptiles,Reptilia,Emoia nativitatis,Emoia nativitatis,Emoia nativitatis,"Christmas Island Forest Skink, Christmas Island Whiptail-skink",2021-03-03,FALSE,FALSE
+Extinct,Birds,Aves,Aplonis fusca,Aplonis fusca,Aplonis fusca,Tasman Starling,2000-07-16,FALSE,FALSE
+Extinct,Birds,Aves,Columba vitiensis godmanae,Columba vitiensis godmanae,Columba vitiensis godmanae,"Lord Howe White-throated Pigeon, White-throated Pigeon (Lord Howe Island)",2000-07-16,FALSE,FALSE
+Extinct,Birds,Aves,Cyanoramphus novaezelandiae erythrotis,Cyanoramphus novaezelandiae erythrotis,Cyanoramphus novaezelandiae erythrotis,"Macquarie Island Red-fronted Parakeet, Red-crowned Parakeet (Macquarie Island)",2000-07-16,FALSE,FALSE
+Extinct,Birds,Aves,Cyanoramphus novaezelandiae subflavescens,Cyanoramphus novaezelandiae subflavescens,Cyanoramphus novaezelandiae subflavescens,"Lord Howe Tasman Parakeet, Red-crowned Parakeet (Lord Howe Island)",2000-07-16,FALSE,FALSE
+Extinct,Birds,Aves,Dasyornis broadbenti litoralis,Dasyornis broadbenti litoralis,Dasyornis broadbenti litoralis,"Rufous Bristlebird (western), South-western Rufous Bristlebird",2000-07-16,FALSE,FALSE
+Extinct,Birds,Aves,Dromaius ater,Dromaius novaehollandiae minor,Dromaius novaehollandiae minor,King Island Emu,2000-07-16,FALSE,FALSE
+Extinct,Birds,Aves,Dromaius baudinianus,Dromaius novaehollandiae baudinianus,Dromaius novaehollandiae baudinianus,Kangaroo Island Emu,2000-07-16,FALSE,FALSE
+Extinct,Birds,Aves,Dromaius novaehollandiae diemenensis,Dromaius novaehollandiae diemenensis,Dromaius novaehollandiae diemenensis,"Tasmanian Emu, Emu (Tasmanian)",2000-07-16,FALSE,FALSE
+Extinct,Birds,Aves,Gerygone insularis,Gerygone insularis,Gerygone insularis,"Lord Howe Gerygone, Lord Howe Warbler",2000-07-16,FALSE,FALSE
+Extinct,Birds,Aves,Hemiphaga novaeseelandiae spadicea,Hemiphaga novaeseelandiae spadicea,Hemiphaga novaeseelandiae spadicea,"New Zealand Pigeon (Norfolk Island race), Norfolk Island New Zealand Pigeon",2000-07-16,FALSE,FALSE
+Extinct,Birds,Aves,Hypotaenidia philippensis macquariensis,Hypotaenidia philippensis macquariensis,Hypotaenidia philippensis macquariensis,"Macquarie Island Buff-banded Rail, Buff-banded Rail (Macquarie Island)",2000-07-16,FALSE,FALSE
+Extinct,Birds,Aves,Lalage leucopyga leucopyga,Lalage leucopyga leucopyga,Lalage leucopyga leucopyga,Norfolk Island Long-tailed Triller,2000-07-16,FALSE,FALSE
+Extinct,Birds,Aves,Lewinia pectoralis clelandi,Lewinia pectoralis clelandi,Lewinia pectoralis clelandi,"Western Australian Lewin's Rail, Lewin's Rail (western)",2000-07-16,FALSE,FALSE
+Extinct,Birds,Aves,Nestor productus,Nestor productus,Nestor productus,Norfolk Island Kaka,2000-07-16,FALSE,FALSE
+Extinct,Birds,Aves,Ninox novaeseelandiae albaria,Ninox novaeseelandiae albaria,Ninox novaeseelandiae albaria,"Lord Howe Southern Boobook, Lord Howe Boobook Owl",2000-07-16,FALSE,FALSE
+Extinct,Birds,Aves,Porphyrio albus,Porphyrio albus,Porphyrio albus,White Gallinule,2000-07-16,FALSE,FALSE
+Extinct,Birds,Aves,Psephotus pulcherrimus,Psephotellus pulcherrimus,Psephotellus pulcherrimus,Paradise Parrot,2000-07-16,FALSE,FALSE
+Extinct,Birds,Aves,Rhipidura fuliginosa cervina,Rhipidura fuliginosa cervina,Rhipidura fuliginosa cervina,"Lord Howe Grey Fantail, Grey Fantail (Lord Howe Island)",2000-07-16,FALSE,FALSE
+Extinct,Birds,Aves,Turdus poliocephalus poliocephalus,Turdus poliocephalus poliocephalus,Turdus poliocephalus poliocephalus,"Grey-headed Blackbird, Norfolk Island Thrush",2000-07-16,FALSE,FALSE
+Extinct,Birds,Aves,Turdus poliocephalus vinitinctus,Turdus poliocephalus vinitinctus,Turdus poliocephalus vinitinctus,"Lord Howe Thrush, Vinous-tinted Thrush",2000-07-16,FALSE,FALSE
+Extinct,Birds,Aves,Zosterops albogularis,Zosterops albogularis,Zosterops albogularis,"White-chested White-eye, Norfolk Island Silvereye",2000-07-16,FALSE,FALSE
+Extinct,Birds,Aves,Zosterops strenuus,Zosterops strenuus,Zosterops strenuus,Robust White-eye,2000-07-16,FALSE,FALSE
+Extinct,Mammals,Mammalia,Bettongia anhydra,Bettongia anhydra,Bettongia anhydra,Desert Bettong,2021-03-03,FALSE,FALSE
+Extinct,Mammals,Mammalia,Bettongia gaimardi gaimardi,Bettongia gaimardi gaimardi,Bettongia gaimardi gaimardi,"Eastern Bettong (mainland), Eastern Rat-kangaroo",2000-07-16,FALSE,FALSE
+Extinct,Mammals,Mammalia,Bettongia lesueur graii,Bettongia lesueur graii,Bettongia lesueur graii,"Boodie (inland), Burrowing Bettong (inland)",2000-07-16,FALSE,FALSE
+Extinct,Mammals,Mammalia,Bettongia penicillata penicillata,Bettongia penicillata penicillata,Bettongia penicillata penicillata,"Brush-tailed Bettong (central and south-east), Brush-tailed Bettong (south-east mainland)",2000-07-16,FALSE,FALSE
+Extinct,Mammals,Mammalia,Bettongia pusilla,Bettongia pusilla,Bettongia pusilla,Nullarbor Dwarf Bettong,2021-03-03,FALSE,FALSE
+Extinct,Mammals,Mammalia,Caloprymnus campestris,Caloprymnus campestris,Caloprymnus campestris,Desert Rat-kangaroo,2000-07-16,FALSE,FALSE
+Extinct,Mammals,Mammalia,Chaeropus ecaudatus,Chaeropus ecaudatus,Chaeropus ecaudatus,"Pig-footed Bandicoot, Kanjilpa, Wilalya",2000-07-16,FALSE,FALSE
+Extinct,Mammals,Mammalia,Chaeropus yirratji,Chaeropus yirratji,Chaeropus yirratji,"Yirratji, Northern Pig-footed Bandicoot",2000-07-16,FALSE,FALSE
+Extinct,Mammals,Mammalia,Conilurus albipes,Conilurus albipes,Conilurus albipes,"White-footed Rabbit-rat, Parroo, White-footed Tree-rat",2000-07-16,FALSE,FALSE
+Extinct,Mammals,Mammalia,Conilurus capricornensis,Conilurus capricornensis,Conilurus capricornensis,Capricorn Rabbit-rat,2021-03-03,FALSE,FALSE
+Extinct,Mammals,Mammalia,Lagorchestes asomatus,Lagorchestes asomatus,Lagorchestes asomatus,"Kuluwarri, Central Hare-wallaby",2000-07-16,FALSE,FALSE
+Extinct,Mammals,Mammalia,Lagorchestes hirsutus hirsutus,Lagorchestes hirsutus hirsutus,Lagorchestes hirsutus hirsutus,"Rufous Hare-wallaby (south-western), Woorap",2000-07-16,FALSE,FALSE
+Extinct,Mammals,Mammalia,Lagorchestes leporides,Lagorchestes leporides,Lagorchestes leporides,Eastern Hare-wallaby,2000-07-16,FALSE,FALSE
+Extinct,Mammals,Mammalia,Lagostrophus fasciatus albipilis,Lagostrophus fasciatus albipilis,Lagostrophus fasciatus albipilis,Banded Hare-wallaby (mainland),2000-07-16,FALSE,FALSE
+Extinct,Mammals,Mammalia,Leporillus apicalis,Leporillus apicalis,Leporillus apicalis,"Lesser Stick-nest Rat,Tjooyalpi, White-tailed Stick-nest Rat",2000-07-16,FALSE,FALSE
+Extinct,Mammals,Mammalia,Macrotis leucura,Macrotis leucura,Macrotis leucura,"Yallara, Lesser Bilby, Djoonpi",2000-07-16,FALSE,FALSE
+Extinct,Mammals,Mammalia,Melomys rubicola,Melomys rubicola,Melomys rubicola,Bramble Cay Melomys,2019-02-22,FALSE,FALSE
+Extinct,Mammals,Mammalia,Notamacropus greyi,Notamacropus greyi,Notamacropus greyi,Toolache Wallaby,2000-07-16,FALSE,FALSE
+Extinct,Mammals,Mammalia,Notomys amplus,Notomys amplus,Notomys amplus,"Short-tailed Hopping-mouse, Yoontoo",2000-07-16,FALSE,FALSE
+Extinct,Mammals,Mammalia,Notomys longicaudatus,Notomys longicaudatus,Notomys longicaudatus,"Long-tailed Hopping-mouse, Koolawa, Talamba",2000-07-16,FALSE,FALSE
+Extinct,Mammals,Mammalia,Notomys macrotis,Notomys macrotis,Notomys macrotis,"Large-eared Hopping-mouse, Noompa, Big-eared Hopping- mouse",2000-07-16,FALSE,FALSE
+Extinct,Mammals,Mammalia,Notomys mordax,Notomys mordax,Notomys mordax,"Darling Downs Hopping-mouse, Payi",2000-07-16,FALSE,FALSE
+Extinct,Mammals,Mammalia,Notomys robustus,Notomys robustus,Notomys robustus,"Broad-cheeked Hopping-mouse, Great Hopping-mouse",2021-03-03,FALSE,FALSE
+Extinct,Mammals,Mammalia,Nyctophilus howensis,Nyctophilus howensis,Nyctophilus howensis,"Lord Howe Long-eared Bat, Lord Howe Island Bat",2001-04-04,FALSE,FALSE
+Extinct,Mammals,Mammalia,Onychogalea lunata,Onychogalea lunata,Onychogalea lunata,"Crescent Nailtail Wallaby, Tjawalpa, Wurrung",2000-07-16,FALSE,FALSE
+Extinct,Mammals,Mammalia,Perameles bougainville fasciata,Perameles fasciata,Perameles fasciata,"Western Barred Bandicoot (eastern), Liverpool Plains Striped Bandicoot",2000-07-16,FALSE,FALSE
+Extinct,Mammals,Mammalia,Perameles eremiana,Perameles eremiana,Perameles eremiana,"Desert Bandicoot, Walilya",2000-07-16,FALSE,FALSE
+Extinct,Mammals,Mammalia,Perameles myosurus,Perameles myosuros,Perameles myosuros,"Marl, Western Barred Bandicoot",2021-03-03,FALSE,FALSE
+Extinct,Mammals,Mammalia,Perameles notina,Perameles notina,Perameles notina,South-eastern Striped Bandicoot,2021-03-03,FALSE,FALSE
+Extinct,Mammals,Mammalia,Perameles papillon,Perameles papillon,Perameles papillon,"Butterfly Bandicoot, Nullarbor Barred Bandicoot",2021-03-03,FALSE,FALSE
+Extinct,Mammals,Mammalia,Pipistrellus murrayi,Pipistrellus murrayi,Pipistrellus murrayi,Christmas Island Pipistrelle,2021-03-03,FALSE,FALSE
+Extinct,Mammals,Mammalia,Potorous platyops,Potorous platyops,Potorous platyops,"Broad-faced Potoroo, Moda",2000-07-16,FALSE,FALSE
+Extinct,Mammals,Mammalia,Pseudomys auritus,Pseudomys auritus,Pseudomys auritus,Long-eared Mouse,2021-03-03,FALSE,FALSE
+Extinct,Mammals,Mammalia,Pseudomys glaucus,Pseudomys glaucus,Pseudomys glaucus,Blue-grey Mouse,2021-03-03,FALSE,FALSE
+Extinct,Mammals,Mammalia,Pseudomys gouldii,Pseudomys gouldii,Pseudomys gouldii,"Gould's Mouse, Koontin",2000-07-16,FALSE,FALSE
+Extinct,Mammals,Mammalia,Pteropus brunneus,Pteropus brunneus,Pteropus brunneus,"Percy Island Flying-fox, Dusky Fruit Bat",2021-03-03,FALSE,FALSE
+Extinct,Mammals,Mammalia,Rattus macleari,Rattus macleari,Rattus macleari,"Maclear's Rat, Christmas Island Rat",2000-07-16,FALSE,FALSE
+Extinct,Mammals,Mammalia,Rattus nativitatis,Rattus nativitatis,Rattus nativitatis,"Bulldog Rat, Christmas Island Burrowing Rat",2000-07-16,FALSE,FALSE
+Extinct,Mammals,Mammalia,Thylacinus cynocephalus,Thylacinus cynocephalus,Thylacinus cynocephalus,"Thylacine, Tasmanian Tiger",2000-07-16,FALSE,FALSE
+Extinct,Other Animals,,Hypolimnus pedderensis,Hypolimnus pedderensis,Hypolimnus pedderensis,Lake Pedder Earthworm,2009-06-30,FALSE,FALSE
+Extinct in the wild,Fishes,,Galaxias pedderensis,Galaxias pedderensis,Galaxias pedderensis,Pedder Galaxias,2005-06-06,FALSE,FALSE
+Critically Endangered,Fishes,,Amphiprion mccullochi,Amphiprion mccullochi,Amphiprion mccullochi,"Whitesnout Anemonefish, McCulloch's Anemonefish",2024-09-04,TRUE,FALSE
+Critically Endangered,Fishes,,Brachionichthys hirsutus,Brachionichthys hirsutus,Brachionichthys hirsutus,Spotted Handfish,2012-10-11,TRUE,FALSE
+Critically Endangered,Fishes,,Cairnsichthys bitaeniatus,Cairnsichthys bitaeniatus,Cairnsichthys bitaeniatus,Daintree Rainbowfish,2023-12-21,TRUE,FALSE
+Critically Endangered,Fishes,,Carcharias taurus (east coast population),Carcharias taurus (east coast population),Carcharias taurus (east coast population),Grey Nurse Shark (east coast population),2001-10-16,TRUE,TRUE
+Critically Endangered,Fishes,,Chlamydogobius gloveri,Chlamydogobius gloveri,Chlamydogobius gloveri,Dalhousie Goby,2024-07-16,TRUE,FALSE
+Critically Endangered,Fishes,,Craterocephalus dalhousiensis,Craterocephalus dalhousiensis,Craterocephalus dalhousiensis,Dalhousie Hardyhead,2024-07-16,TRUE,FALSE
+Critically Endangered,Fishes,,Galaxias aequipinnis,Galaxias aequipinnis,Galaxias aequipinnis,East Gippsland Galaxias,2023-03-25,TRUE,FALSE
+Critically Endangered,Fishes,,Galaxias brevissimus,Galaxias brevissimus,Galaxias brevissimus,Short-tail Galaxias,2023-03-25,TRUE,FALSE
+Critically Endangered,Fishes,,Galaxias gunaikurnai,Galaxias gunaikurnai,Galaxias gunaikurnai,Shaw Galaxias,2023-03-25,TRUE,FALSE
+Critically Endangered,Fishes,,Galaxias lanceolatus,Galaxias lanceolatus,Galaxias lanceolatus,Tapered Galaxias,2023-03-25,TRUE,FALSE
+Critically Endangered,Fishes,,Galaxias longifundus,Galaxias longifundus,Galaxias longifundus,West Gippsland Galaxias,2023-03-25,TRUE,FALSE
+Critically Endangered,Fishes,,Galaxias mcdowalli,Galaxias mcdowalli,Galaxias mcdowalli,McDowall's Galaxias,2023-03-25,TRUE,FALSE
+Critically Endangered,Fishes,,Galaxias mungadhan,Galaxias mungadhan,Galaxias mungadhan,Dargo Galaxias,2023-03-25,TRUE,FALSE
+Critically Endangered,Fishes,,Galaxias rostratus,Galaxias rostratus,Galaxias rostratus,"Flathead Galaxias, Beaked Minnow, Flat-headed Galaxias, Flat- headed Jollytail, Flat-headed Minnow",2016-05-05,TRUE,FALSE
+Critically Endangered,Fishes,,Galaxias sp. nov. 'Hunter',Galaxias sp. nov. 'Hunter',Galaxias sp. nov. 'Hunter',"Hunter Galaxias, Hunter Upland Galaxias",2023-11-15,TRUE,FALSE
+Critically Endangered,Fishes,,Galaxias sp. nov. 'Moroka',Galaxias sp. nov. 'Moroka',Galaxias sp. nov. 'Moroka',Moroka Galaxias,2023-12-21,TRUE,FALSE
+Critically Endangered,Fishes,,Galaxias sp. nov. 'Morwell',Galaxias sp. nov. 'Morwell',Galaxias sp. nov. 'Morwell',Morwell Galaxias,2023-09-07,TRUE,FALSE
+Critically Endangered,Fishes,,Galaxias sp. nov. 'Yalmy',Galaxias sp. nov. 'Yalmy',Galaxias sp. nov. 'Yalmy',Yalmy Galaxias,2023-03-25,TRUE,FALSE
+Critically Endangered,Fishes,,Galaxias supremus,Galaxias supremus,Galaxias supremus,Kosciuszko Galaxias,2023-03-25,TRUE,FALSE
+Critically Endangered,Fishes,,Galaxias tantangara,Galaxias tantangara,Galaxias tantangara,Stocky Galaxias,2021-03-03,TRUE,FALSE
+Critically Endangered,Fishes,,Glyphis glyphis,Glyphis glyphis,Glyphis glyphis,Speartooth Shark,2001-10-16,TRUE,FALSE
+Critically Endangered,Fishes,,Hypseleotris gymnocephala,Hypseleotris gymnocephala,Hypseleotris gymnocephala,Bald Carp Gudgeon,2023-09-07,TRUE,FALSE
+Critically Endangered,Fishes,,Melanotaenia sp. nov. 'Malanda',Melanotaenia sp. nov. 'Malanda',Melanotaenia sp. nov. 'Malanda',Malanda Rainbowfish,2022-10-05,TRUE,FALSE
+Critically Endangered,Fishes,,Melanotaenia sp. nov. 'Running River',Melanotaenia sp. nov. 'Running River',Melanotaenia sp. nov. 'Running River',Running River Rainbowfish,2023-09-07,TRUE,FALSE
+Critically Endangered,Fishes,,Mogurnda thermophila,Mogurnda thermophila,Mogurnda thermophila,"Dalhousie Mogurnda, Dalhousie Purple-spotted Gudgeon",2023-09-07,TRUE,FALSE
+Critically Endangered,Fishes,,Neosilurus gloveri,Neosilurus gloveri,Neosilurus gloveri,Dalhousie Catfish,2024-07-16,TRUE,FALSE
+Critically Endangered,Fishes,,Stiphodon semoni,Stiphodon semoni,Stiphodon semoni,Opal Cling Goby,2011-02-16,TRUE,FALSE
+Critically Endangered,Fishes,,Thymichthys politus,Thymichthys politus,Thymichthys politus,Red Handfish,2012-10-11,TRUE,FALSE
+Critically Endangered,Frogs,,Assa wollumbin,Assa wollumbin,Assa wollumbin,"Mount Wollumbin Hip-pocket Frog, Wollumbin Pouched Frog",2023-09-07,TRUE,FALSE
+Critically Endangered,Frogs,,Cophixalus concinnus,Cophixalus concinnus,Cophixalus concinnus,Elegant Frog,2019-07-04,TRUE,FALSE
+Critically Endangered,Frogs,,Cophixalus hosmeri,Cophixalus hosmeri,Cophixalus hosmeri,"Hosmer's Frog, Rattling Nursery-frog",2019-07-04,TRUE,FALSE
+Critically Endangered,Frogs,,Cophixalus mcdonaldi,Cophixalus mcdonaldi,Cophixalus mcdonaldi,"McDonald's Frog, Mt Elliot Nursery-frog",2019-07-04,TRUE,FALSE
+Critically Endangered,Frogs,,Cophixalus monticola,Cophixalus monticola,Cophixalus monticola,Mountain-top Nursery-frog,2019-07-04,TRUE,FALSE
+Critically Endangered,Frogs,,Cophixalus neglectus,Cophixalus neglectus,Cophixalus neglectus,"Neglected Frog, Bellenden Ker Nursery-frog",2019-07-04,TRUE,FALSE
+Critically Endangered,Frogs,,Geocrinia alba,Anstisia alba,Anstisia alba,"White-bellied Frog, Creek Frog",2019-07-04,TRUE,FALSE
+Critically Endangered,Frogs,,Litoria castanea,Ranoidea castanea,Ranoidea castanea,"Yellow-spotted Tree Frog, Yellow-spotted Bell Frog",2019-07-04,TRUE,FALSE
+Critically Endangered,Frogs,,Litoria kroombitensis,Dryopsophus kroombitensis,Dryopsophus kroombitensis,Kroombit Treefrog,2019-07-04,TRUE,FALSE
+Critically Endangered,Frogs,,Litoria lorica,Mosleyia lorica,Mosleyia lorica,Armoured Mist Frog,2007-02-01,TRUE,FALSE
+Critically Endangered,Frogs,,Litoria myola,Spicicalyx myola,Spicicalyx myola,Kuranda Tree Frog,2019-07-04,TRUE,FALSE
+Critically Endangered,Frogs,,Litoria nyakalensis,Mosleyia nyakalensis,Mosleyia nyakalensis,"Mountain Mist Frog, Nyakala Frog",2007-02-01,TRUE,FALSE
+Critically Endangered,Frogs,,Litoria spenceri,Dryopsophus spenceri,Dryopsophus spenceri,Spotted Tree Frog,2021-11-13,TRUE,FALSE
+Critically Endangered,Frogs,,Philoria frosti,Philoria frosti,Philoria frosti,Baw Baw Frog,2019-07-04,TRUE,FALSE
+Critically Endangered,Frogs,,Pseudophryne corroboree,Pseudophryne corroboree,Pseudophryne corroboree,Southern Corroboree Frog,2013-04-06,TRUE,FALSE
+Critically Endangered,Frogs,,Pseudophryne pengilleyi,Pseudophryne pengilleyi,Pseudophryne pengilleyi,Northern Corroboree Frog,2013-04-06,TRUE,FALSE
+Critically Endangered,Frogs,,Taudactylus pleione,Taudactylus pleione,Taudactylus pleione,"Kroombit Tinker Frog, Pleione's Torrent Frog",2012-01-18,TRUE,FALSE
+Critically Endangered,Frogs,,Taudactylus rheophilus,Taudactylus rheophilus,Taudactylus rheophilus,Tinkling Frog,2021-11-24,TRUE,FALSE
+Critically Endangered,Reptiles,Reptilia,Aipysurus apraefrontalis,Aipysurus apraefrontalis,Aipysurus apraefrontalis,"Short-nosed Sea Snake, Short-nosed Seasnake",2011-02-15,TRUE,FALSE
+Critically Endangered,Reptiles,Reptilia,Aipysurus foliosquama,Aipysurus foliosquama,Aipysurus foliosquama,"Leaf-scaled Sea Snake, Leaf-scaled Seasnake",2011-02-15,TRUE,FALSE
+Critically Endangered,Reptiles,Reptilia,Anilios insperatus,Anilios insperatus,Anilios insperatus,Fassifern Blind Snake,2023-03-20,TRUE,FALSE
+Critically Endangered,Reptiles,Reptilia,Austroablepharus barrylyoni,Austroablepharus barrylyoni,Austroablepharus barrylyoni,"Lyon's Grassland Striped Skink, Lyon's Snake-eyed Skink",2023-09-07,TRUE,FALSE
+Critically Endangered,Reptiles,Reptilia,Carinascincus palfreymani,Carinascincus palfreymani,Carinascincus palfreymani,"Pedra Branca Skink, Pedra Branca Cool-skink, Red-throated Skink",2023-11-15,TRUE,FALSE
+Critically Endangered,Reptiles,Reptilia,Cryptoblepharus egeriae,Cryptoblepharus egeriae,Cryptoblepharus egeriae,"Christmas Island Blue-tailed Skink, Blue-tailed Snake-eyed Skink",2014-01-03,TRUE,FALSE
+Critically Endangered,Reptiles,Reptilia,Ctenotus serotinus,Ctenotus serotinus,Ctenotus serotinus,Gravel Downs Ctenotus,2022-10-05,TRUE,FALSE
+Critically Endangered,Reptiles,Reptilia,Egernia roomi,Egernia roomi,Egernia roomi,"Kaputar Rock Skink, Mt Kaputar Rock Skink",2022-04-22,TRUE,FALSE
+Critically Endangered,Reptiles,Reptilia,Elseya albagula,Elseya albagula,Elseya albagula,"Southern Snapping Turtle, White-throated Snapping Turtle",2014-11-07,TRUE,FALSE
+Critically Endangered,Reptiles,Reptilia,Elusor macrurus,Elusor macrurus,Elusor macrurus,"Mary River Turtle, Mary River Tortoise",2024-09-04,TRUE,FALSE
+Critically Endangered,Reptiles,Reptilia,Emydura subglobosa subglobosa,Emydura subglobosa subglobosa,Emydura subglobosa subglobosa,"Jardine River Turtle, Red-flushed River Turtle",2023-12-21,TRUE,FALSE
+Critically Endangered,Reptiles,Reptilia,Lampropholis elongata,Lampropholis elongata,Lampropholis elongata,Long Sunskink,2023-11-15,TRUE,FALSE
+Critically Endangered,Reptiles,Reptilia,Lepidodactylus listeri,Lepidodactylus listeri,Lepidodactylus listeri,"Christmas Island Gecko, Lister's Gecko",2014-01-03,TRUE,FALSE
+Critically Endangered,Reptiles,Reptilia,Nangura spinosa,Nangura spinosa,Nangura spinosa,Nangur Spiny Skink,2007-12-18,TRUE,FALSE
+Critically Endangered,Reptiles,Reptilia,Oedura lineata,Oedura lineata,Oedura lineata,Arcadia Velvet Gecko,2023-12-21,TRUE,FALSE
+Critically Endangered,Reptiles,Reptilia,Orraya occultus,Orraya occultus,Orraya occultus,"Long-necked Northern Leaf-tailed Gecko, McIlwraith Leaf-tailed Gecko",2023-12-21,TRUE,FALSE
+Critically Endangered,Reptiles,Reptilia,Phyllurus gulbaru,Phyllurus gulbaru,Phyllurus gulbaru,Gulbaru Gecko,2015-11-17,TRUE,FALSE
+Critically Endangered,Reptiles,Reptilia,Phyllurus kabikabi,Phyllurus kabikabi,Phyllurus kabikabi,Oakview Leaf-tailed Gecko,2023-03-25,TRUE,FALSE
+Critically Endangered,Reptiles,Reptilia,Phyllurus pinnaclensis,Phyllurus pinnaclensis,Phyllurus pinnaclensis,Pinnacles Leaf-tailed Gecko,2023-12-21,TRUE,FALSE
+Critically Endangered,Reptiles,Reptilia,Pseudemydura umbrina,Pseudemydura umbrina,Pseudemydura umbrina,Western Swamp Tortoise,2004-07-06,TRUE,FALSE
+Critically Endangered,Reptiles,Reptilia,Saltuarius eximius,Saltuarius eximius,Saltuarius eximius,Cape Melville Leaf-tail Gecko,2023-12-21,TRUE,FALSE
+Critically Endangered,Reptiles,Reptilia,Tiliqua scincoides intermedia,Tiliqua scincoides intermedia,Tiliqua scincoides intermedia,Northern Blue-tongued Skink,2023-12-21,TRUE,FALSE
+Critically Endangered,Reptiles,Reptilia,Tympanocryptis lineata,Tympanocryptis lineata,Tympanocryptis lineata,"Canberra Grassland Earless Dragon, Lined Earless Dragon",2023-06-01,TRUE,FALSE
+Critically Endangered,Reptiles,Reptilia,Tympanocryptis mccartneyi,Tympanocryptis mccartneyi,Tympanocryptis mccartneyi,Bathurst Grassland Earless Dragon,2023-06-01,TRUE,FALSE
+Critically Endangered,Reptiles,Reptilia,Tympanocryptis pinguicolla,Tympanocryptis pinguicolla,Tympanocryptis pinguicolla,Victorian Grassland Earless Dragon,2023-06-01,TRUE,FALSE
+Critically Endangered,Reptiles,Reptilia,Varanus mitchelli,Varanus mitchelli,Varanus mitchelli,Mitchell's Water Monitor,2023-12-21,TRUE,FALSE
+Critically Endangered,Reptiles,Reptilia,Wollumbinia georgesi,Myuchelys georgesi,Myuchelys georgesi,"Georges' Snapping Turtle, Bellinger River Sawshell Turtle, Georges Helmeted Turtle",2016-12-07,TRUE,FALSE
+Critically Endangered,Birds,Aves,Acanthornis magna greeniana,Acanthornis magna greeniana,Acanthornis magna greeniana,"King Island Scrubtit, Scrubtit (King Island)",2002-07-02,TRUE,FALSE
+Critically Endangered,Birds,Aves,Amytornis modestus obscurior,Amytornis modestus obscurior,Amytornis modestus obscurior,"Grey Range Thick-billed Grasswren, Thick-billed Grasswren (north-west NSW)",2014-11-06,TRUE,FALSE
+Critically Endangered,Birds,Aves,Amytornis striatus striatus,Amytornis striatus striatus,Amytornis striatus striatus,"Mukarrthippi Grasswren, Striated Grasswren (sandplain)",2023-07-05,TRUE,FALSE
+Critically Endangered,Birds,Aves,Anthochaera phrygia,Anthochaera phrygia,Anthochaera phrygia,Regent Honeyeater,2015-07-08,TRUE,FALSE
+Critically Endangered,Birds,Aves,Calidris ferruginea,Calidris ferruginea,Calidris ferruginea,Curlew Sandpiper,2015-05-26,TRUE,FALSE
+Critically Endangered,Birds,Aves,Cinclosoma punctatum anachoreta,Cinclosoma punctatum anachoreta,Cinclosoma punctatum anachoreta,"Mt Lofty Ranges Spotted Quail-thrush, Spotted Quail-thrush (Mt Lofty Ranges)",2002-07-02,TRUE,FALSE
+Critically Endangered,Birds,Aves,Cyclopsitta diophthalma coxeni,Cyclopsitta diophthalma coxeni,Cyclopsitta diophthalma coxeni,Coxen's Fig-Parrot,2023-03-31,TRUE,FALSE
+Critically Endangered,Birds,Aves,Epthianura crocea macgregori,Epthianura crocea macgregori,Epthianura crocea macgregori,"Capricorn Yellow Chat, Yellow Chat (Dawson)",2002-07-02,TRUE,FALSE
+Critically Endangered,Birds,Aves,Lathamus discolor,Lathamus discolor,Lathamus discolor,Swift Parrot,2016-05-05,TRUE,FALSE
+Critically Endangered,Birds,Aves,Lichenostomus melanops cassidix,Lichenostomus melanops cassidix,Lichenostomus melanops cassidix,"Helmeted Honeyeater, Yellow-tufted Honeyeater (Helmeted)",2014-11-06,TRUE,FALSE
+Critically Endangered,Birds,Aves,Melanodryas cucullata melvillensis,Melanodryas cucullata melvillensis,Melanodryas cucullata melvillensis,"Tiwi Islands Hooded Robin, Hooded Robin (Tiwi Islands)",2018-05-11,TRUE,FALSE
+Critically Endangered,Birds,Aves,Neophema chrysogaster,Neophema chrysogaster,Neophema chrysogaster,Orange-bellied Parrot,2006-09-13,TRUE,FALSE
+Critically Endangered,Birds,Aves,Numenius madagascariensis,Numenius madagascariensis,Numenius madagascariensis,"Eastern Curlew, Far Eastern Curlew",2015-05-26,TRUE,FALSE
+Critically Endangered,Birds,Aves,Pedionomus torquatus,Pedionomus torquatus,Pedionomus torquatus,Plains-wanderer,2015-07-08,TRUE,FALSE
+Critically Endangered,Birds,Aves,Pezoporus flaviventris,Pezoporus flaviventris,Pezoporus flaviventris,"Western Ground Parrot, Kyloring",2013-05-14,TRUE,FALSE
+Critically Endangered,Birds,Aves,Pezoporus occidentalis,Pezoporus occidentalis,Pezoporus occidentalis,Night Parrot,2025-09-05,TRUE,FALSE
+Critically Endangered,Birds,Aves,Pterodroma heraldica,Pterodroma heraldica,Pterodroma heraldica,Herald Petrel,2002-07-02,TRUE,FALSE
+Critically Endangered,Birds,Aves,Turnix olivii,Turnix olivii,Turnix olivii,Buff-breasted Button-quail,2024-09-04,TRUE,FALSE
+Critically Endangered,Mammals,Mammalia,Crocidura trichura,Crocidura trichura,Crocidura trichura,Christmas Island Shrew,2018-02-15,TRUE,FALSE
+Critically Endangered,Mammals,Mammalia,Gymnobelideus leadbeateri,Gymnobelideus leadbeateri,Gymnobelideus leadbeateri,Leadbeater's Possum,2015-05-02,TRUE,FALSE
+Critically Endangered,Mammals,Mammalia,Lasiorhinus krefftii,Lasiorhinus krefftii,Lasiorhinus krefftii,"Northern Hairy-nosed Wombat, Yaminon",2018-02-15,TRUE,FALSE
+Critically Endangered,Mammals,Mammalia,Miniopterus orianae bassanii,Miniopterus orianae bassanii,Miniopterus orianae bassanii,Southern Bent-wing Bat,2007-12-18,TRUE,FALSE
+Critically Endangered,Mammals,Mammalia,Petrogale concinna concinna,Petrogale concinna concinna,Petrogale concinna concinna,Nabarlek (Victoria River District),2019-07-04,TRUE,FALSE
+Critically Endangered,Mammals,Mammalia,Potorous gilbertii,Potorous gilbertii,Potorous gilbertii,"Gilbert's Potoroo, Ngilkat",2004-07-06,TRUE,FALSE
+Critically Endangered,Mammals,Mammalia,Pseudocheirus occidentalis,Pseudocheirus occidentalis,Pseudocheirus occidentalis,"Western Ringtail Possum, Ngwayir, Womp, Woder, Ngoor, Ngoolangit",2018-05-11,TRUE,FALSE
+Critically Endangered,Mammals,Mammalia,Pteropus natalis,Pteropus natalis,Pteropus natalis,"Christmas Island Flying-fox, Christmas Island Fruit-bat",2014-01-03,TRUE,FALSE
+Critically Endangered,Mammals,Mammalia,Zyzomys pedunculatus,Zyzomys pedunculatus,Zyzomys pedunculatus,"Central Rock-rat, Antina",2018-02-15,TRUE,FALSE
+Critically Endangered,Other Animals,,Adclarkia dawsonensis,Adclarkia dawsonensis,Adclarkia dawsonensis,"Boggomoss Snail, Dawson River Snail, Dawson Valley Snail",2003-06-02,TRUE,FALSE
+Critically Endangered,Other Animals,,Advena campbellii,Advena campbellii,Advena campbellii,Campbell's Keeled Glass-snail,2009-01-08,TRUE,FALSE
+Critically Endangered,Other Animals,,Ammoniropa vigens,Ammoniropa vigens,Ammoniropa vigens,Ammonite Pinwheel Snail,2014-01-24,TRUE,FALSE
+Critically Endangered,Other Animals,,Argynnis hyperbius inconstans,Argynnis hyperbius inconstans,Argynnis hyperbius inconstans,Australian Fritillary,2017-08-15,TRUE,FALSE
+Critically Endangered,Other Animals,,Budginmaya eulae,Budginmaya eulae,Budginmaya eulae,Eula's Planthopper,2026-08-28,TRUE,FALSE
+Critically Endangered,Other Animals,,Cherax tenuimanus,Cherax tenuimanus,Cherax tenuimanus,"Hairy Marron, Margaret River Hairy Marron, Margaret River Marron",2006-08-18,TRUE,FALSE
+Critically Endangered,Other Animals,,Cormodes darwini,Cormodes darwini,Cormodes darwini,a beetle,2023-09-07,TRUE,FALSE
+Critically Endangered,Other Animals,,Dryococelus australis,Dryococelus australis,Dryococelus australis,"Lord Howe Island Phasmid, Land Lobster",2002-07-23,TRUE,FALSE
+Critically Endangered,Other Animals,,Engaewa pseudoreducta,Engaewa pseudoreducta,Engaewa pseudoreducta,Margaret River Burrowing Crayfish,2009-04-24,TRUE,FALSE
+Critically Endangered,Other Animals,,Engaewa reducta,Engaewa reducta,Engaewa reducta,Dunsborough Burrowing Crayfish,2009-04-24,TRUE,FALSE
+Critically Endangered,Other Animals,,Euastacus angustus,Euastacus angustus,Euastacus angustus,"Narrow Euastacus, Slender Dwarf Crayfish, Narrow Dwarf Crayfish",2025-09-05,TRUE,FALSE
+Critically Endangered,Other Animals,,Euastacus bindal,Euastacus bindal,Euastacus bindal,Mt Elliot Crayfish,2016-12-07,TRUE,FALSE
+Critically Endangered,Other Animals,,Euastacus binzayedi,Euastacus binzayedi,Euastacus binzayedi,Embezee's Crayfish,2023-09-07,TRUE,FALSE
+Critically Endangered,Other Animals,,Euastacus dalagarbe,Euastacus dalagarbe,Euastacus dalagarbe,Mud Gully Crayfish,2023-09-07,TRUE,FALSE
+Critically Endangered,Other Animals,,Euastacus dharawalus,Euastacus dharawalus,Euastacus dharawalus,Fitzroy Falls Spiny Crayfish,2016-12-07,TRUE,FALSE
+Critically Endangered,Other Animals,,Euastacus guruhgi,Euastacus guruhgi,Euastacus guruhgi,Swollen Crayfish,2025-09-05,TRUE,FALSE
+Critically Endangered,Other Animals,,Euastacus guwinus,Euastacus guwinus,Euastacus guwinus,Tianjara Crayfish,2023-11-15,TRUE,FALSE
+Critically Endangered,Other Animals,,Euastacus jagabar,Euastacus jagabar,Euastacus jagabar,Blue-black Crayfish,2023-09-07,TRUE,FALSE
+Critically Endangered,Other Animals,,Euastacus jagara,Euastacus jagara,Euastacus jagara,Jagara Hairy Crayfish,2023-09-07,TRUE,FALSE
+Critically Endangered,Other Animals,,Euastacus maidae,Euastacus maidae,Euastacus maidae,"Hinterland Spiny Crayfish, Hinterland Crayfish",2023-09-07,TRUE,FALSE
+Critically Endangered,Other Animals,,Euastacus morgani,Euastacus morgani,Euastacus morgani,Morgan's Crayfish,2023-09-07,TRUE,FALSE
+Critically Endangered,Other Animals,,Euastacus vesper,Euastacus vesper,Euastacus vesper,Cudgegong Giant Spiny Crayfish,2023-09-07,TRUE,FALSE
+Critically Endangered,Other Animals,,Euastacus yigara,Euastacus yigara,Euastacus yigara,"Cardwell Crayfish, Cardwell Hairy Crayfish",2025-09-05,TRUE,FALSE
+Critically Endangered,Other Animals,,Gudeoconcha sophiae magnifica,Gudeoconcha sophiae magnifica,Gudeoconcha sophiae magnifica,Magnificent Helicarionid Land Snail,2009-01-08,TRUE,FALSE
+Critically Endangered,Other Animals,,Haliotis rubiginosa,Haliotis rubiginosa,Haliotis rubiginosa,Lord Howe Abalone,2026-02-06,TRUE,FALSE
+Critically Endangered,Other Animals,,Hesperocolletes douglasi,Hesperocolletes douglasi,Hesperocolletes douglasi,"Douglas' Broad-headed Bee, Rottnest Bee",2019-07-04,TRUE,FALSE
+Critically Endangered,Other Animals,,Hoplogonus bornemisszai,Hoplogonus bornemisszai,Hoplogonus bornemisszai,Bornemissza's Stag Beetle,2009-01-08,TRUE,FALSE
+Critically Endangered,Other Animals,,Hypochrysops piceatus,Hypochrysops piceatus,Hypochrysops piceatus,Bulloak Jewel Butterfly,2023-09-07,TRUE,FALSE
+Critically Endangered,Other Animals,,Hyridella glenelgensis,Hyridella glenelgensis,Hyridella glenelgensis,Glenelg Freshwater Mussel,2011-02-16,TRUE,FALSE
+Critically Endangered,Other Animals,,Leioproctus douglasiellus,Leioproctus douglasiellus,Leioproctus douglasiellus,a short-tongued bee,2013-05-14,TRUE,FALSE
+Critically Endangered,Other Animals,,Marginaster littoralis,Patiriella littoralis,Patiriella littoralis,Derwent River Seastar,2009-06-30,TRUE,FALSE
+Critically Endangered,Other Animals,,Mathewsoconcha grayi ms,Advena grayi,Advena grayi,Gray's Helicarionid Land Snail,2009-01-08,TRUE,FALSE
+Critically Endangered,Other Animals,,Mathewsoconcha phillipii,Advena phillipii,Advena phillipii,Phillip Island Helicarionid Land Snail,2009-01-08,TRUE,FALSE
+Critically Endangered,Other Animals,,Mathewsoconcha suteri,Advena suteri,Advena suteri,Suter's Striped Glass-snail,2009-01-08,TRUE,FALSE
+Critically Endangered,Other Animals,,Micropathus kiernani,Micropathus kiernani,Micropathus kiernani,"Francistown Cave Cricket, Southern sandstone cave cricket",2014-01-24,TRUE,FALSE
+Critically Endangered,Other Animals,,Mystivagor mastersi,Pseudocharopa mastersi,Pseudocharopa mastersi,Masters' Charopid Land Snail,2009-01-08,TRUE,FALSE
+Critically Endangered,Other Animals,,Neopasiphae simplicior,Neopasiphae simplicior,Neopasiphae simplicior,A native bee,2009-01-08,TRUE,FALSE
+Critically Endangered,Other Animals,,Nurus atlas,Nurus atlas,Nurus atlas,Atlas Rainforest Ground-beetle,2026-08-28,TRUE,FALSE
+Critically Endangered,Other Animals,,Ogyris subterrestris petrina,Ogyris petrina,Ogyris petrina,Arid Bronze Azure,2015-04-09,TRUE,FALSE
+Critically Endangered,Other Animals,,Ordtrachia septentrionalis,Ordtrachia septentrionalis,Ordtrachia septentrionalis,Rosewood Keeled Snail,2015-11-17,TRUE,FALSE
+Critically Endangered,Other Animals,,Pericryptodrilus nanus,Pericryptodrilus nanus,Pericryptodrilus nanus,Lord Howe Earthworm,2023-12-21,TRUE,FALSE
+Critically Endangered,Other Animals,,Promethis sterrha,Promethis sterrha,Promethis sterrha,a beetle,2023-09-07,TRUE,FALSE
+Critically Endangered,Other Animals,,Pseudocharopa ledgbirdi,Pseudocharopa ledgbirdi,Pseudocharopa ledgbirdi,Mount Lidgbird Charopid Land Snail,2009-01-08,TRUE,FALSE
+Critically Endangered,Other Animals,,Pseudocharopa whiteleggei,Pseudocharopa whiteleggei,Pseudocharopa whiteleggei,Whitelegge's Land Snail,2009-01-08,TRUE,FALSE
+Critically Endangered,Other Animals,,Pseudococcus markharveyi,Pseudococcus markharveyi,Pseudococcus markharveyi,Banksia montana mealybug,2018-05-11,TRUE,FALSE
+Critically Endangered,Other Animals,,Quintalia stoddartii,Advena stoddartii,Advena stoddartii,Stoddart's Helicarionid Land Snail,2009-01-08,TRUE,FALSE
+Critically Endangered,Other Animals,,Riekoperla darlingtoni,Riekoperla darlingtoni,Riekoperla darlingtoni,Mount Donna Buang Wingless Stonefly,2026-02-06,TRUE,FALSE
+Critically Endangered,Other Animals,,Thersites mitchellae,Thersites mitchellae,Thersites mitchellae,Mitchell's Rainforest Snail,2002-07-23,TRUE,FALSE
+Critically Endangered,Other Animals,,Zephyrarchaea austini,Zephyrarchaea austini,Zephyrarchaea austini,Kangaroo Island Assassin Spider,2022-04-22,TRUE,FALSE
+Endangered,Fishes,,Bidyanus bidyanus,Bidyanus bidyanus,Bidyanus bidyanus,"Silver Perch, Bidyan",2024-07-16,TRUE,FALSE
+Endangered,Fishes,,Cairnsichthys rhombosomoides,Cairnsichthys rhombosomoides,Cairnsichthys rhombosomoides,"Cairns Rainbowfish, Northern Soft-spined Sunfish",2023-12-21,TRUE,FALSE
+Endangered,Fishes,,Chlamydogobius micropterus,Chlamydogobius micropterus,Chlamydogobius micropterus,Elizabeth Springs Goby,2000-07-16,TRUE,FALSE
+Endangered,Fishes,,Craterocephalus fluviatilis,Craterocephalus fluviatilis,Craterocephalus fluviatilis,Murray Hardyhead,2012-03-16,TRUE,FALSE
+Endangered,Fishes,,Gadopsis sp. SWV,Gadopsis sp. SWV,Gadopsis sp. SWV,Western Victorian Blackfish,2025-03-05,TRUE,FALSE
+Endangered,Fishes,,Galaxias auratus,Galaxias auratus,Galaxias auratus,Golden Galaxias,2005-06-06,TRUE,FALSE
+Endangered,Fishes,,Galaxias fontanus,Galaxias fontanus,Galaxias fontanus,Swan Galaxias,2000-07-16,TRUE,FALSE
+Endangered,Fishes,,Galaxias fuscus,Galaxias fuscus,Galaxias fuscus,Barred Galaxias,2000-07-16,TRUE,FALSE
+Endangered,Fishes,,Galaxias johnstoni,Galaxias johnstoni,Galaxias johnstoni,Clarence Galaxias,2000-07-16,TRUE,FALSE
+Endangered,Fishes,,Galaxias terenasus,Galaxias terenasus,Galaxias terenasus,Roundsnout Galaxias,2023-03-25,TRUE,FALSE
+Endangered,Fishes,,Galaxias truttaceus (Western Australian population),Galaxias truttaceus (Western Australian population),Galaxias truttaceus (Western Australian population),Western Trout Minnow,2019-07-04,TRUE,TRUE
+Endangered,Fishes,,Galaxiella nigrostriata,Galaxiella nigrostriata,Galaxiella nigrostriata,"Blackstriped Dwarf Galaxias, Black-stripe Minnow",2018-05-11,TRUE,FALSE
+Endangered,Fishes,,Galaxiella pusilla,Galaxiella pusilla,Galaxiella pusilla,"Eastern Dwarf Galaxias, Dwarf Galaxias",2023-11-15,TRUE,FALSE
+Endangered,Fishes,,Glyphis garricki,Glyphis garricki,Glyphis garricki,"Northern River Shark, New Guinea River Shark",2001-10-16,TRUE,FALSE
+Endangered,Fishes,,Hippocampus whitei,Hippocampus whitei,Hippocampus whitei,"White's Seahorse, Crowned Seahorse, Sydney Seahorse",2020-12-12,TRUE,FALSE
+Endangered,Fishes,,Maccullochella ikei,Maccullochella ikei,Maccullochella ikei,"Clarence River Cod, Eastern Freshwater Cod",2000-07-16,TRUE,FALSE
+Endangered,Fishes,,Maccullochella macquariensis,Maccullochella macquariensis,Maccullochella macquariensis,Trout Cod,2000-07-16,TRUE,FALSE
+Endangered,Fishes,,Maccullochella mariensis,Maccullochella mariensis,Maccullochella mariensis,Mary River Cod,2000-07-16,TRUE,FALSE
+Endangered,Fishes,,Macquaria australasica,Macquaria australasica,Macquaria australasica,Macquarie Perch,2000-07-16,TRUE,FALSE
+Endangered,Fishes,,Melanotaenia eachamensis,Melanotaenia eachamensis,Melanotaenia eachamensis,Lake Eacham Rainbowfish,2000-07-16,TRUE,FALSE
+Endangered,Fishes,,Milyeringa justitia,Milyeringa justitia,Milyeringa justitia,Barrow Cave Gudgeon,2025-03-19,TRUE,FALSE
+Endangered,Fishes,,Mogurnda adspersa (Murray-Darling Basin population),Mogurnda adspersa (Murray-Darling Basin population),Mogurnda adspersa (Murray-Darling Basin population),Southern Purple Spotted Gudgeon (Murray-Darling Basin population),2026-02-06,TRUE,TRUE
+Endangered,Fishes,,Mogurnda clivicola,Mogurnda clivicola,Mogurnda clivicola,Flinders Ranges Mogurnda,2026-08-28,TRUE,FALSE
+Endangered,Fishes,,Mordacia praecox,Mordacia praecox,Mordacia praecox,"Non-parasitic Lamprey, Precocious Lamprey",2023-03-25,TRUE,FALSE
+Endangered,Fishes,,Nannoperca obscura,Nannoperca obscura,Nannoperca obscura,Yarra Pygmy Perch,2023-11-15,TRUE,FALSE
+Endangered,Fishes,,Nannoperca oxleyana,Nannoperca oxleyana,Nannoperca oxleyana,Oxleyan Pygmy Perch,2000-07-16,TRUE,FALSE
+Endangered,Fishes,,Nannoperca pygmaea,Nannoperca pygmaea,Nannoperca pygmaea,Little Pygmy Perch,2019-07-04,TRUE,FALSE
+Endangered,Fishes,,Neochanna cleaveri,Neochanna cleaveri,Neochanna cleaveri,Australian Mudfish,2026-08-28,TRUE,FALSE
+Endangered,Fishes,,Paragalaxias mesotes,Paragalaxias mesotes,Paragalaxias mesotes,Arthurs Paragalaxias,2005-06-06,TRUE,FALSE
+Endangered,Fishes,,Pristis pristis,Pristis pristis,Pristis pristis,"Largetooth Sawfish, Freshwater Sawfish, River Sawfish, Leichhardt's Sawfish, Northern Sawfish",2025-08-20,TRUE,FALSE
+Endangered,Fishes,,Pseudomugil mellis,Pseudomugil mellis,Pseudomugil mellis,"Honey Blue Eye, Honey Blue-eye",2023-09-07,TRUE,FALSE
+Endangered,Fishes,,Scaturiginichthys vermeilipinnis,Scaturiginichthys vermeilipinnis,Scaturiginichthys vermeilipinnis,"Redfin Blue Eye, Redfin Blue-eye",2000-07-16,TRUE,FALSE
+Endangered,Fishes,,Zearaja maugeana,Zearaja maugeana,Zearaja maugeana,"Maugean Skate, Port Davey Skate",2004-03-04,TRUE,FALSE
+Endangered,Frogs,,Cophixalus aenigma,Cophixalus aenigma,Cophixalus aenigma,Tapping Nursery-frog,2019-07-04,TRUE,FALSE
+Endangered,Frogs,,Crinia sloanei,Crinia sloanei,Crinia sloanei,Sloane's Froglet,2019-07-04,TRUE,FALSE
+Endangered,Frogs,,Heleioporus australiacus australiacus,Heleioporus australiacus australiacus,Heleioporus australiacus australiacus,"Giant Burrowing Frog, Eastern Owl Frog",2025-03-05,TRUE,FALSE
+Endangered,Frogs,,Heleioporus australiacus flavopunctatus,Heleioporus australiacus flavopunctatus,Heleioporus australiacus flavopunctatus,"Southern Owl Frog, Southern Giant Burrowing Frog",2025-03-05,TRUE,FALSE
+Endangered,Frogs,,Litoria booroolongensis,Rhyaconastes booroolongensis,Rhyaconastes booroolongensis,Booroolong Frog,2007-12-18,TRUE,FALSE
+Endangered,Frogs,,Litoria littlejohni,Rawlinsonia littlejohni,Rawlinsonia littlejohni,"Northern Heath Frog, Littlejohn's Tree Frog",2022-02-18,TRUE,FALSE
+Endangered,Frogs,,Litoria watsoni,Rawlinsonia watsoni,Rawlinsonia watsoni,"Southern Heath Frog, Watson's Tree Frog",2022-02-18,TRUE,FALSE
+Endangered,Frogs,,Mixophyes fleayi,Mixophyes fleayi,Mixophyes fleayi,Fleay's Frog,2000-07-16,TRUE,FALSE
+Endangered,Frogs,,Philoria knowlesi,Philoria knowlesi,Philoria knowlesi,Mount Ballow Mountain Frog,2025-03-05,TRUE,FALSE
+Endangered,Frogs,,Philoria kundagungan,Philoria kundagungan,Philoria kundagungan,Mountain Frog,2021-11-13,TRUE,FALSE
+Endangered,Frogs,,Philoria pughi,Philoria pughi,Philoria pughi,Pugh's Sphagnum Frog,2024-07-16,TRUE,FALSE
+Endangered,Frogs,,Philoria richmondensis,Philoria richmondensis,Philoria richmondensis,Richmond Range Sphagnum Frog,2021-11-13,TRUE,FALSE
+Endangered,Frogs,,Taudactylus eungellensis,Taudactylus eungellensis,Taudactylus eungellensis,Eungella Day Frog,2000-07-16,TRUE,FALSE
+Endangered,Frogs,,Uperoleia mahonyi,Uperoleia mahonyi,Uperoleia mahonyi,Mahony's Toadlet,2021-03-03,TRUE,FALSE
+Endangered,Frogs,,Uperoleia martini,Uperoleia martini,Uperoleia martini,Martin's Toadlet,2023-11-15,TRUE,FALSE
+Endangered,Reptiles,Reptilia,Aipysurus fuscus,Aipysurus fuscus,Aipysurus fuscus,Dusky Sea Snake,2024-09-04,TRUE,FALSE
+Endangered,Reptiles,Reptilia,Aprasia aurita,Aprasia aurita,Aprasia aurita,"Eared Worm-lizard, Mallee Worm-lizard",2025-09-05,TRUE,FALSE
+Endangered,Reptiles,Reptilia,Bellatorias obiri,Bellatorias obiri,Bellatorias obiri,Arnhem Land Egernia,2006-08-18,TRUE,FALSE
+Endangered,Reptiles,Reptilia,Caretta caretta,Caretta caretta,Caretta caretta,Loggerhead Turtle,2000-07-16,TRUE,FALSE
+Endangered,Reptiles,Reptilia,Carinascincus greeni,Carinascincus greeni,Carinascincus greeni,"Alpine Cool-skink, Northern Snow Skink",2023-12-21,TRUE,FALSE
+Endangered,Reptiles,Reptilia,Carinascincus microlepidotus,Carinascincus microlepidotus,Carinascincus microlepidotus,"Boulder Cool-skink, Southern Snow Skink",2023-12-21,TRUE,FALSE
+Endangered,Reptiles,Reptilia,Carinascincus orocryptus,Carinascincus orocryptus,Carinascincus orocryptus,"Heath Cool-skink, Mountain Skink",2023-12-21,TRUE,FALSE
+Endangered,Reptiles,Reptilia,Cryptoblepharus gurrmul,Cryptoblepharus gurrmul,Cryptoblepharus gurrmul,Arafura Snake-eyed Skink,2018-05-11,TRUE,FALSE
+Endangered,Reptiles,Reptilia,Cyclodomorphus praealtus,Cyclodomorphus praealtus,Cyclodomorphus praealtus,Alpine She-oak Skink,2009-12-24,TRUE,FALSE
+Endangered,Reptiles,Reptilia,Cyrtodactylus sadleiri,Cyrtodactylus sadleiri,Cyrtodactylus sadleiri,Christmas Island Giant Gecko,2014-01-03,TRUE,FALSE
+Endangered,Reptiles,Reptilia,Delma vescolineata,Delma vescolineata,Delma vescolineata,Hunter Valley Delma,2024-07-16,TRUE,FALSE
+Endangered,Reptiles,Reptilia,Dermochelys coriacea,Dermochelys coriacea,Dermochelys coriacea,"Leatherback Turtle, Leathery Turtle, Luth",2009-01-08,TRUE,FALSE
+Endangered,Reptiles,Reptilia,Egernia stokesii badia,Egernia stokesii badia,Egernia stokesii badia,"Western Spiny-tailed Skink, Baudin Island Spiny-tailed Skink",2000-07-16,TRUE,FALSE
+Endangered,Reptiles,Reptilia,Elseya lavarackorum,Elseya lavarackorum,Elseya lavarackorum,Gulf Snapping Turtle,2000-07-16,TRUE,FALSE
+Endangered,Reptiles,Reptilia,Eulamprus leuraensis,Eulamprus leuraensis,Eulamprus leuraensis,Blue Mountains Water Skink,2000-07-16,TRUE,FALSE
+Endangered,Reptiles,Reptilia,Eulamprus tympanum marnieae,Eulamprus tympanum marnieae,Eulamprus tympanum marnieae,"Corangamite Water Skink, Dreeite Water Skink",2000-07-16,TRUE,FALSE
+Endangered,Reptiles,Reptilia,Hemiaspis damelii,Hemiaspis damelii,Hemiaspis damelii,Grey Snake,2022-10-05,TRUE,FALSE
+Endangered,Reptiles,Reptilia,Hoplocephalus bungaroides,Hoplocephalus bungaroides,Hoplocephalus bungaroides,Broad-headed Snake,2023-11-15,TRUE,FALSE
+Endangered,Reptiles,Reptilia,Lampropholis elliotensis,Lampropholis elliotensis,Lampropholis elliotensis,Mount Elliot Rainforest Sunskink,2026-08-20,TRUE,FALSE
+Endangered,Reptiles,Reptilia,Lepidochelys olivacea,Lepidochelys olivacea,Lepidochelys olivacea,"Olive Ridley Turtle, Pacific Ridley Turtle",2000-07-16,TRUE,FALSE
+Endangered,Reptiles,Reptilia,Lerista allanae,Lerista allanae,Lerista allanae,"Allan's Lerista, Retro Slider",2000-07-16,TRUE,FALSE
+Endangered,Reptiles,Reptilia,Lerista colliveri,Lerista colliveri,Lerista colliveri,Nubbined Fine-lined Slider,2026-02-06,TRUE,FALSE
+Endangered,Reptiles,Reptilia,Lerista nevinae,Lerista nevinae,Lerista nevinae,Nevin's Slider,2018-02-15,TRUE,FALSE
+Endangered,Reptiles,Reptilia,Lerista rochfordensis,Lerista rochfordensis,Lerista rochfordensis,Rochford Slider,2026-02-06,TRUE,FALSE
+Endangered,Reptiles,Reptilia,Liopholis guthega,Liopholis guthega,Liopholis guthega,Guthega Skink,2011-02-23,TRUE,FALSE
+Endangered,Reptiles,Reptilia,Liopholis montana,Liopholis montana,Liopholis montana,Mountain Skink,2022-08-10,TRUE,FALSE
+Endangered,Reptiles,Reptilia,Liopholis slateri slateri,Liopholis slateri slateri,Liopholis slateri slateri,"Slater's Skink, Floodplain Skink",2001-04-04,TRUE,FALSE
+Endangered,Reptiles,Reptilia,Lissolepis coventryi,Lissolepis coventryi,Lissolepis coventryi,"Swamp Skink, Eastern Mourning Skink",2023-03-25,TRUE,FALSE
+Endangered,Reptiles,Reptilia,Lucasium occultum,Lucasium occultum,Lucasium occultum,"Yellow-snouted Gecko, Yellow-snouted Ground Gecko",2006-08-18,TRUE,FALSE
+Endangered,Reptiles,Reptilia,Myuchelys belli,Myuchelys bellii,Myuchelys bellii,Western Sawshelled Turtle,2023-03-15,TRUE,FALSE
+Endangered,Reptiles,Reptilia,Myuchelys purvisi,Myuchelys purvisi,Myuchelys purvisi,"Manning River Saw-Shelled Turtle, Purvis' Turtle",2023-03-15,TRUE,FALSE
+Endangered,Reptiles,Reptilia,Phyllurus caudiannulatus,Phyllurus caudiannulatus,Phyllurus caudiannulatus,Ringed Thin-tail Gecko,2024-07-16,TRUE,FALSE
+Endangered,Reptiles,Reptilia,Pseudemoia cryodroma,Pseudemoia cryodroma,Pseudemoia cryodroma,"Alpine Bog Skink, Alpine Bog-skink",2023-03-25,TRUE,FALSE
+Endangered,Reptiles,Reptilia,Rheodytes leukops,Rheodytes leukops,Rheodytes leukops,"Fitzroy River Turtle, Fitzroy Tortoise, Fitzroy Turtle, White-eyed River Diver",2024-09-04,TRUE,FALSE
+Endangered,Reptiles,Reptilia,Saltuarius kateae,Saltuarius kateae,Saltuarius kateae,Kate's Leaf-tail Gecko,2023-09-07,TRUE,FALSE
+Endangered,Reptiles,Reptilia,Saltuarius moritzi,Saltuarius moritzi,Saltuarius moritzi,"New England Leaf-tailed Gecko, Moritz's Leaf-tailed Gecko",2024-09-04,TRUE,FALSE
+Endangered,Reptiles,Reptilia,Saltuarius wyberba,Saltuarius wyberba,Saltuarius wyberba,Granite Belt Leaf-tailed Gecko,2024-09-04,TRUE,FALSE
+Endangered,Reptiles,Reptilia,Strophurus trux,Strophurus trux,Strophurus trux,Golden-eyed Gecko,2026-08-20,TRUE,FALSE
+Endangered,Reptiles,Reptilia,Tiliqua adelaidensis,Tiliqua adelaidensis,Tiliqua adelaidensis,"Pygmy Blue-tongue Lizard, Adelaide Blue-tongue Lizard",2000-07-16,TRUE,FALSE
+Endangered,Reptiles,Reptilia,Tympanocryptis condaminensis,Tympanocryptis condaminensis,Tympanocryptis condaminensis,Condamine Earless Dragon,2000-07-16,TRUE,FALSE
+Endangered,Reptiles,Reptilia,Tympanocryptis osbornei,Tympanocryptis osbornei,Tympanocryptis osbornei,Monaro Grassland Earless Dragon,2023-06-01,TRUE,FALSE
+Endangered,Reptiles,Reptilia,Varanus mertensi,Varanus mertensi,Varanus mertensi,Mertens' Water Monitor,2023-12-21,TRUE,FALSE
+Endangered,Birds,Aves,Acanthiza pusilla magnirostris,Acanthiza pusilla magnirostris,Acanthiza pusilla magnirostris,"King Island Brown Thornbill, Brown Thornbill (King Island)",2000-07-16,TRUE,FALSE
+Endangered,Birds,Aves,Accipiter hiogaster natalis,Accipiter hiogaster natalis,Accipiter hiogaster natalis,Christmas Island Goshawk,2000-07-16,TRUE,FALSE
+Endangered,Birds,Aves,Amytornis barbatus barbatus,Amytornis barbatus barbatus,Amytornis barbatus barbatus,"Bulloo Grey Grasswren, Grey Grasswren (Bulloo)",2014-11-06,TRUE,FALSE
+Endangered,Birds,Aves,Amytornis dorotheae,Amytornis dorotheae,Amytornis dorotheae,Carpentarian Grasswren,2016-05-05,TRUE,FALSE
+Endangered,Birds,Aves,Amytornis merrotsyi pedleri,Amytornis merrotsyi pedleri,Amytornis merrotsyi pedleri,"Gawler Ranges Short-tailed Grasswren, Short-tailed Grasswren (Gawler Ranges)",2014-11-06,TRUE,FALSE
+Endangered,Birds,Aves,Amytornis striatus howei,Amytornis striatus howei,Amytornis striatus howei,"Murray Mallee Striated Grasswren, Striated Grasswren (sandplain)",2023-07-05,TRUE,FALSE
+Endangered,Birds,Aves,Aquila audax fleayi,Aquila audax fleayi,Aquila audax fleayi,"Tasmanian Wedge-tailed Eagle, Wedge-tailed Eagle (Tasmanian)",2000-07-16,TRUE,FALSE
+Endangered,Birds,Aves,Atrichornis clamosus,Atrichornis clamosus,Atrichornis clamosus,"Noisy Scrub-bird, Tjimiluk",2018-02-15,TRUE,FALSE
+Endangered,Birds,Aves,Atrichornis rufescens,Atrichornis rufescens,Atrichornis rufescens,Rufous Scrub-bird,2014-11-06,TRUE,FALSE
+Endangered,Birds,Aves,Botaurus poiciloptilus,Botaurus poiciloptilus,Botaurus poiciloptilus,Australasian Bittern,2011-03-03,TRUE,FALSE
+Endangered,Birds,Aves,Calamanthus pyrrhopygius parkeri,Hylacola pyrrhopygia parkeri,Hylacola pyrrhopygia parkeri,Chestnut-rumped Heathwren (Mt Lofty Ranges),2005-09-15,TRUE,FALSE
+Endangered,Birds,Aves,Callocephalon fimbriatum,Callocephalon fimbriatum,Callocephalon fimbriatum,Gang-gang Cockatoo,2022-03-02,TRUE,FALSE
+Endangered,Birds,Aves,Calyptorhynchus banksii graptogyne,Calyptorhynchus banksii graptogyne,Calyptorhynchus banksii graptogyne,South-eastern Red-tailed Black-Cockatoo,2000-07-16,TRUE,FALSE
+Endangered,Birds,Aves,Calyptorhynchus baudinii,Zanda baudinii,Zanda baudinii,"Baudin's Cockatoo, Long-billed Black-Cockatoo",2018-02-15,TRUE,FALSE
+Endangered,Birds,Aves,Calyptorhynchus lathami halmaturinus,Calyptorhynchus lathami halmaturinus,Calyptorhynchus lathami halmaturinus,"Kangaroo Island Glossy Black-Cockatoo, Glossy Black-Cockatoo (South Australian)",2000-07-16,TRUE,FALSE
+Endangered,Birds,Aves,Calyptorhynchus latirostris,Zanda latirostris,Zanda latirostris,"Carnaby's Cockatoo, Short-billed Black-Cockatoo",2000-07-16,TRUE,FALSE
+Endangered,Birds,Aves,Casuarius casuarius johnsonii,Casuarius casuarius,Casuarius casuarius,"Southern Cassowary, Australian Cassowary, Double-wattled Cassowary",2000-07-16,TRUE,FALSE
+Endangered,Birds,Aves,Ceyx azureus diemenensis,Ceyx azureus diemenensis,Ceyx azureus diemenensis,Tasmanian Azure Kingfisher,2010-08-19,TRUE,FALSE
+Endangered,Birds,Aves,Chalcophaps indica natalis,Chalcophaps indica natalis,Chalcophaps indica natalis,"Christmas Island Emerald Dove, Emerald Dove (Christmas Island)",2005-04-12,TRUE,FALSE
+Endangered,Birds,Aves,Charadrius mongolus,Charadrius mongolus,Charadrius mongolus,"Lesser Sand Plover, Mongolian Plover",2016-05-05,TRUE,FALSE
+Endangered,Birds,Aves,Cyanoramphus cookii,Cyanoramphus cookii,Cyanoramphus cookii,"Norfolk Island Green Parrot, Tasman Parakeet, Norfolk Island Parakeet",2000-07-16,TRUE,FALSE
+Endangered,Birds,Aves,Dasyornis brachypterus,Dasyornis brachypterus,Dasyornis brachypterus,Eastern Bristlebird,2000-07-16,TRUE,FALSE
+Endangered,Birds,Aves,Dasyornis longirostris,Dasyornis longirostris,Dasyornis longirostris,Western Bristlebird,2018-02-15,TRUE,FALSE
+Endangered,Birds,Aves,Diomedea amsterdamensis,Diomedea amsterdamensis,Diomedea amsterdamensis,Amsterdam Albatross,2000-07-16,TRUE,FALSE
+Endangered,Birds,Aves,Diomedea dabbenena,Diomedea dabbenena,Diomedea dabbenena,Tristan Albatross,2000-07-16,TRUE,FALSE
+Endangered,Birds,Aves,Diomedea sanfordi,Diomedea sanfordi,Diomedea sanfordi,Northern Royal Albatross,2000-07-16,TRUE,FALSE
+Endangered,Birds,Aves,Epthianura crocea tunneyi,Epthianura crocea tunneyi,Epthianura crocea tunneyi,"Alligator Rivers Yellow Chat, Yellow Chat (Alligator Rivers)",2006-12-14,TRUE,FALSE
+Endangered,Birds,Aves,Erythrotriorchis radiatus,Erythrotriorchis radiatus,Erythrotriorchis radiatus,Red Goshawk,2023-03-31,TRUE,FALSE
+Endangered,Birds,Aves,Erythrura gouldiae,Chloebia gouldiae,Chloebia gouldiae,Gouldian Finch,2000-07-16,TRUE,FALSE
+Endangered,Birds,Aves,Fregata andrewsi,Fregata andrewsi,Fregata andrewsi,"Christmas Island Frigatebird, Andrew's Frigatebird",2016-12-07,TRUE,FALSE
+Endangered,Birds,Aves,Hypotaenidia philippensis andrewsi,Hypotaenidia philippensis andrewsi,Hypotaenidia philippensis andrewsi,"Buff-banded Rail (Cocos (Keeling) Islands), Ayam Hutan",2000-07-16,TRUE,FALSE
+Endangered,Birds,Aves,Hypotaenidia sylvestris,Hypotaenidia sylvestris,Hypotaenidia sylvestris,Lord Howe Woodhen,2017-08-15,TRUE,FALSE
+Endangered,Birds,Aves,Limosa lapponica baueri,Limosa lapponica baueri,Limosa lapponica baueri,"Nunivak Bar-tailed Godwit, Western Alaskan Bar-tailed Godwit",2024-01-05,TRUE,FALSE
+Endangered,Birds,Aves,Limosa lapponica menzbieri,Limosa lapponica menzbieri,Limosa lapponica menzbieri,"Northern Siberian Bar-tailed Godwit, Russkoye Bar-tailed Godwit",2024-01-05,TRUE,FALSE
+Endangered,Birds,Aves,Limosa limosa,Limosa limosa,Limosa limosa,Black-tailed Godwit,2024-01-05,TRUE,FALSE
+Endangered,Birds,Aves,Lophochroa leadbeateri leadbeateri,Lophochroa leadbeateri leadbeateri,Lophochroa leadbeateri leadbeateri,"Major Mitchell's Cockatoo (eastern), Eastern Major Mitchell's Cockatoo, Pink Cockatoo (eastern)",2023-03-31,TRUE,FALSE
+Endangered,Birds,Aves,Macronectes giganteus,Macronectes giganteus,Macronectes giganteus,"Southern Giant-Petrel, Southern Giant Petrel",2001-04-04,TRUE,FALSE
+Endangered,Birds,Aves,Malurus coronatus coronatus,Malurus coronatus coronatus,Malurus coronatus coronatus,Purple-crowned Fairy-wren (western),2015-10-31,TRUE,FALSE
+Endangered,Birds,Aves,Manorina melanotis,Manorina melanotis,Manorina melanotis,Black-eared Miner,2000-07-16,TRUE,FALSE
+Endangered,Birds,Aves,Melanodryas cucullata cucullata,Melanodryas cucullata cucullata,Melanodryas cucullata cucullata,"South-eastern Hooded Robin, Hooded Robin (south-eastern)",2023-03-31,TRUE,FALSE
+Endangered,Birds,Aves,Melithreptus brevirostris magnirostris,Melithreptus brevirostris magnirostris,Melithreptus brevirostris magnirostris,Kangaroo Island Brown-headed Honeyeater,2021-12-14,TRUE,FALSE
+Endangered,Birds,Aves,Neochmia ruficauda ruficauda,Neochmia ruficauda ruficauda,Neochmia ruficauda ruficauda,"Star Finch (eastern), Star Finch (southern)",2000-07-16,TRUE,FALSE
+Endangered,Birds,Aves,Nesoptilotis leucotis thomasi,Nesoptilotis leucotis thomasi,Nesoptilotis leucotis thomasi,Kangaroo Island White-eared Honeyeater,2021-12-14,TRUE,FALSE
+Endangered,Birds,Aves,Ninox novaeseelandiae undulata,Ninox novaeseelandiae undulata,Ninox novaeseelandiae undulata,"Norfolk Island Boobook, Norfolk Island Morepork, Southern Boobook (Norfolk Island)",2000-07-16,TRUE,FALSE
+Endangered,Birds,Aves,Papasula abbotti,Papasula abbotti,Papasula abbotti,Abbott's Booby,2000-07-16,TRUE,FALSE
+Endangered,Birds,Aves,Pardalotus quadragintus,Pardalotus quadragintus,Pardalotus quadragintus,Forty-spotted Pardalote,2000-07-16,TRUE,FALSE
+Endangered,Birds,Aves,Phaethon lepturus fulvus,Phaethon lepturus fulvus,Phaethon lepturus fulvus,"Christmas Island White-tailed Tropicbird, Golden Bosunbird",2014-11-06,TRUE,FALSE
+Endangered,Birds,Aves,Phaethon rubricauda westralis,Phaethon rubricauda westralis,Phaethon rubricauda westralis,"Red-tailed Tropicbird (Indian Ocean), Indian Ocean Red-tailed Tropicbird",2023-12-21,TRUE,FALSE
+Endangered,Birds,Aves,Poephila cincta cincta,Poephila cincta cincta,Poephila cincta cincta,Southern Black-throated Finch,2005-02-14,TRUE,FALSE
+Endangered,Birds,Aves,Probosciger aterrimus macgillivrayi,Probosciger aterrimus macgillivrayi,Probosciger aterrimus macgillivrayi,Southern Palm Cockatoo,2026-08-28,TRUE,FALSE
+Endangered,Birds,Aves,Psephotus chrysopterygius,Psephotellus chrysopterygius,Psephotellus chrysopterygius,"Golden-shouldered Parrot, Alwal, Thaku, Arrmorral, Minpin",2000-07-16,TRUE,FALSE
+Endangered,Birds,Aves,Psophodes leucogaster leucogaster,Psophodes leucogaster leucogaster,Psophodes leucogaster leucogaster,Mallee Whipbird,2023-12-21,TRUE,FALSE
+Endangered,Birds,Aves,Psophodes nigrogularis lashmari,Psophodes leucogaster lashmari,Psophodes leucogaster lashmari,Western Whipbird (Kangaroo Island),2021-12-14,TRUE,FALSE
+Endangered,Birds,Aves,Psophodes nigrogularis nigrogularis,Psophodes nigrogularis nigrogularis,Psophodes nigrogularis nigrogularis,Western Heath Whipbird,2000-07-16,TRUE,FALSE
+Endangered,Birds,Aves,Pterodroma leucoptera leucoptera,Pterodroma leucoptera,Pterodroma leucoptera,"Gould's Petrel, Australian Gould's Petrel",2000-07-16,TRUE,FALSE
+Endangered,Birds,Aves,Rostratula australis,Rostratula australis,Rostratula australis,Australian Painted Snipe,2013-05-15,TRUE,FALSE
+Endangered,Birds,Aves,Stagonopleura bella samueli,Stagonopleura bella samueli,Stagonopleura bella samueli,"Western Beautiful Firetail, Beautiful Firetail (Mt Lofty Range and Kangaroo Island)",2022-10-05,TRUE,FALSE
+Endangered,Birds,Aves,Sterna vittata bethunei,Sterna vittata bethunei,Sterna vittata bethunei,"New Zealand Antarctic Tern, Antarctic Tern (New Zealand)",2000-07-16,TRUE,FALSE
+Endangered,Birds,Aves,Stipiturus malachurus halmaturinus,Stipiturus malachurus halmaturinus,Stipiturus malachurus halmaturinus,Kangaroo Island Southern Emu-wren,2021-12-14,TRUE,FALSE
+Endangered,Birds,Aves,Stipiturus malachurus intermedius,Stipiturus malachurus intermedius,Stipiturus malachurus intermedius,"Fleurieu Peninsula Southern Emu-wren, Mount Lofty Southern Emu-wren",2000-07-16,TRUE,FALSE
+Endangered,Birds,Aves,Stipiturus malachurus parimeda,Stipiturus malachurus parimeda,Stipiturus malachurus parimeda,"Southern Emu-wren (Eyre Peninsula), Eyre Peninsula Southern Emu-wren",2023-07-05,TRUE,FALSE
+Endangered,Birds,Aves,Stipiturus mallee,Stipiturus mallee,Stipiturus mallee,Mallee Emu-wren,2008-09-07,TRUE,FALSE
+Endangered,Birds,Aves,Thalassarche cauta,Thalassarche cauta,Thalassarche cauta,Shy Albatross,2020-07-03,TRUE,FALSE
+Endangered,Birds,Aves,Thalassarche chrysostoma,Thalassarche chrysostoma,Thalassarche chrysostoma,Grey-headed Albatross,2009-12-24,TRUE,FALSE
+Endangered,Birds,Aves,Thalassarche eremita,Thalassarche eremita,Thalassarche eremita,Chatham Albatross,2000-07-16,TRUE,FALSE
+Endangered,Birds,Aves,Tringa nebularia,Tringa nebularia,Tringa nebularia,"Common Greenshank, Greenshank",2024-01-05,TRUE,FALSE
+Endangered,Birds,Aves,Turdus poliocephalus erythropleurus,Turdus poliocephalus erythropleurus,Turdus poliocephalus erythropleurus,Christmas Island Thrush,2005-04-12,TRUE,FALSE
+Endangered,Birds,Aves,Turnix varius scintillans,Turnix varius scintillans,Turnix varius scintillans,Painted Button-quail (Houtman Abrolhos),2023-03-31,TRUE,FALSE
+Endangered,Birds,Aves,Tyto novaehollandiae melvillensis,Tyto novaehollandiae melvillensis,Tyto novaehollandiae melvillensis,"Tiwi Masked Owl, Tiwi Islands Masked Owl",2006-08-18,TRUE,FALSE
+Endangered,Birds,Aves,Zoothera lunulata halmaturina,Zoothera lunulata halmaturina,Zoothera lunulata halmaturina,"South Australian Bassian Thrush, Western Bassian Thrush",2022-04-22,TRUE,FALSE
+Endangered,Mammals,Mammalia,Antechinus argentus,Antechinus argentus,Antechinus argentus,Silver-headed Antechinus,2018-05-11,TRUE,FALSE
+Endangered,Mammals,Mammalia,Antechinus arktos,Antechinus arktos,Antechinus arktos,Black-tailed Antechinus,2018-05-11,TRUE,FALSE
+Endangered,Mammals,Mammalia,Arctocephalus tropicalis,Arctocephalus tropicalis,Arctocephalus tropicalis,Subantarctic Fur-seal,2016-12-07,TRUE,FALSE
+Endangered,Mammals,Mammalia,Balaenoptera musculus,Balaenoptera musculus,Balaenoptera musculus,Blue Whale,2000-07-16,TRUE,FALSE
+Endangered,Mammals,Mammalia,Bettongia penicillata ogilbyi,Bettongia penicillata ogilbyi,Bettongia penicillata ogilbyi,Woylie,2009-06-11,TRUE,FALSE
+Endangered,Mammals,Mammalia,Bettongia tropica,Bettongia tropica,Bettongia tropica,Northern Bettong,2000-07-16,TRUE,FALSE
+Endangered,Mammals,Mammalia,Burramys parvus,Burramys parvus,Burramys parvus,Mountain Pygmy-possum,2000-07-16,TRUE,FALSE
+Endangered,Mammals,Mammalia,Chalinolobus dwyeri,Chalinolobus dwyeri,Chalinolobus dwyeri,"Large-eared Pied Bat, Large Pied Bat",2023-11-15,TRUE,FALSE
+Endangered,Mammals,Mammalia,Dasyuroides byrnei,Dasyuroides byrnei,Dasyuroides byrnei,"Kowari, brushy-tailed marsupial rat, Byrne's crest-tailed marsupial rat",2023-11-15,TRUE,FALSE
+Endangered,Mammals,Mammalia,Dasyurus hallucatus,Dasyurus hallucatus,Dasyurus hallucatus,"Northern Quoll, Digul [Gogo-Yimidir], Wijingadda [Dambimangari], Wiminji [Martu]",2005-04-12,TRUE,FALSE
+Endangered,Mammals,Mammalia,Dasyurus maculatus gracilis,Dasyurus maculatus gracilis,Dasyurus maculatus gracilis,"Spotted-tailed Quoll (North Queensland), Yarri",2000-07-16,TRUE,FALSE
+Endangered,Mammals,Mammalia,Dasyurus maculatus maculatus (SE mainland population),Dasyurus maculatus maculatus (SE mainland population),Dasyurus maculatus maculatus (SE mainland population),"Spotted-tail Quoll, Spot-tailed Quoll, Tiger Quoll (southeastern mainland population)",2004-05-14,TRUE,TRUE
+Endangered,Mammals,Mammalia,Dasyurus viverrinus,Dasyurus viverrinus,Dasyurus viverrinus,"Eastern Quoll, Luaner",2015-12-03,TRUE,FALSE
+Endangered,Mammals,Mammalia,Eubalaena australis,Eubalaena australis,Eubalaena australis,Southern Right Whale,2000-07-16,TRUE,FALSE
+Endangered,Mammals,Mammalia,Hemibelideus lemuroides,Hemibelideus lemuroides,Hemibelideus lemuroides,Lemuroid Ringtail Possum,2026-02-06,TRUE,FALSE
+Endangered,Mammals,Mammalia,Hipposideros inornatus,Hipposideros inornatus,Hipposideros inornatus,Arnhem Leaf-nosed Bat,2015-12-03,TRUE,FALSE
+Endangered,Mammals,Mammalia,Isoodon obesulus obesulus,Isoodon obesulus obesulus,Isoodon obesulus obesulus,"Southern Brown Bandicoot (eastern), Southern Brown Bandicoot (south-eastern)",2001-04-04,TRUE,FALSE
+Endangered,Mammals,Mammalia,Lagorchestes hirsutus Central Australian subspecies,Lagorchestes hirsutus Central Australian subspecies,Lagorchestes hirsutus Central Australian subspecies,"Mala, Rufous Hare-Wallaby (Central Australia)",2000-07-16,TRUE,TRUE
+Endangered,Mammals,Mammalia,Mastacomys fuscus mordicus,Mastacomys fuscus mordicus,Mastacomys fuscus mordicus,"Broad-toothed Rat (mainland), Tooarrana",2023-11-15,TRUE,FALSE
+Endangered,Mammals,Mammalia,Mesembriomys gouldii gouldii,Mesembriomys gouldii gouldii,Mesembriomys gouldii gouldii,"Black-footed Tree-rat (Kimberley and mainland Northern Territory), Djintamoonga, Manbul",2015-06-26,TRUE,FALSE
+Endangered,Mammals,Mammalia,Myrmecobius fasciatus,Myrmecobius fasciatus,Myrmecobius fasciatus,Numbat,2018-02-15,TRUE,FALSE
+Endangered,Mammals,Mammalia,Neophoca cinerea,Neophoca cinerea,Neophoca cinerea,"Australian Sea-lion, Australian Sea Lion",2020-12-23,TRUE,FALSE
+Endangered,Mammals,Mammalia,Notomys aquilo,Notomys aquilo,Notomys aquilo,"Northern Hopping-mouse, Woorrentinta",2021-03-26,TRUE,FALSE
+Endangered,Mammals,Mammalia,Onychogalea fraenata,Onychogalea fraenata,Onychogalea fraenata,"Bridled Nail-tail Wallaby, Bridled Nailtail Wallaby",2000-07-16,TRUE,FALSE
+Endangered,Mammals,Mammalia,Parantechinus apicalis,Parantechinus apicalis,Parantechinus apicalis,Dibbler,2000-07-16,TRUE,FALSE
+Endangered,Mammals,Mammalia,Perameles bougainville,Perameles bougainville,Perameles bougainville,Shark Bay Bandicoot,2000-07-16,TRUE,FALSE
+Endangered,Mammals,Mammalia,Perameles gunnii Victorian subspecies,Perameles gunnii Victorian subspecies,Perameles gunnii Victorian subspecies,Eastern Barred Bandicoot (Mainland),2000-07-16,TRUE,TRUE
+Endangered,Mammals,Mammalia,Petauroides volans,Petauroides volans,Petauroides volans,Greater Glider (southern and central),2022-07-05,TRUE,FALSE
+Endangered,Mammals,Mammalia,Petaurus australis Wet Tropics subspecies,Petaurus australis brevirostrum,Petaurus australis brevirostrum,"Yellow-bellied Glider (Wet Tropics), Fluffy Glider",2020-07-09,TRUE,TRUE
+Endangered,Mammals,Mammalia,Petaurus gracilis,Petaurus gracilis,Petaurus gracilis,Mahogany Glider,2000-07-16,TRUE,FALSE
+Endangered,Mammals,Mammalia,Petrogale coenensis,Petrogale coenensis,Petrogale coenensis,Cape York Rock-wallaby,2015-12-03,TRUE,FALSE
+Endangered,Mammals,Mammalia,Petrogale concinna canescens,Petrogale concinna canescens,Petrogale concinna canescens,Nabarlek (Top End),2015-12-03,TRUE,FALSE
+Endangered,Mammals,Mammalia,Petrogale concinna monastria,Petrogale concinna monastria,Petrogale concinna monastria,Nabarlek (Kimberley),2015-12-03,TRUE,FALSE
+Endangered,Mammals,Mammalia,Petrogale lateralis kimberleyensis,Petrogale lateralis kimberleyensis,Petrogale lateralis kimberleyensis,"Wiliji, West Kimberley Rock-wallaby",2021-06-24,TRUE,FALSE
+Endangered,Mammals,Mammalia,Petrogale lateralis lateralis,Petrogale lateralis lateralis,Petrogale lateralis lateralis,"Black-flanked Rock-wallaby, Moororong, Black-footed Rock Wallaby",2016-12-07,TRUE,FALSE
+Endangered,Mammals,Mammalia,Petrogale persephone,Petrogale persephone,Petrogale persephone,Proserpine Rock-wallaby,2000-07-16,TRUE,FALSE
+Endangered,Mammals,Mammalia,"Phascolarctos cinereus (combined populations of Qld, NSW and the ACT)","Phascolarctos cinereus (combined populations of Qld, NSW and the ACT)","Phascolarctos cinereus (combined populations of Qld, NSW and the ACT)","Koala (combined populations of Queensland, New South Wales and the Australian Capital Territory)",2022-02-12,TRUE,TRUE
+Endangered,Mammals,Mammalia,Potorous longipes,Potorous longipes,Potorous longipes,Long-footed Potoroo,2000-07-16,TRUE,FALSE
+Endangered,Mammals,Mammalia,Pseudomys fumeus,Pseudomys fumeus,Pseudomys fumeus,"Smoky Mouse, Konoom",2000-07-16,TRUE,FALSE
+Endangered,Mammals,Mammalia,Pseudomys oralis,Pseudomys oralis,Pseudomys oralis,"Hastings River Mouse, Koontoo",2000-07-16,TRUE,FALSE
+Endangered,Mammals,Mammalia,Pseudomys shortridgei,Pseudomys shortridgei,Pseudomys shortridgei,"Heath Mouse, Dayang, Heath Rat",2016-12-07,TRUE,FALSE
+Endangered,Mammals,Mammalia,Pteropus conspicillatus,Pteropus conspicillatus,Pteropus conspicillatus,Spectacled Flying-fox,2019-02-22,TRUE,FALSE
+Endangered,Mammals,Mammalia,Sarcophilus harrisii,Sarcophilus harrisii,Sarcophilus harrisii,Tasmanian Devil,2009-05-29,TRUE,FALSE
+Endangered,Mammals,Mammalia,Sminthopsis fuliginosa aitkeni,Sminthopsis fuliginosa aitkeni,Sminthopsis fuliginosa aitkeni,Kangaroo Island Dunnart,2000-07-16,TRUE,FALSE
+Endangered,Mammals,Mammalia,Sminthopsis psammophila,Sminthopsis psammophila,Sminthopsis psammophila,Sandhill Dunnart,2000-07-16,TRUE,FALSE
+Endangered,Mammals,Mammalia,Tachyglossus aculeatus multiaculeatus,Tachyglossus aculeatus multiaculeatus,Tachyglossus aculeatus multiaculeatus,Kangaroo Island Echidna,2015-06-26,TRUE,FALSE
+Endangered,Mammals,Mammalia,Zyzomys palatalis,Zyzomys palatalis,Zyzomys palatalis,"Carpentarian Rock-rat, Aywalirroomoo",2000-07-16,TRUE,FALSE
+Endangered,Other Animals,,Adclarkia cameroni,Adclarkia cameroni,Adclarkia cameroni,Brigalow Woodland Snail,2016-12-07,TRUE,FALSE
+Endangered,Other Animals,,Adclarkia dulacca,Adclarkia dulacca,Adclarkia dulacca,Dulacca Woodland Snail,2016-12-07,TRUE,FALSE
+Endangered,Other Animals,,Antipodia chaostola leucophaea,Antipodia chaostola leucophaea,Antipodia chaostola leucophaea,"Tasmanian Chaostola Skipper, Heath-sand Skipper",2010-08-19,TRUE,FALSE
+Endangered,Other Animals,,Austrocordulia leonardi,Austrocordulia leonardi,Austrocordulia leonardi,Sydney Hawk Dragonfly,2022-04-22,TRUE,FALSE
+Endangered,Other Animals,,Bertmainius tingle,Bertmainius tingle,Bertmainius tingle,Tingle Pygmy Trapdoor Spider,2018-05-11,TRUE,FALSE
+Endangered,Other Animals,,Dendronephthya australis,Dendronephthya australis,Dendronephthya australis,Cauliflower Soft Coral,2020-12-12,TRUE,FALSE
+Endangered,Other Animals,,Engaeus granulatus,Engaeus granulatus,Engaeus granulatus,Central North Burrowing Crayfish,2005-11-15,TRUE,FALSE
+Endangered,Other Animals,,Engaeus martigener,Engaeus martigener,Engaeus martigener,Furneaux Burrowing Crayfish,2001-08-06,TRUE,FALSE
+Endangered,Other Animals,,Engaeus spinicaudatus,Engaeus spinicaudatus,Engaeus spinicaudatus,Scottsdale Burrowing Crayfish,2001-08-06,TRUE,FALSE
+Endangered,Other Animals,,Engaewa walpolea,Engaewa walpolea,Engaewa walpolea,Walpole Burrowing Crayfish,2009-04-24,TRUE,FALSE
+Endangered,Other Animals,,Euastacus balanensis,Euastacus balanensis,Euastacus balanensis,Balan Spiny Crayfish,2025-09-05,TRUE,FALSE
+Endangered,Other Animals,,Euastacus bidawalus,Euastacus bidawalus,Euastacus bidawalus,"Bidhawal Crayfish, Bidawal Crayfish, East Gippsland Spiny Crayfish",2023-11-15,TRUE,FALSE
+Endangered,Other Animals,,Euastacus bispinosus,Euastacus bispinosus,Euastacus bispinosus,"Glenelg Spiny Freshwater Crayfish, Pricklyback",2011-02-15,TRUE,FALSE
+Endangered,Other Animals,,Euastacus clarkae,Euastacus clarkae,Euastacus clarkae,"Ellen Clark's Crayfish, Clark's Crayfish",2023-11-15,TRUE,FALSE
+Endangered,Other Animals,,Euastacus diversus,Euastacus diversus,Euastacus diversus,Orbost Spiny Crayfish,2023-11-15,TRUE,FALSE
+Endangered,Other Animals,,Euastacus eungella,Euastacus eungella,Euastacus eungella,Eungella Spiny Crayfish,2023-09-07,TRUE,FALSE
+Endangered,Other Animals,,Euastacus fleckeri,Euastacus fleckeri,Euastacus fleckeri,"Flecker's Crayfish, Red and Blue Spiny Crayfish",2025-09-05,TRUE,FALSE
+Endangered,Other Animals,,Euastacus gamilaroi,Euastacus gamilaroi,Euastacus gamilaroi,"Gamilaroi Crayfish, Gamilaroi Spiny Crayfish, Hanging Rock Crayfish",2023-09-07,TRUE,FALSE
+Endangered,Other Animals,,Euastacus girurmulayn,Euastacus girurmulayn,Euastacus girurmulayn,Smooth Crayfish,2023-09-07,TRUE,FALSE
+Endangered,Other Animals,,Euastacus gumar,Euastacus gumar,Euastacus gumar,"Bloodclaw Crayfish, Blood Crayfish",2023-09-07,TRUE,FALSE
+Endangered,Other Animals,,Euastacus hystricosus,Euastacus hystricosus,Euastacus hystricosus,Conondale Spiny Crayfish,2024-09-04,TRUE,FALSE
+Endangered,Other Animals,,Euastacus maccai,Euastacus maccai,Euastacus maccai,Terrestrial Crayfish,2025-09-05,TRUE,FALSE
+Endangered,Other Animals,,Euastacus mirangudjin,Euastacus mirangudjin,Euastacus mirangudjin,Orange-bellied Crayfish,2025-09-05,TRUE,FALSE
+Endangered,Other Animals,,Euastacus monteithorum,Euastacus monteithorum,Euastacus monteithorum,"Monteith's Crayfish, Monteith's Spiny Crayfish",2023-09-07,TRUE,FALSE
+Endangered,Other Animals,,Euastacus polysetosus,Euastacus polysetosus,Euastacus polysetosus,Many-bristled Crayfish,2023-11-15,TRUE,FALSE
+Endangered,Other Animals,,Euastacus rieki,Euastacus rieki,Euastacus rieki,Riek's Crayfish,2023-09-07,TRUE,FALSE
+Endangered,Other Animals,,Euastacus robertsi,Euastacus robertsi,Euastacus robertsi,"Robert's Crayfish, Robert's Spiny Crayfish",2023-09-07,TRUE,FALSE
+Endangered,Other Animals,,Euastacus simplex,Euastacus simplex,Euastacus simplex,"Simple Crayfish, Small Mountain Crayfish",2023-11-15,TRUE,FALSE
+Endangered,Other Animals,,Euastacus sp. 1 coughrani (McCormack & Fetzner),Euastacus sp. 1 coughrani (McCormack & Fetzner),Euastacus sp. 1 coughrani (McCormack & Fetzner),"Coughran's Crayfish, Arte Spiny Crayfish",2023-11-15,TRUE,FALSE
+Endangered,Other Animals,,Euastacus spinichelatus,Euastacus spinichelatus,Euastacus spinichelatus,Small Crayfish,2023-11-15,TRUE,FALSE
+Endangered,Other Animals,,Euastacus suttoni,Euastacus suttoni,Euastacus suttoni,Sutton's Crayfish,2023-09-07,TRUE,FALSE
+Endangered,Other Animals,,Euastacus urospinosus,Euastacus urospinosus,Euastacus urospinosus,Maleny Crayfish,2025-09-05,TRUE,FALSE
+Endangered,Other Animals,,Keyacris scurra,Keyacris scurra,Keyacris scurra,Key's Matchstick Grasshopper,2022-10-05,TRUE,FALSE
+Endangered,Other Animals,,Leucopatus anophthalmus,Leucopatus anophthalmus,Leucopatus anophthalmus,Blind Velvet Worm,2009-06-30,TRUE,FALSE
+Endangered,Other Animals,,Lissotes latidens,Lissotes latidens,Lissotes latidens,"Broad-toothed Stag Beetle, Wielangta Stag Beetle",2002-12-03,TRUE,FALSE
+Endangered,Other Animals,,Meridolum maryae,Sauroconcha maryae,Sauroconcha maryae,Maroubra Woodland Snail,2021-12-07,TRUE,FALSE
+Endangered,Other Animals,,Mesodontrachia fitzroyana,Mesodontrachia fitzroyana,Mesodontrachia fitzroyana,Fitzroy Land Snail,2006-08-18,TRUE,FALSE
+Endangered,Other Animals,,Moggridgea rainbowi,Moggridgea rainbowi,Moggridgea rainbowi,Kangaroo Island Micro-trapdoor Spider,2022-04-22,TRUE,FALSE
+Endangered,Other Animals,,Oreixenica ptunarra,Oreixenica ptunarra,Oreixenica ptunarra,"Ptunarra Brown, Ptunarra Brown Butterfly, Ptunarra Xenica",2014-01-24,TRUE,FALSE
+Endangered,Other Animals,,Paralucia pyrodiscus lucida,Paralucia pyrodiscus lucida,Paralucia pyrodiscus lucida,Eltham Copper Butterfly,2016-05-05,TRUE,FALSE
+Endangered,Other Animals,,Phyllodes imperialis smithersi,Phyllodes imperialis smithersi,Phyllodes imperialis smithersi,Pink Underwing Moth,2002-12-03,TRUE,FALSE
+Endangered,Other Animals,,Placostylus bivaricosus,Placostylus bivaricosus,Placostylus bivaricosus,"Lord Howe Flax Snail, Lord Howe Placostylus",2005-11-15,TRUE,FALSE
+Endangered,Other Animals,,Pommerhelix duralensis,Pommerhelix duralensis,Pommerhelix duralensis,Dural Land Snail,2015-04-09,TRUE,FALSE
+Endangered,Other Animals,,Semotrachia euzyga,Catellotrachia euzyga,Catellotrachia euzyga,a land snail,2006-08-18,TRUE,FALSE
+Endangered,Other Animals,,Sinumelon bednalli,Sinumelon bednalli,Sinumelon bednalli,Bednall's Land Snail,2006-08-18,TRUE,FALSE
+Endangered,Other Animals,,Thaumatoperla alpina,Thaumatoperla alpina,Thaumatoperla alpina,Alpine Stonefly,2011-03-31,TRUE,FALSE
+Endangered,Other Animals,,Trioza barrettae,Trioza barrettae,Trioza barrettae,Banksia brownii plant louse,2019-07-04,TRUE,FALSE
+Endangered,Other Animals,,Trisyntopa scatophaga,Trisyntopa scatophaga,Trisyntopa scatophaga,Antbed Parrot Moth,2016-12-07,TRUE,FALSE
+Vulnerable,Fishes,,Brachiopsilus ziebelli,Brachiopsilus ziebelli,Brachiopsilus ziebelli,"Ziebell's Handfish, Waterfall Bay Handfish",2000-07-16,TRUE,FALSE
+Vulnerable,Fishes,,Carcharias taurus (west coast population),Carcharias taurus (west coast population),Carcharias taurus (west coast population),Grey Nurse Shark (west coast population),2001-10-16,TRUE,TRUE
+Vulnerable,Fishes,,Carcharodon carcharias,Carcharodon carcharias,Carcharodon carcharias,"White Shark, Great White Shark",2000-07-16,TRUE,FALSE
+Vulnerable,Fishes,,Chlamydogobius squamigenus,Chlamydogobius squamigenus,Chlamydogobius squamigenus,Edgbaston Goby,2000-07-16,TRUE,FALSE
+Vulnerable,Fishes,,Epinephelus daemelii,Epinephelus daemelii,Epinephelus daemelii,"Black Rockcod, Black Cod, Saddled Rockcod",2012-04-04,TRUE,FALSE
+Vulnerable,Fishes,,Galaxias parvus,Galaxias parvus,Galaxias parvus,Swamp Galaxias,2006-11-24,TRUE,FALSE
+Vulnerable,Fishes,,Galaxias tanycephalus,Galaxias tanycephalus,Galaxias tanycephalus,Saddled Galaxias,2000-07-16,TRUE,FALSE
+Vulnerable,Fishes,,Galaxiella munda,Galaxiella munda,Galaxiella munda,"Western Dwarf Galaxias, Western Mud Minnow",2025-03-05,TRUE,FALSE
+Vulnerable,Fishes,,Galaxiella toourtkoourt,Galaxiella toourtkoourt,Galaxiella toourtkoourt,"Little Galaxias, Western Plains Galaxiella",2026-08-28,TRUE,FALSE
+Vulnerable,Fishes,,Maccullochella peelii,Maccullochella peelii,Maccullochella peelii,Murray Cod,2003-07-03,TRUE,FALSE
+Vulnerable,Fishes,,Milyeringa veritas,Milyeringa veritas,Milyeringa veritas,"Cape Range Cave Gudgeon, Blind Gudgeon",2000-07-16,TRUE,FALSE
+Vulnerable,Fishes,,Nannatherina balstoni,Nannatherina balstoni,Nannatherina balstoni,Balston's Pygmy Perch,2006-11-24,TRUE,FALSE
+Vulnerable,Fishes,,Nannoperca australis Murray-Darling Basin lineage,Nannoperca australis Murray-Darling Basin lineage,Nannoperca australis Murray-Darling Basin lineage,Southern Pygmy Perch (Murray-Darling Basin lineage),2021-04-13,TRUE,TRUE
+Vulnerable,Fishes,,Nannoperca variegata,Nannoperca variegata,Nannoperca variegata,"Variegated Pygmy Perch, Ewens Pygmy Perch, Golden Pygmy Perch",2000-07-16,TRUE,FALSE
+Vulnerable,Fishes,,Neoceratodus forsteri,Neoceratodus forsteri,Neoceratodus forsteri,"Australian Lungfish, Queensland Lungfish",2003-08-06,TRUE,FALSE
+Vulnerable,Fishes,,Ophisternon candidum,Ophisternon candidum,Ophisternon candidum,Blind Cave Eel,2000-07-16,TRUE,FALSE
+Vulnerable,Fishes,,Paragalaxias dissimilis,Paragalaxias dissimilis,Paragalaxias dissimilis,Shannon Paragalaxias,2006-11-24,TRUE,FALSE
+Vulnerable,Fishes,,Paragalaxias eleotroides,Paragalaxias eleotroides,Paragalaxias eleotroides,Great Lake Paragalaxias,2006-11-24,TRUE,FALSE
+Vulnerable,Fishes,,Pristis clavata,Pristis clavata,Pristis clavata,"Dwarf Sawfish, Queensland Sawfish",2009-10-20,TRUE,FALSE
+Vulnerable,Fishes,,Pristis zijsron,Pristis zijsron,Pristis zijsron,"Green Sawfish, Dindagubba, Narrowsnout Sawfish",2008-03-07,TRUE,FALSE
+Vulnerable,Fishes,,Prototroctes maraena,Prototroctes maraena,Prototroctes maraena,Australian Grayling,2000-07-16,TRUE,FALSE
+Vulnerable,Fishes,,Rhincodon typus,Rhincodon typus,Rhincodon typus,Whale Shark,2001-10-16,TRUE,FALSE
+Vulnerable,Frogs,,Assa darlingtoni,Assa darlingtoni,Assa darlingtoni,Pouched Frog,2023-09-07,TRUE,FALSE
+Vulnerable,Frogs,,Geocrinia vitellina,Anstisia vitellina,Anstisia vitellina,Orange-bellied Frog,2000-07-16,TRUE,FALSE
+Vulnerable,Frogs,,Litoria aurea,Ranoidea aurea,Ranoidea aurea,Green and Golden Bell Frog,2000-07-16,TRUE,FALSE
+Vulnerable,Frogs,,Litoria daviesae,Dryopsophus daviesae,Dryopsophus daviesae,Davies' Tree Frog,2023-03-15,TRUE,FALSE
+Vulnerable,Frogs,,Litoria dayi,Eremnoculus dayi,Eremnoculus dayi,"Australian Lace-lid, Lace-eyed Tree Frog, Day's Big-eyed Treefrog",2019-07-04,TRUE,FALSE
+Vulnerable,Frogs,,Litoria olongburensis,Drymomantis olongburensis,Drymomantis olongburensis,Wallum Sedge Frog,2000-07-16,TRUE,FALSE
+Vulnerable,Frogs,,Litoria piperata,Dryopsophus piperatus,Dryopsophus piperatus,Peppered Tree Frog,2000-07-16,TRUE,FALSE
+Vulnerable,Frogs,,Litoria raniformis,Ranoidea raniformis,Ranoidea raniformis,"Southern Bell Frog, Growling Grass Frog, Green and Golden Frog, Warty Swamp Frog, Golden Bell Frog",2000-07-16,TRUE,FALSE
+Vulnerable,Frogs,,Litoria subglandulosa,Dryopsophus subglandulosus,Dryopsophus subglandulosus,"New England Tree Frog, Glandular Frog",2023-09-07,TRUE,FALSE
+Vulnerable,Frogs,,Litoria verreauxii alpina,Rawlinsonia verreauxii alpina,Rawlinsonia verreauxii alpina,"Alpine Tree Frog, Verreaux's Alpine Tree Frog",2000-07-16,TRUE,FALSE
+Vulnerable,Frogs,,Mixophyes balbus,Mixophyes balbus,Mixophyes balbus,"Stuttering Frog, Southern Barred Frog (in Victoria)",2000-07-16,TRUE,FALSE
+Vulnerable,Frogs,,Mixophyes iteratus,Mixophyes iteratus,Mixophyes iteratus,"Giant Barred Frog, Southern Barred Frog",2021-11-13,TRUE,FALSE
+Vulnerable,Frogs,,Philoria sphagnicola,Philoria sphagnicola,Philoria sphagnicola,Sphagnum Frog,2023-03-15,TRUE,FALSE
+Vulnerable,Frogs,,Pseudophryne covacevichae,Pseudophryne covacevichae,Pseudophryne covacevichae,Magnificent Brood Frog,2000-07-16,TRUE,FALSE
+Vulnerable,Frogs,,Spicospina flammocaerulea,Spicospina flammocaerulea,Spicospina flammocaerulea,Sunset Frog,2019-07-04,TRUE,FALSE
+Vulnerable,Frogs,,Uperoleia daviesae,Uperoleia daviesae,Uperoleia daviesae,"Howard River Toadlet, Davies's Toadlet",2021-11-13,TRUE,FALSE
+Vulnerable,Reptiles,Reptilia,Acanthophis hawkei,Acanthophis hawkei,Acanthophis hawkei,Plains Death Adder,2012-05-11,TRUE,FALSE
+Vulnerable,Reptiles,Reptilia,Anomalopus mackayi,Anomalopus mackayi,Anomalopus mackayi,"Five-clawed Worm-skink, Long-legged Worm-skink",2000-07-16,TRUE,FALSE
+Vulnerable,Reptiles,Reptilia,Aprasia parapulchella,Aprasia parapulchella,Aprasia parapulchella,"Pink-tailed Worm-lizard, Pink-tailed Legless Lizard",2000-07-16,TRUE,FALSE
+Vulnerable,Reptiles,Reptilia,Aprasia pseudopulchella,Aprasia pseudopulchella,Aprasia pseudopulchella,Flinders Ranges Worm-lizard,2000-07-16,TRUE,FALSE
+Vulnerable,Reptiles,Reptilia,Carettochelys insculpta,Carettochelys insculpta,Carettochelys insculpta,"Pig-nosed Turtle, Pitted Shell Turtle",2024-07-16,TRUE,FALSE
+Vulnerable,Reptiles,Reptilia,Chelonia mydas,Chelonia mydas,Chelonia mydas,Green Turtle,2000-07-16,TRUE,FALSE
+Vulnerable,Reptiles,Reptilia,Christinus guentheri,Christinus guentheri,Christinus guentheri,"Lord Howe Island Gecko, Lord Howe Island Southern Gecko",2000-07-16,TRUE,FALSE
+Vulnerable,Reptiles,Reptilia,Coeranoscincus reticulatus,Coeranoscincus reticulatus,Coeranoscincus reticulatus,Three-toed Snake-tooth Skink,2000-07-16,TRUE,FALSE
+Vulnerable,Reptiles,Reptilia,Ctenophorus yinnietharra,Ctenophorus yinnietharra,Ctenophorus yinnietharra,Yinnietharra Rock-Dragon,2000-07-16,TRUE,FALSE
+Vulnerable,Reptiles,Reptilia,Ctenotus lancelini,Ctenotus lancelini,Ctenotus lancelini,Lancelin Island Skink,2000-07-16,TRUE,FALSE
+Vulnerable,Reptiles,Reptilia,Ctenotus zastictus,Ctenotus zastictus,Ctenotus zastictus,Hamelin Ctenotus,2000-07-16,TRUE,FALSE
+Vulnerable,Reptiles,Reptilia,Delma impar,Delma impar,Delma impar,"Striped Legless Lizard, Striped Snake-lizard",2000-07-16,TRUE,FALSE
+Vulnerable,Reptiles,Reptilia,Delma mitella,Delma mitella,Delma mitella,"Atherton Delma, Legless Lizard",2000-07-16,TRUE,FALSE
+Vulnerable,Reptiles,Reptilia,Delma torquata,Delma torquata,Delma torquata,"Adorned Delma, Collared Delma",2000-07-16,TRUE,FALSE
+Vulnerable,Reptiles,Reptilia,Denisonia maculata,Denisonia maculata,Denisonia maculata,Ornamental Snake,2000-07-16,TRUE,FALSE
+Vulnerable,Reptiles,Reptilia,Egernia rugosa,Egernia rugosa,Egernia rugosa,Yakka Skink,2000-07-16,TRUE,FALSE
+Vulnerable,Reptiles,Reptilia,Elseya irwini,Elseya irwini,Elseya irwini,"Irwin's Turtle, White-headed Snapping Turtle",2025-03-05,TRUE,FALSE
+Vulnerable,Reptiles,Reptilia,Eretmochelys imbricata,Eretmochelys imbricata,Eretmochelys imbricata,Hawksbill Turtle,2000-07-16,TRUE,FALSE
+Vulnerable,Reptiles,Reptilia,Eulamprus kosciuskoi,Eulamprus kosciuskoi,Eulamprus kosciuskoi,Alpine Water Skink,2024-07-16,TRUE,FALSE
+Vulnerable,Reptiles,Reptilia,Furina dunmalli,Furina dunmalli,Furina dunmalli,Dunmall's Snake,2000-07-16,TRUE,FALSE
+Vulnerable,Reptiles,Reptilia,Harrisoniascincus zia,Harrisoniascincus zia,Harrisoniascincus zia,Rainforest Cool-skink,2023-09-07,TRUE,FALSE
+Vulnerable,Reptiles,Reptilia,Lerista vittata,Lerista vittata,Lerista vittata,"Mount Cooper Striped Skink, Mount Cooper Striped Lerista",2000-07-16,TRUE,FALSE
+Vulnerable,Reptiles,Reptilia,Liasis olivaceus barroni,Liasis olivaceus barroni,Liasis olivaceus barroni,Pilbara Olive Python,2000-07-16,TRUE,FALSE
+Vulnerable,Reptiles,Reptilia,Liopholis kintorei,Liopholis kintorei,Liopholis kintorei,"Great Desert Skink, Tjakura, Warrarna, Mulyamiji, Tjalapa, Nampu",2000-07-16,TRUE,FALSE
+Vulnerable,Reptiles,Reptilia,Liopholis pulchra longicauda,Liopholis pulchra longicauda,Liopholis pulchra longicauda,"Jurien Bay Skink, Jurien Bay Rock-skink",2009-06-11,TRUE,FALSE
+Vulnerable,Reptiles,Reptilia,Natator depressus,Natator depressus,Natator depressus,Flatback Turtle,2000-07-16,TRUE,FALSE
+Vulnerable,Reptiles,Reptilia,Notechis scutatus ater,Notechis scutatus ater,Notechis scutatus ater,Krefft's Tiger Snake (Flinders Ranges),2000-07-16,TRUE,FALSE
+Vulnerable,Reptiles,Reptilia,Nyctophilopython oenpelliensis,Nyctophilopython oenpelliensis,Nyctophilopython oenpelliensis,"Nawaran, Oenpelli Python, Oenpelli Rock Python",2026-02-06,TRUE,FALSE
+Vulnerable,Reptiles,Reptilia,Oligosoma lichenigerum,Oligosoma lichenigerum,Oligosoma lichenigerum,"Lord Howe and Norfolk Islands Skink, Lord Howe Island Skink",2000-07-16,TRUE,FALSE
+Vulnerable,Reptiles,Reptilia,Ophidiocephalus taeniatus,Ophidiocephalus taeniatus,Ophidiocephalus taeniatus,Bronzeback Snake-lizard,2000-07-16,TRUE,FALSE
+Vulnerable,Reptiles,Reptilia,Pseudemoia rawlinsoni,Pseudemoia rawlinsoni,Pseudemoia rawlinsoni,"Glossy Grass Skink, Swampland Cool-skink, Rawlinson's Window-eyed Skink",2026-02-06,TRUE,FALSE
+Vulnerable,Reptiles,Reptilia,Ramphotyphlops exocoeti,Ramphotyphlops exocoeti,Ramphotyphlops exocoeti,"Christmas Island Blind Snake, Christmas Island Pink Blind Snake",2000-07-16,TRUE,FALSE
+Vulnerable,Reptiles,Reptilia,Strophurus horneri,Strophurus horneri,Strophurus horneri,Arnhem Phasmid Gecko,2026-02-06,TRUE,FALSE
+Vulnerable,Reptiles,Reptilia,Uvidicolus sphyrurus,Uvidicolus sphyrurus,Uvidicolus sphyrurus,"Border Thick-tailed Gecko, Granite Belt Thick-tailed Gecko",2000-07-16,TRUE,FALSE
+Vulnerable,Birds,Aves,Acanthiza iredalei rosinae,Acanthiza iredalei rosinae,Acanthiza iredalei rosinae,Slender-billed Thornbill (Gulf St Vincent),2015-07-08,TRUE,FALSE
+Vulnerable,Birds,Aves,Acanthiza lineata whitei,Acanthiza lineata whitei,Acanthiza lineata whitei,Kangaroo Island Striated Thornbill,2021-12-08,TRUE,FALSE
+Vulnerable,Birds,Aves,Amytornis merrotsyi merrotsyi,Amytornis merrotsyi merrotsyi,Amytornis merrotsyi merrotsyi,Short-tailed Grasswren (Flinders Ranges),2014-11-06,TRUE,FALSE
+Vulnerable,Birds,Aves,Amytornis modestus,Amytornis modestus,Amytornis modestus,Thick-billed Grasswren,2000-07-16,TRUE,FALSE
+Vulnerable,Birds,Aves,Amytornis textilis myall,Amytornis textilis myall,Amytornis textilis myall,Western Grasswren (Gawler Ranges),2014-11-06,TRUE,FALSE
+Vulnerable,Birds,Aves,Amytornis woodwardi,Amytornis woodwardi,Amytornis woodwardi,"White-throated Grasswren, Yirlinkirrkirr",2014-11-06,TRUE,FALSE
+Vulnerable,Birds,Aves,Anous tenuirostris melanops,Anous tenuirostris melanops,Anous tenuirostris melanops,Australian Lesser Noddy,2000-07-16,TRUE,FALSE
+Vulnerable,Birds,Aves,Anthochaera chrysoptera halmaturina,Anthochaera chrysoptera halmaturina,Anthochaera chrysoptera halmaturina,Kangaroo Island Little Wattlebird,2021-12-08,TRUE,FALSE
+Vulnerable,Birds,Aves,Aphelocephala leucopsis,Aphelocephala leucopsis,Aphelocephala leucopsis,Southern Whiteface,2023-03-31,TRUE,FALSE
+Vulnerable,Birds,Aves,Ardenna grisea,Ardenna grisea,Ardenna grisea,Sooty Shearwater,2023-12-21,TRUE,FALSE
+Vulnerable,Birds,Aves,Arenaria interpres,Arenaria interpres,Arenaria interpres,Ruddy Turnstone,2024-01-05,TRUE,FALSE
+Vulnerable,Birds,Aves,Calidris acuminata,Calidris acuminata,Calidris acuminata,Sharp-tailed Sandpiper,2024-01-05,TRUE,FALSE
+Vulnerable,Birds,Aves,Calidris canutus,Calidris canutus,Calidris canutus,"Red Knot, Knot",2024-01-05,TRUE,FALSE
+Vulnerable,Birds,Aves,Calidris tenuirostris,Calidris tenuirostris,Calidris tenuirostris,Great Knot,2024-01-05,TRUE,FALSE
+Vulnerable,Birds,Aves,Calyptorhynchus banksii naso,Calyptorhynchus banksii naso,Calyptorhynchus banksii naso,"Forest Red-tailed Black-Cockatoo, Karrak",2009-06-11,TRUE,FALSE
+Vulnerable,Birds,Aves,Calyptorhynchus lathami lathami,Calyptorhynchus lathami lathami,Calyptorhynchus lathami lathami,South-eastern Glossy Black-Cockatoo,2022-08-10,TRUE,FALSE
+Vulnerable,Birds,Aves,Cereopsis novaehollandiae grisea,Cereopsis novaehollandiae grisea,Cereopsis novaehollandiae grisea,"Cape Barren Goose (south-western), Recherche Cape Barren Goose",2000-07-16,TRUE,FALSE
+Vulnerable,Birds,Aves,Charadrius leschenaultii,Charadrius leschenaultii,Charadrius leschenaultii,"Greater Sand Plover, Large Sand Plover",2016-05-05,TRUE,FALSE
+Vulnerable,Birds,Aves,Climacteris picumnus victoriae,Climacteris picumnus victoriae,Climacteris picumnus victoriae,Brown Treecreeper (south-eastern),2023-03-31,TRUE,FALSE
+Vulnerable,Birds,Aves,Diomedea antipodensis,Diomedea antipodensis,Diomedea antipodensis,Antipodean Albatross,2000-07-16,TRUE,FALSE
+Vulnerable,Birds,Aves,Diomedea antipodensis gibsoni,Diomedea antipodensis gibsoni,Diomedea antipodensis gibsoni,Gibson's Albatross,2000-07-16,TRUE,FALSE
+Vulnerable,Birds,Aves,Diomedea epomophora,Diomedea epomophora,Diomedea epomophora,Southern Royal Albatross,2000-07-16,TRUE,FALSE
+Vulnerable,Birds,Aves,Diomedea exulans,Diomedea exulans,Diomedea exulans,Wandering Albatross,2000-07-16,TRUE,FALSE
+Vulnerable,Birds,Aves,Falco hypoleucos,Falco hypoleucos,Falco hypoleucos,Grey Falcon,2020-07-09,TRUE,FALSE
+Vulnerable,Birds,Aves,Falcunculus frontatus whitei,Falcunculus frontatus whitei,Falcunculus frontatus whitei,"Crested Shrike-tit (northern), Northern Shrike-tit",2000-07-16,TRUE,FALSE
+Vulnerable,Birds,Aves,Fregetta grallaria grallaria,Fregetta grallaria grallaria,Fregetta grallaria grallaria,"White-bellied Storm-Petrel (Tasman Sea), White-bellied Storm- Petrel (Australasian)",2000-07-16,TRUE,FALSE
+Vulnerable,Birds,Aves,Gallinago hardwickii,Gallinago hardwickii,Gallinago hardwickii,"Latham's Snipe, Japanese Snipe",2024-01-05,TRUE,FALSE
+Vulnerable,Birds,Aves,Geophaps scripta scripta,Geophaps scripta scripta,Geophaps scripta scripta,Squatter Pigeon (southern),2000-07-16,TRUE,FALSE
+Vulnerable,Birds,Aves,Geophaps smithii blaauwi,Geophaps smithii blaauwi,Geophaps smithii blaauwi,Partridge Pigeon (western),2000-07-16,TRUE,FALSE
+Vulnerable,Birds,Aves,Geophaps smithii smithii,Geophaps smithii smithii,Geophaps smithii smithii,Partridge Pigeon (eastern),2000-07-16,TRUE,FALSE
+Vulnerable,Birds,Aves,Grantiella picta,Grantiella picta,Grantiella picta,Painted Honeyeater,2015-07-08,TRUE,FALSE
+Vulnerable,Birds,Aves,Halobaena caerulea,Halobaena caerulea,Halobaena caerulea,Blue Petrel,2000-07-16,TRUE,FALSE
+Vulnerable,Birds,Aves,Hirundapus caudacutus,Hirundapus caudacutus,Hirundapus caudacutus,White-throated Needletail,2019-07-04,TRUE,FALSE
+Vulnerable,Birds,Aves,Hylacola cauta halmaturina,Hylacola cauta halmaturina,Hylacola cauta halmaturina,Shy Heathwren (Kangaroo Island),2021-12-08,TRUE,FALSE
+Vulnerable,Birds,Aves,Leipoa ocellata,Leipoa ocellata,Leipoa ocellata,Malleefowl,2000-07-16,TRUE,FALSE
+Vulnerable,Birds,Aves,Leucocarbo atriceps nivalis,Leucocarbo atriceps nivalis,Leucocarbo atriceps nivalis,"Imperial Shag (Heard Island), Heard Shag",2000-07-16,TRUE,FALSE
+Vulnerable,Birds,Aves,Leucocarbo atriceps purpurascens,Leucocarbo atriceps purpurascens,Leucocarbo atriceps purpurascens,Imperial Shag (Macquarie Island),2000-07-16,TRUE,FALSE
+Vulnerable,Birds,Aves,Limnodromus semipalmatus,Limnodromus semipalmatus,Limnodromus semipalmatus,Asian Dowitcher,2024-01-05,TRUE,FALSE
+Vulnerable,Birds,Aves,Macronectes halli,Macronectes halli,Macronectes halli,Northern Giant Petrel,2001-04-04,TRUE,FALSE
+Vulnerable,Birds,Aves,Malurus leucopterus edouardi,Malurus leucopterus edouardi,Malurus leucopterus edouardi,"White-winged Fairy-wren (Barrow Island), Barrow Island Black- and-white Fairy-wren",2000-07-16,TRUE,FALSE
+Vulnerable,Birds,Aves,Malurus leucopterus leucopterus,Malurus leucopterus leucopterus,Malurus leucopterus leucopterus,"White-winged Fairy-wren (Dirk Hartog Island), Dirk Hartog Black-and-White Fairy-wren",2000-07-16,TRUE,FALSE
+Vulnerable,Birds,Aves,Mirafra javanica melvillensis,Mirafra javanica melvillensis,Mirafra javanica melvillensis,Horsfield's Bushlark (Tiwi Islands),2015-07-08,TRUE,FALSE
+Vulnerable,Birds,Aves,Neophema chrysostoma,Neophema chrysostoma,Neophema chrysostoma,Blue-winged Parrot,2023-03-31,TRUE,FALSE
+Vulnerable,Birds,Aves,Ninox natalis,Ninox natalis,Ninox natalis,"Christmas Island Hawk-Owl, Christmas Boobook",2000-07-16,TRUE,FALSE
+Vulnerable,Birds,Aves,Pachycephala pectoralis xanthoprocta,Pachycephala pectoralis xanthoprocta,Pachycephala pectoralis xanthoprocta,Golden Whistler (Norfolk Island),2000-07-16,TRUE,FALSE
+Vulnerable,Birds,Aves,Pachycephala rufogularis,Pachycephala rufogularis,Pachycephala rufogularis,Red-lored Whistler,2000-07-16,TRUE,FALSE
+Vulnerable,Birds,Aves,Pachyptila turtur subantarctica,Pachyptila turtur subantarctica,Pachyptila turtur subantarctica,Fairy Prion (southern),2000-07-16,TRUE,FALSE
+Vulnerable,Birds,Aves,Petroica multicolor,Petroica multicolor,Petroica multicolor,"Norfolk Island Robin, Pacific Robin",2000-07-16,TRUE,FALSE
+Vulnerable,Birds,Aves,Phoebetria fusca,Phoebetria fusca,Phoebetria fusca,Sooty Albatross,2000-07-16,TRUE,FALSE
+Vulnerable,Birds,Aves,Platycercus caledonicus brownii,Platycercus caledonicus brownii,Platycercus caledonicus brownii,Green Rosella (King Island),2015-10-31,TRUE,FALSE
+Vulnerable,Birds,Aves,Platycercus elegans melanopterus,Platycercus elegans melanopterus,Platycercus elegans melanopterus,Kangaroo Island Crimson Rosella,2021-12-08,TRUE,FALSE
+Vulnerable,Birds,Aves,Pluvialis squatarola,Pluvialis squatarola,Pluvialis squatarola,Grey Plover,2024-01-05,TRUE,FALSE
+Vulnerable,Birds,Aves,Polytelis alexandrae,Polytelis alexandrae,Polytelis alexandrae,"Princess Parrot, Alexandra's Parrot",2000-07-16,TRUE,FALSE
+Vulnerable,Birds,Aves,Polytelis anthopeplus monarchoides,Polytelis anthopeplus monarchoides,Polytelis anthopeplus monarchoides,Regent Parrot (eastern),2000-07-16,TRUE,FALSE
+Vulnerable,Birds,Aves,Polytelis swainsonii,Polytelis swainsonii,Polytelis swainsonii,Superb Parrot,2000-07-16,TRUE,FALSE
+Vulnerable,Birds,Aves,Pterodroma mollis,Pterodroma mollis,Pterodroma mollis,Soft-plumaged Petrel,2000-07-16,TRUE,FALSE
+Vulnerable,Birds,Aves,Pterodroma neglecta neglecta,Pterodroma neglecta neglecta,Pterodroma neglecta neglecta,Kermadec Petrel (western),2000-07-16,TRUE,FALSE
+Vulnerable,Birds,Aves,Pycnoptilus floccosus,Pycnoptilus floccosus,Pycnoptilus floccosus,Pilotbird,2022-03-02,TRUE,FALSE
+Vulnerable,Birds,Aves,Stagonopleura guttata,Stagonopleura guttata,Stagonopleura guttata,Diamond Firetail,2023-03-31,TRUE,FALSE
+Vulnerable,Birds,Aves,Sterna vittata vittata,Sterna vittata vittata,Sterna vittata vittata,Antarctic Tern (Indian Ocean),2000-07-16,TRUE,FALSE
+Vulnerable,Birds,Aves,Sternula albifrons,Sternula albifrons,Sternula albifrons,Little Tern,2025-03-05,TRUE,FALSE
+Vulnerable,Birds,Aves,Sternula nereis nereis,Sternula nereis nereis,Sternula nereis nereis,Australian Fairy Tern,2011-03-03,TRUE,FALSE
+Vulnerable,Birds,Aves,Strepera fuliginosa colei,Strepera fuliginosa colei,Strepera fuliginosa colei,Black Currawong (King Island),2015-10-31,TRUE,FALSE
+Vulnerable,Birds,Aves,Strepera graculina crissalis,Strepera graculina crissalis,Strepera graculina crissalis,"Lord Howe Island Currawong, Pied Currawong (Lord Howe Island)",2000-07-16,TRUE,FALSE
+Vulnerable,Birds,Aves,Thalassarche bulleri,Thalassarche bulleri,Thalassarche bulleri,"Buller's Albatross, Pacific Albatross",2000-07-16,TRUE,FALSE
+Vulnerable,Birds,Aves,Thalassarche bulleri platei,Thalassarche bulleri platei,Thalassarche bulleri platei,"Northern Buller's Albatross, Pacific Albatross",2000-07-16,TRUE,FALSE
+Vulnerable,Birds,Aves,Thalassarche carteri,Thalassarche carteri,Thalassarche carteri,Indian Yellow-nosed Albatross,2000-07-16,TRUE,FALSE
+Vulnerable,Birds,Aves,Thalassarche impavida,Thalassarche impavida,Thalassarche impavida,"Campbell Albatross, Campbell Black-browed Albatross",2000-07-16,TRUE,FALSE
+Vulnerable,Birds,Aves,Thalassarche melanophris,Thalassarche melanophris,Thalassarche melanophris,Black-browed Albatross,2005-06-06,TRUE,FALSE
+Vulnerable,Birds,Aves,Thalassarche salvini,Thalassarche salvini,Thalassarche salvini,Salvin's Albatross,2000-07-16,TRUE,FALSE
+Vulnerable,Birds,Aves,Thalassarche steadi,Thalassarche steadi,Thalassarche steadi,White-capped Albatross,2000-07-16,TRUE,FALSE
+Vulnerable,Birds,Aves,Thinornis cucullatus cucullatus,Thinornis cucullatus cucullatus,Thinornis cucullatus cucullatus,"Eastern Hooded Plover, Eastern Hooded Plover",2014-11-06,TRUE,FALSE
+Vulnerable,Birds,Aves,Turnix melanogaster,Turnix melanogaster,Turnix melanogaster,Black-breasted Button-quail,2000-07-16,TRUE,FALSE
+Vulnerable,Birds,Aves,Tyto novaehollandiae castanops (Tasmanian population),Tyto novaehollandiae castanops (Tasmanian population),Tyto novaehollandiae castanops (Tasmanian population),Masked Owl (Tasmanian),2010-08-19,TRUE,TRUE
+Vulnerable,Birds,Aves,Tyto novaehollandiae kimberli,Tyto novaehollandiae kimberli,Tyto novaehollandiae kimberli,Masked Owl (northern),2000-07-16,TRUE,FALSE
+Vulnerable,Birds,Aves,Xenus cinereus,Xenus cinereus,Xenus cinereus,Terek Sandpiper,2024-01-05,TRUE,FALSE
+Vulnerable,Mammals,Mammalia,Antechinus bellus,Antechinus bellus,Antechinus bellus,Fawn Antechinus,2015-12-03,TRUE,FALSE
+Vulnerable,Mammals,Mammalia,Antechinus minimus maritimus,Antechinus minimus maritimus,Antechinus minimus maritimus,Swamp Antechinus (mainland),2016-05-05,TRUE,FALSE
+Vulnerable,Mammals,Mammalia,Balaenoptera borealis,Balaenoptera borealis,Balaenoptera borealis,Sei Whale,2000-07-16,TRUE,FALSE
+Vulnerable,Mammals,Mammalia,Balaenoptera physalus,Balaenoptera physalus,Balaenoptera physalus,Fin Whale,2000-07-16,TRUE,FALSE
+Vulnerable,Mammals,Mammalia,Bettongia lesueur Barrow and Boodie Islands subspecies,Bettongia lesueur Barrow and Boodie Islands subspecies,Bettongia lesueur Barrow and Boodie Islands subspecies,"Boodie, Burrowing Bettong (Barrow and Boodie Islands)",2000-07-16,TRUE,TRUE
+Vulnerable,Mammals,Mammalia,Bettongia lesueur lesueur,Bettongia lesueur lesueur,Bettongia lesueur lesueur,"Burrowing Bettong (Shark Bay), Boodie",2000-07-16,TRUE,FALSE
+Vulnerable,Mammals,Mammalia,Conilurus penicillatus,Conilurus penicillatus,Conilurus penicillatus,"Brush-tailed Rabbit-rat, Brush-tailed Tree-rat, Pakooma",2008-12-06,TRUE,FALSE
+Vulnerable,Mammals,Mammalia,Dasyurus geoffroii,Dasyurus geoffroii,Dasyurus geoffroii,"Chuditch, Western Quoll",2000-07-16,TRUE,FALSE
+Vulnerable,Mammals,Mammalia,Dasyurus maculatus maculatus (Tasmanian population),Dasyurus maculatus maculatus (Tasmanian population),Dasyurus maculatus maculatus (Tasmanian population),"Spotted-tail Quoll, Spot-tailed Quoll, Tiger Quoll (Tasmanian population)",2004-05-14,TRUE,TRUE
+Vulnerable,Mammals,Mammalia,Hipposideros semoni,Hipposideros semoni,Hipposideros semoni,"Semon's Leaf-nosed Bat, Greater Wart-nosed Horseshoe-bat",2016-12-07,TRUE,FALSE
+Vulnerable,Mammals,Mammalia,Isoodon auratus auratus,Isoodon auratus auratus,Isoodon auratus auratus,Golden Bandicoot (mainland),2000-07-16,TRUE,FALSE
+Vulnerable,Mammals,Mammalia,Isoodon auratus barrowensis,Isoodon auratus barrowensis,Isoodon auratus barrowensis,Golden Bandicoot (Barrow Island),2000-07-16,TRUE,FALSE
+Vulnerable,Mammals,Mammalia,Isoodon obesulus nauticus,Isoodon obesulus nauticus,Isoodon obesulus nauticus,Southern Brown Bandicoot (Nuyts Archipelago),2000-07-16,TRUE,FALSE
+Vulnerable,Mammals,Mammalia,Lagorchestes conspicillatus conspicillatus,Lagorchestes conspicillatus conspicillatus,Lagorchestes conspicillatus conspicillatus,Spectacled Hare-wallaby (Barrow Island),2000-07-16,TRUE,FALSE
+Vulnerable,Mammals,Mammalia,Lagorchestes hirsutus bernieri,Lagorchestes hirsutus bernieri,Lagorchestes hirsutus bernieri,Rufous Hare-wallaby (Bernier Island),2000-07-16,TRUE,FALSE
+Vulnerable,Mammals,Mammalia,Lagorchestes hirsutus dorreae,Lagorchestes hirsutus dorreae,Lagorchestes hirsutus dorreae,Rufous Hare-wallaby (Dorre Island),2000-07-16,TRUE,FALSE
+Vulnerable,Mammals,Mammalia,Lagostrophus fasciatus fasciatus,Lagostrophus fasciatus fasciatus,Lagostrophus fasciatus fasciatus,"Banded Hare-wallaby, Merrnine, Marnine, Munning",2000-07-16,TRUE,FALSE
+Vulnerable,Mammals,Mammalia,Leporillus conditor,Leporillus conditor,Leporillus conditor,"Wopilkara, Greater Stick-nest Rat",2000-07-16,TRUE,FALSE
+Vulnerable,Mammals,Mammalia,Macroderma gigas,Macroderma gigas,Macroderma gigas,Ghost Bat,2016-05-05,TRUE,FALSE
+Vulnerable,Mammals,Mammalia,Macrotis lagotis,Macrotis lagotis,Macrotis lagotis,Greater Bilby,2000-07-16,TRUE,FALSE
+Vulnerable,Mammals,Mammalia,Mesembriomys gouldii melvillensis,Mesembriomys gouldii melvillensis,Mesembriomys gouldii melvillensis,Black-footed Tree-rat (Melville Island),2015-06-26,TRUE,FALSE
+Vulnerable,Mammals,Mammalia,Mesembriomys gouldii rattoides,Mesembriomys gouldii rattoides,Mesembriomys gouldii rattoides,"Black-footed Tree-rat (north Queensland), Shaggy Rabbit-rat",2015-06-26,TRUE,FALSE
+Vulnerable,Mammals,Mammalia,Mirounga leonina,Mirounga leonina,Mirounga leonina,Southern Elephant Seal,2001-04-04,TRUE,FALSE
+Vulnerable,Mammals,Mammalia,Notamacropus parma,Notamacropus parma,Notamacropus parma,Parma Wallaby,2022-10-05,TRUE,FALSE
+Vulnerable,Mammals,Mammalia,Notomys fuscus,Notomys fuscus,Notomys fuscus,"Dusky Hopping-mouse, Wilkiniti",2000-07-16,TRUE,FALSE
+Vulnerable,Mammals,Mammalia,Nyctophilus corbeni,Nyctophilus corbeni,Nyctophilus corbeni,"Corben's Long-eared Bat, South-eastern Long-eared Bat",2001-04-04,TRUE,FALSE
+Vulnerable,Mammals,Mammalia,Orcaella heinsohni,Orcaella heinsohni,Orcaella heinsohni,Australian Snubfin Dolphin,2025-03-05,TRUE,FALSE
+Vulnerable,Mammals,Mammalia,Osphranter robustus isabellinus,Osphranter robustus isabellinus,Osphranter robustus isabellinus,"Barrow Island Wallaroo, Barrow Island Euro",2000-07-16,TRUE,FALSE
+Vulnerable,Mammals,Mammalia,Perameles gunnii gunnii,Perameles gunnii gunnii,Perameles gunnii gunnii,Eastern Barred Bandicoot (Tasmania),2000-07-16,TRUE,FALSE
+Vulnerable,Mammals,Mammalia,Petauroides minor,Petauroides minor,Petauroides minor,"Greater Glider (northern), Greater Glider (north-eastern Queensland)",2022-07-05,TRUE,FALSE
+Vulnerable,Mammals,Mammalia,Petaurus australis australis,Petaurus australis australis,Petaurus australis australis,Yellow-bellied Glider (south-eastern),2022-03-02,TRUE,FALSE
+Vulnerable,Mammals,Mammalia,Petrogale lateralis centralis,Petrogale lateralis centralis,Petrogale lateralis centralis,"Warru, Central Australian Rock-wallaby",2000-07-16,TRUE,FALSE
+Vulnerable,Mammals,Mammalia,Petrogale lateralis hacketti,Petrogale lateralis hacketti,Petrogale lateralis hacketti,Recherche Rock-wallaby,2000-07-16,TRUE,FALSE
+Vulnerable,Mammals,Mammalia,Petrogale penicillata,Petrogale penicillata,Petrogale penicillata,Brush-tailed Rock-wallaby,2000-07-16,TRUE,FALSE
+Vulnerable,Mammals,Mammalia,Petrogale sharmani,Petrogale sharmani,Petrogale sharmani,"Mount Claro Rock Wallaby, Sharman's Rock Wallaby",2016-05-05,TRUE,FALSE
+Vulnerable,Mammals,Mammalia,Petrogale xanthopus celeris,Petrogale xanthopus celeris,Petrogale xanthopus celeris,Yellow-footed Rock-wallaby (central-western Queensland),2016-05-05,TRUE,FALSE
+Vulnerable,Mammals,Mammalia,Petrogale xanthopus xanthopus,Petrogale xanthopus xanthopus,Petrogale xanthopus xanthopus,Yellow-footed Rock-wallaby (SA and NSW),2000-07-16,TRUE,FALSE
+Vulnerable,Mammals,Mammalia,Phascogale calura,Phascogale calura,Phascogale calura,"Red-tailed Phascogale, Red-tailed Wambenger, Kenngoor",2016-12-07,TRUE,FALSE
+Vulnerable,Mammals,Mammalia,Phascogale pirata,Phascogale pirata,Phascogale pirata,Northern Brush-tailed Phascogale,2010-08-19,TRUE,FALSE
+Vulnerable,Mammals,Mammalia,Phascogale tapoatafa kimberleyensis,Phascogale tapoatafa kimberleyensis,Phascogale tapoatafa kimberleyensis,"Kimberley brush-tailed phascogale, Brush-tailed Phascogale (Kimberley)",2017-08-15,TRUE,FALSE
+Vulnerable,Mammals,Mammalia,Potorous tridactylus tridactylus,Potorous tridactylus tridactylus,Potorous tridactylus tridactylus,Long-nosed Potoroo (northern),2000-07-16,TRUE,FALSE
+Vulnerable,Mammals,Mammalia,Potorous tridactylus trisulcatus,Potorous tridactylus trisulcatus,Potorous tridactylus trisulcatus,Long-nosed Potoroo (southern mainland),2022-03-02,TRUE,FALSE
+Vulnerable,Mammals,Mammalia,Pseudomys australis,Pseudomys australis,Pseudomys australis,"Plains Rat, Palyoora, Plains Mouse",2000-07-16,TRUE,FALSE
+Vulnerable,Mammals,Mammalia,Pseudomys fieldi,Pseudomys fieldi,Pseudomys fieldi,"Shark Bay Mouse, Djoongari, Alice Springs Mouse",2000-07-16,TRUE,FALSE
+Vulnerable,Mammals,Mammalia,Pseudomys novaehollandiae,Pseudomys novaehollandiae,Pseudomys novaehollandiae,"Pookila, New Holland Mouse",2010-08-11,TRUE,FALSE
+Vulnerable,Mammals,Mammalia,Pseudomys pilligaensis,Pseudomys pilligaensis,Pseudomys pilligaensis,"Pilliga Mouse, Poolkoo",2000-07-16,TRUE,FALSE
+Vulnerable,Mammals,Mammalia,Pteropus poliocephalus,Pteropus poliocephalus,Pteropus poliocephalus,Grey-headed Flying-fox,2001-12-06,TRUE,FALSE
+Vulnerable,Mammals,Mammalia,Rhinolophus robertsi,Rhinolophus robertsi,Rhinolophus robertsi,"Large-eared Horseshoe Bat, Greater Large-eared Horseshoe Bat, Lesser Large-eared Horseshoe Bat",2016-12-07,TRUE,FALSE
+Vulnerable,Mammals,Mammalia,Rhinonicteris aurantia (Pilbara form),Rhinonicteris aurantia (Pilbara form),Rhinonicteris aurantia (Pilbara form),Pilbara Leaf-nosed Bat,2001-04-04,TRUE,FALSE
+Vulnerable,Mammals,Mammalia,Saccolaimus saccolaimus nudicluniatus,Saccolaimus saccolaimus nudicluniatus,Saccolaimus saccolaimus nudicluniatus,"Bare-rumped Sheath-tailed Bat, Bare-rumped Sheathtail Bat",2016-12-07,TRUE,FALSE
+Vulnerable,Mammals,Mammalia,Setonix brachyurus,Setonix brachyurus,Setonix brachyurus,Quokka,2000-07-16,TRUE,FALSE
+Vulnerable,Mammals,Mammalia,Sminthopsis butleri,Sminthopsis butleri,Sminthopsis butleri,Butler's Dunnart,2000-07-16,TRUE,FALSE
+Vulnerable,Mammals,Mammalia,Sminthopsis douglasi,Sminthopsis douglasi,Sminthopsis douglasi,Julia Creek Dunnart,2016-12-07,TRUE,FALSE
+Vulnerable,Mammals,Mammalia,Sousa sahulensis,Sousa sahulensis,Sousa sahulensis,Australian Humpback Dolphin,2025-03-05,TRUE,FALSE
+Vulnerable,Mammals,Mammalia,Trichosurus vulpecula arnhemensis,Trichosurus vulpecula arnhemensis,Trichosurus vulpecula arnhemensis,Northern Brushtail Possum,2021-05-11,TRUE,FALSE
+Vulnerable,Mammals,Mammalia,Xeromys myoides,Xeromys myoides,Xeromys myoides,"Water Mouse, False Water Rat, Yirrkoo",2000-07-16,TRUE,FALSE
+Vulnerable,Mammals,Mammalia,Zyzomys maini,Zyzomys maini,Zyzomys maini,"Arnhem Rock-rat, Arnhem Land Rock-rat, Kodjperr",2006-08-18,TRUE,FALSE
+Vulnerable,Other Animals,,Astacopsis gouldi,Astacopsis gouldi,Astacopsis gouldi,"Giant Freshwater Crayfish, Tasmanian Giant Freshwater Lobster",2000-07-16,TRUE,FALSE
+Vulnerable,Other Animals,,Bertmainius colonus,Bertmainius colonus,Bertmainius colonus,Eastern Stirling Range Pygmy Trapdoor Spider,2018-05-11,TRUE,FALSE
+Vulnerable,Other Animals,,Cherax robustus,Cherax robustus,Cherax robustus,Sand Yabby,2023-09-07,TRUE,FALSE
+Vulnerable,Other Animals,,Engaeus orramakunna,Engaeus orramakunna,Engaeus orramakunna,Mount Arthur Burrowing Crayfish,2001-08-06,TRUE,FALSE
+Vulnerable,Other Animals,,Engaeus yabbimunna,Engaeus yabbimunna,Engaeus yabbimunna,Burnie Burrowing Crayfish,2001-08-06,TRUE,FALSE
+Vulnerable,Other Animals,,Euastacus armatus,Euastacus armatus,Euastacus armatus,Murray Crayfish,2025-03-05,TRUE,FALSE
+Vulnerable,Other Animals,,Hoplogonus simsoni,Hoplogonus simsoni,Hoplogonus simsoni,Simson's Stag Beetle,2011-03-04,TRUE,FALSE
+Vulnerable,Other Animals,,Hoplogonus vanderschoori,Hoplogonus vanderschoori,Hoplogonus vanderschoori,Vanderschoor's Stag Beetle,2011-03-04,TRUE,FALSE
+Vulnerable,Other Animals,,Idiosoma nigrum,Idiosoma nigrum,Idiosoma nigrum,"Shield-backed Trapdoor Spider, Black Rugose Trapdoor Spider",2013-05-14,TRUE,FALSE
+Vulnerable,Other Animals,,Kumonga exleyi,Kumonga exleyi,Kumonga exleyi,Cape Range Remipede,2000-07-16,TRUE,FALSE
+Vulnerable,Other Animals,,Megascolides australis,Megascolides australis,Megascolides australis,Giant Gippsland Earthworm,2000-07-16,TRUE,FALSE
+Vulnerable,Other Animals,,Oreisplanus munionga larana,Hesperilla munionga larana,Hesperilla munionga larana,"Marrawah Skipper, Alpine Sedge Skipper, Alpine Skipper",2011-03-04,TRUE,FALSE
+Vulnerable,Other Animals,,Paralucia spinifera,Paralucia spinifera,Paralucia spinifera,"Bathurst Copper Butterfly, Purple Copper Butterfly, Bathurst Copper, Bathurst Copper Wing, Bathurst-Lithgow Copper, Purple Copper",2000-07-16,TRUE,FALSE
+Vulnerable,Other Animals,,Parvulastra vivipara,Parvulastra vivipara,Parvulastra vivipara,Tasmanian Live-bearing Seastar,2009-06-30,TRUE,FALSE
+Vulnerable,Other Animals,,Synemon plana,Synemon plana,Synemon plana,Golden Sun Moth,2021-12-07,TRUE,FALSE
+Vulnerable,Other Animals,,Westralunio carteri,Westralunio carteri,Westralunio carteri,"Carter's Freshwater Mussel, Ambiguus Mussel",2018-02-15,TRUE,FALSE
+Conservation dependent,Fishes,,Centrophorus harrissoni,Centrophorus harrissoni,Centrophorus harrissoni,"Harrisson's Dogfish, Endeavour Dogfish, Dumb Gulper Shark, Harrison's Deepsea Dogfish",2013-06-14,TRUE,FALSE
+Conservation dependent,Fishes,,Centrophorus uyato,Centrophorus uyato,Centrophorus uyato,Little Gulper Shark,2013-06-14,TRUE,FALSE
+Conservation dependent,Fishes,,Galeorhinus galeus,Galeorhinus galeus,Galeorhinus galeus,"Tope, Flake, Oil Shark, School Shark",2009-01-22,TRUE,FALSE
+Conservation dependent,Fishes,,Hoplostethus atlanticus,Hoplostethus atlanticus,Hoplostethus atlanticus,"Orange Roughy, Deep-sea Perch, Red Roughy",2006-12-05,TRUE,FALSE
+Conservation dependent,Fishes,,Rexea solandri (eastern Australian population),Rexea solandri (eastern Australian population),Rexea solandri (eastern Australian population),Eastern Gemfish,2009-01-22,TRUE,TRUE
+Conservation dependent,Fishes,,Seriolella brama,Seriolella brama,Seriolella brama,Blue Warehou,2015-02-14,TRUE,FALSE
+Conservation dependent,Fishes,,Sphyrna lewini,Sphyrna lewini,Sphyrna lewini,Scalloped Hammerhead,2018-03-15,TRUE,FALSE

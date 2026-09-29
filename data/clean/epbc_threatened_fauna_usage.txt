@@ -1,0 +1,24 @@
+epbc_threatened_fauna_clean.csv
+- This is the full official EPBC fauna list
+- 700 rows
+- Includes:
+  - Extinct
+  - Extinct in the Wild
+  - Critically Endangered
+  - Endangered
+  - Vulnerable
+  - Conservation dependent
+- Keep this as your master/reference dataset
+- Useful for documentation, checking categories, and showing that your source is complete. The source PDF states a total of 700 fauna listings.
+
+epbc_current_threatened_fauna_for_join.csv
+- This is the working dataset for your DV2 analysis
+- 632 rows
+- Includes only:
+  - Critically Endangered
+  - Endangered
+  - Vulnerable
+  - Conservation dependent
+- This is the one you should later join with your cleaned ALA species data
+- Use it for your choropleth:
+  - % of recorded species in each city that are nationally threatened
