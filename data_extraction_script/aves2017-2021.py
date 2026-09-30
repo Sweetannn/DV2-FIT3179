@@ -3,26 +3,26 @@ import json
 from shapely.geometry import shape, Point
 from pathlib import Path
 
-# -----------------------------
-# Paths
-# -----------------------------
+# --------------------------------------------------
+# PATHS
+# --------------------------------------------------
+
 ROOT = Path(__file__).resolve().parent.parent
 BASE = ROOT / "data" / "raw" / "ala"
 
-CSV_FILES = [
-    BASE / "aves_2016" / "aves_2016.csv",
-    BASE / "aves_2016" / "aves_2016_part2.csv",
-    BASE / "aves_2016" / "aves_2016_part3.csv",
-]
+INPUT_FOLDER = BASE / "aves_2017-2021"
 
 GEOBASE = ROOT / "geo" / "final"
 GEOJSON_FILE = GEOBASE / "capital_cities.geojson"
 
-OUTPUT_FILE = BASE / "aves_2016_urban.csv"
+OUTPUT_FILE = (
+    BASE / "aves_2017-2021_urban.csv"
+)
 
-# -----------------------------
-# Load city polygons
-# -----------------------------
+# --------------------------------------------------
+# LOAD CITY POLYGONS
+# --------------------------------------------------
+
 with open(GEOJSON_FILE, "r", encoding="utf-8") as f:
     geojson = json.load(f)
 
@@ -32,18 +32,35 @@ for feature in geojson["features"]:
     city_name = feature["properties"]["CITY"]
     geometry = shape(feature["geometry"])
 
-    cities.append({
-        "city": city_name,
-        "geometry": geometry
-    })
+    cities.append(
+        {
+            "city": city_name,
+            "geometry": geometry
+        }
+    )
 
 print("Loaded cities:")
+
 for c in cities:
     print(" -", c["city"])
 
-# -----------------------------
-# Columns we actually need
-# -----------------------------
+# --------------------------------------------------
+# FIND ALL ALA CSV PARTS
+# --------------------------------------------------
+
+CSV_FILES = sorted(
+    INPUT_FOLDER.glob("aves_2017-2021*.csv")
+)
+
+print("\nFiles found:", len(CSV_FILES))
+
+for f in CSV_FILES:
+    print(" -", f.name)
+
+# --------------------------------------------------
+# COLUMNS TO KEEP
+# --------------------------------------------------
+
 KEEP_COLUMNS = [
     "occurrenceID",
     "scientificName",
@@ -64,12 +81,14 @@ KEEP_COLUMNS = [
     "dataResourceName",
 ]
 
-# -----------------------------
-# Process in chunks
-# -----------------------------
+# --------------------------------------------------
+# PROCESS IN CHUNKS
+# --------------------------------------------------
+
 CHUNK_SIZE = 200_000
 
 first_output = True
+
 total_input = 0
 total_kept = 0
 
@@ -86,12 +105,12 @@ for csv_file in CSV_FILES:
 
         total_input += len(chunk)
 
-        # Remove records without coordinates
+        # Remove missing coordinates
         chunk = chunk.dropna(
             subset=["decimalLatitude", "decimalLongitude"]
         ).copy()
 
-        # Ensure numeric coordinates
+        # Convert coordinates to numeric
         chunk["decimalLatitude"] = pd.to_numeric(
             chunk["decimalLatitude"],
             errors="coerce"
@@ -106,10 +125,10 @@ for csv_file in CSV_FILES:
             subset=["decimalLatitude", "decimalLongitude"]
         )
 
-        # Prepare city column
+        # Prepare city field
         chunk["CITY"] = None
 
-        # Point-in-polygon test
+        # Point-in-polygon
         for idx, row in chunk.iterrows():
 
             point = Point(
@@ -118,19 +137,23 @@ for csv_file in CSV_FILES:
             )
 
             for city in cities:
+
                 if city["geometry"].covers(point):
+
                     chunk.at[idx, "CITY"] = city["city"]
+
                     break
 
         # Keep only records inside one of the 8 cities
-        urban = chunk[chunk["CITY"].notna()].copy()
+        urban = chunk[
+            chunk["CITY"].notna()
+        ].copy()
 
-        # Add standard animal group
         urban["animal_group"] = "Bird"
 
         total_kept += len(urban)
 
-        # Append result progressively
+        # Save progressively
         urban.to_csv(
             OUTPUT_FILE,
             mode="w" if first_output else "a",
@@ -147,5 +170,7 @@ for csv_file in CSV_FILES:
 
 print("\nDONE")
 print(f"Total records processed: {total_input:,}")
-print(f"Records inside 8 urban areas: {total_kept:,}")
+print(
+    f"Records inside 8 urban areas: {total_kept:,}"
+)
 print(f"Saved to: {OUTPUT_FILE}")
