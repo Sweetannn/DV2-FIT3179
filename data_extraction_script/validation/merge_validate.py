@@ -11,6 +11,26 @@ print("\n=== BASIC ===")
 print("Rows:", len(df))
 print("Columns:", len(df.columns))
 
+print("\n=== OCCURRENCE ID ===")
+
+print(
+    "Missing occurrenceID:",
+    df["occurrenceID"].isna().sum()
+)
+
+print(
+    "Unique non-null occurrenceID:",
+    df["occurrenceID"].nunique(dropna=True)
+)
+
+print(
+    "Duplicated non-null occurrenceID:",
+    df.loc[
+        df["occurrenceID"].notna(),
+        "occurrenceID"
+    ].duplicated().sum()
+)
+
 print("\n=== ANIMAL GROUPS ===")
 print(df["animal_group"].value_counts())
 
@@ -18,26 +38,14 @@ print("\n=== CLASSES ===")
 print(df["class"].value_counts())
 
 print("\n=== YEARS ===")
-print(df["year"].value_counts().sort_index())
+print(
+    df["year"]
+    .value_counts()
+    .sort_index()
+)
 
 print("\n=== CITIES ===")
 print(df["CITY"].value_counts())
-
-print("\n=== GROUP × CITY ===")
-print(
-    pd.crosstab(
-        df["CITY"],
-        df["animal_group"]
-    )
-)
-
-print("\n=== GROUP × YEAR ===")
-print(
-    pd.crosstab(
-        df["year"],
-        df["animal_group"]
-    )
-)
 
 print("\n=== SPECIES COMPLETENESS ===")
 
@@ -47,11 +55,12 @@ for group in [
     "Reptile",
     "Insect"
 ]:
+
     subset = df[
         df["animal_group"] == group
     ]
 
-    pct = (
+    percentage = (
         subset["species"]
         .notna()
         .mean()
@@ -59,6 +68,5 @@ for group in [
     )
 
     print(
-        f"{group}: "
-        f"{pct:.2f}% species-level"
+        f"{group}: {percentage:.2f}% species-level"
     )
