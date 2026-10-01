@@ -1,0 +1,454 @@
+/* =========================================================
+   DESIGN TOKENS
+   Change these values later to restyle the whole website.
+========================================================= */
+
+:root {
+
+    /* Page dimensions */
+    --page-max-width: 1280px;
+
+    /* Spacing */
+    --space-xs: 0.5rem;
+    --space-sm: 1rem;
+    --space-md: 1.5rem;
+    --space-lg: 2.5rem;
+    --space-xl: 4rem;
+    --space-xxl: 7rem;
+
+    /* Border radius */
+    --radius-sm: 8px;
+    --radius-md: 16px;
+
+    /* Typography */
+    --font-body:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    --font-heading:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    /* Colours */
+    --colour-background: #f7f5ef;
+    --colour-surface: #ffffff;
+
+    --colour-text: #20251f;
+    --colour-muted: #686f68;
+
+    --colour-border: #dedfd9;
+
+    --colour-accent: #435f45;
+
+    /* Animal group colours */
+    --colour-bird: #587c58;
+    --colour-mammal: #9a6642;
+    --colour-reptile: #75733e;
+    --colour-insect: #b98945;
+}
+
+
+/* =========================================================
+   GLOBAL
+========================================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+
+    margin: 0;
+
+    background:
+        var(--colour-background);
+
+    color:
+        var(--colour-text);
+
+    font-family:
+        var(--font-body);
+
+    line-height: 1.6;
+}
+
+
+img,
+svg,
+canvas {
+    max-width: 100%;
+}
+
+
+/* =========================================================
+   MASTER PAGE CONTAINER
+========================================================= */
+
+.page-container {
+
+    width: min(
+        100% - 2rem,
+        var(--page-max-width)
+    );
+
+    margin-inline: auto;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+
+    min-height: 75vh;
+
+    display: flex;
+
+    align-items: center;
+
+    padding-block:
+        var(--space-xxl);
+}
+
+
+.hero-content {
+
+    max-width: 800px;
+}
+
+
+.eyebrow {
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.12em;
+
+    font-size: 0.8rem;
+
+    font-weight: 700;
+
+    color:
+        var(--colour-accent);
+}
+
+
+.hero h1 {
+
+    margin:
+        var(--space-xs)
+        0
+        0;
+
+    font-family:
+        var(--font-heading);
+
+    font-size:
+        clamp(
+            3rem,
+            8vw,
+            7rem
+        );
+
+    line-height: 0.95;
+}
+
+
+.hero h2 {
+
+    margin:
+        var(--space-sm)
+        0;
+
+    font-family:
+        var(--font-heading);
+
+    font-size:
+        clamp(
+            1.6rem,
+            4vw,
+            3rem
+        );
+
+    font-weight: 400;
+}
+
+
+.hero-description {
+
+    max-width: 650px;
+
+    margin-top:
+        var(--space-lg);
+
+    font-size:
+        clamp(
+            1rem,
+            1.6vw,
+            1.25rem
+        );
+
+    color:
+        var(--colour-muted);
+}
+
+
+/* =========================================================
+   STORY SECTIONS
+========================================================= */
+
+.story-section {
+
+    padding-block:
+        var(--space-xxl);
+}
+
+
+.section-heading {
+
+    max-width: 760px;
+
+    margin-bottom:
+        var(--space-xl);
+}
+
+
+.section-number {
+
+    margin-bottom:
+        var(--space-xs);
+
+    font-size: 0.8rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.15em;
+
+    color:
+        var(--colour-accent);
+}
+
+
+.section-heading h2 {
+
+    margin:
+        0
+        0
+        var(--space-md);
+
+    font-family:
+        var(--font-heading);
+
+    font-size:
+        clamp(
+            2rem,
+            4vw,
+            3.4rem
+        );
+
+    line-height: 1.1;
+}
+
+
+.section-intro {
+
+    margin: 0;
+
+    color:
+        var(--colour-muted);
+
+    font-size:
+        1.1rem;
+}
+
+
+/* =========================================================
+   FLEXIBLE GRID SYSTEM
+========================================================= */
+
+.chart-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            12,
+            minmax(0, 1fr)
+        );
+
+    gap:
+        var(--space-lg);
+}
+
+
+/* Default chart = half width */
+
+.chart-card {
+
+    grid-column:
+        span 6;
+
+    min-width: 0;
+
+    background:
+        var(--colour-surface);
+
+    border:
+        1px solid
+        var(--colour-border);
+
+    border-radius:
+        var(--radius-md);
+
+    padding:
+        var(--space-lg);
+}
+
+
+/* Full-width chart */
+
+.chart-card--wide {
+
+    grid-column:
+        1 / -1;
+}
+
+
+/* 8 columns */
+
+.chart-card--large {
+
+    grid-column:
+        span 8;
+}
+
+
+/* 4 columns */
+
+.chart-card--small {
+
+    grid-column:
+        span 4;
+}
+
+
+/* =========================================================
+   CHART CONTENT
+========================================================= */
+
+.chart-heading {
+
+    margin-bottom:
+        var(--space-md);
+}
+
+
+.chart-heading h3 {
+
+    margin:
+        0
+        0
+        var(--space-xs);
+
+    font-family:
+        var(--font-heading);
+
+    font-size:
+        1.6rem;
+}
+
+
+.chart-heading p {
+
+    margin: 0;
+
+    color:
+        var(--colour-muted);
+}
+
+
+.chart {
+
+    width: 100%;
+
+    min-width: 0;
+
+    overflow: hidden;
+}
+
+
+.chart-note {
+
+    margin-top:
+        var(--space-md);
+
+    padding-top:
+        var(--space-sm);
+
+    border-top:
+        1px solid
+        var(--colour-border);
+
+    font-size:
+        0.82rem;
+
+    color:
+        var(--colour-muted);
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (
+    max-width: 900px
+) {
+
+    .chart-card,
+    .chart-card--large,
+    .chart-card--small {
+
+        grid-column:
+            1 / -1;
+    }
+
+
+    .story-section {
+
+        padding-block:
+            var(--space-xl);
+    }
+
+}
+
+
+@media (
+    max-width: 600px
+) {
+
+    .page-container {
+
+        width:
+            min(
+                100% - 1rem,
+                var(--page-max-width)
+            );
+    }
+
+
+    .chart-card {
+
+        padding:
+            var(--space-md);
+    }
+
+}

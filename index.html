@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Australian Urban Wildlife</title>
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+    <!-- Vega libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+</head>
+
+
+<body>
+
+    <main class="page-container">
+
+        <!-- =================================================
+             HERO / INTRODUCTION
+        ================================================== -->
+
+        <section class="hero">
+
+            <div class="hero-content">
+
+                <p class="eyebrow">
+                    Australian Urban Wildlife
+                </p>
+
+                <h1>
+                    Wild Cities
+                </h1>
+
+                <h2>
+                    Who still lives among us?
+                </h2>
+
+                <p class="hero-description">
+                    Goal: Investigate wildlife living in Australian urban environments. Compare observations of birds, mammals, reptiles and insects across cities to explore how biodiversity changes in urban areas.
+                    <br><br>
+                    Target audience: Australian urban planners and local policymakers interested in using biodiversity evidence to inform green-space planning, habitat protection and urban conservation.
+
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             SECTION 1
+        ================================================== -->
+
+        <section
+            class="story-section"
+            id="overview"
+        >
+
+            <div class="section-heading">
+
+                <p class="section-number">
+                    01
+                </p>
+
+                <h2>
+                    Wildlife across Australia's cities
+                </h2>
+
+                <p class="section-intro">
+                    Recorded species richness varies considerably
+                    across the eight urban areas in this study.
+                    The composition of that richness also differs
+                    between birds, mammals, reptiles and insects.
+                </p>
+
+            </div>
+
+
+            <!-- Flexible chart layout -->
+            <div class="chart-grid">
+
+                <article class="chart-card chart-card--wide">
+
+                    <div class="chart-heading">
+
+                        <h3>
+                            What makes up each city's wildlife?
+                        </h3>
+
+                        <p>
+                            Recorded species richness by animal group,
+                            2016–2025
+                        </p>
+
+                    </div>
+
+                    <div
+                        id="heatmap"
+                        class="chart"
+                    ></div>
+
+                    <p class="chart-note">
+                        Species richness counts distinct species
+                        recorded in Atlas of Living Australia
+                        occurrence data.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script
+        type="module"
+        src="js/main.js"
+    ></script>
+
+</body>
+
+</html>
