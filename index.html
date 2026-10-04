@@ -10,7 +10,7 @@
       content="Wild Cities: Exploring Australia's urban wildlife from 2016–2025."
     />
 
-    <title>Wild Cities: Who Still Lives Among Us?</title>
+    <title>Australia's Urban Wildlife</title>
 
     <!-- Main stylesheet -->
     <link rel="stylesheet" href="css/style.css" />
@@ -150,27 +150,26 @@
             </h3>
 
             <p>
-              Cell labels show the number of distinct species recorded. Darker
-              cells indicate higher richness relative to other cities within the
-              same animal group.
+              Darker cells indicate higher recorded species richness relative to
+              other cities within the same animal group.
             </p>
           </header>
 
-          <div class="heatmap-layout">
-            <div class="heatmap-visual">
+          <div class="split-layout split-layout--2-1">
+            <div class="split-main">
               <div
                 id="group-heatmap"
                 class="chart"
                 aria-label="
-                      Heatmap comparing recorded species richness for birds,
-                      mammals, reptiles and insects across eight Australian
-                      urban areas
-                    "
+          Heatmap comparing recorded species richness for birds,
+          mammals, reptiles and insects across eight Australian
+          urban areas
+        "
               ></div>
             </div>
 
-            <aside class="heatmap-support">
-              <div class="support-block key-finding-block">
+            <aside class="split-sidebar">
+              <div class="split-sidebar-block chart-insight">
                 <span class="insight-label"> KEY FINDING </span>
 
                 <p class="insight-main">
@@ -183,26 +182,26 @@
                   ranks highest overall in recorded species richness.
                 </p>
               </div>
-
-              <div class="support-block">
+              <div class="split-sidebar-block">
                 <span class="insight-label"> HOW TO READ THIS </span>
 
                 <p class="chart-note">
-                  Colour is normalised within each animal group so groups with
-                  fewer species remain comparable between cities. Numbers show
-                  the actual recorded species richness.
+                  Colour is normalised separately within each animal group.
+                  Darker cells indicate a city with higher recorded richness
+                  relative to other cities in the same column, while exact
+                  values are available on hover.
                 </p>
 
                 <!-- <p class="chart-source">
-                    Source: Atlas of Living Australia, 2016–2025.
-                  </p> -->
+                  Source: Atlas of Living Australia, 2016–2025.
+                </p> -->
               </div>
             </aside>
           </div>
         </article>
 
         <!-- Chart 3 -->
-        <article class="chart-card">
+        <article class="chart-card chart-wide">
           <header class="chart-header">
             <h3>More observations do not always mean more species</h3>
 

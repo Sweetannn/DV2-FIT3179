@@ -1,0 +1,166 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+  "width": "container",
+  "height": 360,
+
+  "data": {
+    "url": "data/final/02_city_group_summary.csv"
+  },
+
+  "transform": [
+    {
+      "calculate": "toNumber(datum.species_richness)",
+      "as": "species_richness_num"
+    },
+
+    {
+      "joinaggregate": [
+        {
+          "op": "max",
+          "field": "species_richness_num",
+          "as": "group_max_richness"
+        }
+      ],
+      "groupby": ["animal_group"]
+    },
+
+    {
+      "calculate": "datum.species_richness_num / datum.group_max_richness",
+      "as": "relative_richness"
+    }
+  ],
+
+  "layer": [
+    {
+      "mark": {
+        "type": "rect",
+        "cornerRadius": 3,
+        "stroke": "#FFFFFF",
+        "strokeWidth": 2
+      },
+
+      "encoding": {
+        "x": {
+          "field": "animal_group",
+          "type": "nominal",
+          "title": null,
+
+          "sort": ["Bird", "Mammal", "Reptile", "Insect"],
+
+          "axis": {
+            "orient": "top",
+            "labelAngle": 0,
+            "labelFont": "Source Sans 3",
+            "labelFontSize": 14,
+            "labelFontWeight": 600,
+            "labelColor": "#202622",
+            "labelPadding": 12,
+            "ticks": false,
+            "domain": false
+          }
+        },
+
+        "y": {
+          "field": "city",
+          "type": "nominal",
+          "title": null,
+
+          "sort": [
+            "Brisbane",
+            "Sydney",
+            "Melbourne",
+            "Canberra–Queanbeyan",
+            "Adelaide",
+            "Perth",
+            "Hobart",
+            "Darwin"
+          ],
+
+          "axis": {
+            "labelFont": "Source Sans 3",
+            "labelFontSize": 13,
+            "labelColor": "#202622",
+            "labelPadding": 12,
+            "labelLimit": 190,
+            "ticks": false,
+            "domain": false
+          }
+        },
+
+        "color": {
+          "field": "relative_richness",
+          "type": "quantitative",
+          "title": "Relative richness",
+
+          "scale": {
+            "domain": [0, 0.25, 0.5, 0.75, 1],
+
+            "range": ["#EEF3EF", "#C9D9CE", "#94B5A0", "#5E8C70", "#2F694D"]
+          },
+
+          "legend": {
+            "orient": "bottom",
+            "direction": "horizontal",
+
+            "title": "Relative richness",
+
+            "values": [0, 0.25, 0.5, 0.75, 1],
+
+            "format": ".0%",
+
+            "gradientLength": 450,
+            "gradientThickness": 14,
+
+            "titleFont": "Source Sans 3",
+            "titleFontSize": 13,
+            "titleFontWeight": 600,
+            "titleColor": "#202622",
+            "titlePadding": 10,
+
+            "labelFont": "Source Sans 3",
+            "labelFontSize": 12,
+            "labelColor": "#68706A",
+
+            "offset": 14
+          }
+        },
+
+        "tooltip": [
+          {
+            "field": "city",
+            "type": "nominal",
+            "title": "Urban area"
+          },
+
+          {
+            "field": "animal_group",
+            "type": "nominal",
+            "title": "Animal group"
+          },
+
+          {
+            "field": "species_richness_num",
+            "type": "quantitative",
+            "title": "Recorded species richness",
+            "format": ","
+          },
+
+          {
+            "field": "record_count",
+            "type": "quantitative",
+            "title": "Occurrence records",
+            "format": ","
+          },
+
+          {
+            "field": "relative_richness",
+            "type": "quantitative",
+            "title": "Relative richness",
+            "format": ".1%"
+          }
+        ]
+      }
+    }
+  ]
+}

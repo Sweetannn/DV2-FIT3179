@@ -22,7 +22,7 @@
   --insect-color: #8167a9;
 
   /* Layout */
-  --page-width: 1180px;
+  --page-width: 1280px;
 
   /* Spacing scale */
   --space-xs: 0.5rem;
@@ -407,6 +407,10 @@ p {
 .chart-wide {
   width: 100%;
 
+  margin-top: 0;
+}
+
+.chart-card + .chart-card {
   margin-top: 2rem;
 }
 
@@ -477,38 +481,61 @@ p {
 }
 
 /* =========================================================
-   HEATMAP LAYOUT
+   REUSABLE SPLIT LAYOUT
    ========================================================= */
 
-.heatmap-layout {
+.split-layout {
   display: grid;
-
-  grid-template-columns:
-    minmax(0, 2fr)
-    minmax(260px, 1fr);
 
   gap: 3rem;
 
-  align-items: center;
+  align-items: start;
+
+  margin-top: 0.5rem;
 }
 
 /* =========================================================
-   HEATMAP VISUAL
+   SPLIT RATIOS
    ========================================================= */
 
-.heatmap-visual {
+.split-layout--2-1 {
+  grid-template-columns:
+    minmax(0, 2fr)
+    minmax(280px, 1fr);
+}
+
+.split-layout--3-2 {
+  grid-template-columns:
+    minmax(0, 3fr)
+    minmax(280px, 2fr);
+}
+
+.split-layout--1-1 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+/* =========================================================
+   MAIN VISUAL AREA
+   ========================================================= */
+
+.split-main {
+  width: 100%;
   min-width: 0;
 }
 
-.heatmap-visual .chart {
+.split-main .chart {
   width: 100%;
+
+  /* Prevent the general chart minimum height from
+     forcing compact charts to become too tall */
+  min-height: 0;
 }
 
 /* =========================================================
-   RIGHT SUPPORT COLUMN
+   SIDEBAR
    ========================================================= */
 
-.heatmap-support {
+.split-sidebar {
   display: flex;
   flex-direction: column;
 
@@ -516,37 +543,80 @@ p {
 
   min-width: 0;
 
-  padding-left: 1.5rem;
+  padding-left: 2rem;
 
   border-left: 1px solid var(--color-rule);
 }
 
 /* =========================================================
-   SUPPORT BLOCK
+   SIDEBAR BLOCK
    ========================================================= */
 
-.support-block {
+.split-sidebar-block {
   width: 100%;
-}
-
-.key-finding-block {
-  padding-left: 1rem;
-
-  border-left: 3px solid var(--color-accent);
+  min-width: 0;
 }
 
 /* =========================================================
-   RESPONSIVE
+   SIDEBAR TYPOGRAPHY
    ========================================================= */
 
-@media (max-width: 900px) {
-  .heatmap-layout {
-    grid-template-columns: 1fr;
+.split-sidebar .insight-label {
+  margin-bottom: 0.75rem;
+}
 
+.split-sidebar .insight-main {
+  max-width: 32ch;
+
+  margin: 0 0 0.85rem;
+
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1.5;
+
+  color: var(--color-text);
+}
+
+.split-sidebar .insight-context,
+.split-sidebar .chart-note {
+  max-width: 34ch;
+
+  margin: 0;
+
+  font-size: 0.92rem;
+  line-height: 1.6;
+
+  color: var(--color-muted);
+}
+
+.split-sidebar .chart-source {
+  max-width: 34ch;
+
+  margin-top: 0.85rem;
+
+  font-size: 0.75rem;
+  line-height: 1.45;
+
+  color: var(--color-muted);
+}
+
+/* =========================================================
+   RESPONSIVE SPLIT LAYOUT
+   ========================================================= */
+
+@media (max-width: 950px) {
+  .split-layout,
+  .split-layout--2-1,
+  .split-layout--3-2,
+  .split-layout--1-1 {
+    grid-template-columns: 1fr;
+  }
+
+  .split-layout {
     gap: 2rem;
   }
 
-  .heatmap-support {
+  .split-sidebar {
     display: grid;
 
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -554,13 +624,23 @@ p {
     gap: 2rem;
 
     padding-left: 0;
+    padding-top: 1.5rem;
 
     border-left: none;
+
+    border-top: 1px solid var(--color-rule);
+  }
+
+  .split-sidebar .insight-main,
+  .split-sidebar .insight-context,
+  .split-sidebar .chart-note,
+  .split-sidebar .chart-source {
+    max-width: none;
   }
 }
 
 @media (max-width: 650px) {
-  .heatmap-support {
+  .split-sidebar {
     grid-template-columns: 1fr;
   }
 }
