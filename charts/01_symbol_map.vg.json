@@ -12,7 +12,6 @@
   },
 
   "layer": [
-
     {
       "data": {
         "url": "geo/final/countries-110m.json",
@@ -36,7 +35,6 @@
       }
     },
 
-
     {
       "data": {
         "url": "geo/final/city_boundaries.topojson",
@@ -55,7 +53,6 @@
       }
     },
 
-
     {
       "data": {
         "url": "data/final/01_city_label_positions.csv"
@@ -69,7 +66,6 @@
       },
 
       "encoding": {
-
         "longitude": {
           "field": "longitude",
           "type": "quantitative"
@@ -90,7 +86,6 @@
       }
     },
 
-
     {
       "data": {
         "url": "data/final/01_city_summary.csv"
@@ -104,7 +99,6 @@
       },
 
       "encoding": {
-
         "longitude": {
           "field": "longitude",
           "type": "quantitative"
@@ -128,17 +122,12 @@
           "legend": {
             "title": "Species richness",
             "titlePadding": 10,
-            "values": [
-              1500,
-              2500,
-              3500,
-              4500
-            ],
+            "values": [1500, 2500, 3500, 4500],
             "format": ",.0f",
             "orient": "right",
             "direction": "vertical",
             "offset": 8,
-            "padding": 12,
+            "padding": 30,
             "labelOffset": 10,
             "symbolOpacity": 0.72,
             "titleFontSize": 14,
@@ -154,7 +143,6 @@
         },
 
         "tooltip": [
-
           {
             "field": "city",
             "type": "nominal",
@@ -202,11 +190,9 @@
             "title": "Insect species",
             "format": ","
           }
-
         ]
       }
     },
-
 
     {
       "data": {
@@ -231,7 +217,6 @@
       },
 
       "encoding": {
-
         "longitude": {
           "field": "label_longitude",
           "type": "quantitative"
@@ -248,7 +233,6 @@
         }
       }
     },
-
 
     {
       "data": {
@@ -273,7 +257,6 @@
       },
 
       "encoding": {
-
         "longitude": {
           "field": "label_longitude",
           "type": "quantitative"
@@ -290,7 +273,6 @@
         }
       }
     },
-
 
     {
       "data": {
@@ -314,7 +296,6 @@
       },
 
       "encoding": {
-
         "longitude": {
           "field": "label_longitude",
           "type": "quantitative"
@@ -331,11 +312,9 @@
         }
       }
     }
-
   ],
 
   "config": {
-
     "background": null,
 
     "view": {
@@ -347,6 +326,5 @@
     "legend": {
       "padding": 8
     }
-
   }
 }
