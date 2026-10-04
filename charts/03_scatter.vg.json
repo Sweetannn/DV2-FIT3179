@@ -1,0 +1,195 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+  "width": "container",
+  "height": 450,
+
+  "autosize": {
+    "type": "fit",
+    "contains": "padding",
+    "resize": true
+  },
+
+  "data": {
+    "url": "data/final/01_city_summary.csv"
+  },
+
+  "transform": [
+    {
+      "calculate": "toNumber(datum.record_count)",
+      "as": "record_count_num"
+    },
+    {
+      "calculate": "toNumber(datum.species_richness)",
+      "as": "species_richness_num"
+    }
+  ],
+
+  "layer": [
+    {
+      "mark": {
+        "type": "circle",
+        "size": 250,
+        "opacity": 0.82,
+        "color": "#325C4B",
+        "stroke": "#FFFFFF",
+        "strokeWidth": 1.5
+      },
+
+      "encoding": {
+        "x": {
+          "field": "record_count_num",
+          "type": "quantitative",
+          "title": "Occurrence records",
+
+          "scale": {
+            "domainMin": 0,
+            "domainMax": 5600000,
+            "nice": false
+          },
+
+          "axis": {
+            "labelFont": "Source Sans 3",
+            "labelFontSize": 12,
+            "labelColor": "#68706A",
+            "labelPadding": 7,
+
+            "titleFont": "Source Sans 3",
+            "titleFontSize": 13,
+            "titleFontWeight": 600,
+            "titleColor": "#202622",
+            "titlePadding": 10,
+
+            "grid": true,
+            "gridColor": "#E8EBE7",
+            "gridOpacity": 1,
+            "gridWidth": 1,
+
+            "domainColor": "#BFC6C1",
+            "domainWidth": 1,
+
+            "tickColor": "#BFC6C1",
+            "tickSize": 4,
+
+            "format": ".2~s",
+
+            "tickCount": 7
+          }
+        },
+
+        "y": {
+          "field": "species_richness_num",
+          "type": "quantitative",
+          "title": "Recorded species richness",
+
+          "scale": {
+            "domain": [1000, 5000],
+            "nice": false,
+            "zero": false
+          },
+
+          "axis": {
+            "labelFont": "Source Sans 3",
+            "labelFontSize": 12,
+            "labelColor": "#68706A",
+            "labelPadding": 7,
+
+            "titleFont": "Source Sans 3",
+            "titleFontSize": 13,
+            "titleFontWeight": 600,
+            "titleColor": "#202622",
+            "titlePadding": 12,
+
+            "grid": true,
+            "gridColor": "#E8EBE7",
+            "gridOpacity": 1,
+            "gridWidth": 1,
+
+            "domainColor": "#BFC6C1",
+            "domainWidth": 1,
+
+            "tickColor": "#BFC6C1",
+            "tickSize": 4,
+
+            "format": ",.0f",
+
+            "values": [1000, 1500, 2000, 2500, 3000, 3500, 4000, 4500, 5000]
+          }
+        },
+
+        "tooltip": [
+          {
+            "field": "city",
+            "type": "nominal",
+            "title": "Urban area"
+          },
+          {
+            "field": "record_count_num",
+            "type": "quantitative",
+            "title": "Occurrence records",
+            "format": ","
+          },
+          {
+            "field": "species_richness_num",
+            "type": "quantitative",
+            "title": "Recorded species richness",
+            "format": ","
+          }
+        ]
+      }
+    },
+
+    {
+      "mark": {
+        "type": "text",
+        "font": "Source Sans 3",
+        "fontSize": 12,
+        "fontWeight": 600,
+        "color": "#202622",
+        "align": "left",
+        "baseline": "middle",
+        "dx": 9,
+        "dy": -9
+      },
+
+      "encoding": {
+        "x": {
+          "field": "record_count_num",
+          "type": "quantitative",
+
+          "scale": {
+            "domainMin": 0,
+            "domainMax": 5600000,
+            "nice": false
+          }
+        },
+
+        "y": {
+          "field": "species_richness_num",
+          "type": "quantitative",
+
+          "scale": {
+            "domain": [1000, 5000],
+            "nice": false,
+            "zero": false
+          }
+        },
+
+        "text": {
+          "field": "city",
+          "type": "nominal"
+        }
+      }
+    }
+  ],
+
+  "config": {
+    "background": null,
+
+    "view": {
+      "stroke": null
+    },
+
+    "font": "Source Sans 3"
+  }
+}

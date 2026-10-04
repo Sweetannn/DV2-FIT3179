@@ -201,23 +201,83 @@
         </article>
 
         <!-- Chart 3 -->
+        <!-- Chart 3 -->
         <article class="chart-card chart-wide">
+
           <header class="chart-header">
-            <h3>More observations do not always mean more species</h3>
+
+            <h3>
+              More observations do not always mean more recorded species
+            </h3>
 
             <p>
-              Observation effort and recorded richness tell related, but
-              different, stories.
+              Comparing occurrence records with recorded species richness shows 
+              how observation effort may shape the biodiversity record.
             </p>
+
           </header>
 
-          <div
-            id="effort-scatter"
-            class="chart"
-            aria-label="Scatterplot of occurrence records and species richness"
-          ></div>
+
+          <div class="split-layout split-layout--2-1 split-layout--center">
+
+            <div class="split-main">
+
+              <div
+                id="effort-scatter"
+                class="chart"
+                aria-label="
+                  Scatterplot comparing Atlas of Living Australia occurrence
+                  records with recorded species richness across eight
+                  Australian urban areas
+                "
+              ></div>
+
+            </div>
+
+            <aside class="split-sidebar">
+
+              <div class="split-sidebar-block chart-insight">
+
+                <span class="insight-label">
+                  KEY FINDING
+                </span>
+
+                <p class="insight-main">
+                  More observations are generally associated with greater recorded species richness, 
+                  but the relationship is not one-to-one.
+                </p>
+
+                <p class="insight-context">
+                  Melbourne has the most occurrence records, yet Brisbane and Sydney record greater 
+                  species richness, showing that observation effort alone does not determine recorded richness.
+                </p>
+
+              </div>
+
+
+              <div class="split-sidebar-block">
+
+                <span class="insight-label">
+                  HOW TO READ THIS
+                </span>
+
+                <p class="chart-note">
+                  Each point represents one urban area. Moving right indicates more 
+                  ALA occurrence records, while moving upward indicates greater recorded 
+                  species richness. Hover for exact values.
+                </p>
+
+                <!-- <p class="chart-source">
+                  Source: Atlas of Living Australia, 2016–2025.
+                </p> -->
+
+              </div>
+
+            </aside>
+
+          </div>
+
         </article>
-      </section>
 
       <!-- =========================================================
          SECTION 2

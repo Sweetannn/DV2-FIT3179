@@ -415,7 +415,7 @@ p {
 }
 
 .chart-header {
-  margin-bottom: 1.3rem;
+  margin-bottom: 2rem;
 }
 
 .chart-header p {
@@ -529,6 +529,10 @@ p {
   /* Prevent the general chart minimum height from
      forcing compact charts to become too tall */
   min-height: 0;
+}
+
+.split-layout--center {
+  align-items: center;
 }
 
 /* =========================================================
