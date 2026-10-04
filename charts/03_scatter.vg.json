@@ -98,7 +98,7 @@
             "titleFontSize": 13,
             "titleFontWeight": 600,
             "titleColor": "#202622",
-            "titlePadding": 12,
+            "titlePadding": 18,
 
             "grid": true,
             "gridColor": "#E8EBE7",
