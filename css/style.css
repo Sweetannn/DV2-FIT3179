@@ -1,454 +1,566 @@
 /* =========================================================
-   DESIGN TOKENS
-   Change these values later to restyle the whole website.
-========================================================= */
+   1. DESIGN TOKENS
+   ========================================================= */
 
 :root {
+  /* Page colours */
+  --color-page: #f7f7f2;
+  --color-surface: #ffffff;
+  --color-text: #202622;
+  --color-muted: #68706a;
+  --color-rule: #dfe3df;
 
-    /* Page dimensions */
-    --page-max-width: 1280px;
+  /* Accent */
+  --color-accent: #325c4b;
 
-    /* Spacing */
-    --space-xs: 0.5rem;
-    --space-sm: 1rem;
-    --space-md: 1.5rem;
-    --space-lg: 2.5rem;
-    --space-xl: 4rem;
-    --space-xxl: 7rem;
+  /* Animal groups
+     Final values can be adjusted later after accessibility testing.
+  */
+  --bird-color: #3978a8;
+  --mammal-color: #c47a3d;
+  --reptile-color: #48875f;
+  --insect-color: #8167a9;
 
-    /* Border radius */
-    --radius-sm: 8px;
-    --radius-md: 16px;
+  /* Layout */
+  --page-width: 1180px;
 
-    /* Typography */
-    --font-body:
-        Arial,
-        Helvetica,
-        sans-serif;
+  /* Spacing scale */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2.5rem;
+  --space-xl: 4rem;
+  --space-xxl: 5.5rem;
 
-    --font-heading:
-        Georgia,
-        "Times New Roman",
-        serif;
-
-    /* Colours */
-    --colour-background: #f7f5ef;
-    --colour-surface: #ffffff;
-
-    --colour-text: #20251f;
-    --colour-muted: #686f68;
-
-    --colour-border: #dedfd9;
-
-    --colour-accent: #435f45;
-
-    /* Animal group colours */
-    --colour-bird: #587c58;
-    --colour-mammal: #9a6642;
-    --colour-reptile: #75733e;
-    --colour-insect: #b98945;
+  /* Border radius */
+  --radius: 8px;
 }
 
+.chart-support {
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 3rem;
+
+  align-items: start;
+
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+
+  border-top: 1px solid var(--color-rule);
+}
 
 /* =========================================================
-   GLOBAL
-========================================================= */
+   Equal column structure
+   ========================================================= */
 
-* {
-    box-sizing: border-box;
+.chart-insight,
+.chart-meta {
+  width: 100%;
+  min-width: 0;
+
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+
+  box-sizing: border-box;
 }
 
+/*
+Both columns receive a 3px left border so their usable
+content widths remain identical.
 
-html {
-    scroll-behavior: smooth;
+The right border is transparent so it is not visible.
+*/
+
+.chart-insight {
+  border-left: 3px solid var(--color-accent);
 }
 
-
-body {
-
-    margin: 0;
-
-    background:
-        var(--colour-background);
-
-    color:
-        var(--colour-text);
-
-    font-family:
-        var(--font-body);
-
-    line-height: 1.6;
+.chart-meta {
+  border-left: 3px solid transparent;
 }
-
-
-img,
-svg,
-canvas {
-    max-width: 100%;
-}
-
 
 /* =========================================================
-   MASTER PAGE CONTAINER
-========================================================= */
+   Small section labels
+   ========================================================= */
 
-.page-container {
+.insight-label {
+  display: block;
 
-    width: min(
-        100% - 2rem,
-        var(--page-max-width)
-    );
+  margin-bottom: 0.9rem;
 
-    margin-inline: auto;
+  font-size: 0.75rem;
+  font-weight: 700;
+
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+
+  color: var(--color-accent);
 }
-
 
 /* =========================================================
-   HERO
-========================================================= */
+   Key finding
+   ========================================================= */
 
-.hero {
+.insight-main {
+  width: 100%;
 
-    min-height: 75vh;
+  margin: 0 0 0.5rem;
 
-    display: flex;
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1.5;
 
-    align-items: center;
-
-    padding-block:
-        var(--space-xxl);
+  color: var(--color-text);
 }
 
+.insight-context {
+  width: 100%;
 
-.hero-content {
+  margin: 0;
 
-    max-width: 800px;
+  font-size: 0.95rem;
+  font-weight: 400;
+  line-height: 1.6;
+
+  color: var(--color-muted);
 }
-
-
-.eyebrow {
-
-    text-transform: uppercase;
-
-    letter-spacing: 0.12em;
-
-    font-size: 0.8rem;
-
-    font-weight: 700;
-
-    color:
-        var(--colour-accent);
-}
-
-
-.hero h1 {
-
-    margin:
-        var(--space-xs)
-        0
-        0;
-
-    font-family:
-        var(--font-heading);
-
-    font-size:
-        clamp(
-            3rem,
-            8vw,
-            7rem
-        );
-
-    line-height: 0.95;
-}
-
-
-.hero h2 {
-
-    margin:
-        var(--space-sm)
-        0;
-
-    font-family:
-        var(--font-heading);
-
-    font-size:
-        clamp(
-            1.6rem,
-            4vw,
-            3rem
-        );
-
-    font-weight: 400;
-}
-
-
-.hero-description {
-
-    max-width: 650px;
-
-    margin-top:
-        var(--space-lg);
-
-    font-size:
-        clamp(
-            1rem,
-            1.6vw,
-            1.25rem
-        );
-
-    color:
-        var(--colour-muted);
-}
-
 
 /* =========================================================
-   STORY SECTIONS
-========================================================= */
-
-.story-section {
-
-    padding-block:
-        var(--space-xxl);
-}
-
-
-.section-heading {
-
-    max-width: 760px;
-
-    margin-bottom:
-        var(--space-xl);
-}
-
-
-.section-number {
-
-    margin-bottom:
-        var(--space-xs);
-
-    font-size: 0.8rem;
-
-    font-weight: 700;
-
-    letter-spacing: 0.15em;
-
-    color:
-        var(--colour-accent);
-}
-
-
-.section-heading h2 {
-
-    margin:
-        0
-        0
-        var(--space-md);
-
-    font-family:
-        var(--font-heading);
-
-    font-size:
-        clamp(
-            2rem,
-            4vw,
-            3.4rem
-        );
-
-    line-height: 1.1;
-}
-
-
-.section-intro {
-
-    margin: 0;
-
-    color:
-        var(--colour-muted);
-
-    font-size:
-        1.1rem;
-}
-
-
-/* =========================================================
-   FLEXIBLE GRID SYSTEM
-========================================================= */
-
-.chart-grid {
-
-    display: grid;
-
-    grid-template-columns:
-        repeat(
-            12,
-            minmax(0, 1fr)
-        );
-
-    gap:
-        var(--space-lg);
-}
-
-
-/* Default chart = half width */
-
-.chart-card {
-
-    grid-column:
-        span 6;
-
-    min-width: 0;
-
-    background:
-        var(--colour-surface);
-
-    border:
-        1px solid
-        var(--colour-border);
-
-    border-radius:
-        var(--radius-md);
-
-    padding:
-        var(--space-lg);
-}
-
-
-/* Full-width chart */
-
-.chart-card--wide {
-
-    grid-column:
-        1 / -1;
-}
-
-
-/* 8 columns */
-
-.chart-card--large {
-
-    grid-column:
-        span 8;
-}
-
-
-/* 4 columns */
-
-.chart-card--small {
-
-    grid-column:
-        span 4;
-}
-
-
-/* =========================================================
-   CHART CONTENT
-========================================================= */
-
-.chart-heading {
-
-    margin-bottom:
-        var(--space-md);
-}
-
-
-.chart-heading h3 {
-
-    margin:
-        0
-        0
-        var(--space-xs);
-
-    font-family:
-        var(--font-heading);
-
-    font-size:
-        1.6rem;
-}
-
-
-.chart-heading p {
-
-    margin: 0;
-
-    color:
-        var(--colour-muted);
-}
-
-
-.chart {
-
-    width: 100%;
-
-    min-width: 0;
-
-    overflow: hidden;
-}
-
+   Method / limitation
+   ========================================================= */
 
 .chart-note {
+  width: 100%;
 
-    margin-top:
-        var(--space-md);
+  margin: 0;
 
-    padding-top:
-        var(--space-sm);
+  font-size: 0.95rem;
+  font-weight: 400;
+  line-height: 1.6;
 
-    border-top:
-        1px solid
-        var(--colour-border);
-
-    font-size:
-        0.82rem;
-
-    color:
-        var(--colour-muted);
+  color: var(--color-muted);
 }
 
+.chart-source {
+  width: 100%;
+
+  margin: 1rem 0 0;
+
+  font-size: 0.76rem;
+  line-height: 1.5;
+
+  color: var(--color-muted);
+}
+
+/* =========================================================
+   Responsive
+   ========================================================= */
+
+@media (max-width: 800px) {
+  .chart-support {
+    grid-template-columns: 1fr;
+
+    gap: 2rem;
+  }
+
+  .chart-insight,
+  .chart-meta {
+    padding-right: 0.5rem;
+  }
+}
+
+/* =========================================================
+   2. RESET / BASE
+   ========================================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+
+  background: var(--color-page);
+  color: var(--color-text);
+
+  font-family: "Source Sans 3", "Segoe UI", Arial, sans-serif;
+
+  font-size: 17px;
+  line-height: 1.55;
+}
+
+/* =========================================================
+   3. TYPOGRAPHY
+   ========================================================= */
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1,
+h2 {
+  font-family: "Lora", Georgia, serif;
+
+  white-space: nowrap;
+}
+
+h1 {
+  max-width: 850px;
+  margin-bottom: 1.5rem;
+
+  font-size: clamp(3rem, 6vw, 4.9rem);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+h1 span {
+  display: block;
+  color: var(--color-accent);
+}
+
+h2 {
+  margin-bottom: 1rem;
+
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.1;
+}
+
+h3 {
+  margin-bottom: 0.5rem;
+
+  font-size: 1.6rem;
+  line-height: 1.25;
+}
+
+p {
+  max-width: 60ch;
+}
+
+.eyebrow {
+  margin-bottom: 0.9rem;
+
+  font-size: 0.85rem;
+  font-weight: 700;
+
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+
+  color: var(--color-muted);
+}
+
+/* =========================================================
+   4. PAGE
+   ========================================================= */
+
+.page-container {
+  width: min(calc(100% - 3rem), var(--page-width));
+
+  margin-inline: auto;
+}
+
+/* =========================================================
+   5. HERO
+   ========================================================= */
+
+.hero {
+  padding: 5rem 0 1rem;
+}
+
+.hero-intro {
+  font-size: 1.2rem;
+  color: var(--color-muted);
+}
+
+.stat-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 1.5rem;
+
+  margin: 3rem 0;
+}
+
+.stat {
+  padding-top: 1rem;
+
+  border-top: 2px solid var(--color-text);
+}
+
+.stat-value {
+  display: block;
+
+  font-size: 2.4rem;
+  font-weight: 700;
+
+  line-height: 1;
+}
+
+.stat-label {
+  display: block;
+
+  margin-top: 0.45rem;
+
+  color: var(--color-muted);
+}
+
+.method-note {
+  max-width: 800px;
+
+  padding: 1.25rem 1.5rem;
+
+  background: #ecefe9;
+
+  border-left: 4px solid var(--color-accent);
+}
+
+/* =========================================================
+   6. STORY SECTIONS
+   ========================================================= */
+
+.story-section {
+  padding: var(--space-xxl) 0;
+
+  border-top: 1px solid var(--color-rule);
+}
+
+.section-heading {
+  max-width: 820px;
+
+  margin-bottom: 3rem;
+  margin-left: 1.5rem;
+}
+
+.section-kicker {
+  display: flex;
+  align-items: baseline;
+
+  gap: 1.25rem;
+
+  margin-bottom: 1rem;
+  margin-left: 0.3rem;
+}
+
+.section-number {
+  font-size: 0.95rem;
+  font-weight: 700;
+
+  color: var(--color-accent);
+}
+
+.section-kicker .eyebrow {
+  margin: 0;
+}
+
+.section-heading h2 {
+  margin: 0 0 1.25rem;
+
+  font-size: clamp(2.3rem, 4vw, 2.9rem);
+  line-height: 1.08;
+  white-space: nowrap;
+}
+
+.section-intro {
+  max-width: 58ch;
+
+  margin: 0;
+
+  font-size: 1.1rem;
+  line-height: 1.6;
+
+  color: var(--color-muted);
+}
+
+/* =========================================================
+   7. CHART LAYOUT
+   ========================================================= */
+
+.two-column {
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 2rem;
+
+  margin-top: 2rem;
+}
+
+.chart-card {
+  min-width: 0;
+
+  padding: 1.5rem;
+
+  background: var(--color-surface);
+
+  border-radius: var(--radius);
+}
+
+.chart-wide {
+  width: 100%;
+
+  margin-top: 2rem;
+}
+
+.chart-header {
+  margin-bottom: 1.3rem;
+}
+
+.chart-header p {
+  margin-bottom: 0;
+
+  color: var(--color-muted);
+
+  font-size: 0.95rem;
+}
+
+.chart {
+  width: 100%;
+  min-height: 300px;
+}
+
+/* =========================================================
+   8. VEGA RESPONSIVENESS
+   ========================================================= */
+
+.chart .vega-embed,
+.chart .vega-embed > div {
+  width: 100%;
+}
+
+/* =========================================================
+   9. FOOTER
+   ========================================================= */
+
+.footer {
+  padding: 5rem 0;
+
+  border-top: 1px solid var(--color-rule);
+
+  color: var(--color-muted);
+}
+
+/* =========================================================
+   10. RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 800px) {
+  .page-container {
+    width: min(calc(100% - 2rem), var(--page-width));
+  }
+
+  .hero {
+    padding-top: 4rem;
+  }
+
+  .stat-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .two-column {
+    grid-template-columns: 1fr;
+  }
+
+  .section-heading {
+    grid-template-columns: 1fr;
+
+    gap: 0.5rem;
+  }
+}
+
+/* =========================================================
+   HEATMAP LAYOUT
+   ========================================================= */
+
+.heatmap-layout {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 2fr)
+    minmax(260px, 1fr);
+
+  gap: 3rem;
+
+  align-items: center;
+}
+
+/* =========================================================
+   HEATMAP VISUAL
+   ========================================================= */
+
+.heatmap-visual {
+  min-width: 0;
+}
+
+.heatmap-visual .chart {
+  width: 100%;
+}
+
+/* =========================================================
+   RIGHT SUPPORT COLUMN
+   ========================================================= */
+
+.heatmap-support {
+  display: flex;
+  flex-direction: column;
+
+  gap: 2.25rem;
+
+  min-width: 0;
+
+  padding-left: 1.5rem;
+
+  border-left: 1px solid var(--color-rule);
+}
+
+/* =========================================================
+   SUPPORT BLOCK
+   ========================================================= */
+
+.support-block {
+  width: 100%;
+}
+
+.key-finding-block {
+  padding-left: 1rem;
+
+  border-left: 3px solid var(--color-accent);
+}
 
 /* =========================================================
    RESPONSIVE
-========================================================= */
+   ========================================================= */
 
-@media (
-    max-width: 900px
-) {
+@media (max-width: 900px) {
+  .heatmap-layout {
+    grid-template-columns: 1fr;
 
-    .chart-card,
-    .chart-card--large,
-    .chart-card--small {
+    gap: 2rem;
+  }
 
-        grid-column:
-            1 / -1;
-    }
+  .heatmap-support {
+    display: grid;
 
+    grid-template-columns: repeat(2, minmax(0, 1fr));
 
-    .story-section {
+    gap: 2rem;
 
-        padding-block:
-            var(--space-xl);
-    }
+    padding-left: 0;
 
+    border-left: none;
+  }
 }
 
-
-@media (
-    max-width: 600px
-) {
-
-    .page-container {
-
-        width:
-            min(
-                100% - 1rem,
-                var(--page-max-width)
-            );
-    }
-
-
-    .chart-card {
-
-        padding:
-            var(--space-md);
-    }
-
+@media (max-width: 650px) {
+  .heatmap-support {
+    grid-template-columns: 1fr;
+  }
 }

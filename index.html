@@ -1,136 +1,377 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
 
-<head>
-    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
+      name="description"
+      content="Wild Cities: Exploring Australia's urban wildlife from 2016–2025."
+    />
 
-    <title>Australian Urban Wildlife</title>
+    <title>Wild Cities: Who Still Lives Among Us?</title>
 
-    <link
-        rel="stylesheet"
-        href="css/style.css"
-    >
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="css/style.css" />
 
     <!-- Vega libraries -->
-    <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
-</head>
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+  </head>
 
-
-<body>
-
+  <body>
     <main class="page-container">
+      <!-- =========================================================
+         HERO
+         ========================================================= -->
 
-        <!-- =================================================
-             HERO / INTRODUCTION
-        ================================================== -->
+      <header class="hero">
+        <p class="eyebrow">AUSTRALIA'S URBAN WILDLIFE · 2016–2025</p>
 
-        <section class="hero">
+        <h1>
+          <span>Wild Cities:</span>
+          Who Still Lives Among Us?
+        </h1>
 
-            <div class="hero-content">
+        <p class="hero-intro">
+          From birds above suburban streets to reptiles, mammals and thousands
+          of insect species, Australia's cities support a surprising range of
+          recorded wildlife.
+        </p>
 
-                <p class="eyebrow">
-                    Australian Urban Wildlife
-                </p>
+        <p class="hero-intro">
+          This visualisation explores wildlife observations across Sydney,
+          Melbourne, Brisbane, Adelaide, Perth, Hobart, Darwin and
+          Canberra–Queanbeyan.
+        </p>
 
-                <h1>
-                    Wild Cities
-                </h1>
+        <div class="stat-grid">
+          <div class="stat">
+            <span class="stat-value">17.45 Million</span>
+            <span class="stat-label">occurrence records</span>
+          </div>
 
-                <h2>
-                    Who still lives among us?
-                </h2>
+          <div class="stat">
+            <span class="stat-value">10,643</span>
+            <span class="stat-label">recorded species</span>
+          </div>
 
-                <p class="hero-description">
-                    Goal: Investigate wildlife living in Australian urban environments. Compare observations of birds, mammals, reptiles and insects across cities to explore how biodiversity changes in urban areas.
-                    <br><br>
-                    Target audience: Australian urban planners and local policymakers interested in using biodiversity evidence to inform green-space planning, habitat protection and urban conservation.
+          <div class="stat">
+            <span class="stat-value">110</span>
+            <span class="stat-label">nationally threatened species</span>
+          </div>
+        </div>
+      </header>
 
-                </p>
+      <!-- =========================================================
+         SECTION 1
+         ========================================================= -->
 
+      <section class="story-section" id="overview">
+        <div class="section-heading">
+          <div class="section-kicker">
+            <span class="section-number">01</span>
+            <span class="eyebrow">THE BIG PICTURE</span>
+          </div>
+
+          <h2>Eight cities. Very different records of<br />urban wildlife.</h2>
+
+          <p class="section-intro">
+            Start with the geography: how much wildlife has been recorded in
+            each urban area, and how do the four animal groups contribute to
+            that richness?
+          </p>
+        </div>
+
+        <!-- Chart 1 -->
+        <article class="chart-card chart-wide">
+          <header class="chart-header">
+            <h3>
+              Recorded species richness differs across eight Australian urban
+              areas
+            </h3>
+
+            <p>
+              Circle area represents the number of distinct species recorded
+              within each ABS urban area, 2016–2025.
+            </p>
+          </header>
+
+          <div
+            id="symbol-map"
+            class="chart"
+            aria-label="
+          Proportional symbol map comparing recorded species richness
+          across eight Australian urban areas
+        "
+          ></div>
+
+          <div class="chart-support">
+            <aside class="chart-insight">
+              <span class="insight-label"> KEY FINDING </span>
+
+              <p class="insight-main">
+                Brisbane recorded the highest species richness: <br />
+                4,678 documented species.
+              </p>
+
+              <p class="insight-context">
+                This was the largest recorded total among the eight selected
+                urban areas during 2016–2025.
+              </p>
+            </aside>
+
+            <div class="chart-meta">
+              <span class="insight-label"> HOW TO READ THIS </span>
+
+              <p class="chart-note">
+                Recorded species richness represents distinct species documented
+                in Atlas of Living Australia occurrence data. It does not
+                represent<br />
+                complete biodiversity or animal population size.
+              </p>
+
+              <!-- <p class="chart-source">
+          Sources: Atlas of Living Australia; Australian Bureau of Statistics,
+          Urban Centres and Localities 2021.
+        </p> -->
+            </div>
+          </div>
+        </article>
+
+        <!-- Chart 2 -->
+        <article class="chart-card chart-wide">
+          <header class="chart-header">
+            <h3>
+              Different cities lead different parts of the urban wildlife
+              community
+            </h3>
+
+            <p>
+              Cell labels show the number of distinct species recorded. Darker
+              cells indicate higher richness relative to other cities within the
+              same animal group.
+            </p>
+          </header>
+
+          <div class="heatmap-layout">
+            <div class="heatmap-visual">
+              <div
+                id="group-heatmap"
+                class="chart"
+                aria-label="
+                      Heatmap comparing recorded species richness for birds,
+                      mammals, reptiles and insects across eight Australian
+                      urban areas
+                    "
+              ></div>
             </div>
 
-        </section>
+            <aside class="heatmap-support">
+              <div class="support-block key-finding-block">
+                <span class="insight-label"> KEY FINDING </span>
 
-
-        <!-- =================================================
-             SECTION 1
-        ================================================== -->
-
-        <section
-            class="story-section"
-            id="overview"
-        >
-
-            <div class="section-heading">
-
-                <p class="section-number">
-                    01
+                <p class="insight-main">
+                  Sydney leads birds, mammals and reptiles, while Brisbane
+                  records the greatest insect richness.
                 </p>
 
-                <h2>
-                    Wildlife across Australia's cities
-                </h2>
+                <p class="insight-context">
+                  Brisbane's 4,097 recorded insect species help explain why it
+                  ranks highest overall in recorded species richness.
+                </p>
+              </div>
 
-                <p class="section-intro">
-                    Recorded species richness varies considerably
-                    across the eight urban areas in this study.
-                    The composition of that richness also differs
-                    between birds, mammals, reptiles and insects.
+              <div class="support-block">
+                <span class="insight-label"> HOW TO READ THIS </span>
+
+                <p class="chart-note">
+                  Colour is normalised within each animal group so groups with
+                  fewer species remain comparable between cities. Numbers show
+                  the actual recorded species richness.
                 </p>
 
-            </div>
+                <!-- <p class="chart-source">
+                    Source: Atlas of Living Australia, 2016–2025.
+                  </p> -->
+              </div>
+            </aside>
+          </div>
+        </article>
 
+        <!-- Chart 3 -->
+        <article class="chart-card">
+          <header class="chart-header">
+            <h3>More observations do not always mean more species</h3>
 
-            <!-- Flexible chart layout -->
-            <div class="chart-grid">
+            <p>
+              Observation effort and recorded richness tell related, but
+              different, stories.
+            </p>
+          </header>
 
-                <article class="chart-card chart-card--wide">
+          <div
+            id="effort-scatter"
+            class="chart"
+            aria-label="Scatterplot of occurrence records and species richness"
+          ></div>
+        </article>
+      </section>
 
-                    <div class="chart-heading">
+      <!-- =========================================================
+         SECTION 2
+         ========================================================= -->
 
-                        <h3>
-                            What makes up each city's wildlife?
-                        </h3>
+      <section class="story-section" id="composition">
+        <div class="section-heading">
+          <span class="section-number">02</span>
 
-                        <p>
-                            Recorded species richness by animal group,
-                            2016–2025
-                        </p>
+          <div>
+            <p class="eyebrow">WHO LIVES HERE?</p>
 
-                    </div>
+            <h2>Urban biodiversity is more than a species count.</h2>
 
-                    <div
-                        id="heatmap"
-                        class="chart"
-                    ></div>
+            <p class="section-intro">
+              The next views reveal which taxonomic families dominate, which
+              species appear across many cities, and how the four animal groups
+              contribute to each urban ecosystem.
+            </p>
+          </div>
+        </div>
 
-                    <p class="chart-note">
-                        Species richness counts distinct species
-                        recorded in Atlas of Living Australia
-                        occurrence data.
-                    </p>
+        <article class="chart-card chart-wide">
+          <div id="taxonomy-treemap" class="chart"></div>
+        </article>
 
-                </article>
+        <div class="two-column">
+          <article class="chart-card">
+            <div id="species-ranking" class="chart"></div>
+          </article>
 
-            </div>
+          <article class="chart-card">
+            <div id="alluvial" class="chart"></div>
+          </article>
+        </div>
+      </section>
 
-        </section>
+      <!-- =========================================================
+         SECTION 3
+         ========================================================= -->
 
+      <section class="story-section" id="time">
+        <div class="section-heading">
+          <span class="section-number">03</span>
+
+          <div>
+            <p class="eyebrow">CHANGE THROUGH TIME</p>
+
+            <h2>Recorded urban wildlife does not stand still.</h2>
+          </div>
+        </div>
+
+        <article class="chart-card chart-wide">
+          <div id="bump-chart" class="chart"></div>
+        </article>
+
+        <article class="chart-card chart-wide">
+          <div id="spiral-chart" class="chart"></div>
+        </article>
+      </section>
+
+      <!-- =========================================================
+         SECTION 4
+         ========================================================= -->
+
+      <section class="story-section" id="connections">
+        <div class="section-heading">
+          <span class="section-number">04</span>
+
+          <div>
+            <p class="eyebrow">CONNECTED CITIES</p>
+
+            <h2>City boundaries do not define wildlife communities.</h2>
+          </div>
+        </div>
+
+        <article class="chart-card chart-wide">
+          <div id="city-network" class="chart"></div>
+        </article>
+      </section>
+
+      <!-- =========================================================
+         SECTION 5
+         ========================================================= -->
+
+      <section class="story-section" id="geography">
+        <div class="section-heading">
+          <span class="section-number">05</span>
+
+          <div>
+            <p class="eyebrow">WHERE WILDLIFE IS RECORDED</p>
+
+            <h2>Urban wildlife is concentrated unevenly across space.</h2>
+          </div>
+        </div>
+
+        <article class="chart-card chart-wide">
+          <div id="bin-map" class="chart"></div>
+        </article>
+      </section>
+
+      <!-- =========================================================
+         SECTION 6
+         ========================================================= -->
+
+      <section class="story-section" id="threatened">
+        <div class="section-heading">
+          <span class="section-number">06</span>
+
+          <div>
+            <p class="eyebrow">SPECIES AT RISK</p>
+
+            <h2>
+              Threatened wildlife still persists inside Australia's cities.
+            </h2>
+          </div>
+        </div>
+
+        <article class="chart-card chart-wide">
+          <div id="threatened-dot-map" class="chart"></div>
+        </article>
+
+        <article class="chart-card chart-wide">
+          <div id="threatened-choropleth" class="chart"></div>
+        </article>
+      </section>
+
+      <!-- =========================================================
+         FOOTER
+         ========================================================= -->
+
+      <footer class="footer">
+        <h2>About the data</h2>
+
+        <p>
+          Wildlife occurrence records were sourced from the Atlas of Living
+          Australia and spatially restricted to eight ABS Urban Centres and
+          Localities. Threat status was matched against current EPBC threatened
+          fauna listings from DCCEEW.
+        </p>
+
+        <p>
+          Data sources: Atlas of Living Australia · Australian Bureau of
+          Statistics · Department of Climate Change, Energy, the Environment and
+          Water.
+        </p>
+
+        <p>Visualisation by Lim Sweet Ann · 2026</p>
+      </footer>
     </main>
 
-
-    <script
-        type="module"
-        src="js/main.js"
-    ></script>
-
-</body>
-
+    <!-- Project JavaScript -->
+    <script src="js/config.js"></script>
+    <script src="js/visualisations.js"></script>
+  </body>
 </html>

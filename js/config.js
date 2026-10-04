@@ -1,129 +1,68 @@
-export const DATA_PATHS = {
-
-    citySummary:
-        "data/final/01_city_summary.csv",
-
-    cityGroup:
-        "data/final/02_city_group_summary.csv",
-
-    taxonomy:
-        "data/final/03_taxonomy_treemap.csv",
-
-    taxonomySpecies:
-        "data/final/03b_taxonomy_species.csv",
-
-    cityYear:
-        "data/final/04_city_year_richness.csv",
-
-    speciesCoverage:
-        "data/final/05_species_city_coverage.csv",
-
-    networkNodes:
-        "data/final/06_network_nodes.csv",
-
-    networkEdges:
-        "data/final/07_network_edges.csv",
-
-    hexbin:
-        "data/final/08_hexbin.geojson",
-
-    threatenedCity:
-        "data/final/09_threatened_city_summary.csv",
-
-    threatenedSpecies:
-        "data/final/09b_threatened_species_matches.csv",
-
-    cityGeoJSON:
-        "capital_cities.geojson"
-};
+"use strict";
 
 
-export const GROUP_ORDER = [
+/*
+=========================================================
+WILD CITIES
+Shared project configuration
+=========================================================
+*/
+
+
+const WILD_CITIES_CONFIG = {
+
+  /*
+  -------------------------------------------------------
+  Chart embedding options
+  -------------------------------------------------------
+  */
+
+  embedOptions: {
+    actions: false,
+    renderer: "svg"
+  },
+
+
+  /*
+  -------------------------------------------------------
+  Animal group definitions
+
+  Keep the order identical across the whole visualisation.
+  -------------------------------------------------------
+  */
+
+  animalGroups: [
     "Bird",
     "Mammal",
     "Reptile",
     "Insect"
-];
+  ],
 
 
-export const GROUP_COLOURS = [
-    "#587c58",
-    "#9a6642",
-    "#75733e",
-    "#b98945"
-];
+  /*
+  -------------------------------------------------------
+  Colours
 
+  These must match the colours used inside Vega-Lite
+  specifications.
+  -------------------------------------------------------
+  */
 
-export const CITY_ORDER = [
-    "Brisbane",
-    "Sydney",
-    "Melbourne",
-    "Canberra–Queanbeyan",
-    "Adelaide",
-    "Perth",
-    "Hobart",
-    "Darwin"
-];
+  colours: {
 
+    bird: "#3978A8",
 
-export const VEGA_CONFIG = {
+    mammal: "#C47A3D",
 
-    background:
-        null,
+    reptile: "#48875F",
 
-    font:
-        "Arial",
+    insect: "#8167A9",
 
-    view: {
-        stroke:
-            null
-    },
+    text: "#202622",
 
-    axis: {
+    muted: "#68706A",
 
-        labelFont:
-            "Arial",
+    mapBackground: "#ECEEEA"
+  }
 
-        titleFont:
-            "Arial",
-
-        labelColor:
-            "#4f554f",
-
-        titleColor:
-            "#20251f",
-
-        domainColor:
-            "#bfc3bc",
-
-        tickColor:
-            "#bfc3bc",
-
-        gridColor:
-            "#e7e7e1"
-    },
-
-    legend: {
-
-        labelFont:
-            "Arial",
-
-        titleFont:
-            "Arial",
-
-        labelColor:
-            "#4f554f",
-
-        titleColor:
-            "#20251f"
-    },
-
-    title: {
-
-        font:
-            "Georgia",
-
-        color:
-            "#20251f"
-    }
 };
