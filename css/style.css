@@ -948,3 +948,453 @@ sidebar | visual
     font-size: 0.78rem;
   }
 }
+
+/* =========================================================
+   REUSABLE CHART-TO-CHART LAYOUT
+   ========================================================= */
+
+/*
+  Used when two independent visualisations
+  are displayed side by side.
+
+  Different from .split-layout, which is intended
+  for a chart paired with an explanatory sidebar.
+*/
+
+.chart-pair {
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 1.5rem;
+
+  align-items: start;
+
+  width: 100%;
+  min-width: 0;
+
+  margin-top: 2rem;
+}
+
+/* =========================================================
+   REUSABLE COLUMN RATIOS
+   ========================================================= */
+
+.chart-pair--1-1 {
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(0, 1fr);
+}
+
+.chart-pair--1-2 {
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(0, 2fr);
+}
+
+.chart-pair--2-1 {
+  grid-template-columns:
+    minmax(0, 2fr)
+    minmax(0, 1fr);
+}
+
+.chart-pair--2-3 {
+  grid-template-columns:
+    minmax(0, 2fr)
+    minmax(0, 3fr);
+}
+
+.chart-pair--3-2 {
+  grid-template-columns:
+    minmax(0, 3fr)
+    minmax(0, 2fr);
+}
+
+/* =========================================================
+   CHART CARD OVERRIDES
+   ========================================================= */
+
+.chart-pair > .chart-card {
+  width: 100%;
+  min-width: 0;
+
+  margin: 0;
+}
+
+/*
+  Important:
+  The existing .chart-card + .chart-card rule
+  adds vertical margin between successive cards.
+
+  Remove that margin only inside chart pairs.
+*/
+
+.chart-pair > .chart-card + .chart-card {
+  margin-top: 0;
+}
+
+.chart-pair-card {
+  display: flex;
+  flex-direction: column;
+}
+
+/* =========================================================
+   HEADINGS
+   ========================================================= */
+
+.chart-pair-card .chart-header {
+  margin-bottom: 1.25rem;
+}
+
+.chart-pair-card .chart-header h3 {
+  font-size: clamp(1.25rem, 1.6vw, 1.55rem);
+
+  line-height: 1.3;
+
+  margin-bottom: 0.6rem;
+}
+
+.chart-pair-card .chart-header p {
+  max-width: 60ch;
+
+  font-size: 0.92rem;
+  line-height: 1.55;
+}
+
+/* =========================================================
+   CHART CONTAINERS
+   ========================================================= */
+
+.chart-ranking-compact {
+  width: 100%;
+  min-width: 0;
+
+  min-height: 390px;
+}
+
+.chart-alluvial {
+  width: 100%;
+  min-width: 0;
+
+  min-height: 390px;
+}
+
+.chart-pair .vega-embed,
+.chart-pair .vega-embed > div {
+  width: 100%;
+}
+
+/* =========================================================
+   SUPPORTING TEXT — COMPACT CARD VERSION
+   ========================================================= */
+
+/*
+  Keep the normal two-column explanation layout
+  for wide chart cards.
+
+  For narrow chart-pair cards, stack the explanations.
+*/
+
+.chart-support--compact {
+  display: grid;
+
+  grid-template-columns: minmax(0, 1fr);
+
+  gap: 1.4rem;
+
+  align-items: start;
+
+  margin-top: 1.25rem;
+  padding-top: 1.25rem;
+
+  border-top: 1px solid var(--color-rule);
+}
+
+.chart-support--compact .chart-insight,
+.chart-support--compact .chart-meta {
+  width: 100%;
+  min-width: 0;
+
+  padding-left: 1rem;
+  padding-right: 0;
+}
+
+.chart-support--compact .chart-insight {
+  border-left: 3px solid var(--color-accent);
+}
+
+.chart-support--compact .chart-meta {
+  border-left: 3px solid transparent;
+}
+
+.chart-support--compact .insight-main {
+  margin-bottom: 0.65rem;
+
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.chart-support--compact .insight-context,
+.chart-support--compact .chart-note {
+  max-width: none;
+
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+/* =========================================================
+   SOURCE ATTRIBUTION
+   ========================================================= */
+
+.chart-pair-card > .chart-source {
+  max-width: none;
+
+  margin: 1.25rem 0 0;
+
+  padding-top: 0.75rem;
+
+  border-top: 1px solid var(--color-rule);
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1200px) {
+  .chart-pair,
+  .chart-pair--1-1,
+  .chart-pair--1-2,
+  .chart-pair--2-1,
+  .chart-pair--2-3,
+  .chart-pair--3-2 {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .chart-pair {
+    gap: 1.5rem;
+  }
+
+  .chart-ranking-compact,
+  .chart-alluvial {
+    min-height: 390px;
+  }
+}
+
+@media (max-width: 650px) {
+  .chart-pair {
+    gap: 1rem;
+  }
+
+  .chart-pair-card .chart-header h3 {
+    font-size: 1.25rem;
+  }
+
+  .chart-ranking-compact,
+  .chart-alluvial {
+    min-height: 370px;
+  }
+}
+
+/* =========================================================
+   CHART 5 — RANKED SPECIES BAR CHART
+   ========================================================= */
+
+/* =========================================================
+   1. CHART CONTAINER
+   ========================================================= */
+
+.chart-species-ranking {
+  width: 100%;
+  min-width: 0;
+
+  min-height: 450px;
+
+  margin: 0;
+  padding: 0;
+}
+
+.chart-species-ranking .vega-embed,
+.chart-species-ranking .vega-embed > div {
+  width: 100%;
+}
+
+.chart-species-ranking svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* =========================================================
+   3. SOURCE ATTRIBUTION
+   ========================================================= */
+
+.ranking-source {
+  width: 100%;
+  max-width: none;
+
+  margin: 1.25rem 0 0;
+
+  font-size: 0.76rem;
+  line-height: 1.5;
+
+  color: var(--color-muted);
+}
+
+/* =========================================================
+   4. RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 800px) {
+  .chart-species-ranking {
+    min-height: 420px;
+  }
+
+  .ranking-context {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .chart-species-ranking {
+    min-height: 400px;
+  }
+
+  .ranking-context p {
+    font-size: 0.9rem;
+  }
+}
+
+/* =========================================================
+   CHART 5 — RANKING + CONTEXT LAYOUT
+   ========================================================= */
+
+/* Reuse existing .split-layout--2-1 */
+
+.ranking-layout {
+  gap: 2rem;
+  align-items: center;
+
+  margin-top: 0.5rem;
+}
+
+/* =========================================================
+   LEFT — RANKED BAR CHART
+   ========================================================= */
+
+.ranking-layout .split-main {
+  width: 100%;
+  min-width: 0;
+}
+
+.ranking-layout .chart-species-ranking {
+  width: 100%;
+  min-width: 0;
+
+  min-height: 0;
+
+  margin: 0;
+  padding: 0;
+}
+
+/* =========================================================
+   RIGHT — EXPLANATORY CONTEXT
+   ========================================================= */
+
+.ranking-context {
+  width: 100%;
+  min-width: 0;
+
+  margin: 0;
+
+  padding: 1.5rem;
+
+  background: #f0f3ef;
+
+  border-left: 3px solid var(--color-accent);
+  border-radius: 0 6px 6px 0;
+}
+
+/* =========================================================
+   CONTEXT LABEL
+   ========================================================= */
+
+.ranking-context-label {
+  display: block;
+
+  margin: 0 0 1rem;
+
+  font-size: 0.75rem;
+  font-weight: 700;
+
+  line-height: 1.4;
+
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+
+  color: var(--color-accent);
+}
+
+/* =========================================================
+   CONTEXT PARAGRAPHS
+   ========================================================= */
+
+.ranking-context p {
+  width: 100%;
+  max-width: none;
+
+  margin: 0;
+
+  font-size: 0.95rem;
+  line-height: 1.65;
+
+  color: var(--color-muted);
+}
+
+.ranking-context p + p {
+  margin-top: 1rem;
+}
+
+/* =========================================================
+   SUPPORT SECTION BELOW
+   ========================================================= */
+
+#chart-5 > .chart-support {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 3rem;
+
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 950px) {
+  .ranking-layout {
+    grid-template-columns: minmax(0, 1fr);
+
+    align-items: start;
+    gap: 1.5rem;
+  }
+
+  .ranking-context {
+    padding: 1.25rem;
+  }
+}
+
+@media (max-width: 800px) {
+  #chart-5 > .chart-support {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .ranking-context {
+    padding: 1rem;
+  }
+
+  .ranking-context p {
+    font-size: 0.9rem;
+  }
+}

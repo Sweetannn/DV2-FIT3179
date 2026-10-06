@@ -1,0 +1,201 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+  "width": "container",
+  "height": 390,
+  "autosize": {
+    "type": "fit",
+    "contains": "padding"
+  },
+
+  "padding": {
+    "left": 55,
+    "right": 20
+  },
+
+  "data": {
+    "url": "data/final/05_species_city_coverage.csv",
+    "format": {
+      "type": "csv"
+    }
+  },
+
+  "transform": [
+    {
+      "calculate": "toNumber(datum.cities_present)",
+      "as": "cities_num"
+    },
+    {
+      "calculate": "toNumber(datum.record_count)",
+      "as": "records_num"
+    },
+    {
+      "filter": "isValid(datum.species) && length(trim(datum.species)) > 0 && isValid(datum.cities_num) && datum.cities_num >= 1 && datum.cities_num <= 8 && isValid(datum.records_num) && datum.records_num >= 0"
+    },
+    {
+      "calculate": "isValid(datum.common_name) && length(trim(datum.common_name)) > 0 ? datum.common_name : datum.species",
+      "as": "display_name"
+    },
+    {
+      "window": [
+        {
+          "op": "row_number",
+          "as": "species_rank"
+        }
+      ],
+      "sort": [
+        {
+          "field": "cities_num",
+          "order": "descending"
+        },
+        {
+          "field": "records_num",
+          "order": "descending"
+        },
+        {
+          "field": "species",
+          "order": "ascending"
+        }
+      ]
+    },
+    {
+      "filter": "datum.species_rank <= 10"
+    },
+    {
+      "calculate": "format(datum.records_num, ',.0f')",
+      "as": "record_label"
+    }
+  ],
+
+  "encoding": {
+    "y": {
+      "field": "display_name",
+      "type": "nominal",
+      "title": null,
+
+      "sort": {
+        "field": "species_rank",
+        "op": "min",
+        "order": "ascending"
+      },
+
+      "axis": {
+        "labelFont": "Source Sans 3",
+        "labelFontSize": 14,
+        "labelFontWeight": 500,
+        "labelColor": "#202622",
+        "labelPadding": 14,
+        "labelLimit": 240,
+        "ticks": false,
+        "domain": false
+      }
+    },
+
+    "x": {
+      "field": "records_num",
+      "type": "quantitative",
+      "title": "ALA occurrence records",
+
+      "scale": {
+        "domain": [0, 650000],
+        "nice": false,
+        "zero": true
+      },
+
+      "axis": {
+        "values": [0, 100000, 200000, 300000, 400000, 500000, 600000],
+
+        "format": ",.0f",
+
+        "labelFont": "Source Sans 3",
+        "labelFontSize": 12,
+        "labelColor": "#68706A",
+        "labelPadding": 10,
+
+        "titleFont": "Source Sans 3",
+        "titleFontSize": 14,
+        "titleFontWeight": 600,
+        "titleColor": "#202622",
+        "titlePadding": 20,
+
+        "grid": true,
+        "gridColor": "#E8ECE8",
+        "gridWidth": 0.8,
+
+        "tickColor": "#C9D1CA",
+        "domainColor": "#C9D1CA"
+      }
+    }
+  },
+
+  "layer": [
+    {
+      "mark": {
+        "type": "bar",
+        "size": 26,
+        "cornerRadiusEnd": 3,
+        "opacity": 0.9,
+        "color": "#3978A8"
+      },
+
+      "encoding": {
+        "tooltip": [
+          {
+            "field": "display_name",
+            "type": "nominal",
+            "title": "Common name"
+          },
+          {
+            "field": "species",
+            "type": "nominal",
+            "title": "Scientific name"
+          },
+          {
+            "field": "animal_group",
+            "type": "nominal",
+            "title": "Animal group"
+          },
+          {
+            "field": "records_num",
+            "type": "quantitative",
+            "title": "Occurrence records",
+            "format": ",.0f"
+          }
+        ]
+      }
+    },
+
+    {
+      "mark": {
+        "type": "text",
+
+        "align": "left",
+        "baseline": "middle",
+        "dx": 10,
+
+        "font": "Source Sans 3",
+        "fontSize": 13,
+        "fontWeight": 600,
+
+        "color": "#202622"
+      },
+
+      "encoding": {
+        "text": {
+          "field": "record_label",
+          "type": "nominal"
+        }
+      }
+    }
+  ],
+
+  "config": {
+    "background": null,
+
+    "view": {
+      "stroke": null
+    },
+
+    "font": "Source Sans 3"
+  }
+}
