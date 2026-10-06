@@ -293,31 +293,23 @@
         </div>
 
         <!-- Chart 4 -->
-        <article class="chart-card chart-wide">
+        <article class="chart-card chart-wide" id="chart-4">
 
           <header class="chart-header">
 
             <h3>
-              Which families account for the most recorded species?
+              Which families contain the most recorded species?
             </h3>
 
             <p>
-              The ten richest named families within each animal group
-              are shown. Rectangle area represents recorded species
-              richness among those selected families.
+              Explore the five richest named families within each
+              animal group. Rectangle area represents recorded
+              species richness among the displayed families.
             </p>
 
           </header>
 
-
-          <!-- =====================================================
-              FOUR-PANEL TREEMAP GRID
-              ===================================================== -->
-
-          <div
-            id="taxonomy-treemap"
-            class="treemap-grid"
-          >
+          <div id="taxonomy-treemap" class="treemap-grid">
 
             <!-- BIRD -->
             <section class="treemap-panel">
@@ -341,7 +333,7 @@
                 id="bird-treemap"
                 class="treemap-chart"
                 role="img"
-                aria-label="Treemap of the ten richest recorded bird families"
+                aria-label="Treemap of the five richest recorded bird families"
               ></div>
 
             </section>
@@ -369,7 +361,7 @@
                 id="mammal-treemap"
                 class="treemap-chart"
                 role="img"
-                aria-label="Treemap of the ten richest recorded mammal families"
+                aria-label="Treemap of the five richest recorded mammal families"
               ></div>
 
             </section>
@@ -397,7 +389,7 @@
                 id="reptile-treemap"
                 class="treemap-chart"
                 role="img"
-                aria-label="Treemap of the ten richest recorded reptile families"
+                aria-label="Treemap of the five richest recorded reptile families"
               ></div>
 
             </section>
@@ -425,17 +417,12 @@
                 id="insect-treemap"
                 class="treemap-chart"
                 role="img"
-                aria-label="Treemap of the ten richest recorded insect families"
+                aria-label="Treemap of the five richest recorded insect families"
               ></div>
 
             </section>
 
           </div>
-
-
-          <!-- =====================================================
-              KEY FINDING AND EXPLANATION
-              ===================================================== -->
 
           <div class="chart-support">
 
@@ -446,15 +433,17 @@
               </span>
 
               <p class="insight-main">
-                Recorded richness is more concentrated among the
-                leading reptile families than among the leading
-                bird and insect families.
+                The leading families account for different shares
+                of recorded species richness across animal groups.
               </p>
 
-              <p class="insight-context">
-                The ten richest reptile families represent 91.0%
-                of recorded reptile richness, compared with 47.7%
-                for birds and 34.8% for insects.
+              <p
+                id="treemap-key-finding-context"
+                class="insight-context"
+              >
+                Comparing the five richest families in each group
+                highlights differences in recorded taxonomic
+                composition.
               </p>
 
             </aside>
@@ -467,27 +456,22 @@
               </span>
 
               <p class="chart-note">
-                Each panel shows the ten richest named families
+                Each panel shows the five richest named families
                 within one animal group. Rectangle area represents
-                recorded species richness among those families.
-                Compare rectangle sizes within each panel, not
-                across animal groups. The percentage above each
-                panel indicates the proportion of total recorded
-                richness represented by the displayed families.
-                Hover over a rectangle for its full family name
-                and exact values.
+                recorded species richness among those five families.
+                Compare rectangle sizes within panels, not across
+                animal groups. The percentage above each panel
+                indicates how much of the group's total recorded
+                richness is represented by the five displayed
+                families. 
               </p>
 
-              <p class="chart-source">
+              <!-- <p class="chart-source">
                 Source: Atlas of Living Australia, 2016–2025.
-              </p>
-
+              </p> -->
             </div>
-
           </div>
-
         </article>
-
 
 
         <div class="two-column">
