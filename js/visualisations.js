@@ -1,6 +1,5 @@
 "use strict";
 
-
 /*
 =========================================================
 WILD CITIES
@@ -8,9 +7,7 @@ Visualisation loader
 =========================================================
 */
 
-
 const visualisations = [
-
   {
     container: "#symbol-map",
     spec: "charts/01_symbol_map.vg.json"
@@ -26,10 +23,10 @@ const visualisations = [
     spec: "charts/03_scatter.vg.json"
   },
 
-  {
-    container: "#taxonomy-treemap",
-    spec: "charts/04_treemap.vg.json"
-  },
+  // {
+  //   container: "#taxonomy-treemap",
+  //   spec: "charts/04_treemap.vg.json"
+  // },
 
   {
     container: "#species-ranking",
@@ -70,9 +67,7 @@ const visualisations = [
     container: "#threatened-choropleth",
     spec: "charts/12_threatened_choropleth.vg.json"
   }
-
 ];
-
 
 /*
 =========================================================
@@ -81,23 +76,14 @@ Embed one visualisation
 */
 
 function embedVisualisation(item) {
-
   return vegaEmbed(
     item.container,
     item.spec,
     WILD_CITIES_CONFIG.embedOptions
-  )
-  .catch(function(error) {
-
-    console.error(
-      `Failed to load ${item.spec}`,
-      error
-    );
-
+  ).catch(function (error) {
+    console.error(`Failed to load ${item.spec}`, error);
   });
-
 }
-
 
 /*
 =========================================================
@@ -105,6 +91,4 @@ Embed all visualisations
 =========================================================
 */
 
-visualisations.forEach(
-  embedVisualisation
-);
+visualisations.forEach(embedVisualisation);

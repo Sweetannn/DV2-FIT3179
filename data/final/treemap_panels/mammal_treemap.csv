@@ -1,0 +1,13 @@
+id,parent,animal_group,family,species_richness,record_count,family_type
+root,,Mammal,,0,0,root
+Mammal|Other families,root,Mammal,Other families,59,198240,Other
+Mammal|Vespertilionidae,root,Mammal,Vespertilionidae,22,8300,Named family
+Mammal|Macropodidae,root,Mammal,Macropodidae,19,26446,Named family
+Mammal|Dasyuridae,root,Mammal,Dasyuridae,16,4077,Named family
+Mammal|Muridae,root,Mammal,Muridae,16,23411,Named family
+Mammal|Delphinidae,root,Mammal,Delphinidae,10,216,Named family
+Mammal|Molossidae,root,Mammal,Molossidae,9,2923,Named family
+Mammal|Pteropodidae,root,Mammal,Pteropodidae,7,26042,Named family
+Mammal|Cervidae,root,Mammal,Cervidae,5,5265,Named family
+Mammal|Peramelidae,root,Mammal,Peramelidae,5,12903,Named family
+Mammal|Petauridae,root,Mammal,Petauridae,5,2415,Named family

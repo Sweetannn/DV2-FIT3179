@@ -1,0 +1,13 @@
+id,parent,animal_group,family,species_richness,record_count,family_type
+root,,Insect,,0,0,root
+Insect|Other families,root,Insect,Other families,6184,438514,Other
+Insect|Geometridae,root,Insect,Geometridae,543,41709,Named family
+Insect|Oecophoridae,root,Insect,Oecophoridae,466,15647,Named family
+Insect|Erebidae,root,Insect,Erebidae,383,27542,Named family
+Insect|Formicidae,root,Insect,Formicidae,351,26677,Named family
+Insect|Chrysomelidae,root,Insect,Chrysomelidae,321,14295,Named family
+Insect|Curculionidae,root,Insect,Curculionidae,293,4837,Named family
+Insect|Cerambycidae,root,Insect,Cerambycidae,283,5186,Named family
+Insect|Crambidae,root,Insect,Crambidae,260,18607,Named family
+Insect|Noctuidae,root,Insect,Noctuidae,208,21562,Named family
+Insect|Buprestidae,root,Insect,Buprestidae,198,1989,Named family

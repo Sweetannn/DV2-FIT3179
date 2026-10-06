@@ -12,10 +12,8 @@
 
     <title>Australia's Urban Wildlife</title>
 
-    <!-- Main stylesheet -->
     <link rel="stylesheet" href="css/style.css" />
 
-    <!-- Vega libraries -->
     <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
@@ -23,10 +21,7 @@
 
   <body>
     <main class="page-container">
-      <!-- =========================================================
-         HERO
-         ========================================================= -->
-
+      <!-- header intro -->
       <header class="hero">
         <p class="eyebrow">AUSTRALIA'S URBAN WILDLIFE · 2016–2025</p>
 
@@ -65,9 +60,7 @@
         </div>
       </header>
 
-      <!-- =========================================================
-         SECTION 1
-         ========================================================= -->
+      <!-- SECTION 1 -->
 
       <section class="story-section" id="overview">
         <div class="section-heading">
@@ -201,7 +194,6 @@
         </article>
 
         <!-- Chart 3 -->
-        <!-- Chart 3 -->
         <article class="chart-card chart-wide">
 
           <header class="chart-header">
@@ -278,30 +270,225 @@
 
         </article>
 
-      <!-- =========================================================
-         SECTION 2
-         ========================================================= -->
-
+      <!-- SECTION 2 -->
       <section class="story-section" id="composition">
+
         <div class="section-heading">
-          <span class="section-number">02</span>
 
-          <div>
-            <p class="eyebrow">WHO LIVES HERE?</p>
-
-            <h2>Urban biodiversity is more than a species count.</h2>
-
-            <p class="section-intro">
-              The next views reveal which taxonomic families dominate, which
-              species appear across many cities, and how the four animal groups
-              contribute to each urban ecosystem.
-            </p>
+          <div class="section-kicker">
+            <span class="section-number">02</span>
+            <span class="eyebrow">WHO LIVES HERE?</span>
           </div>
+
+          <h2>
+            Urban biodiversity is more than a species count.
+          </h2>
+
+          <p class="section-intro">
+            Look beneath the city totals to see which taxonomic families
+            make up Australia's recorded urban wildlife, and which species
+            recur across multiple cities.
+          </p>
+
         </div>
 
+        <!-- Chart 4 -->
         <article class="chart-card chart-wide">
-          <div id="taxonomy-treemap" class="chart"></div>
+
+          <header class="chart-header">
+
+            <h3>
+              Which families account for the most recorded species?
+            </h3>
+
+            <p>
+              The ten richest named families within each animal group
+              are shown. Rectangle area represents recorded species
+              richness among those selected families.
+            </p>
+
+          </header>
+
+
+          <!-- =====================================================
+              FOUR-PANEL TREEMAP GRID
+              ===================================================== -->
+
+          <div
+            id="taxonomy-treemap"
+            class="treemap-grid"
+          >
+
+            <!-- BIRD -->
+            <section class="treemap-panel">
+
+              <header class="treemap-panel-header">
+
+                <h4 class="treemap-group-title treemap-bird">
+                  BIRD
+                </h4>
+
+                <p
+                  id="bird-treemap-summary"
+                  class="treemap-group-summary"
+                >
+                  Loading...
+                </p>
+
+              </header>
+
+              <div
+                id="bird-treemap"
+                class="treemap-chart"
+                role="img"
+                aria-label="Treemap of the ten richest recorded bird families"
+              ></div>
+
+            </section>
+
+
+            <!-- MAMMAL -->
+            <section class="treemap-panel">
+
+              <header class="treemap-panel-header">
+
+                <h4 class="treemap-group-title treemap-mammal">
+                  MAMMAL
+                </h4>
+
+                <p
+                  id="mammal-treemap-summary"
+                  class="treemap-group-summary"
+                >
+                  Loading...
+                </p>
+
+              </header>
+
+              <div
+                id="mammal-treemap"
+                class="treemap-chart"
+                role="img"
+                aria-label="Treemap of the ten richest recorded mammal families"
+              ></div>
+
+            </section>
+
+
+            <!-- REPTILE -->
+            <section class="treemap-panel">
+
+              <header class="treemap-panel-header">
+
+                <h4 class="treemap-group-title treemap-reptile">
+                  REPTILE
+                </h4>
+
+                <p
+                  id="reptile-treemap-summary"
+                  class="treemap-group-summary"
+                >
+                  Loading...
+                </p>
+
+              </header>
+
+              <div
+                id="reptile-treemap"
+                class="treemap-chart"
+                role="img"
+                aria-label="Treemap of the ten richest recorded reptile families"
+              ></div>
+
+            </section>
+
+
+            <!-- INSECT -->
+            <section class="treemap-panel">
+
+              <header class="treemap-panel-header">
+
+                <h4 class="treemap-group-title treemap-insect">
+                  INSECT
+                </h4>
+
+                <p
+                  id="insect-treemap-summary"
+                  class="treemap-group-summary"
+                >
+                  Loading...
+                </p>
+
+              </header>
+
+              <div
+                id="insect-treemap"
+                class="treemap-chart"
+                role="img"
+                aria-label="Treemap of the ten richest recorded insect families"
+              ></div>
+
+            </section>
+
+          </div>
+
+
+          <!-- =====================================================
+              KEY FINDING AND EXPLANATION
+              ===================================================== -->
+
+          <div class="chart-support">
+
+            <aside class="chart-insight">
+
+              <span class="insight-label">
+                KEY FINDING
+              </span>
+
+              <p class="insight-main">
+                Recorded richness is more concentrated among the
+                leading reptile families than among the leading
+                bird and insect families.
+              </p>
+
+              <p class="insight-context">
+                The ten richest reptile families represent 91.0%
+                of recorded reptile richness, compared with 47.7%
+                for birds and 34.8% for insects.
+              </p>
+
+            </aside>
+
+
+            <div class="chart-meta">
+
+              <span class="insight-label">
+                HOW TO READ THIS
+              </span>
+
+              <p class="chart-note">
+                Each panel shows the ten richest named families
+                within one animal group. Rectangle area represents
+                recorded species richness among those families.
+                Compare rectangle sizes within each panel, not
+                across animal groups. The percentage above each
+                panel indicates the proportion of total recorded
+                richness represented by the displayed families.
+                Hover over a rectangle for its full family name
+                and exact values.
+              </p>
+
+              <p class="chart-source">
+                Source: Atlas of Living Australia, 2016–2025.
+              </p>
+
+            </div>
+
+          </div>
+
         </article>
+
+
 
         <div class="two-column">
           <article class="chart-card">
@@ -431,5 +618,6 @@
     <!-- Project JavaScript -->
     <script src="js/config.js"></script>
     <script src="js/visualisations.js"></script>
+    <script src="js/treemap.js" defer></script>
   </body>
 </html>

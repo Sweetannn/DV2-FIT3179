@@ -1,0 +1,1128 @@
+{
+  "$schema": "https://vega.github.io/schema/vega/v5.json",
+
+  "width": 1100,
+  "height": 700,
+
+  "autosize": {
+    "type": "fit",
+    "contains": "padding",
+    "resize": true
+  },
+
+  "padding": 0,
+
+  "signals": [
+    {
+      "name": "panelGapX",
+      "value": 28
+    },
+    {
+      "name": "panelGapY",
+      "value": 34
+    },
+    {
+      "name": "headerHeight",
+      "value": 44
+    },
+    {
+      "name": "panelWidth",
+      "update": "(width - panelGapX) / 2"
+    },
+    {
+      "name": "panelHeight",
+      "update": "(height - panelGapY) / 2"
+    },
+    {
+      "name": "treemapHeight",
+      "update": "panelHeight - headerHeight"
+    }
+  ],
+
+  "data": [
+    {
+      "name": "birdTree",
+
+      "url": "data/final/treemap_panels/bird_treemap.csv",
+
+      "format": {
+        "type": "csv",
+        "parse": {
+          "species_richness": "number",
+          "record_count": "number"
+        }
+      },
+
+      "transform": [
+        {
+          "type": "stratify",
+          "key": "id",
+          "parentKey": "parent"
+        },
+        {
+          "type": "treemap",
+          "field": "species_richness",
+          "sort": {
+            "field": "value",
+            "order": "descending"
+          },
+          "method": "squarify",
+          "ratio": 1.2,
+          "round": true,
+          "paddingInner": 3,
+          "size": [
+            {
+              "signal": "panelWidth"
+            },
+            {
+              "signal": "treemapHeight"
+            }
+          ]
+        }
+      ]
+    },
+
+    {
+      "name": "birdLeaves",
+
+      "source": "birdTree",
+
+      "transform": [
+        {
+          "type": "filter",
+          "expr": "datum.depth === 1"
+        }
+      ]
+    },
+
+    {
+      "name": "mammalTree",
+
+      "url": "data/final/treemap_panels/mammal_treemap.csv",
+
+      "format": {
+        "type": "csv",
+        "parse": {
+          "species_richness": "number",
+          "record_count": "number"
+        }
+      },
+
+      "transform": [
+        {
+          "type": "stratify",
+          "key": "id",
+          "parentKey": "parent"
+        },
+        {
+          "type": "treemap",
+          "field": "species_richness",
+          "sort": {
+            "field": "value",
+            "order": "descending"
+          },
+          "method": "squarify",
+          "ratio": 1.2,
+          "round": true,
+          "paddingInner": 3,
+          "size": [
+            {
+              "signal": "panelWidth"
+            },
+            {
+              "signal": "treemapHeight"
+            }
+          ]
+        }
+      ]
+    },
+
+    {
+      "name": "mammalLeaves",
+
+      "source": "mammalTree",
+
+      "transform": [
+        {
+          "type": "filter",
+          "expr": "datum.depth === 1"
+        }
+      ]
+    },
+
+    {
+      "name": "reptileTree",
+
+      "url": "data/final/treemap_panels/reptile_treemap.csv",
+
+      "format": {
+        "type": "csv",
+        "parse": {
+          "species_richness": "number",
+          "record_count": "number"
+        }
+      },
+
+      "transform": [
+        {
+          "type": "stratify",
+          "key": "id",
+          "parentKey": "parent"
+        },
+        {
+          "type": "treemap",
+          "field": "species_richness",
+          "sort": {
+            "field": "value",
+            "order": "descending"
+          },
+          "method": "squarify",
+          "ratio": 1.2,
+          "round": true,
+          "paddingInner": 3,
+          "size": [
+            {
+              "signal": "panelWidth"
+            },
+            {
+              "signal": "treemapHeight"
+            }
+          ]
+        }
+      ]
+    },
+
+    {
+      "name": "reptileLeaves",
+
+      "source": "reptileTree",
+
+      "transform": [
+        {
+          "type": "filter",
+          "expr": "datum.depth === 1"
+        }
+      ]
+    },
+
+    {
+      "name": "insectTree",
+
+      "url": "data/final/treemap_panels/insect_treemap.csv",
+
+      "format": {
+        "type": "csv",
+        "parse": {
+          "species_richness": "number",
+          "record_count": "number"
+        }
+      },
+
+      "transform": [
+        {
+          "type": "stratify",
+          "key": "id",
+          "parentKey": "parent"
+        },
+        {
+          "type": "treemap",
+          "field": "species_richness",
+          "sort": {
+            "field": "value",
+            "order": "descending"
+          },
+          "method": "squarify",
+          "ratio": 1.2,
+          "round": true,
+          "paddingInner": 3,
+          "size": [
+            {
+              "signal": "panelWidth"
+            },
+            {
+              "signal": "treemapHeight"
+            }
+          ]
+        }
+      ]
+    },
+
+    {
+      "name": "insectLeaves",
+
+      "source": "insectTree",
+
+      "transform": [
+        {
+          "type": "filter",
+          "expr": "datum.depth === 1"
+        }
+      ]
+    }
+  ],
+
+  "marks": [
+    {
+      "type": "group",
+
+      "encode": {
+        "enter": {
+          "x": {
+            "value": 0
+          },
+          "y": {
+            "value": 0
+          },
+          "width": {
+            "signal": "panelWidth"
+          },
+          "height": {
+            "signal": "panelHeight"
+          }
+        }
+      },
+
+      "marks": [
+        {
+          "type": "text",
+
+          "encode": {
+            "enter": {
+              "x": {
+                "value": 0
+              },
+              "y": {
+                "value": 0
+              },
+              "text": {
+                "value": "BIRD"
+              },
+              "font": {
+                "value": "Source Sans 3"
+              },
+              "fontSize": {
+                "value": 15
+              },
+              "fontWeight": {
+                "value": 700
+              },
+              "fill": {
+                "value": "#3978A8"
+              },
+              "baseline": {
+                "value": "top"
+              }
+            }
+          }
+        },
+
+        {
+          "type": "text",
+
+          "encode": {
+            "enter": {
+              "x": {
+                "value": 0
+              },
+              "y": {
+                "value": 20
+              },
+              "text": {
+                "value": "Recorded family richness: 660"
+              },
+              "font": {
+                "value": "Source Sans 3"
+              },
+              "fontSize": {
+                "value": 11.5
+              },
+              "fill": {
+                "value": "#68706A"
+              },
+              "baseline": {
+                "value": "top"
+              }
+            }
+          }
+        },
+
+        {
+          "type": "rect",
+
+          "from": {
+            "data": "birdLeaves"
+          },
+
+          "encode": {
+            "enter": {
+              "x": {
+                "field": "x0"
+              },
+              "y": {
+                "signal": "datum.y0 + headerHeight"
+              },
+              "x2": {
+                "field": "x1"
+              },
+              "y2": {
+                "signal": "datum.y1 + headerHeight"
+              },
+
+              "fill": {
+                "signal": "datum.family_type === 'Other' ? '#A9C9DD' : '#3978A8'"
+              },
+
+              "stroke": {
+                "value": "#FFFFFF"
+              },
+
+              "strokeWidth": {
+                "value": 2
+              },
+
+              "tooltip": {
+                "signal": "{'Family': datum.family, 'Recorded species richness': format(datum.species_richness, ','), 'Occurrence records': format(datum.record_count, ',')}"
+              }
+            },
+
+            "update": {
+              "fillOpacity": {
+                "value": 0.9
+              }
+            },
+
+            "hover": {
+              "fillOpacity": {
+                "value": 1
+              }
+            }
+          }
+        },
+
+        {
+          "type": "text",
+
+          "from": {
+            "data": "birdLeaves"
+          },
+
+          "interactive": false,
+
+          "encode": {
+            "enter": {
+              "x": {
+                "signal": "datum.x0 + 7"
+              },
+              "y": {
+                "signal": "datum.y0 + headerHeight + 7"
+              },
+              "text": {
+                "field": "family"
+              },
+              "font": {
+                "value": "Source Sans 3"
+              },
+              "fontSize": {
+                "value": 11.5
+              },
+              "fontWeight": {
+                "value": 600
+              },
+              "fill": {
+                "signal": "datum.family_type === 'Other' ? '#202622' : '#FFFFFF'"
+              },
+              "align": {
+                "value": "left"
+              },
+              "baseline": {
+                "value": "top"
+              },
+              "limit": {
+                "signal": "max(0, datum.x1 - datum.x0 - 12)"
+              },
+              "opacity": {
+                "signal": "(datum.x1 - datum.x0) > 75 && (datum.y1 - datum.y0) > 28 ? 1 : 0"
+              }
+            }
+          }
+        },
+
+        {
+          "type": "text",
+
+          "from": {
+            "data": "birdLeaves"
+          },
+
+          "interactive": false,
+
+          "encode": {
+            "enter": {
+              "x": {
+                "signal": "datum.x0 + 7"
+              },
+              "y": {
+                "signal": "datum.y0 + headerHeight + 24"
+              },
+              "text": {
+                "signal": "format(datum.species_richness, ',') + ' species'"
+              },
+              "font": {
+                "value": "Source Sans 3"
+              },
+              "fontSize": {
+                "value": 10
+              },
+              "fill": {
+                "signal": "datum.family_type === 'Other' ? '#202622' : '#FFFFFF'"
+              },
+              "baseline": {
+                "value": "top"
+              },
+              "opacity": {
+                "signal": "(datum.x1 - datum.x0) > 95 && (datum.y1 - datum.y0) > 46 ? 0.9 : 0"
+              }
+            }
+          }
+        }
+      ]
+    },
+
+    {
+      "type": "group",
+
+      "encode": {
+        "enter": {
+          "x": {
+            "signal": "panelWidth + panelGapX"
+          },
+          "y": {
+            "value": 0
+          },
+          "width": {
+            "signal": "panelWidth"
+          },
+          "height": {
+            "signal": "panelHeight"
+          }
+        }
+      },
+
+      "marks": [
+        {
+          "type": "text",
+
+          "encode": {
+            "enter": {
+              "x": {
+                "value": 0
+              },
+              "y": {
+                "value": 0
+              },
+              "text": {
+                "value": "MAMMAL"
+              },
+              "font": {
+                "value": "Source Sans 3"
+              },
+              "fontSize": {
+                "value": 15
+              },
+              "fontWeight": {
+                "value": 700
+              },
+              "fill": {
+                "value": "#C47A3D"
+              },
+              "baseline": {
+                "value": "top"
+              }
+            }
+          }
+        },
+
+        {
+          "type": "text",
+
+          "encode": {
+            "enter": {
+              "x": {
+                "value": 0
+              },
+              "y": {
+                "value": 20
+              },
+              "text": {
+                "value": "Recorded family richness: 173"
+              },
+              "font": {
+                "value": "Source Sans 3"
+              },
+              "fontSize": {
+                "value": 11.5
+              },
+              "fill": {
+                "value": "#68706A"
+              },
+              "baseline": {
+                "value": "top"
+              }
+            }
+          }
+        },
+
+        {
+          "type": "rect",
+
+          "from": {
+            "data": "mammalLeaves"
+          },
+
+          "encode": {
+            "enter": {
+              "x": {
+                "field": "x0"
+              },
+              "y": {
+                "signal": "datum.y0 + headerHeight"
+              },
+              "x2": {
+                "field": "x1"
+              },
+              "y2": {
+                "signal": "datum.y1 + headerHeight"
+              },
+
+              "fill": {
+                "signal": "datum.family_type === 'Other' ? '#E4B993' : '#C47A3D'"
+              },
+
+              "stroke": {
+                "value": "#FFFFFF"
+              },
+
+              "strokeWidth": {
+                "value": 2
+              },
+
+              "tooltip": {
+                "signal": "{'Family': datum.family, 'Recorded species richness': format(datum.species_richness, ','), 'Occurrence records': format(datum.record_count, ',')}"
+              }
+            }
+          }
+        },
+
+        {
+          "type": "text",
+
+          "from": {
+            "data": "mammalLeaves"
+          },
+
+          "interactive": false,
+
+          "encode": {
+            "enter": {
+              "x": {
+                "signal": "datum.x0 + 7"
+              },
+              "y": {
+                "signal": "datum.y0 + headerHeight + 7"
+              },
+              "text": {
+                "field": "family"
+              },
+              "font": {
+                "value": "Source Sans 3"
+              },
+              "fontSize": {
+                "value": 11.5
+              },
+              "fontWeight": {
+                "value": 600
+              },
+              "fill": {
+                "signal": "datum.family_type === 'Other' ? '#202622' : '#FFFFFF'"
+              },
+              "baseline": {
+                "value": "top"
+              },
+              "limit": {
+                "signal": "max(0, datum.x1 - datum.x0 - 12)"
+              },
+              "opacity": {
+                "signal": "(datum.x1 - datum.x0) > 75 && (datum.y1 - datum.y0) > 28 ? 1 : 0"
+              }
+            }
+          }
+        },
+
+        {
+          "type": "text",
+
+          "from": {
+            "data": "mammalLeaves"
+          },
+
+          "interactive": false,
+
+          "encode": {
+            "enter": {
+              "x": {
+                "signal": "datum.x0 + 7"
+              },
+              "y": {
+                "signal": "datum.y0 + headerHeight + 24"
+              },
+              "text": {
+                "signal": "format(datum.species_richness, ',') + ' species'"
+              },
+              "font": {
+                "value": "Source Sans 3"
+              },
+              "fontSize": {
+                "value": 10
+              },
+              "fill": {
+                "signal": "datum.family_type === 'Other' ? '#202622' : '#FFFFFF'"
+              },
+              "baseline": {
+                "value": "top"
+              },
+              "opacity": {
+                "signal": "(datum.x1 - datum.x0) > 95 && (datum.y1 - datum.y0) > 46 ? 0.9 : 0"
+              }
+            }
+          }
+        }
+      ]
+    },
+
+    {
+      "type": "group",
+
+      "encode": {
+        "enter": {
+          "x": {
+            "value": 0
+          },
+          "y": {
+            "signal": "panelHeight + panelGapY"
+          },
+          "width": {
+            "signal": "panelWidth"
+          },
+          "height": {
+            "signal": "panelHeight"
+          }
+        }
+      },
+
+      "marks": [
+        {
+          "type": "text",
+
+          "encode": {
+            "enter": {
+              "x": {
+                "value": 0
+              },
+              "y": {
+                "value": 0
+              },
+              "text": {
+                "value": "REPTILE"
+              },
+              "font": {
+                "value": "Source Sans 3"
+              },
+              "fontSize": {
+                "value": 15
+              },
+              "fontWeight": {
+                "value": 700
+              },
+              "fill": {
+                "value": "#48875F"
+              },
+              "baseline": {
+                "value": "top"
+              }
+            }
+          }
+        },
+
+        {
+          "type": "text",
+
+          "encode": {
+            "enter": {
+              "x": {
+                "value": 0
+              },
+              "y": {
+                "value": 20
+              },
+              "text": {
+                "value": "Recorded family richness: 311"
+              },
+              "font": {
+                "value": "Source Sans 3"
+              },
+              "fontSize": {
+                "value": 11.5
+              },
+              "fill": {
+                "value": "#68706A"
+              },
+              "baseline": {
+                "value": "top"
+              }
+            }
+          }
+        },
+
+        {
+          "type": "rect",
+
+          "from": {
+            "data": "reptileLeaves"
+          },
+
+          "encode": {
+            "enter": {
+              "x": {
+                "field": "x0"
+              },
+              "y": {
+                "signal": "datum.y0 + headerHeight"
+              },
+              "x2": {
+                "field": "x1"
+              },
+              "y2": {
+                "signal": "datum.y1 + headerHeight"
+              },
+
+              "fill": {
+                "signal": "datum.family_type === 'Other' ? '#A9C9B3' : '#48875F'"
+              },
+
+              "stroke": {
+                "value": "#FFFFFF"
+              },
+
+              "strokeWidth": {
+                "value": 2
+              },
+
+              "tooltip": {
+                "signal": "{'Family': datum.family, 'Recorded species richness': format(datum.species_richness, ','), 'Occurrence records': format(datum.record_count, ',')}"
+              }
+            }
+          }
+        },
+
+        {
+          "type": "text",
+
+          "from": {
+            "data": "reptileLeaves"
+          },
+
+          "interactive": false,
+
+          "encode": {
+            "enter": {
+              "x": {
+                "signal": "datum.x0 + 7"
+              },
+              "y": {
+                "signal": "datum.y0 + headerHeight + 7"
+              },
+              "text": {
+                "field": "family"
+              },
+              "font": {
+                "value": "Source Sans 3"
+              },
+              "fontSize": {
+                "value": 11.5
+              },
+              "fontWeight": {
+                "value": 600
+              },
+              "fill": {
+                "signal": "datum.family_type === 'Other' ? '#202622' : '#FFFFFF'"
+              },
+              "baseline": {
+                "value": "top"
+              },
+              "limit": {
+                "signal": "max(0, datum.x1 - datum.x0 - 12)"
+              },
+              "opacity": {
+                "signal": "(datum.x1 - datum.x0) > 75 && (datum.y1 - datum.y0) > 28 ? 1 : 0"
+              }
+            }
+          }
+        },
+
+        {
+          "type": "text",
+
+          "from": {
+            "data": "reptileLeaves"
+          },
+
+          "interactive": false,
+
+          "encode": {
+            "enter": {
+              "x": {
+                "signal": "datum.x0 + 7"
+              },
+              "y": {
+                "signal": "datum.y0 + headerHeight + 24"
+              },
+              "text": {
+                "signal": "format(datum.species_richness, ',') + ' species'"
+              },
+              "font": {
+                "value": "Source Sans 3"
+              },
+              "fontSize": {
+                "value": 10
+              },
+              "fill": {
+                "signal": "datum.family_type === 'Other' ? '#202622' : '#FFFFFF'"
+              },
+              "baseline": {
+                "value": "top"
+              },
+              "opacity": {
+                "signal": "(datum.x1 - datum.x0) > 95 && (datum.y1 - datum.y0) > 46 ? 0.9 : 0"
+              }
+            }
+          }
+        }
+      ]
+    },
+
+    {
+      "type": "group",
+
+      "encode": {
+        "enter": {
+          "x": {
+            "signal": "panelWidth + panelGapX"
+          },
+          "y": {
+            "signal": "panelHeight + panelGapY"
+          },
+          "width": {
+            "signal": "panelWidth"
+          },
+          "height": {
+            "signal": "panelHeight"
+          }
+        }
+      },
+
+      "marks": [
+        {
+          "type": "text",
+
+          "encode": {
+            "enter": {
+              "x": {
+                "value": 0
+              },
+              "y": {
+                "value": 0
+              },
+              "text": {
+                "value": "INSECT"
+              },
+              "font": {
+                "value": "Source Sans 3"
+              },
+              "fontSize": {
+                "value": 15
+              },
+              "fontWeight": {
+                "value": 700
+              },
+              "fill": {
+                "value": "#8167A9"
+              },
+              "baseline": {
+                "value": "top"
+              }
+            }
+          }
+        },
+
+        {
+          "type": "text",
+
+          "encode": {
+            "enter": {
+              "x": {
+                "value": 0
+              },
+              "y": {
+                "value": 20
+              },
+              "text": {
+                "value": "Recorded family richness: 9,490"
+              },
+              "font": {
+                "value": "Source Sans 3"
+              },
+              "fontSize": {
+                "value": 11.5
+              },
+              "fill": {
+                "value": "#68706A"
+              },
+              "baseline": {
+                "value": "top"
+              }
+            }
+          }
+        },
+
+        {
+          "type": "rect",
+
+          "from": {
+            "data": "insectLeaves"
+          },
+
+          "encode": {
+            "enter": {
+              "x": {
+                "field": "x0"
+              },
+              "y": {
+                "signal": "datum.y0 + headerHeight"
+              },
+              "x2": {
+                "field": "x1"
+              },
+              "y2": {
+                "signal": "datum.y1 + headerHeight"
+              },
+
+              "fill": {
+                "signal": "datum.family_type === 'Other' ? '#C7B8DA' : '#8167A9'"
+              },
+
+              "stroke": {
+                "value": "#FFFFFF"
+              },
+
+              "strokeWidth": {
+                "value": 2
+              },
+
+              "tooltip": {
+                "signal": "{'Family': datum.family, 'Recorded species richness': format(datum.species_richness, ','), 'Occurrence records': format(datum.record_count, ',')}"
+              }
+            }
+          }
+        },
+
+        {
+          "type": "text",
+
+          "from": {
+            "data": "insectLeaves"
+          },
+
+          "interactive": false,
+
+          "encode": {
+            "enter": {
+              "x": {
+                "signal": "datum.x0 + 7"
+              },
+              "y": {
+                "signal": "datum.y0 + headerHeight + 7"
+              },
+              "text": {
+                "field": "family"
+              },
+              "font": {
+                "value": "Source Sans 3"
+              },
+              "fontSize": {
+                "value": 11.5
+              },
+              "fontWeight": {
+                "value": 600
+              },
+              "fill": {
+                "signal": "datum.family_type === 'Other' ? '#202622' : '#FFFFFF'"
+              },
+              "baseline": {
+                "value": "top"
+              },
+              "limit": {
+                "signal": "max(0, datum.x1 - datum.x0 - 12)"
+              },
+              "opacity": {
+                "signal": "(datum.x1 - datum.x0) > 75 && (datum.y1 - datum.y0) > 28 ? 1 : 0"
+              }
+            }
+          }
+        },
+
+        {
+          "type": "text",
+
+          "from": {
+            "data": "insectLeaves"
+          },
+
+          "interactive": false,
+
+          "encode": {
+            "enter": {
+              "x": {
+                "signal": "datum.x0 + 7"
+              },
+              "y": {
+                "signal": "datum.y0 + headerHeight + 24"
+              },
+              "text": {
+                "signal": "format(datum.species_richness, ',') + ' species'"
+              },
+              "font": {
+                "value": "Source Sans 3"
+              },
+              "fontSize": {
+                "value": 10
+              },
+              "fill": {
+                "signal": "datum.family_type === 'Other' ? '#202622' : '#FFFFFF'"
+              },
+              "baseline": {
+                "value": "top"
+              },
+              "opacity": {
+                "signal": "(datum.x1 - datum.x0) > 95 && (datum.y1 - datum.y0) > 46 ? 0.9 : 0"
+              }
+            }
+          }
+        }
+      ]
+    }
+  ],
+
+  "config": {
+    "font": "Source Sans 3"
+  }
+}

@@ -782,3 +782,175 @@ sidebar | visual
     gap: 0.75rem;
   }
 }
+
+/* =========================================================
+   CHART 4 — SMALL-MULTIPLE TREEMAPS
+   ========================================================= */
+
+/* =========================================================
+   1. TREEMAP GRID
+   ========================================================= */
+
+.treemap-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  column-gap: 2rem;
+  row-gap: 2.25rem;
+
+  width: 100%;
+  min-width: 0;
+
+  margin: 1.5rem 0 0;
+
+  padding: 0;
+}
+
+/* =========================================================
+   2. INDIVIDUAL PANEL
+   ========================================================= */
+
+.treemap-panel {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  min-width: 0;
+
+  margin: 0;
+  padding: 0;
+}
+
+/* =========================================================
+   3. PANEL HEADER
+   ========================================================= */
+
+.treemap-panel-header {
+  width: 100%;
+
+  margin: 0 0 0.75rem;
+  padding: 0 0 0.65rem;
+
+  border-bottom: 1px solid var(--color-rule);
+}
+
+.treemap-group-title {
+  margin: 0 0 0.25rem;
+
+  font-family: "Source Sans 3", Arial, sans-serif;
+
+  font-size: 1.05rem;
+  font-weight: 700;
+
+  line-height: 1.3;
+  letter-spacing: 0.02em;
+
+  text-transform: uppercase;
+}
+
+.treemap-group-summary {
+  width: 100%;
+  max-width: none;
+
+  margin: 0;
+
+  font-size: 0.85rem;
+  font-weight: 400;
+
+  line-height: 1.5;
+
+  color: var(--color-muted);
+}
+
+/* =========================================================
+   4. ANIMAL GROUP COLOURS
+   Reuse existing project design tokens.
+   ========================================================= */
+
+.treemap-bird {
+  color: var(--bird-color);
+}
+
+.treemap-mammal {
+  color: var(--mammal-color);
+}
+
+.treemap-reptile {
+  color: var(--reptile-color);
+}
+
+.treemap-insect {
+  color: var(--insect-color);
+}
+
+/* =========================================================
+   5. VEGA CHART CONTAINERS
+   ========================================================= */
+
+.treemap-chart {
+  display: block;
+
+  width: 100%;
+  min-width: 0;
+
+  height: 310px;
+  min-height: 0;
+
+  margin: 0;
+  padding: 0;
+
+  overflow: hidden;
+}
+
+.treemap-chart .vega-embed {
+  display: block;
+
+  width: 100%;
+}
+
+.treemap-chart .vega-embed > div {
+  width: 100%;
+}
+
+.treemap-chart svg,
+.treemap-chart canvas {
+  display: block;
+
+  max-width: 100%;
+}
+
+/* =========================================================
+   6. RESPONSIVE DESIGN
+   ========================================================= */
+
+@media (max-width: 900px) {
+  .treemap-grid {
+    grid-template-columns: minmax(0, 1fr);
+
+    column-gap: 0;
+    row-gap: 2rem;
+  }
+
+  .treemap-chart {
+    height: 340px;
+  }
+}
+
+@media (max-width: 480px) {
+  .treemap-grid {
+    row-gap: 1.75rem;
+  }
+
+  .treemap-chart {
+    height: 280px;
+  }
+
+  .treemap-group-title {
+    font-size: 1rem;
+  }
+
+  .treemap-group-summary {
+    font-size: 0.8rem;
+  }
+}

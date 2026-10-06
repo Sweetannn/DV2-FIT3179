@@ -1,0 +1,13 @@
+id,parent,animal_group,family,species_richness,record_count,family_type
+root,,Bird,,0,0,root
+Bird|Other families,root,Bird,Other families,345,9657968,Other
+Bird|Meliphagidae,root,Bird,Meliphagidae,60,1759450,Named family
+Bird|Psittacidae,root,Bird,Psittacidae,40,1080771,Named family
+Bird|Procellariidae,root,Bird,Procellariidae,36,4629,Named family
+Bird|Acanthizidae,root,Bird,Acanthizidae,31,397090,Named family
+Bird|Scolopacidae,root,Bird,Scolopacidae,31,122333,Named family
+Bird|Laridae,root,Bird,Laridae,29,300349,Named family
+Bird|Anatidae,root,Bird,Anatidae,27,1094633,Named family
+Bird|Columbidae,root,Bird,Columbidae,25,869182,Named family
+Bird|Accipitridae,root,Bird,Accipitridae,18,222891,Named family
+Bird|Estrildidae,root,Bird,Estrildidae,18,132167,Named family

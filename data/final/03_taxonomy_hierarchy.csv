@@ -1,0 +1,50 @@
+id,parent,node_type,animal_group,family,species_richness,record_count,family_type
+root,,root,,,0,0,
+group|Bird,root,group,Bird,,0,0,
+group|Mammal,root,group,Mammal,,0,0,
+group|Reptile,root,group,Reptile,,0,0,
+group|Insect,root,group,Insect,,0,0,
+family|Bird|Meliphagidae,group|Bird,family,Bird,Meliphagidae,60,1759450,Named family
+family|Bird|Psittacidae,group|Bird,family,Bird,Psittacidae,40,1080771,Named family
+family|Bird|Procellariidae,group|Bird,family,Bird,Procellariidae,36,4629,Named family
+family|Bird|Acanthizidae,group|Bird,family,Bird,Acanthizidae,31,397090,Named family
+family|Bird|Scolopacidae,group|Bird,family,Bird,Scolopacidae,31,122333,Named family
+family|Bird|Laridae,group|Bird,family,Bird,Laridae,29,300349,Named family
+family|Bird|Anatidae,group|Bird,family,Bird,Anatidae,27,1094633,Named family
+family|Bird|Columbidae,group|Bird,family,Bird,Columbidae,25,869182,Named family
+family|Bird|Accipitridae,group|Bird,family,Bird,Accipitridae,18,222891,Named family
+family|Bird|Estrildidae,group|Bird,family,Bird,Estrildidae,18,132167,Named family
+family|Bird|Other families,group|Bird,family,Bird,Other families,345,9657968,Other
+family|Mammal|Vespertilionidae,group|Mammal,family,Mammal,Vespertilionidae,22,8300,Named family
+family|Mammal|Macropodidae,group|Mammal,family,Mammal,Macropodidae,19,26446,Named family
+family|Mammal|Dasyuridae,group|Mammal,family,Mammal,Dasyuridae,16,4077,Named family
+family|Mammal|Muridae,group|Mammal,family,Mammal,Muridae,16,23411,Named family
+family|Mammal|Delphinidae,group|Mammal,family,Mammal,Delphinidae,10,216,Named family
+family|Mammal|Molossidae,group|Mammal,family,Mammal,Molossidae,9,2923,Named family
+family|Mammal|Pteropodidae,group|Mammal,family,Mammal,Pteropodidae,7,26042,Named family
+family|Mammal|Cervidae,group|Mammal,family,Mammal,Cervidae,5,5265,Named family
+family|Mammal|Peramelidae,group|Mammal,family,Mammal,Peramelidae,5,12903,Named family
+family|Mammal|Petauridae,group|Mammal,family,Mammal,Petauridae,5,2415,Named family
+family|Mammal|Other families,group|Mammal,family,Mammal,Other families,59,198240,Other
+family|Reptile|Scincidae,group|Reptile,family,Reptile,Scincidae,118,44074,Named family
+family|Reptile|Elapidae,group|Reptile,family,Reptile,Elapidae,52,13373,Named family
+family|Reptile|Agamidae,group|Reptile,family,Reptile,Agamidae,21,18814,Named family
+family|Reptile|Diplodactylidae,group|Reptile,family,Reptile,Diplodactylidae,19,624,Named family
+family|Reptile|Pygopodidae,group|Reptile,family,Reptile,Pygopodidae,18,802,Named family
+family|Reptile|Gekkonidae,group|Reptile,family,Reptile,Gekkonidae,14,5100,Named family
+family|Reptile|Chelidae,group|Reptile,family,Reptile,Chelidae,13,14258,Named family
+family|Reptile|Typhlopidae,group|Reptile,family,Reptile,Typhlopidae,10,188,Named family
+family|Reptile|Pythonidae,group|Reptile,family,Reptile,Pythonidae,9,3944,Named family
+family|Reptile|Varanidae,group|Reptile,family,Reptile,Varanidae,9,2599,Named family
+family|Reptile|Other families,group|Reptile,family,Reptile,Other families,28,4631,Other
+family|Insect|Geometridae,group|Insect,family,Insect,Geometridae,543,41709,Named family
+family|Insect|Oecophoridae,group|Insect,family,Insect,Oecophoridae,466,15647,Named family
+family|Insect|Erebidae,group|Insect,family,Insect,Erebidae,383,27542,Named family
+family|Insect|Formicidae,group|Insect,family,Insect,Formicidae,351,26677,Named family
+family|Insect|Chrysomelidae,group|Insect,family,Insect,Chrysomelidae,321,14295,Named family
+family|Insect|Curculionidae,group|Insect,family,Insect,Curculionidae,293,4837,Named family
+family|Insect|Cerambycidae,group|Insect,family,Insect,Cerambycidae,283,5186,Named family
+family|Insect|Crambidae,group|Insect,family,Insect,Crambidae,260,18607,Named family
+family|Insect|Noctuidae,group|Insect,family,Insect,Noctuidae,208,21562,Named family
+family|Insect|Buprestidae,group|Insect,family,Insect,Buprestidae,198,1989,Named family
+family|Insect|Other families,group|Insect,family,Insect,Other families,6184,438514,Other

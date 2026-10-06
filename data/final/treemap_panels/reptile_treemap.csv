@@ -1,0 +1,13 @@
+id,parent,animal_group,family,species_richness,record_count,family_type
+root,,Reptile,,0,0,root
+Reptile|Scincidae,root,Reptile,Scincidae,118,44074,Named family
+Reptile|Elapidae,root,Reptile,Elapidae,52,13373,Named family
+Reptile|Other families,root,Reptile,Other families,28,4631,Other
+Reptile|Agamidae,root,Reptile,Agamidae,21,18814,Named family
+Reptile|Diplodactylidae,root,Reptile,Diplodactylidae,19,624,Named family
+Reptile|Pygopodidae,root,Reptile,Pygopodidae,18,802,Named family
+Reptile|Gekkonidae,root,Reptile,Gekkonidae,14,5100,Named family
+Reptile|Chelidae,root,Reptile,Chelidae,13,14258,Named family
+Reptile|Typhlopidae,root,Reptile,Typhlopidae,10,188,Named family
+Reptile|Pythonidae,root,Reptile,Pythonidae,9,3944,Named family
+Reptile|Varanidae,root,Reptile,Varanidae,9,2599,Named family
