@@ -1,0 +1,173 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Interactive equal-sized categorical point-location map of representative observed threatened-wildlife records within selected Australian urban areas.",
+  "width": "container",
+  "height": 540,
+  "projection": {
+    "type": "equalEarth"
+  },
+  "params": [
+    {
+      "name": "citySelection",
+      "value": "Melbourne",
+      "bind": {
+        "input": "select",
+        "name": "Urban area: ",
+        "options": [
+          "Brisbane",
+          "Sydney",
+          "Melbourne",
+          "Canberra\u2013Queanbeyan",
+          "Adelaide",
+          "Perth",
+          "Hobart",
+          "Darwin"
+        ]
+      }
+    }
+  ],
+  "layer": [
+    {
+      "data": {
+        "url": "geo/final/city_boundaries.topojson",
+        "format": {
+          "type": "topojson",
+          "feature": "cities"
+        }
+      },
+      "transform": [
+        {
+          "filter": "datum.properties.CITY === citySelection"
+        }
+      ],
+      "mark": {
+        "type": "geoshape",
+        "fill": "#F3F4F1",
+        "fillOpacity": 1,
+        "stroke": "#8F9D94",
+        "strokeWidth": 1.2
+      },
+      "encoding": {
+        "tooltip": [
+          {
+            "field": "properties.CITY",
+            "type": "nominal",
+            "title": "Urban area"
+          }
+        ]
+      }
+    },
+    {
+      "data": {
+        "url": "data/final/09c_threatened_occurrences.csv"
+      },
+      "transform": [
+        {
+          "calculate": "toNumber(datum.latitude)",
+          "as": "latitude_num"
+        },
+        {
+          "calculate": "toNumber(datum.longitude)",
+          "as": "longitude_num"
+        },
+        {
+          "calculate": "toNumber(datum.record_count)",
+          "as": "record_count_num"
+        },
+        {
+          "calculate": "isValid(datum.vernacularName) && datum.vernacularName !== '' ? datum.vernacularName : datum.scientificName",
+          "as": "display_name"
+        },
+        {
+          "filter": "isValid(datum.latitude_num) && isValid(datum.longitude_num) && datum.latitude_num >= -90 && datum.latitude_num <= 90 && datum.longitude_num >= -180 && datum.longitude_num <= 180"
+        },
+        {
+          "filter": "datum.CITY === citySelection"
+        }
+      ],
+      "mark": {
+        "type": "circle",
+        "size": 18,
+        "opacity": 0.65,
+        "stroke": "#FFFFFF",
+        "strokeWidth": 0.2
+      },
+      "encoding": {
+        "longitude": {
+          "field": "longitude_num",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "latitude_num",
+          "type": "quantitative"
+        },
+        "color": {
+          "field": "status",
+          "type": "nominal",
+          "title": "Threat status",
+          "scale": {
+            "domain": [
+              "Vulnerable",
+              "Endangered",
+              "Critically Endangered"
+            ],
+            "range": ["#E9A29E", "#C9535B", "#751B30"]
+          },
+          "legend": {
+            "orient": "top",
+            "direction": "horizontal",
+            "titleFont": "Source Sans 3",
+            "titleFontSize": 13,
+            "titleFontWeight": 600,
+            "titleColor": "#202622",
+            "labelFont": "Source Sans 3",
+            "labelFontSize": 12,
+            "labelColor": "#68706A",
+            "symbolSize": 80,
+            "titlePadding": 8
+          }
+        },
+        "tooltip": [
+          {
+            "field": "display_name",
+            "type": "nominal",
+            "title": "Species"
+          },
+          {
+            "field": "scientificName",
+            "type": "nominal",
+            "title": "Scientific name"
+          },
+          {
+            "field": "status",
+            "type": "nominal",
+            "title": "Threat status"
+          },
+          {
+            "field": "animal_group",
+            "type": "nominal",
+            "title": "Animal group"
+          },
+          {
+            "field": "CITY",
+            "type": "nominal",
+            "title": "Urban area"
+          },
+          {
+            "field": "record_count_num",
+            "type": "quantitative",
+            "title": "Occurrence records represented",
+            "format": ",.0f"
+          }
+        ]
+      }
+    }
+  ],
+  "config": {
+    "background": null,
+    "font": "Source Sans 3",
+    "view": {
+      "stroke": null
+    }
+  }
+}

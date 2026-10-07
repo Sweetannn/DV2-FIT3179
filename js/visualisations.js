@@ -1,10 +1,5 @@
 "use strict";
 
-/* =========================================================
-   WILD CITIES
-   Reusable visualisation loader
-   ========================================================= */
-
 const visualisations = [
   /* Chart 1 : Proportional Symbol Map */
   {
@@ -28,7 +23,7 @@ const visualisations = [
   },
 
   /*
-    Chart 4 uses js/treemap.js independently.
+    Chart 4 uses js/treemap.js
   */
 
   /* Chart 5 : Species Coverage Ranking */
@@ -57,27 +52,27 @@ const visualisations = [
   {
     container: "#spiral-chart",
     spec: "charts/08_spiral.vg.json",
-    enabled: true
+    enabled: false
   },
 
   /* Chart 9 : Network Diagram */
   {
     container: "#city-network",
     spec: "charts/09_network.vg.json",
-    enabled: true
+    enabled: false
   },
 
   /* Chart 10 : Bin Map */
   {
     container: "#bin-map",
     spec: "charts/10_bin_map.vg.json",
-    enabled: true
+    enabled: false
   },
 
-  /* Chart 11 : Threatened Species Dot Map */
+  /* Chart 11 : Threatened Species Point-Location Map */
   {
     container: "#threatened-dot-map",
-    spec: "charts/11_threatened_dot_map.vg.json",
+    spec: "charts/11_threatened_point_map.vg.json",
     enabled: true
   },
 
@@ -85,13 +80,9 @@ const visualisations = [
   {
     container: "#threatened-choropleth",
     spec: "charts/12_threatened_choropleth.vg.json",
-    enabled: true
+    enabled: false
   }
 ];
-
-/* =========================================================
-   EMBED ONE VISUALISATION
-   ========================================================= */
 
 async function embedVisualisation(item) {
   if (!item.enabled) {
@@ -122,19 +113,11 @@ async function embedVisualisation(item) {
   }
 }
 
-/* =========================================================
-   INITIALISE CHARTS
-   ========================================================= */
-
 async function initialiseVisualisations() {
   const enabledCharts = visualisations.filter((item) => item.enabled);
 
   await Promise.all(enabledCharts.map(embedVisualisation));
 }
-
-/* =========================================================
-   START
-   ========================================================= */
 
 if (document.readyState === "loading") {
   document.addEventListener("DOMContentLoaded", initialiseVisualisations, {
@@ -143,10 +126,6 @@ if (document.readyState === "loading") {
 } else {
   initialiseVisualisations();
 }
-
-/* =========================================================
-   REUSABLE RESPONSIVE VEGA
-   ========================================================= */
 
 function enableResponsiveVega(container, view) {
   const parent = container.parentElement;
