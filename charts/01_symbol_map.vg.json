@@ -29,8 +29,8 @@
 
       "mark": {
         "type": "geoshape",
-        "fill": "#E7EAE5",
-        "stroke": "#C5CCC6",
+        "fill": "#ecf2ee",
+        "stroke": "#6e7772",
         "strokeWidth": 0.8
       }
     },
@@ -46,8 +46,8 @@
 
       "mark": {
         "type": "geoshape",
-        "fill": "#AFC2B7",
-        "stroke": "#617D6D",
+        "fill": "#e7f7ed",
+        "stroke": "#7b847f",
         "strokeWidth": 0.9,
         "opacity": 0.7
       }
@@ -94,7 +94,8 @@
       "mark": {
         "type": "circle",
         "opacity": 0.72,
-        "stroke": "#536c5e",
+        "fill": "#e6df8e",
+        "stroke": "#bdb558",
         "strokeWidth": 0.8
       },
 
