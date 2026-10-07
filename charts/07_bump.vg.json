@@ -1,0 +1,272 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+  "description": "Bump chart showing annual recorded species-richness rankings for eight Australian urban areas from 2016 to 2025.",
+
+  "width": "container",
+  "height": 230,
+
+  "data": {
+    "url": "data/final/04_city_year_richness.csv"
+  },
+
+  "transform": [
+    {
+      "calculate": "toNumber(datum.year)",
+      "as": "year_num"
+    },
+
+    {
+      "calculate": "toNumber(datum.species_richness)",
+      "as": "richness_num"
+    },
+
+    {
+      "calculate": "toNumber(datum.record_count)",
+      "as": "record_count_num"
+    },
+
+    {
+      "window": [
+        {
+          "op": "row_number",
+          "as": "city_rank"
+        }
+      ],
+
+      "sort": [
+        {
+          "field": "richness_num",
+          "order": "descending"
+        },
+        {
+          "field": "record_count_num",
+          "order": "descending"
+        },
+        {
+          "field": "city",
+          "order": "ascending"
+        }
+      ],
+
+      "groupby": ["year_num"]
+    }
+  ],
+
+  "encoding": {
+    "x": {
+      "field": "year_num",
+      "type": "quantitative",
+
+      "title": null,
+
+      "scale": {
+        "domain": [2016, 2025.9],
+
+        "nice": false
+      },
+
+      "axis": {
+        "values": [2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025],
+
+        "format": "d",
+
+        "labelAngle": 0,
+
+        "labelFont": "Source Sans 3",
+        "labelFontSize": 12,
+        "labelColor": "#68706A",
+
+        "labelPadding": 10,
+
+        "tickColor": "#BCC4BD",
+        "domainColor": "#BCC4BD",
+
+        "grid": true,
+        "gridColor": "#E6E9E6",
+        "gridOpacity": 0.75
+      }
+    },
+
+    "y": {
+      "field": "city_rank",
+      "type": "quantitative",
+
+      "title": "Recorded richness rank",
+
+      "scale": {
+        "domain": [1, 8],
+
+        "reverse": true,
+
+        "nice": false
+      },
+
+      "axis": {
+        "values": [1, 2, 3, 4, 5, 6, 7, 8],
+
+        "labelExpr": "'#' + datum.value",
+
+        "labelFont": "Source Sans 3",
+        "labelFontSize": 12,
+        "labelColor": "#68706A",
+
+        "labelPadding": 10,
+
+        "titleFont": "Source Sans 3",
+        "titleFontSize": 13,
+        "titleFontWeight": 600,
+        "titleColor": "#202622",
+
+        "titlePadding": 18,
+
+        "ticks": false,
+        "domain": false,
+
+        "grid": true,
+        "gridColor": "#E6E9E6",
+        "gridOpacity": 0.85
+      }
+    },
+
+    "color": {
+      "field": "city",
+      "type": "nominal",
+
+      "scale": {
+        "domain": [
+          "Brisbane",
+          "Sydney",
+          "Melbourne",
+          "Canberra–Queanbeyan",
+          "Adelaide",
+          "Perth",
+          "Hobart",
+          "Darwin"
+        ],
+
+        "range": [
+          "#B52F18",
+          "#FFB430",
+          "#47CAE6",
+          "#1E7487",
+          "#472801",
+          "#122170",
+          "#FD5DD8",
+          "#CC025A"
+        ]
+      },
+
+      "legend": null
+    },
+
+    "detail": {
+      "field": "city"
+    },
+
+    "tooltip": [
+      {
+        "field": "city",
+        "type": "nominal",
+        "title": "Urban area"
+      },
+
+      {
+        "field": "year_num",
+        "type": "quantitative",
+        "title": "Year",
+        "format": "d"
+      },
+
+      {
+        "field": "city_rank",
+        "type": "quantitative",
+        "title": "Recorded richness rank",
+        "format": "d"
+      },
+
+      {
+        "field": "richness_num",
+        "type": "quantitative",
+        "title": "Recorded species richness",
+        "format": ","
+      },
+
+      {
+        "field": "record_count_num",
+        "type": "quantitative",
+        "title": "Occurrence records",
+        "format": ","
+      }
+    ]
+  },
+
+  "layer": [
+    {
+      "mark": {
+        "type": "line",
+
+        "strokeWidth": 2.5,
+
+        "interpolate": "monotone",
+
+        "strokeCap": "round",
+        "strokeJoin": "round",
+
+        "opacity": 0.6
+      }
+    },
+
+    {
+      "mark": {
+        "type": "point",
+
+        "filled": true,
+
+        "size": 75,
+
+        "stroke": "#FFFFFF",
+        "strokeWidth": 1.5,
+
+        "opacity": 0.85
+      }
+    },
+
+    {
+      "transform": [
+        {
+          "filter": "datum.year_num === 2025"
+        }
+      ],
+
+      "mark": {
+        "type": "text",
+
+        "align": "left",
+        "baseline": "middle",
+
+        "dx": 9,
+
+        "font": "Source Sans 3",
+        "fontSize": 12,
+        "fontWeight": 600
+      },
+
+      "encoding": {
+        "text": {
+          "field": "city"
+        }
+      }
+    }
+  ],
+
+  "config": {
+    "background": null,
+
+    "font": "Source Sans 3",
+
+    "view": {
+      "stroke": null
+    }
+  }
+}
