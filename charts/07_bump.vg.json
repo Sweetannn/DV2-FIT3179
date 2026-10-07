@@ -4,7 +4,14 @@
   "description": "Bump chart showing annual recorded species-richness rankings for eight Australian urban areas from 2016 to 2025.",
 
   "width": "container",
-  "height": 230,
+  "height": 270,
+
+  "padding": {
+    "top": 10,
+    "left": 5,
+    "right": -35,
+    "bottom": 0
+  },
 
   "data": {
     "url": "data/final/04_city_year_richness.csv"
@@ -61,7 +68,7 @@
       "title": null,
 
       "scale": {
-        "domain": [2016, 2025.9],
+        "domain": [2016, 2025],
 
         "nice": false
       },
