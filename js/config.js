@@ -1,6 +1,5 @@
 "use strict";
 
-
 /*
 =========================================================
 WILD CITIES
@@ -8,9 +7,7 @@ Shared project configuration
 =========================================================
 */
 
-
 const WILD_CITIES_CONFIG = {
-
   /*
   -------------------------------------------------------
   Chart embedding options
@@ -22,7 +19,6 @@ const WILD_CITIES_CONFIG = {
     renderer: "svg"
   },
 
-
   /*
   -------------------------------------------------------
   Animal group definitions
@@ -31,13 +27,7 @@ const WILD_CITIES_CONFIG = {
   -------------------------------------------------------
   */
 
-  animalGroups: [
-    "Bird",
-    "Mammal",
-    "Reptile",
-    "Insect"
-  ],
-
+  animalGroups: ["Bird", "Mammal", "Reptile", "Insect"],
 
   /*
   -------------------------------------------------------
@@ -49,7 +39,6 @@ const WILD_CITIES_CONFIG = {
   */
 
   colours: {
-
     bird: "#3978A8",
 
     mammal: "#C47A3D",
@@ -63,6 +52,16 @@ const WILD_CITIES_CONFIG = {
     muted: "#68706A",
 
     mapBackground: "#ECEEEA"
-  }
+  },
 
+  cities_colours: {
+    "Adelaide": "#472801",
+    "Brisbane": "#B52F18",
+    "Canberra": "#1E7487",
+    "Melbourne": "#47CAE6",
+    "Perth": "#122170",
+    "Sydney": "#FFB430",
+    "Hobart": "#FD5DD8",
+    "Darwin": "#CC025A"
+  }
 };
