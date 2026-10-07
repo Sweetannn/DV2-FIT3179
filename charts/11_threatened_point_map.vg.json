@@ -24,6 +24,19 @@
           "Darwin"
         ]
       }
+    },
+    {
+      "name": "threatSelection",
+      "value": "Critically Endangered",
+      "bind": {
+        "input": "select",
+        "name": "Threat status: ",
+        "options": [
+          "Critically Endangered",
+          "Endangered",
+          "Vulnerable"
+        ]
+      }
     }
   ],
   "layer": [
@@ -83,14 +96,17 @@
         },
         {
           "filter": "datum.CITY === citySelection"
+        },
+        {
+          "filter": "datum.status === threatSelection"
         }
       ],
       "mark": {
         "type": "circle",
-        "size": 18,
-        "opacity": 0.65,
+        "size": 16,
+        "opacity": 0.7,
         "stroke": "#FFFFFF",
-        "strokeWidth": 0.2
+        "strokeWidth": 0.25
       },
       "encoding": {
         "longitude": {
@@ -113,19 +129,7 @@
             ],
             "range": ["#E9A29E", "#C9535B", "#751B30"]
           },
-          "legend": {
-            "orient": "top",
-            "direction": "horizontal",
-            "titleFont": "Source Sans 3",
-            "titleFontSize": 13,
-            "titleFontWeight": 600,
-            "titleColor": "#202622",
-            "labelFont": "Source Sans 3",
-            "labelFontSize": 12,
-            "labelColor": "#68706A",
-            "symbolSize": 80,
-            "titlePadding": 8
-          }
+          "legend": null
         },
         "tooltip": [
           {
