@@ -6,21 +6,21 @@
    ========================================================= */
 
 const visualisations = [
-  /* Chart 1 — Proportional Symbol Map */
+  /* Chart 1 : Proportional Symbol Map */
   {
     container: "#symbol-map",
     spec: "charts/01_symbol_map.vg.json",
     enabled: true
   },
 
-  /* Chart 2 — Heatmap */
+  /* Chart 2 : Heatmap */
   {
     container: "#group-heatmap",
     spec: "charts/02_heatmap.vg.json",
     enabled: true
   },
 
-  /* Chart 3 — Scatterplot */
+  /* Chart 3 : Scatterplot */
   {
     container: "#effort-scatter",
     spec: "charts/03_scatter.vg.json",
@@ -31,60 +31,61 @@ const visualisations = [
     Chart 4 uses js/treemap.js independently.
   */
 
-  /* Chart 5 — Species Coverage Ranking */
+  /* Chart 5 : Species Coverage Ranking */
   {
     container: "#species-ranking",
     spec: "charts/05_species_rank.vg.json",
     enabled: true
   },
 
-  /* Chart 6 — Alluvial Diagram */
+  /* Chart 6 : Alluvial Diagram */
   {
     container: "#alluvial",
     spec: "charts/06_alluvial.vg.json",
-    enabled: false
+    enabled: true,
+    responsiveVega: true
   },
 
-  /* Chart 7 — Bump Chart */
+  /* Chart 7 : Bump Chart */
   {
     container: "#bump-chart",
     spec: "charts/07_bump.vg.json",
-    enabled: false
+    enabled: true
   },
 
-  /* Chart 8 — Spiral Plot */
+  /* Chart 8 : Spiral Plot */
   {
     container: "#spiral-chart",
     spec: "charts/08_spiral.vg.json",
-    enabled: false
+    enabled: true
   },
 
-  /* Chart 9 — Network Diagram */
+  /* Chart 9 : Network Diagram */
   {
     container: "#city-network",
     spec: "charts/09_network.vg.json",
-    enabled: false
+    enabled: true
   },
 
-  /* Chart 10 — Bin Map */
+  /* Chart 10 : Bin Map */
   {
     container: "#bin-map",
     spec: "charts/10_bin_map.vg.json",
-    enabled: false
+    enabled: true
   },
 
-  /* Chart 11 — Threatened Species Dot Map */
+  /* Chart 11 : Threatened Species Dot Map */
   {
     container: "#threatened-dot-map",
     spec: "charts/11_threatened_dot_map.vg.json",
-    enabled: false
+    enabled: true
   },
 
-  /* Chart 12 — Threatened Species Choropleth */
+  /* Chart 12 : Threatened Species Choropleth */
   {
     container: "#threatened-choropleth",
     spec: "charts/12_threatened_choropleth.vg.json",
-    enabled: false
+    enabled: true
   }
 ];
 
@@ -105,7 +106,15 @@ async function embedVisualisation(item) {
   }
 
   try {
-    await vegaEmbed(container, item.spec, WILD_CITIES_CONFIG.embedOptions);
+    const result = await vegaEmbed(
+      container,
+      item.spec,
+      WILD_CITIES_CONFIG.embedOptions
+    );
+
+    if (item.responsiveVega) {
+      enableResponsiveVega(container, result.view);
+    }
   } catch (error) {
     console.error(`Failed to load ${item.spec}`, error);
 
@@ -133,4 +142,38 @@ if (document.readyState === "loading") {
   });
 } else {
   initialiseVisualisations();
+}
+
+/* =========================================================
+   REUSABLE RESPONSIVE VEGA
+   ========================================================= */
+
+function enableResponsiveVega(container, view) {
+  const parent = container.parentElement;
+
+  let lastWidth = -1;
+  let resizeQueue = Promise.resolve();
+
+  const observer = new ResizeObserver((entries) => {
+    const width = Math.floor(entries[0].contentRect.width);
+
+    if (width <= 0 || width === lastWidth) {
+      return;
+    }
+
+    lastWidth = width;
+
+    resizeQueue = resizeQueue
+      .then(() => {
+        view.width(width);
+        return view.runAsync();
+      })
+      .catch((error) => {
+        console.error("Vega resize failed:", error);
+      });
+  });
+
+  observer.observe(parent);
+
+  return observer;
 }

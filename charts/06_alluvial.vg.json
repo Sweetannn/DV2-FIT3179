@@ -1,0 +1,335 @@
+{
+  "$schema": "https://vega.github.io/schema/vega/v5.json",
+
+  "description": "Alluvial diagram of recorded species richness across four animal groups and eight Australian urban areas.",
+
+  "width": 800,
+  "height": 400,
+
+  "padding": {
+    "left": 35,
+    "right": 0
+  },
+
+  "autosize": {
+    "type": "none",
+    "contains": "content"
+  },
+
+  "background": null,
+
+  "signals": [
+    {
+      "name": "leftNodeX",
+      "value": 0.06
+    },
+    {
+      "name": "leftNodeX2",
+      "value": 0.075
+    },
+
+    {
+      "name": "rightNodeX",
+      "value": 0.77
+    },
+    {
+      "name": "rightNodeX2",
+      "value": 0.785
+    },
+
+    {
+      "name": "leftLabelX",
+      "value": 0.045
+    },
+    {
+      "name": "rightLabelX",
+      "value": 0.8
+    },
+
+    {
+      "name": "curveX1",
+      "value": 0.3
+    },
+    {
+      "name": "curveX2",
+      "value": 0.55
+    }
+  ],
+
+  "data": [
+    {
+      "name": "links",
+      "url": "data/final/06_alluvial_data.json",
+      "format": {
+        "type": "json",
+        "property": "links"
+      }
+    },
+
+    {
+      "name": "nodes",
+      "url": "data/final/06_alluvial_data.json",
+      "format": {
+        "type": "json",
+        "property": "nodes"
+      }
+    },
+
+    {
+      "name": "groups",
+      "source": "nodes",
+      "transform": [
+        {
+          "type": "filter",
+          "expr": "datum.side === 'group'"
+        }
+      ]
+    },
+
+    {
+      "name": "cities",
+      "source": "nodes",
+      "transform": [
+        {
+          "type": "filter",
+          "expr": "datum.side === 'city'"
+        }
+      ]
+    }
+  ],
+
+  "marks": [
+    {
+      "type": "path",
+      "name": "flow-ribbons",
+
+      "from": {
+        "data": "links"
+      },
+
+      "encode": {
+        "enter": {
+          "fill": {
+            "field": "color"
+          },
+
+          "tooltip": {
+            "signal": "{'Animal group': datum.group, 'Urban area': datum.city, 'Recorded species richness': format(datum.value, ','), 'Share of city summed group richness': format(datum.city_share, '.1%'), 'Occurrence records': format(datum.record_count, ',')}"
+          }
+        },
+
+        "update": {
+          "path": {
+            "signal": "'M' + (width * leftNodeX2) + ',' + (height * datum.sy0) + ' C' + (width * curveX1) + ',' + (height * datum.sy0) + ' ' + (width * curveX2) + ',' + (height * datum.ty0) + ' ' + (width * rightNodeX) + ',' + (height * datum.ty0) + ' L' + (width * rightNodeX) + ',' + (height * datum.ty1) + ' C' + (width * curveX2) + ',' + (height * datum.ty1) + ' ' + (width * curveX1) + ',' + (height * datum.sy1) + ' ' + (width * leftNodeX2) + ',' + (height * datum.sy1) + ' Z'"
+          },
+
+          "fillOpacity": {
+            "value": 0.5
+          }
+        },
+
+        "hover": {
+          "fillOpacity": {
+            "value": 0.85
+          }
+        }
+      }
+    },
+
+    {
+      "type": "rect",
+      "name": "animal-group-nodes",
+
+      "from": {
+        "data": "groups"
+      },
+
+      "encode": {
+        "enter": {
+          "fill": {
+            "field": "color"
+          },
+
+          "cornerRadius": {
+            "value": 2
+          },
+
+          "tooltip": {
+            "signal": "{'Animal group': datum.name, 'Summed city-group richness': format(datum.total, ',')}"
+          }
+        },
+
+        "update": {
+          "x": {
+            "signal": "width * leftNodeX"
+          },
+
+          "x2": {
+            "signal": "width * leftNodeX2"
+          },
+
+          "y": {
+            "signal": "height * datum.y0"
+          },
+
+          "y2": {
+            "signal": "height * datum.y1"
+          }
+        }
+      }
+    },
+
+    {
+      "type": "rect",
+      "name": "city-nodes",
+
+      "from": {
+        "data": "cities"
+      },
+
+      "encode": {
+        "enter": {
+          "fill": {
+            "field": "color"
+          },
+
+          "cornerRadius": {
+            "value": 2
+          },
+
+          "tooltip": {
+            "signal": "{'Urban area': datum.name, 'Summed animal-group richness': format(datum.total, ',')}"
+          }
+        },
+
+        "update": {
+          "x": {
+            "signal": "width * rightNodeX"
+          },
+
+          "x2": {
+            "signal": "width * rightNodeX2"
+          },
+
+          "y": {
+            "signal": "height * datum.y0"
+          },
+
+          "y2": {
+            "signal": "height * datum.y1"
+          }
+        }
+      }
+    },
+
+    {
+      "type": "text",
+      "name": "animal-group-labels",
+
+      "from": {
+        "data": "groups"
+      },
+
+      "encode": {
+        "enter": {
+          "text": {
+            "field": "name"
+          },
+
+          "align": {
+            "value": "right"
+          },
+
+          "baseline": {
+            "value": "middle"
+          },
+
+          "font": {
+            "value": "Source Sans 3"
+          },
+
+          "fontSize": {
+            "value": 14
+          },
+
+          "fontWeight": {
+            "value": 600
+          },
+
+          "fill": {
+            "value": "#202622"
+          }
+        },
+
+        "update": {
+          "x": {
+            "signal": "width * leftLabelX"
+          },
+
+          "y": {
+            "signal": "height * ((datum.y0 + datum.y1) / 2)"
+          }
+        }
+      }
+    },
+
+    {
+      "type": "text",
+      "name": "city-labels",
+
+      "from": {
+        "data": "cities"
+      },
+
+      "encode": {
+        "enter": {
+          "text": {
+            "field": "name"
+          },
+
+          "align": {
+            "value": "left"
+          },
+
+          "baseline": {
+            "value": "middle"
+          },
+
+          "font": {
+            "value": "Source Sans 3"
+          },
+
+          "fontSize": {
+            "value": 12
+          },
+
+          "fontWeight": {
+            "value": 500
+          },
+
+          "fill": {
+            "value": "#202622"
+          }
+        },
+
+        "update": {
+          "x": {
+            "signal": "width * rightLabelX"
+          },
+
+          "y": {
+            "signal": "height * ((datum.y0 + datum.y1) / 2)"
+          }
+        }
+      }
+    }
+  ],
+
+  "config": {
+    "font": "Source Sans 3",
+
+    "view": {
+      "stroke": null
+    }
+  }
+}
