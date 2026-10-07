@@ -29,7 +29,6 @@ const visualisations = [
 
   /*
     Chart 4 uses js/treemap.js independently.
-    Do not register it twice.
   */
 
   /* Chart 5 — Species Coverage Ranking */

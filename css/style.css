@@ -1299,7 +1299,7 @@ sidebar | visual
    RIGHT — EXPLANATORY CONTEXT
    ========================================================= */
 
-.ranking-context {
+.green-context {
   width: 100%;
   min-width: 0;
 
@@ -1317,17 +1317,17 @@ sidebar | visual
    CONTEXT LABEL
    ========================================================= */
 
-.ranking-context-label {
+.context-label {
   display: block;
 
   margin: 0 0 1rem;
 
-  font-size: 0.75rem;
+  font-size: 1rem;
   font-weight: 700;
 
   line-height: 1.4;
 
-  letter-spacing: 0.1em;
+  letter-spacing: 0.01em;
   text-transform: uppercase;
 
   color: var(--color-accent);
@@ -1337,7 +1337,7 @@ sidebar | visual
    CONTEXT PARAGRAPHS
    ========================================================= */
 
-.ranking-context p {
+.green-context p {
   width: 100%;
   max-width: none;
 
@@ -1349,7 +1349,7 @@ sidebar | visual
   color: var(--color-muted);
 }
 
-.ranking-context p + p {
+.green-context p + p {
   margin-top: 1rem;
 }
 
