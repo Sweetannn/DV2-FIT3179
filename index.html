@@ -660,9 +660,9 @@
         </article>
 
         <!-- Chart 8 -->
-        <article class="chart-card chart-wide">
+        <!-- <article class="chart-card chart-wide">
           <div id="spiral-chart" class="chart"></div>
-        </article>
+        </article> -->
       </section>
 
       <!-- Section 4 -->
@@ -682,66 +682,88 @@
           </p>
         </div>
 
-        <!-- Chart 9 -->
+        <!-- CHART 9 -->
         <article class="chart-card chart-wide" id="chart-9">
           <header class="chart-header">
             <h3>
-              Australian cities share recorded wildlife species, but the degree
-              of overlap varies
+              Sydney and Brisbane lead Australia's recorded wildlife overlap
             </h3>
 
             <p>
-              Explore shared wildlife records across eight Australian urban
-              areas from 2016–2025. Thicker connections indicate more distinct
-              species documented in both connected cities.
+              Shared-species counts reveal differences in documented wildlife
+              overlap among eight Australian urban areas, 2016–2025.
             </p>
           </header>
 
-          <div
-            class="split-layout split-layout--1-2 split-layout--reverse split-layout--center"
-          >
+          <div class="split-layout split-layout--2-1 split-layout--center">
             <div class="split-main">
               <div
                 id="city-network"
                 class="chart"
-                aria-label="
-                  Circular edge-bundling network diagram showing the number of shared
-                  species recorded between eight Australian urban areas.
-                "
+                role="img"
+                aria-label="Circular network diagram showing
+        shared recorded wildlife species among eight
+        Australian urban areas from 2016 to 2025."
               ></div>
             </div>
 
-            <aside class="split-sidebar">
-              <div class="split-sidebar-block chart-insight">
-                <span class="insight-label"> KEY FINDING </span>
+            <aside class="green-context">
+              <span class="context-label">
+                WHAT DOES A STRONG CONNECTION MEAN?
+              </span>
 
-                <p class="insight-main">
-                  Recorded wildlife overlap varies substantially between city
-                  pairs.
-                </p>
+              <p>
+                Thicker connections indicate a greater number of species
+                recorded in both cities. However, raw shared-species counts do
+                not necessarily mean two wildlife communities are proportionally
+                more similar. Cities with longer recorded species lists may also
+                have larger overlaps.
+              </p>
 
-                <p class="insight-context">
-                  Thicker connections indicate more shared recorded species,
-                  highlighting where documented wildlife distributions overlap
-                  most strongly in absolute terms. These connections describe
-                  shared recorded species, not animal movement between cities.
-                  Observation effort may also influence the measured overlap.
-                </p>
-              </div>
-
-              <div class="split-sidebar-block">
-                <span class="insight-label"> HOW TO READ THIS </span>
-
-                <p class="chart-note">
-                  Each circle represents one urban area. Circle area shows total
-                  recorded species richness, and colour identifies the city.
-                  Each grey line connects a pair of cities. Thicker lines
-                  represent more distinct species recorded in both cities. The
-                  circular layout is schematic. Node positions and line lengths
-                  do not represent geographic distances.
-                </p>
-              </div>
+              <p>
+                These connections represent shared documented species, not
+                animal movement between cities. Observation effort may also
+                influence the measured overlap.
+              </p>
             </aside>
+          </div>
+
+          <div class="chart-support">
+            <aside class="chart-insight">
+              <span class="insight-label"> KEY FINDING </span>
+
+              <p class="insight-main">
+                Sydney and Brisbane share the most recorded species among all 28
+                city pairs, with 2,649 documented in both cities.
+              </p>
+
+              <p class="insight-context">
+                Sydney–Melbourne (2,430 species) and
+                Melbourne–Canberra–Queanbeyan (2,285 species) rank next. At the
+                other extreme, Hobart and Darwin share only 159 recorded
+                species.
+              </p>
+            </aside>
+
+            <div class="chart-meta">
+              <span class="insight-label"> HOW TO READ THIS </span>
+
+              <p class="chart-note">
+                Each circle represents one urban area. Circle size indicates
+                recorded species richness, while colour identifies the city.
+              </p>
+
+              <p class="chart-note">
+                Grey lines connect city pairs. Thicker lines represent more
+                distinct species recorded in both cities.
+              </p>
+
+              <p class="chart-note">
+                The circular arrangement is schematic. Node positions and line
+                lengths do not represent geographic distances. Hover for exact
+                values.
+              </p>
+            </div>
           </div>
         </article>
       </section>
@@ -758,10 +780,10 @@
           </div>
         </div>
 
-        <!-- Chart 10
+        <!-- Chart 10 -->
         <article class="chart-card chart-wide">
           <div id="bin-map" class="chart"></div>
-        </article> -->
+        </article>
       </section>
 
       <!-- Section 6 -->
