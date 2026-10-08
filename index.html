@@ -590,15 +590,7 @@
             </p>
           </header>
 
-          <!-- BUMP CHART -->
-
-          <!-- =========================================================
-     CHART 7 — BUMP CHART + STORY CONTEXT
-     ========================================================= -->
-
           <div class="split-layout split-layout--2-1 split-layout--center">
-            <!-- LEFT — BUMP CHART -->
-
             <div class="split-main">
               <div
                 id="bump-chart"
@@ -609,8 +601,6 @@
       from 2016 to 2025."
               ></div>
             </div>
-
-            <!-- RIGHT — STORYTELLING CONTEXT -->
 
             <aside class="green-context">
               <span class="context-label"> WHO HELD THE LEAD? </span>
@@ -630,11 +620,7 @@
             </aside>
           </div>
 
-          <!-- SUPPORTING TEXT -->
-
           <div class="chart-support">
-            <!-- KEY FINDING -->
-
             <aside class="chart-insight">
               <span class="insight-label"> KEY FINDING </span>
 
@@ -651,8 +637,6 @@
                 seventh and eighth.
               </p>
             </aside>
-
-            <!-- HOW TO READ -->
 
             <div class="chart-meta">
               <span class="insight-label"> HOW TO READ THIS </span>
@@ -675,15 +659,13 @@
           </div>
         </article>
 
+        <!-- Chart 8 -->
         <article class="chart-card chart-wide">
           <div id="spiral-chart" class="chart"></div>
         </article>
       </section>
 
-      <!-- =========================================================
-         SECTION 4
-         ========================================================= -->
-
+      <!-- Section 4 -->
       <section class="story-section" id="connections">
         <div class="section-heading">
           <span class="section-number">04</span>
@@ -695,15 +677,13 @@
           </div>
         </div>
 
+        <!-- Chart 9 -->
         <article class="chart-card chart-wide">
           <div id="city-network" class="chart"></div>
         </article>
       </section>
 
-      <!-- =========================================================
-         SECTION 5
-         ========================================================= -->
-
+      <!-- Section 5 -->
       <section class="story-section" id="geography">
         <div class="section-heading">
           <span class="section-number">05</span>
@@ -715,17 +695,15 @@
           </div>
         </div>
 
+        <!-- Chart 10
         <article class="chart-card chart-wide">
           <div id="bin-map" class="chart"></div>
-        </article>
+        </article> -->
       </section>
 
-      <!-- =========================================================
-         SECTION 6
-         ========================================================= -->
-
+      <!-- Section 6 -->
       <section class="story-section" id="threatened">
-        <div class="section-heading">
+        <!-- <div class="section-heading">
           <span class="section-number">06</span>
 
           <div>
@@ -740,14 +718,14 @@
         <article class="chart-card chart-wide" id="chart-11">
           <header class="chart-header">
             <h3>
-              Where are threatened wildlife species recorded within Australian
-              cities?
+              Where are threatened wildlife records concentrated within
+              Australian cities?
             </h3>
 
             <p>
-              Select an urban area and conservation status to explore
-              representative recorded locations of nationally threatened
-              species, 2016–2025.
+              Select an urban area to explore the spatial concentration of
+              threatened wildlife records. Each equal-sized dot represents
+              approximately 50 occurrence records, 2016–2025.
             </p>
           </header>
 
@@ -756,9 +734,11 @@
             class="chart"
             role="img"
             aria-label="
-      Interactive map of equal-sized geographic points showing representative
-      recorded locations for the selected national threat status within the
-      selected Australian urban area. Hover over a point for species details.
+      Interactive one-to-many dot-density map showing one selected Australian
+      urban area. Each equal-sized synthetic dot represents approximately 50
+      nationally threatened wildlife occurrence records and is distributed
+      within its spatial cell. Denser dots indicate more documented records;
+      dots do not show exact wildlife locations.
     "
           ></div>
 
@@ -767,15 +747,15 @@
               <span class="insight-label"> KEY FINDING </span>
 
               <p class="insight-main">
-                The documented distribution of Critically Endangered wildlife
-                is sharply uneven across the eight urban areas.
+                Recorded threatened-wildlife occurrences cluster in particular
+                parts of every urban area rather than being evenly distributed.
               </p>
 
               <p class="insight-context">
-                The default view contains 173 representative locations in
-                Melbourne, 150 in Sydney and 126 in Brisbane, compared with 15
-                in Canberra–Queanbeyan and 4 in Adelaide. These differences
-                reflect recorded observations and survey effort, not abundance.
+                Brisbane has the largest documented total and Hobart the
+                smallest. All nationally threatened categories are combined to
+                keep the same dot value useful across every city; the pattern
+                reflects records, not animal abundance.
               </p>
             </aside>
 
@@ -783,30 +763,25 @@
               <span class="insight-label"> HOW TO READ THIS </span>
 
               <p class="chart-note">
-                Each equal-sized point represents one threatened species within
-                an aggregated spatial cell and is positioned at an actual
-                observed location from that group. Use the controls to select a
-                city and national threat status; showing one status at a time
-                prevents the larger Vulnerable layer from obscuring higher-risk
-                locations. Hover for species details and the represented record
-                count. Point concentration reflects recorded observations, not
-                animal abundance or complete species distribution. Each city is
-                fitted separately, so do not compare screen-space density directly
-                between city selections.
+                Each equal-sized dot represents approximately 50 threatened
+                wildlife occurrence records. Dots are distributed within the
+                corresponding H3 spatial cell and urban boundary, so they show
+                broad recording concentration rather than exact observation
+                locations. Denser clusters indicate more documented records, not
+                greater animal abundance. Low-count cells may not generate a dot.
+                Each city is fitted separately, so do not compare screen-space
+                density directly between selections.
               </p>
             </div>
           </div>
-        </article>
+        </article> -->
 
         <!-- <article class="chart-card chart-wide">
           <div id="threatened-choropleth" class="chart"></div>
         </article> -->
       </section>
 
-      <!-- =========================================================
-         FOOTER
-         ========================================================= -->
-
+      <!-- End -->
       <footer class="footer">
         <h2>About the data</h2>
 
@@ -827,7 +802,6 @@
       </footer>
     </main>
 
-    <!-- Project JavaScript -->
     <script src="js/config.js"></script>
     <script src="js/visualisations.js"></script>
     <script src="js/treemap.js" defer></script>
