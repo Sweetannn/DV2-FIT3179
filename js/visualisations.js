@@ -59,7 +59,7 @@ const visualisations = [
   {
     container: "#city-network",
     spec: "charts/09_network.vg.json",
-    enabled: false
+    enabled: true
   },
 
   /* Chart 10 : Bin Map */
@@ -69,10 +69,10 @@ const visualisations = [
     enabled: false
   },
 
-  /* Chart 11 : Threatened Species Point-Location Map */
+  /* Chart 11 : Threatened Species Dot-Density Map */
   {
     container: "#threatened-dot-map",
-    spec: "charts/11_threatened_point_map.vg.json",
+    spec: "charts/11_threatened_dot_density.vg.json",
     enabled: true
   },
 
