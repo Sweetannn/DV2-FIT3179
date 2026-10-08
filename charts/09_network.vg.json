@@ -1,0 +1,189 @@
+{
+  "$schema": "https://vega.github.io/schema/vega/v5.json",
+  "description": "Circular Network Diagram with Straight Edges.",
+  "width": 600,
+  "height": 550,
+  "padding": 20,
+  "autosize": "fit",
+
+  "signals": [
+    {
+      "name": "radius",
+      "value": 200
+    },
+    {
+      "name": "cx",
+      "update": "width / 2"
+    },
+    {
+      "name": "cy",
+      "update": "height / 2"
+    }
+  ],
+
+  "data": [
+    {
+      "name": "nodes",
+      "url": "data/final/06_network_nodes.csv",
+      "format": { "type": "csv", "parse": "auto" },
+      "transform": [
+        {
+          "type": "window",
+          "sort": { "field": "species_richness", "order": "descending" },
+          "ops": ["row_number"],
+          "as": ["rank"]
+        },
+        {
+          "type": "formula",
+          "expr": "(datum.rank - 1) * 2 * PI / 8 - PI/2",
+          "as": "angle"
+        },
+        {
+          "type": "formula",
+          "expr": "cx + cos(datum.angle) * radius",
+          "as": "x"
+        },
+        {
+          "type": "formula",
+          "expr": "cy + sin(datum.angle) * radius",
+          "as": "y"
+        },
+        {
+          "type": "formula",
+          "expr": "cos(datum.angle) > 0.01 ? 'left' : (cos(datum.angle) < -0.01 ? 'right' : 'center')",
+          "as": "labelAlign"
+        },
+        {
+          "type": "formula",
+          "expr": "sin(datum.angle) > 0.01 ? 'top' : (sin(datum.angle) < -0.01 ? 'bottom' : 'middle')",
+          "as": "labelBaseline"
+        }
+      ]
+    },
+    {
+      "name": "edges",
+      "url": "data/final/07_network_edges.csv",
+      "format": { "type": "csv", "parse": "auto" },
+      "transform": [
+        {
+          "type": "lookup",
+          "from": "nodes",
+          "key": "city",
+          "fields": ["source", "target"],
+          "as": ["s", "t"]
+        },
+        {
+          "type": "filter",
+          "expr": "datum.s != null && datum.t != null"
+        }
+      ]
+    }
+  ],
+
+  "scales": [
+    {
+      "name": "nodeSize",
+      "type": "linear",
+      "domain": { "data": "nodes", "field": "species_richness" },
+      "range": [200, 3500]
+    },
+    {
+      "name": "edgeWidth",
+      "type": "linear",
+      "domain": { "data": "edges", "field": "shared_species" },
+      "range": [0.5, 12]
+    },
+    {
+      "name": "color",
+      "type": "ordinal",
+      "domain": [
+        "Brisbane",
+        "Sydney",
+        "Melbourne",
+        "Canberra–Queanbeyan",
+        "Adelaide",
+        "Perth",
+        "Hobart",
+        "Darwin"
+      ],
+      "range": [
+        "#B52F18",
+        "#FFB430",
+        "#47CAE6",
+        "#1E7487",
+        "#472801",
+        "#122170",
+        "#FD5DD8",
+        "#CC025A"
+      ]
+    }
+  ],
+
+  "marks": [
+    {
+      "type": "path",
+      "from": { "data": "edges" },
+      "encode": {
+        "enter": {
+          "strokeWidth": { "scale": "edgeWidth", "field": "shared_species" },
+          "tooltip": {
+            "signal": "{'City 1': datum.source, 'City 2': datum.target, 'Shared Species': format(datum.shared_species, ',')}"
+          }
+        },
+        "update": {
+          "path": {
+            "signal": "'M' + datum.s.x + ',' + datum.s.y + ' L' + datum.t.x + ',' + datum.t.y"
+          },
+          "stroke": { "value": "#68706A" },
+          "strokeOpacity": { "value": 0.25 }
+        },
+        "hover": {
+          "strokeOpacity": { "value": 0.9 },
+          "stroke": { "value": "#325C4B" }
+        }
+      }
+    },
+    {
+      "type": "symbol",
+      "from": { "data": "nodes" },
+      "encode": {
+        "enter": {
+          "fill": { "scale": "color", "field": "city" },
+          "stroke": { "value": "#FFFFFF" },
+          "strokeWidth": { "value": 2 },
+          "tooltip": {
+            "signal": "{'Urban Area': datum.city, 'Recorded Species': format(datum.species_richness, ',')}"
+          }
+        },
+        "update": {
+          "x": { "field": "x" },
+          "y": { "field": "y" },
+          "size": { "scale": "nodeSize", "field": "species_richness" }
+        }
+      }
+    },
+    {
+      "type": "text",
+      "from": { "data": "nodes" },
+      "encode": {
+        "enter": {
+          "text": { "field": "city" },
+          "font": { "value": "Source Sans 3" },
+          "fontSize": { "value": 14 },
+          "fontWeight": { "value": 600 },
+          "fill": { "value": "#202622" }
+        },
+        "update": {
+          "x": {
+            "signal": "cx + cos(datum.angle) * (radius + sqrt(scale('nodeSize', datum.species_richness))/2 + 10)"
+          },
+          "y": {
+            "signal": "cy + sin(datum.angle) * (radius + sqrt(scale('nodeSize', datum.species_richness))/2 + 10)"
+          },
+          "align": { "field": "labelAlign" },
+          "baseline": { "field": "labelBaseline" }
+        }
+      }
+    }
+  ]
+}

@@ -668,18 +668,76 @@
       <!-- Section 4 -->
       <section class="story-section" id="connections">
         <div class="section-heading">
-          <span class="section-number">04</span>
-
-          <div>
-            <p class="eyebrow">CONNECTED CITIES</p>
-
-            <h2>City boundaries do not define wildlife communities.</h2>
+          <div class="section-kicker">
+            <span class="section-number">04</span>
+            <span class="eyebrow">CONNECTED CITIES</span>
           </div>
+
+          <h2>City boundaries do not define wildlife communities.</h2>
+
+          <p class="section-intro">
+            Geographic layouts can suffer from severe overlapping, hiding the
+            true strength of the network. This circular layout reorganises the
+            cities by recorded richness to cleanly expose the relationships.
+          </p>
         </div>
 
         <!-- Chart 9 -->
-        <article class="chart-card chart-wide">
-          <div id="city-network" class="chart"></div>
+        <article class="chart-card chart-wide" id="chart-9">
+          <header class="chart-header">
+            <h3>Eastern cities share a vast recorded wildlife community</h3>
+
+            <p>
+              Explore connections between Australian urban areas. The thickness
+              of each line represents the number of distinct species recorded in
+              both connected cities between 2016–2025.
+            </p>
+          </header>
+
+          <div
+            class="split-layout split-layout--1-2 split-layout--reverse split-layout--center"
+          >
+            <div class="split-main">
+              <div
+                id="city-network"
+                class="chart"
+                aria-label="
+                  Circular edge-bundling network diagram showing the number of shared
+                  species recorded between eight Australian urban areas.
+                "
+              ></div>
+            </div>
+
+            <aside class="split-sidebar">
+              <div class="split-sidebar-block chart-insight">
+                <span class="insight-label"> KEY FINDING </span>
+
+                <p class="insight-main">
+                  Brisbane and Sydney share the highest number of recorded
+                  species.
+                </p>
+
+                <p class="insight-context">
+                  A thick band of connectivity links Brisbane, Sydney and
+                  Melbourne. This reflects their high proximity on the eastern
+                  seaboard, comparable climatic zones, and high historical
+                  observation efforts.
+                </p>
+              </div>
+
+              <div class="split-sidebar-block">
+                <span class="insight-label"> HOW TO READ THIS </span>
+
+                <p class="chart-note">
+                  Cities are arranged circularly, sorted clockwise from the top
+                  by total recorded species richness. Node circle size reflects
+                  the total richness of that city. The thickness of the curved
+                  line connecting two cities is proportional to the number of
+                  shared species documented in both locations.
+                </p>
+              </div>
+            </aside>
+          </div>
         </article>
       </section>
 
