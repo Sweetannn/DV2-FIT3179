@@ -131,55 +131,47 @@
   "layer": [
     {
       "mark": {
-        "type": "bar",
-        "size": 26,
-        "cornerRadiusEnd": 3,
+        "type": "rule",
+        "strokeWidth": 3,
         "opacity": 0.9,
         "color": "#3978A8"
       },
-
       "encoding": {
         "tooltip": [
-          {
-            "field": "display_name",
-            "type": "nominal",
-            "title": "Common name"
-          },
-          {
-            "field": "species",
-            "type": "nominal",
-            "title": "Scientific name"
-          },
-          {
-            "field": "animal_group",
-            "type": "nominal",
-            "title": "Animal group"
-          },
-          {
-            "field": "records_num",
-            "type": "quantitative",
-            "title": "Occurrence records",
-            "format": ",.0f"
-          }
+          { "field": "display_name", "type": "nominal", "title": "Common name" },
+          { "field": "species", "type": "nominal", "title": "Scientific name" },
+          { "field": "animal_group", "type": "nominal", "title": "Animal group" },
+          { "field": "records_num", "type": "quantitative", "title": "Occurrence records", "format": ",.0f" }
         ]
       }
     },
-
+    {
+      "mark": {
+        "type": "circle",
+        "size": 200,
+        "opacity": 1,
+        "color": "#3978A8"
+      },
+      "encoding": {
+        "tooltip": [
+          { "field": "display_name", "type": "nominal", "title": "Common name" },
+          { "field": "species", "type": "nominal", "title": "Scientific name" },
+          { "field": "animal_group", "type": "nominal", "title": "Animal group" },
+          { "field": "records_num", "type": "quantitative", "title": "Occurrence records", "format": ",.0f" }
+        ]
+      }
+    },
     {
       "mark": {
         "type": "text",
-
         "align": "left",
         "baseline": "middle",
-        "dx": 10,
-
+        "dx": 15,
         "font": "Source Sans 3",
         "fontSize": 13,
         "fontWeight": 600,
-
         "color": "#202622"
       },
-
       "encoding": {
         "text": {
           "field": "record_label",
