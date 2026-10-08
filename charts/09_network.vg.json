@@ -1,8 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega/v5.json",
-  "description": "Circular Network Diagram with Straight Edges.",
   "width": 600,
-  "height": 550,
+  "height": 500,
   "padding": 20,
   "autosize": "fit",
 
@@ -28,14 +27,13 @@
       "format": { "type": "csv", "parse": "auto" },
       "transform": [
         {
-          "type": "window",
-          "sort": { "field": "species_richness", "order": "descending" },
-          "ops": ["row_number"],
-          "as": ["rank"]
+          "type": "formula",
+          "expr": "indexof(['Darwin', 'Brisbane', 'Sydney', 'Canberra–Queanbeyan', 'Hobart', 'Melbourne', 'Adelaide', 'Perth'], datum.city)",
+          "as": "geo_rank"
         },
         {
           "type": "formula",
-          "expr": "(datum.rank - 1) * 2 * PI / 8 - PI/2",
+          "expr": "datum.geo_rank * 2 * PI / 8 - PI/2",
           "as": "angle"
         },
         {
@@ -127,7 +125,7 @@
         "enter": {
           "strokeWidth": { "scale": "edgeWidth", "field": "shared_species" },
           "tooltip": {
-            "signal": "{'City 1': datum.source, 'City 2': datum.target, 'Shared Species': format(datum.shared_species, ',')}"
+            "signal": "{'Connected cities': datum.source + ' & ' + datum.target, 'Shared recorded species': format(datum.shared_species, ','), 'Period': '2016–2025'}"
           }
         },
         "update": {
@@ -139,7 +137,7 @@
         },
         "hover": {
           "strokeOpacity": { "value": 0.9 },
-          "stroke": { "value": "#325C4B" }
+          "stroke": { "value": "#000000" }
         }
       }
     },
@@ -152,7 +150,7 @@
           "stroke": { "value": "#FFFFFF" },
           "strokeWidth": { "value": 2 },
           "tooltip": {
-            "signal": "{'Urban Area': datum.city, 'Recorded Species': format(datum.species_richness, ',')}"
+            "signal": "{'Urban area': datum.city, 'Recorded species richness': format(datum.species_richness, ','), 'Period': '2016–2025'}"
           }
         },
         "update": {

@@ -1,53 +1,25 @@
 "use strict";
 
-/* =========================================================
-   CHART 4 — TOP 5 TAXONOMIC TREEMAPS
-
-   Wild Cities: Who Still Lives Among Us?
-   FIT3179 Data Visualisation 2
-
-   One reusable Vega specification for four animal groups.
-
-   Area:
-     Recorded species richness among the selected families.
-
-   Colour:
-     Animal group.
-
-   Comparison:
-     Within-panel only.
-
-   ========================================================= */
-
-/* =========================================================
-   1. SHARED CONFIGURATION
-   ========================================================= */
-
 const TREEMAP_CONFIG = {
   dataDirectory: "data/final/treemap_panels/",
 
-  /* Change this to 6, 8 or 10 if needed later */
+  // show top 5 families in each treemap panel
   topN: 5,
 
   font: "Source Sans 3",
 
-  /* Layout */
   rectangleGap: 2,
   treemapRatio: 1.2,
 
-  /* Typography */
   familyFontSize: 11,
   countFontSize: 10,
 
-  /* Internal padding */
   labelPaddingX: 7,
   labelPaddingY: 7,
 
-  /* Minimum heights */
   minLabelHeight: 24,
   minTwoLineHeight: 43,
 
-  /* Additional horizontal safety margin */
   labelSafetyMargin: 4,
 
   renderer: "svg",
@@ -95,26 +67,11 @@ const TREEMAP_CONFIG = {
   ]
 };
 
-/* =========================================================
-   2. SHARED HELPERS
-   ========================================================= */
-
 const treemapNumberFormatter = new Intl.NumberFormat("en-AU");
 
 function formatTreemapNumber(value) {
   return treemapNumberFormatter.format(value);
 }
-
-/* =========================================================
-   3. MEASURE TEXT WIDTH ACCURATELY
-   ========================================================= */
-
-/*
-  Use the browser's actual font measurements rather than
-  estimating text width from character count.
-
-  This helps prevent truncated scientific family names.
-*/
 
 const treemapMeasureCanvas = document.createElement("canvas");
 
@@ -129,10 +86,6 @@ function measureTreemapText(text, fontSize, fontWeight) {
 
   return treemapMeasureContext.measureText(String(text)).width;
 }
-
-/* =========================================================
-   4. LOAD AND VALIDATE PANEL DATA
-   ========================================================= */
 
 async function loadTreemapData(group) {
   const cfg = TREEMAP_CONFIG;
@@ -155,7 +108,6 @@ async function loadTreemapData(group) {
     throw new Error(`${url} contains no records.`);
   }
 
-  /* Validate required columns */
   const requiredFields = [
     "family",
     "family_type",
@@ -169,7 +121,6 @@ async function loadTreemapData(group) {
     }
   }
 
-  /* Convert numeric values explicitly */
   const cleaned = records.map((row) => {
     const richness = Number(row.species_richness);
 
@@ -195,7 +146,6 @@ async function loadTreemapData(group) {
     };
   });
 
-  /* Retrieve ALL named families in the source file */
   const allNamedFamilies = cleaned
     .filter((row) => row.family_type === "Named family")
     .sort(
@@ -206,7 +156,6 @@ async function loadTreemapData(group) {
 
   const otherFamilies = cleaned.filter((row) => row.family_type === "Other");
 
-  /* Validate existing Top 10 + Other dataset */
   if (otherFamilies.length !== 1) {
     throw new Error(`${group.name}: expected one Other families row.`);
   }
@@ -222,12 +171,8 @@ async function loadTreemapData(group) {
     throw new Error(`${group.name}: duplicate family names found.`);
   }
 
-  /* Select Top N for plotting */
   const selectedFamilies = allNamedFamilies.slice(0, cfg.topN);
 
-  /* Correct denominator:
-     ALL named families in this CSV + original Other.
-  */
   const allNamedRichness = allNamedFamilies.reduce(
     (sum, row) => sum + row.species_richness,
     0
@@ -235,9 +180,6 @@ async function loadTreemapData(group) {
 
   const totalRichness = allNamedRichness + otherFamilies[0].species_richness;
 
-  /* Numerator:
-     Selected Top N only.
-  */
   const selectedRichness = selectedFamilies.reduce(
     (sum, row) => sum + row.species_richness,
     0
@@ -253,7 +195,6 @@ async function loadTreemapData(group) {
 
   const coverage = (selectedRichness / totalRichness) * 100;
 
-  /* Build hierarchy for Vega */
   const hierarchy = [
     {
       id: "root",
@@ -306,10 +247,6 @@ async function loadTreemapData(group) {
   };
 }
 
-/* =========================================================
-   5. UPDATE PANEL SUMMARY
-   ========================================================= */
-
 function updateTreemapSummary(group, data) {
   const element = document.querySelector(group.summary);
 
@@ -323,10 +260,6 @@ function updateTreemapSummary(group, data) {
     `of ${formatTreemapNumber(data.totalRichness)} ` +
     `recorded species (${data.coverage.toFixed(1)}%)`;
 }
-
-/* =========================================================
-   6. UPDATE KEY FINDING WITH ACTUAL COVERAGE
-   ========================================================= */
 
 function updateTreemapFinding(results) {
   const element = document.querySelector("#treemap-key-finding-context");
@@ -350,26 +283,14 @@ function updateTreemapFinding(results) {
     `in the dataset, not complete biodiversity.`;
 }
 
-/* =========================================================
-   7. CREATE SHARED VEGA SPECIFICATION
-   ========================================================= */
-
 function createTreemapSpec(group, data, width, height) {
   const cfg = TREEMAP_CONFIG;
 
-  /* Show a complete name only if it fits horizontally
-     and vertically.
-  */
   const showFamilyName =
     "(datum.x1 - datum.x0) >= datum.labelMinWidth " +
     "&& (datum.y1 - datum.y0) >= " +
     cfg.minLabelHeight;
 
-  /* Show the count only if:
-     - the complete name fits
-     - the count also fits
-     - enough height is available for two lines
-  */
   const showSpeciesCount =
     "(" +
     showFamilyName +
@@ -438,10 +359,6 @@ function createTreemapSpec(group, data, width, height) {
     ],
 
     "marks": [
-      /* ===================================================
-         A. FAMILY RECTANGLES
-         =================================================== */
-
       {
         "type": "rect",
 
@@ -505,10 +422,6 @@ function createTreemapSpec(group, data, width, height) {
         }
       },
 
-      /* ===================================================
-         B. FULL SCIENTIFIC FAMILY NAME
-         =================================================== */
-
       {
         "type": "text",
 
@@ -564,10 +477,6 @@ function createTreemapSpec(group, data, width, height) {
           }
         }
       },
-
-      /* ===================================================
-         C. SPECIES COUNT
-         =================================================== */
 
       {
         "type": "text",
@@ -634,10 +543,6 @@ function createTreemapSpec(group, data, width, height) {
   };
 }
 
-/* =========================================================
-   8. RENDERING AND RESPONSIVE RESIZING
-   ========================================================= */
-
 const treemapInstances = new Map();
 
 async function createTreemapPanel(group) {
@@ -647,7 +552,6 @@ async function createTreemapPanel(group) {
     throw new Error(`${group.name}: chart container not found.`);
   }
 
-  /* Load the dataset once */
   const data = await loadTreemapData(group);
 
   updateTreemapSummary(group, data);
@@ -681,10 +585,6 @@ async function createTreemapPanel(group) {
   };
 
   treemapInstances.set(group.key, instance);
-
-  /* =====================================================
-     RESPONSIVE RESIZING
-     ===================================================== */
 
   let requestedWidth = width;
   let requestedHeight = height;
@@ -755,14 +655,7 @@ async function createTreemapPanel(group) {
   };
 }
 
-/* =========================================================
-   9. INITIALISE ALL PANELS
-   ========================================================= */
-
 async function initialiseTaxonomyTreemaps() {
-  /* Wait for Source Sans 3 to finish loading.
-     Text measurements will then match the displayed font.
-  */
   if (document.fonts) {
     await document.fonts.ready;
   }
@@ -795,15 +688,10 @@ async function initialiseTaxonomyTreemaps() {
     }
   });
 
-  /* Update key finding only when all panels loaded */
   if (successful.length === TREEMAP_CONFIG.groups.length) {
     updateTreemapFinding(successful);
   }
 }
-
-/* =========================================================
-   10. START WHEN DOM IS READY
-   ========================================================= */
 
 if (document.readyState === "loading") {
   document.addEventListener("DOMContentLoaded", initialiseTaxonomyTreemaps, {
