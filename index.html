@@ -788,7 +788,7 @@
 
       <!-- Section 6 -->
       <section class="story-section" id="threatened">
-        <!-- <div class="section-heading">
+        <div class="section-heading">
           <span class="section-number">06</span>
 
           <div>
@@ -800,7 +800,7 @@
           </div>
         </div>
 
-        <article class="chart-card chart-wide" id="chart-11">
+        <!-- <article class="chart-card chart-wide" id="chart-11">
           <header class="chart-header">
             <h3>
               Where are threatened wildlife records concentrated within
@@ -853,17 +853,121 @@
                 corresponding H3 spatial cell and urban boundary, so they show
                 broad recording concentration rather than exact observation
                 locations. Denser clusters indicate more documented records, not
-                greater animal abundance. Low-count cells may not generate a dot.
-                Each city is fitted separately, so do not compare screen-space
-                density directly between selections.
+                greater animal abundance. Low-count cells may not generate a
+                dot. Each city is fitted separately, so do not compare
+                screen-space density directly between selections.
               </p>
             </div>
           </div>
         </article> -->
 
-        <!-- <article class="chart-card chart-wide">
-          <div id="threatened-choropleth" class="chart"></div>
-        </article> -->
+        <!-- Chart 12 -->
+
+        <!-- CHART 10 — ZOOMABLE CHOROPLETH -->
+
+        <article class="chart-card chart-wide" id="chart-10">
+          <header class="chart-header">
+            <h3>
+              Where do nationally threatened species make up the greatest share
+              of recorded urban wildlife?
+            </h3>
+
+            <p>
+              Explore the percentage of distinct recorded species nationally
+              listed as threatened across eight Australian urban areas and their
+              LGA subdivisions, 2016–2025. Select a map centre and adjust the
+              zoom to explore.
+            </p>
+          </header>
+
+          <!-- MAP -->
+          <div
+            id="threatened-choropleth"
+            class="chart chart--geographic"
+            aria-label="Zoomable choropleth showing threatened
+    wildlife species percentages across Australian
+    urban areas and LGA subdivisions."
+          ></div>
+
+          <!-- LEGEND -->
+          <div class="map-legend">
+            <span class="insight-label"> THREATENED SPECIES SHARE </span>
+
+            <div class="map-legend-items">
+              <span class="map-legend-item">
+                <i class="map-legend-swatch" style="--swatch: #edf5e7"></i>
+                0–&lt;0.5%
+              </span>
+
+              <span class="map-legend-item">
+                <i class="map-legend-swatch" style="--swatch: #c0ddb3"></i>
+                0.5–&lt;1%
+              </span>
+
+              <span class="map-legend-item">
+                <i class="map-legend-swatch" style="--swatch: #8bbd85"></i>
+                1–&lt;1.5%
+              </span>
+
+              <span class="map-legend-item">
+                <i class="map-legend-swatch" style="--swatch: #52936d"></i>
+                1.5–&lt;2%
+              </span>
+
+              <span class="map-legend-item">
+                <i class="map-legend-swatch" style="--swatch: #22583d"></i>
+                2% and above
+              </span>
+
+              <span class="map-legend-item">
+                <i class="map-legend-swatch" style="--swatch: #b9bec0"></i>
+                Low coverage
+              </span>
+            </div>
+          </div>
+
+          <!-- EXISTING REUSABLE SUPPORT LAYOUT -->
+          <div class="chart-support">
+            <aside class="chart-insight">
+              <span class="insight-label"> KEY FINDING </span>
+
+              <p class="insight-main">
+                Nedlands in Perth has the highest recorded threatened-species
+                share among the analysed LGAs, at 4.03%.
+              </p>
+
+              <p class="insight-context">
+                Waverley in Sydney follows at 3.80%. Both documented 16
+                nationally threatened species, but Nedlands recorded 397 species
+                overall, compared with 421 in Waverley.
+              </p>
+            </aside>
+
+            <div class="chart-meta">
+              <span class="insight-label"> HOW TO READ THIS </span>
+
+              <p class="chart-note">
+                Use Map Centre to switch between the Australia overview and
+                individual cities. Adjust Zoom to explore the map at different
+                scales. Each coloured polygon represents an urban area in the
+                overview or an LGA subdivision in city view.
+              </p>
+
+              <p class="chart-note">
+                Darker green indicates a higher percentage of distinct recorded
+                species nationally listed as threatened. Grey indicates
+                subdivisions with fewer than 100 recorded species. Hover for
+                exact values. The uncoloured national background is outside the
+                study coverage.
+              </p>
+            </div>
+          </div>
+
+          <p class="chart-source">
+            Sources: Atlas of Living Australia (2016–2025); DCCEEW EPBC
+            threatened fauna; ABS ASGS 2021 UCL and LGA boundaries.
+          </p>
+        </article>
       </section>
 
       <!-- End -->

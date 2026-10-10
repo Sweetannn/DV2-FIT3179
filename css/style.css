@@ -1414,3 +1414,115 @@ sidebar | visual
   width: 100%;
   min-width: 0;
 }
+
+/* =========================================================
+   REUSABLE GEOGRAPHIC CHART
+   ========================================================= */
+
+.chart--geographic {
+  width: 100%;
+  min-width: 0;
+  min-height: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.chart--geographic .vega-embed,
+.chart--geographic .vega-embed > div {
+  width: 100%;
+  min-width: 0;
+}
+
+.chart--geographic svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* =========================================================
+   REUSABLE VEGA CONTROLS
+   ========================================================= */
+
+.chart--geographic .vega-bindings {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+  margin-top: var(--space-xs);
+}
+
+.chart--geographic .vega-bind {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.chart--geographic .vega-bind-name {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--color-accent);
+}
+
+.chart--geographic .vega-bind select,
+.chart--geographic .vega-bind input {
+  accent-color: var(--color-accent);
+  font: inherit;
+}
+
+.chart--geographic .vega-bind select {
+  max-width: 100%;
+  padding: 0.5rem 0.75rem;
+  background: var(--color-surface);
+  border: 1px solid var(--color-rule);
+  border-radius: var(--radius);
+  color: var(--color-text);
+}
+
+/* =========================================================
+   REUSABLE MAP LEGEND
+   ========================================================= */
+
+.map-legend {
+  margin-top: var(--space-sm);
+  padding-bottom: var(--space-sm);
+}
+
+.map-legend .insight-label {
+  margin-bottom: var(--space-xs);
+}
+
+.map-legend-items {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.65rem 1.25rem;
+}
+
+.map-legend-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.85rem;
+  color: var(--color-muted);
+}
+
+.map-legend-swatch {
+  display: inline-block;
+  width: 22px;
+  height: 18px;
+  flex-shrink: 0;
+  background: var(--swatch);
+  border: 1px solid var(--color-rule);
+  border-radius: 3px;
+}
+
+@media (max-width: 650px) {
+  .map-legend-items {
+    gap: 0.5rem 0.8rem;
+  }
+
+  .map-legend-item {
+    font-size: 0.78rem;
+  }
+}

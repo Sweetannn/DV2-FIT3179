@@ -1,0 +1,283 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Choropleth of nationally threatened wildlife species as a percentage of distinct recorded species in eight Australian urban areas, 2016–2025.",
+  "width": "container",
+  "height": 510,
+  "padding": 5,
+  "autosize": {
+    "type": "fit",
+    "contains": "padding",
+    "resize": true
+  },
+  "background": "white",
+
+  "params": [
+    {
+      "name": "map_centre",
+      "value": "Australia",
+      "bind": {
+        "input": "select",
+        "options": [
+          "Australia",
+          "Sydney",
+          "Melbourne",
+          "Brisbane",
+          "Adelaide",
+          "Perth",
+          "Hobart",
+          "Darwin",
+          "Canberra–Queanbeyan"
+        ],
+        "labels": [
+          "Australia (Overview)",
+          "Sydney",
+          "Melbourne",
+          "Brisbane",
+          "Adelaide",
+          "Perth",
+          "Hobart",
+          "Darwin",
+          "Canberra–Queanbeyan"
+        ],
+        "name": "Map Centre: "
+      }
+    },
+    {
+      "name": "zoom_factor",
+      "value": 1,
+      "bind": {
+        "input": "range",
+        "min": 0.6,
+        "max": 2,
+        "step": 0.05,
+        "name": "Zoom: "
+      }
+    },
+    {
+      "name": "center_to",
+      "expr": "map_centre === 'Australia' ? [134.4, -27.2] : map_centre === 'Sydney' ? [150.932, -33.849] : map_centre === 'Melbourne' ? [145.046, -37.971] : map_centre === 'Brisbane' ? [152.993, -27.383] : map_centre === 'Adelaide' ? [138.599, -34.999] : map_centre === 'Perth' ? [115.928, -32.124] : map_centre === 'Hobart' ? [147.397, -42.845] : map_centre === 'Darwin' ? [130.933, -12.428] : [149.114, -35.309]"
+    },
+    {
+      "name": "base_scale",
+      "expr": "map_centre === 'Australia' ? 610 : map_centre === 'Sydney' ? 35000 : map_centre === 'Melbourne' ? 19000 : map_centre === 'Brisbane' ? 26000 : map_centre === 'Adelaide' ? 26000 : map_centre === 'Perth' ? 17500 : map_centre === 'Hobart' ? 49000 : map_centre === 'Darwin' ? 110000 : 53000"
+    }
+  ],
+
+  "projection": {
+    "type": "equirectangular",
+    "center": {
+      "expr": "center_to"
+    },
+    "scale": {
+      "expr": "base_scale * zoom_factor * (width / 960)"
+    }
+  },
+
+  "layer": [
+    {
+      "data": {
+        "url": "geo/final/countries-110m.json",
+        "format": {
+          "type": "topojson",
+          "feature": "countries"
+        }
+      },
+      "transform": [
+        {
+          "filter": "datum.properties.name === 'Australia' && map_centre === 'Australia'"
+        }
+      ],
+      "mark": {
+        "type": "geoshape",
+        "fill": "#f1f3ef",
+        "stroke": "#aabbb0",
+        "strokeWidth": 1.2
+      }
+    },
+
+    {
+      "data": {
+        "url": "geo/final/city_boundaries.topojson",
+        "format": {
+          "type": "topojson",
+          "feature": "cities"
+        }
+      },
+      "transform": [
+        {
+          "filter": "map_centre === 'Australia'"
+        },
+        {
+          "lookup": "properties.CITY",
+          "from": {
+            "data": {
+              "url": "data/final/09_threatened_city_summary.csv",
+              "format": {
+                "type": "csv",
+                "parse": {
+                  "city": "string",
+                  "recorded_species": "number",
+                  "threatened_species": "number",
+                  "threatened_share_pct": "number"
+                }
+              }
+            },
+            "key": "city",
+            "fields": [
+              "recorded_species",
+              "threatened_species",
+              "threatened_share_pct"
+            ]
+          }
+        }
+      ],
+      "mark": {
+        "type": "geoshape",
+        "stroke": "#204c39",
+        "strokeWidth": 1.8
+      },
+      "encoding": {
+        "color": {
+          "field": "threatened_share_pct",
+          "type": "quantitative",
+          "scale": {
+            "type": "threshold",
+            "domain": [0.5, 1, 1.5, 2],
+            "range": ["#edf5e7", "#c0ddb3", "#8bbd85", "#52936d", "#22583d"]
+          },
+          "legend": null
+        },
+        "tooltip": [
+          {
+            "field": "properties.CITY",
+            "title": "Urban area",
+            "type": "nominal"
+          },
+          {
+            "field": "recorded_species",
+            "title": "Recorded species",
+            "type": "quantitative",
+            "format": ","
+          },
+          {
+            "field": "threatened_species",
+            "title": "Threatened species",
+            "type": "quantitative",
+            "format": ","
+          },
+          {
+            "field": "threatened_share_pct",
+            "title": "Threatened species (%)",
+            "type": "quantitative",
+            "format": ".2f"
+          }
+        ]
+      }
+    },
+
+    {
+      "data": {
+        "url": "geo/final/city_lga_final.topojson",
+        "format": {
+          "type": "topojson",
+          "feature": "city_lga_clipped"
+        }
+      },
+      "transform": [
+        {
+          "filter": "map_centre !== 'Australia'"
+        },
+        {
+          "filter": "datum.properties.CITY === map_centre"
+        },
+        {
+          "lookup": "properties.LGA_CODE21",
+          "from": {
+            "data": {
+              "url": "data/final/13_threatened_lga_summary.csv",
+              "format": {
+                "type": "csv",
+                "parse": {
+                  "CITY": "string",
+                  "LGA_CODE21": "string",
+                  "total_species": "number",
+                  "threatened_species": "number",
+                  "threatened_pct": "number"
+                }
+              }
+            },
+            "key": "LGA_CODE21",
+            "fields": [
+              "total_species",
+              "threatened_species",
+              "threatened_pct",
+              "CITY"
+            ]
+          }
+        },
+        {
+          "calculate": "isValid(datum.total_species) && datum.total_species < 100 ? null : datum.threatened_pct",
+          "as": "display_pct"
+        }
+      ],
+      "mark": {
+        "type": "geoshape",
+        "stroke": "#ffffff",
+        "strokeWidth": 1
+      },
+      "encoding": {
+        "color": {
+          "condition": {
+            "test": "isValid(datum.total_species) && datum.total_species < 100",
+            "value": "#b9bec0"
+          },
+          "field": "display_pct",
+          "type": "quantitative",
+          "scale": {
+            "type": "threshold",
+            "domain": [0.5, 1, 1.5, 2],
+            "range": ["#edf5e7", "#c0ddb3", "#8bbd85", "#52936d", "#22583d"]
+          },
+          "legend": null
+        },
+        "tooltip": [
+          {
+            "field": "properties.CITY",
+            "title": "Urban area",
+            "type": "nominal"
+          },
+          {
+            "field": "properties.LGA_NAME21",
+            "title": "LGA subdivision",
+            "type": "nominal"
+          },
+          {
+            "field": "total_species",
+            "title": "Recorded species",
+            "type": "quantitative",
+            "format": ","
+          },
+          {
+            "field": "threatened_species",
+            "title": "Threatened species",
+            "type": "quantitative",
+            "format": ","
+          },
+          {
+            "field": "threatened_pct",
+            "title": "Threatened species (%)",
+            "type": "quantitative",
+            "format": ".2f"
+          }
+        ]
+      }
+    }
+  ],
+
+  "config": {
+    "view": {
+      "stroke": null
+    },
+    "font": "Source Sans 3"
+  }
+}

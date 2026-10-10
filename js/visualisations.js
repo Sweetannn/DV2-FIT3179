@@ -73,14 +73,14 @@ const visualisations = [
   {
     container: "#threatened-dot-map",
     spec: "charts/11_threatened_dot_density.vg.json",
-    enabled: true
+    enabled: false
   },
 
   /* Chart 12 : Threatened Species Choropleth */
   {
     container: "#threatened-choropleth",
     spec: "charts/12_threatened_choropleth.vg.json",
-    enabled: false
+    enabled: true
   }
 ];
 
