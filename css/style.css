@@ -1611,3 +1611,249 @@ sidebar | visual
     flex-wrap: wrap;
   }
 }
+
+/* =========================================================
+   REUSABLE TWO-COLUMN EDITORIAL TEXT
+   ========================================================= */
+
+.prose-columns {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: var(--space-lg);
+
+  width: 100%;
+  min-width: 0;
+
+  margin-bottom: var(--space-xl);
+}
+
+.prose-column {
+  min-width: 0;
+}
+
+.prose-column p {
+  max-width: 58ch;
+
+  margin: 0 0 var(--space-sm);
+
+  font-size: 1rem;
+  line-height: 1.75;
+
+  color: var(--color-muted);
+}
+
+.prose-column p:last-child {
+  margin-bottom: 0;
+}
+
+/* =========================================================
+   REUSABLE SOURCE SECTION
+   ========================================================= */
+
+.footer-sources {
+  width: 100%;
+  min-width: 0;
+
+  margin-bottom: var(--space-lg);
+  padding-top: var(--space-md);
+
+  border-top: 1px solid var(--color-rule);
+}
+
+.footer-heading {
+  margin: 0 0 var(--space-sm);
+
+  font-family: "Source Sans 3", Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.4;
+
+  color: var(--color-text);
+}
+
+/* Three equally sized source columns */
+
+.source-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  gap: var(--space-lg);
+
+  align-items: start;
+
+  width: 100%;
+  min-width: 0;
+}
+
+.source-item {
+  min-width: 0;
+}
+
+/* Compact source typography */
+
+.source-name {
+  margin: 0 0 0.35rem;
+
+  font-size: 0.82rem;
+  font-weight: 600;
+  line-height: 1.45;
+
+  color: var(--color-text);
+}
+
+.source-description {
+  margin: 0 0 0.45rem;
+
+  font-size: 0.78rem;
+  line-height: 1.55;
+
+  color: var(--color-muted);
+}
+
+.source-item a {
+  display: inline-block;
+
+  font-size: 0.78rem;
+  line-height: 1.5;
+
+  color: var(--color-accent);
+
+  text-decoration: underline;
+  text-underline-offset: 3px;
+
+  overflow-wrap: anywhere;
+}
+
+.source-item a:hover {
+  text-decoration-thickness: 2px;
+}
+
+.source-item a:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
+/* =========================================================
+   REUSABLE FOOTER CREDITS
+   ========================================================= */
+
+.footer-credits {
+  margin-top: var(--space-md);
+  padding-top: var(--space-md);
+
+  border-top: 1px solid var(--color-rule);
+}
+
+.footer-credits p {
+  margin: 0;
+
+  font-size: 0.85rem;
+  line-height: 1.6;
+
+  color: var(--color-muted);
+}
+
+/* =========================================================
+   RESPONSIVE EDITORIAL LAYOUT
+   ========================================================= */
+
+@media (max-width: 900px) {
+  .prose-columns {
+    gap: var(--space-md);
+  }
+
+  .source-grid {
+    gap: var(--space-md);
+  }
+}
+
+@media (max-width: 700px) {
+  .prose-columns {
+    grid-template-columns: minmax(0, 1fr);
+
+    gap: var(--space-sm);
+
+    margin-bottom: var(--space-lg);
+  }
+
+  .source-grid {
+    grid-template-columns: minmax(0, 1fr);
+
+    gap: var(--space-md);
+  }
+
+  .prose-column p {
+    max-width: none;
+  }
+}
+
+/* =========================================================
+   REUSABLE SECTION CONTENT ALIGNMENT
+   ========================================================= */
+
+.section-content {
+  width: calc(100% - 1.5rem);
+  max-width: 1100px;
+
+  margin-left: 1.5rem;
+  margin-right: auto;
+
+  min-width: 0;
+}
+
+/* Reset heading's original indentation inside the wrapper */
+
+.section-content > .section-heading {
+  width: 100%;
+  max-width: none;
+
+  margin-left: 0;
+  margin-right: 0;
+}
+
+/* Align editorial paragraphs and references */
+
+.section-content > .prose-columns,
+.section-content > .footer-sources,
+.section-content > .footer-credits {
+  width: 100%;
+  max-width: none;
+
+  margin-left: 0;
+  margin-right: 0;
+}
+
+/* Balanced two-column editorial layout */
+
+.section-content .prose-columns {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: var(--space-lg);
+}
+
+/* Compact three-column source layout */
+
+.section-content .source-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  column-gap: var(--space-md);
+}
+
+/* Responsive alignment */
+
+@media (max-width: 800px) {
+  .section-content {
+    width: 100%;
+    max-width: none;
+
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 700px) {
+  .section-content .prose-columns,
+  .section-content .source-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
