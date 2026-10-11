@@ -36,7 +36,7 @@
           "Darwin",
           "Canberra–Queanbeyan"
         ],
-        "name": "Map Centre: "
+        "name": "Choose a city: "
       }
     },
     {
@@ -47,7 +47,7 @@
         "min": 0.75,
         "max": 1.5,
         "step": 0.05,
-        "name": "Zoom: "
+        "name": "Map zoom: "
       }
     },
     {
@@ -98,15 +98,16 @@
         "strokeWidth": 0.6,
         "clip": true
       },
+
       "encoding": {
         "tooltip": [
           {
             "field": "properties.LGA_NAME21",
             "type": "nominal",
-            "title": "LGA"
+            "title": "Local government area"
           },
           {
-            "value": "Outside analysed urban footprint",
+            "value": "Outside the studied urban area",
             "title": "Study coverage"
           }
         ]
@@ -168,6 +169,7 @@
           },
           "legend": null
         },
+
         "tooltip": [
           {
             "field": "properties.CITY",
@@ -176,24 +178,24 @@
           },
           {
             "field": "properties.LGA_NAME21",
-            "title": "LGA subdivision",
+            "title": "Local government area",
             "type": "nominal"
           },
           {
             "field": "total_species",
-            "title": "Recorded species",
+            "title": "Distinct recorded species",
             "type": "quantitative",
             "format": ","
           },
           {
             "field": "threatened_species",
-            "title": "Threatened species",
+            "title": "Nationally threatened species",
             "type": "quantitative",
             "format": ","
           },
           {
             "field": "threatened_pct",
-            "title": "Threatened share (%)",
+            "title": "Nationally threatened species (%)",
             "type": "quantitative",
             "format": ".2f"
           }

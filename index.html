@@ -795,8 +795,16 @@
             <p class="eyebrow">SPECIES AT RISK</p>
 
             <h2>
-              Threatened wildlife still persists inside Australia's cities.
+              Threatened wildlife still persists inside <br />Australia's
+              cities.
             </h2>
+
+            <p class="section-intro">
+              Nationally threatened species are documented across Australia's
+              urban environments, but their share of recorded wildlife varies
+              between local areas. Explore where those proportions are highest
+              and how they differ within each city.
+            </p>
           </div>
         </div>
 
@@ -861,12 +869,10 @@
           </div>
         </article> -->
 
-        <!-- Chart 12 -->
-
-        <!-- CHART 10 — ZOOMABLE CHOROPLETH -->
+        <!-- Chart 10 -->
 
         <article class="chart-card chart-wide" id="chart-10">
-          <header class="chart-header">
+          <header class="chart-header chart-header--wide">
             <h3>
               Where do nationally threatened species make up the greatest share
               of recorded urban wildlife?
@@ -874,99 +880,97 @@
 
             <p>
               Explore the percentage of distinct recorded species nationally
-              listed as threatened across eight Australian urban areas and their
-              LGA subdivisions, 2016–2025. Select a map centre and adjust the
+              listed as threatened across local government areas within eight
+              Australian cities, 2016–2025. Choose a city and adjust the map
               zoom to explore.
             </p>
           </header>
 
-          <!-- MAP -->
-          <div
-            id="threatened-choropleth"
-            class="chart chart--geographic"
-            aria-label="Zoomable choropleth showing threatened
-    wildlife species percentages across Australian
-    urban areas and LGA subdivisions."
-          ></div>
+          <div class="map-panel">
+            <div
+              id="threatened-choropleth"
+              class="chart chart--geographic"
+              aria-label="Interactive map showing the percentage of
+      nationally threatened recorded species within local
+      government areas of eight Australian urban regions."
+            ></div>
+          </div>
 
-          <!-- LEGEND -->
           <div class="map-legend">
-            <span class="insight-label"> THREATENED SPECIES SHARE </span>
+            <span class="insight-label">
+              PERCENTAGE OF RECORDED SPECIES NATIONALLY THREATENED
+            </span>
 
             <div class="map-legend-items">
               <span class="map-legend-item">
-                <i class="map-legend-swatch" style="--swatch: #edf5e7"></i>
+                <i class="map-legend-swatch" style="--swatch: #fee5d9"></i>
                 0–&lt;0.5%
               </span>
 
               <span class="map-legend-item">
-                <i class="map-legend-swatch" style="--swatch: #c0ddb3"></i>
+                <i class="map-legend-swatch" style="--swatch: #fcbba1"></i>
                 0.5–&lt;1%
               </span>
 
               <span class="map-legend-item">
-                <i class="map-legend-swatch" style="--swatch: #8bbd85"></i>
+                <i class="map-legend-swatch" style="--swatch: #fc9272"></i>
                 1–&lt;1.5%
               </span>
 
               <span class="map-legend-item">
-                <i class="map-legend-swatch" style="--swatch: #52936d"></i>
+                <i class="map-legend-swatch" style="--swatch: #ef3b2c"></i>
                 1.5–&lt;2%
               </span>
 
               <span class="map-legend-item">
-                <i class="map-legend-swatch" style="--swatch: #22583d"></i>
+                <i class="map-legend-swatch" style="--swatch: #99000d"></i>
                 2% and above
               </span>
 
               <span class="map-legend-item">
-                <i class="map-legend-swatch" style="--swatch: #b9bec0"></i>
-                Low coverage
+                <i class="map-legend-swatch" style="--swatch: #e2e5e2"></i>
+                Outside studied urban area
               </span>
             </div>
           </div>
 
-          <!-- EXISTING REUSABLE SUPPORT LAYOUT -->
           <div class="chart-support">
             <aside class="chart-insight">
-              <span class="insight-label"> KEY FINDING </span>
+              <span class="insight-label">KEY FINDING</span>
 
               <p class="insight-main">
                 Nedlands in Perth has the highest recorded threatened-species
-                share among the analysed LGAs, at 4.03%.
+                percentage, at 4.03%.
               </p>
 
               <p class="insight-context">
-                Waverley in Sydney follows at 3.80%. Both documented 16
+                Waverley in Sydney follows at 3.80%. Both areas documented 16
                 nationally threatened species, but Nedlands recorded 397 species
-                overall, compared with 421 in Waverley.
+                in total, compared with 421 in Waverley. These percentages
+                describe recorded species, not animal population sizes.
               </p>
             </aside>
 
             <div class="chart-meta">
-              <span class="insight-label"> HOW TO READ THIS </span>
+              <span class="insight-label">HOW TO READ THIS</span>
 
               <p class="chart-note">
-                Use Map Centre to switch between the Australia overview and
-                individual cities. Adjust Zoom to explore the map at different
-                scales. Each coloured polygon represents an urban area in the
-                overview or an LGA subdivision in city view.
-              </p>
-
-              <p class="chart-note">
-                Darker green indicates a higher percentage of distinct recorded
-                species nationally listed as threatened. Grey indicates
-                subdivisions with fewer than 100 recorded species. Hover for
-                exact values. The uncoloured national background is outside the
-                study coverage.
+                Choose a city to explore its local government areas. Darker red
+                indicates a higher percentage of distinct recorded species
+                nationally listed as threatened. Each coloured area represents
+                the part of a local government area that falls within the
+                selected urban boundary. Surrounding areas appear in grey
+                because they are outside the analysed urban boundary.
               </p>
             </div>
           </div>
 
-          <p class="chart-source">
-            Sources: Atlas of Living Australia (2016–2025); DCCEEW EPBC
-            threatened fauna; ABS ASGS 2021 UCL and LGA boundaries.
-          </p>
+          <!-- <p class="chart-source">
+            Sources: Atlas of Living Australia (2016–2025); Australian
+            Government Department of Climate Change, Energy, the Environment and
+            Water; Australian Bureau of Statistics, 2021 urban and local
+            government boundaries.
+          </p> -->
         </article>
       </section>
 
