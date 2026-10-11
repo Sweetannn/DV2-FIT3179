@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "description": "Choropleth of nationally threatened wildlife species as a percentage of distinct recorded species in eight Australian urban areas, 2016–2025.",
+  "description": "Regional-only zoomable choropleth of nationally threatened recorded wildlife species in eight Australian urban areas, 2016–2025.",
   "width": "container",
   "height": 510,
   "padding": 5,
@@ -9,18 +9,16 @@
     "contains": "padding",
     "resize": true
   },
-  "background": "white",
-
+  "background": "#ffffff",
   "params": [
     {
       "name": "map_centre",
-      "value": "Australia",
+      "value": "Melbourne",
       "bind": {
         "input": "select",
         "options": [
-          "Australia",
-          "Sydney",
           "Melbourne",
+          "Sydney",
           "Brisbane",
           "Adelaide",
           "Perth",
@@ -29,9 +27,8 @@
           "Canberra–Queanbeyan"
         ],
         "labels": [
-          "Australia (Overview)",
-          "Sydney",
           "Melbourne",
+          "Sydney",
           "Brisbane",
           "Adelaide",
           "Perth",
@@ -43,139 +40,80 @@
       }
     },
     {
-      "name": "zoom_factor",
+      "name": "zoom_level",
       "value": 1,
       "bind": {
         "input": "range",
-        "min": 0.6,
-        "max": 2,
+        "min": 0.75,
+        "max": 1.5,
         "step": 0.05,
         "name": "Zoom: "
       }
     },
     {
-      "name": "center_to",
-      "expr": "map_centre === 'Australia' ? [134.4, -27.2] : map_centre === 'Sydney' ? [150.932, -33.849] : map_centre === 'Melbourne' ? [145.046, -37.971] : map_centre === 'Brisbane' ? [152.993, -27.383] : map_centre === 'Adelaide' ? [138.599, -34.999] : map_centre === 'Perth' ? [115.928, -32.124] : map_centre === 'Hobart' ? [147.397, -42.845] : map_centre === 'Darwin' ? [130.933, -12.428] : [149.114, -35.309]"
+      "name": "target_center",
+      "expr": "map_centre === 'Sydney' ? [150.932, -33.849] : map_centre === 'Melbourne' ? [145.046, -37.971] : map_centre === 'Brisbane' ? [152.993, -27.383] : map_centre === 'Adelaide' ? [138.599, -34.999] : map_centre === 'Perth' ? [115.928, -32.124] : map_centre === 'Hobart' ? [147.397, -42.845] : map_centre === 'Darwin' ? [130.933, -12.428] : [149.114, -35.309]"
     },
     {
-      "name": "base_scale",
-      "expr": "map_centre === 'Australia' ? 610 : map_centre === 'Sydney' ? 35000 : map_centre === 'Melbourne' ? 19000 : map_centre === 'Brisbane' ? 26000 : map_centre === 'Adelaide' ? 26000 : map_centre === 'Perth' ? 17500 : map_centre === 'Hobart' ? 49000 : map_centre === 'Darwin' ? 110000 : 53000"
+      "name": "target_scale",
+      "expr": "map_centre === 'Sydney' ? 35000 : map_centre === 'Melbourne' ? 19000 : map_centre === 'Brisbane' ? 26000 : map_centre === 'Adelaide' ? 26000 : map_centre === 'Perth' ? 17500 : map_centre === 'Hobart' ? 49000 : map_centre === 'Darwin' ? 110000 : 53000"
+    },
+    {
+      "name": "effective_center",
+      "expr": "target_center"
+    },
+    {
+      "name": "effective_scale",
+      "expr": "target_scale * zoom_level * (width / 960)"
     }
   ],
-
   "projection": {
     "type": "equirectangular",
     "center": {
-      "expr": "center_to"
+      "expr": "effective_center"
     },
     "scale": {
-      "expr": "base_scale * zoom_factor * (width / 960)"
+      "expr": "effective_scale"
     }
   },
-
   "layer": [
     {
+      "name": "regionalContext",
       "data": {
-        "url": "geo/final/countries-110m.json",
+        "url": "geo/final/australia_lga_context.topojson",
         "format": {
           "type": "topojson",
-          "feature": "countries"
+          "feature": "regional_lgas"
         }
       },
       "transform": [
         {
-          "filter": "datum.properties.name === 'Australia' && map_centre === 'Australia'"
+          "filter": "indexof(datum.properties.contextCities, map_centre) >= 0"
         }
       ],
       "mark": {
         "type": "geoshape",
-        "fill": "#f1f3ef",
-        "stroke": "#aabbb0",
-        "strokeWidth": 1.2
-      }
-    },
-
-    {
-      "data": {
-        "url": "geo/final/city_boundaries.topojson",
-        "format": {
-          "type": "topojson",
-          "feature": "cities"
-        }
-      },
-      "transform": [
-        {
-          "filter": "map_centre === 'Australia'"
-        },
-        {
-          "lookup": "properties.CITY",
-          "from": {
-            "data": {
-              "url": "data/final/09_threatened_city_summary.csv",
-              "format": {
-                "type": "csv",
-                "parse": {
-                  "city": "string",
-                  "recorded_species": "number",
-                  "threatened_species": "number",
-                  "threatened_share_pct": "number"
-                }
-              }
-            },
-            "key": "city",
-            "fields": [
-              "recorded_species",
-              "threatened_species",
-              "threatened_share_pct"
-            ]
-          }
-        }
-      ],
-      "mark": {
-        "type": "geoshape",
-        "stroke": "#204c39",
-        "strokeWidth": 1.8
+        "fill": "#e2e5e2",
+        "stroke": "#ffffff",
+        "strokeWidth": 0.6,
+        "clip": true
       },
       "encoding": {
-        "color": {
-          "field": "threatened_share_pct",
-          "type": "quantitative",
-          "scale": {
-            "type": "threshold",
-            "domain": [0.5, 1, 1.5, 2],
-            "range": ["#edf5e7", "#c0ddb3", "#8bbd85", "#52936d", "#22583d"]
-          },
-          "legend": null
-        },
         "tooltip": [
           {
-            "field": "properties.CITY",
-            "title": "Urban area",
-            "type": "nominal"
+            "field": "properties.LGA_NAME21",
+            "type": "nominal",
+            "title": "LGA"
           },
           {
-            "field": "recorded_species",
-            "title": "Recorded species",
-            "type": "quantitative",
-            "format": ","
-          },
-          {
-            "field": "threatened_species",
-            "title": "Threatened species",
-            "type": "quantitative",
-            "format": ","
-          },
-          {
-            "field": "threatened_share_pct",
-            "title": "Threatened species (%)",
-            "type": "quantitative",
-            "format": ".2f"
+            "value": "Outside analysed urban footprint",
+            "title": "Study coverage"
           }
         ]
       }
     },
-
     {
+      "name": "studiedUrbanLGAs",
       "data": {
         "url": "geo/final/city_lga_final.topojson",
         "format": {
@@ -184,9 +122,6 @@
         }
       },
       "transform": [
-        {
-          "filter": "map_centre !== 'Australia'"
-        },
         {
           "filter": "datum.properties.CITY === map_centre"
         },
@@ -214,29 +149,22 @@
               "CITY"
             ]
           }
-        },
-        {
-          "calculate": "isValid(datum.total_species) && datum.total_species < 100 ? null : datum.threatened_pct",
-          "as": "display_pct"
         }
       ],
       "mark": {
         "type": "geoshape",
         "stroke": "#ffffff",
-        "strokeWidth": 1
+        "strokeWidth": 1,
+        "clip": true
       },
       "encoding": {
         "color": {
-          "condition": {
-            "test": "isValid(datum.total_species) && datum.total_species < 100",
-            "value": "#b9bec0"
-          },
-          "field": "display_pct",
+          "field": "threatened_pct",
           "type": "quantitative",
           "scale": {
             "type": "threshold",
             "domain": [0.5, 1, 1.5, 2],
-            "range": ["#edf5e7", "#c0ddb3", "#8bbd85", "#52936d", "#22583d"]
+            "range": ["#fee5d9", "#fcbba1", "#fc9272", "#ef3b2c", "#99000d"]
           },
           "legend": null
         },
@@ -265,7 +193,7 @@
           },
           {
             "field": "threatened_pct",
-            "title": "Threatened species (%)",
+            "title": "Threatened share (%)",
             "type": "quantitative",
             "format": ".2f"
           }
@@ -273,7 +201,6 @@
       }
     }
   ],
-
   "config": {
     "view": {
       "stroke": null
