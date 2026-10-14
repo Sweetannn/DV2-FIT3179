@@ -3,6 +3,9 @@
 
   "width": "container",
   "height": 300,
+  "padding": {
+    "left": 35,
+  },
 
   "data": {
     "url": "data/final/02_city_group_summary.csv"
