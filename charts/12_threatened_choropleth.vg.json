@@ -1,6 +1,5 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "description": "Regional-only zoomable choropleth of nationally threatened recorded wildlife species in eight Australian urban areas, 2016–2025.",
   "width": "container",
   "height": 510,
   "padding": 5,
