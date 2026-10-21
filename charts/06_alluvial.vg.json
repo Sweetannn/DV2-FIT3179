@@ -1,8 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega/v5.json",
 
-  "description": "Alluvial diagram of recorded species richness across four animal groups and eight Australian urban areas.",
-
   "width": 800,
   "height": 400,
 
