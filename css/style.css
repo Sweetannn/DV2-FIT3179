@@ -1910,3 +1910,104 @@ sidebar | visual
     padding-bottom: 0.5rem;
   }
 }
+
+/* =========================================================
+   TIME CHART PAIR
+   Shared by Chart 7 and Chart 8
+   ========================================================= */
+
+/*
+  Creates a consistent visual area inside both cards.
+
+  This allows the support section underneath each chart
+  to begin at approximately the same vertical position,
+  even if the two Vega visualisations have slightly
+  different internal dimensions.
+*/
+
+.chart-pair-visual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  min-width: 0;
+
+  min-height: 430px;
+}
+
+/*
+  Shared chart container for both temporal charts.
+*/
+
+.chart-time-pair {
+  width: 100%;
+  min-width: 0;
+
+  min-height: 410px;
+
+  margin: 0;
+  padding: 0;
+
+  overflow: hidden;
+}
+
+/*
+  Vega wrapper should use all available card width.
+*/
+
+.chart-time-pair .vega-embed,
+.chart-time-pair .vega-embed > div {
+  width: 100%;
+  min-width: 0;
+}
+
+/*
+  Prevent SVG/canvas from creating page-level
+  horizontal overflow.
+*/
+
+.chart-time-pair svg,
+.chart-time-pair canvas {
+  display: block;
+
+  max-width: 100%;
+}
+
+/* =========================================================
+   SECONDARY EXPLANATORY PARAGRAPHS
+   ========================================================= */
+
+.chart-note--secondary {
+  margin-top: 0.8rem;
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1200px) {
+  /*
+    .chart-pair already collapses to one column at this
+    breakpoint. We simply allow slightly more visual room
+    once each chart receives the full page width.
+  */
+
+  .chart-pair-visual {
+    min-height: 440px;
+  }
+
+  .chart-time-pair {
+    min-height: 420px;
+  }
+}
+
+@media (max-width: 650px) {
+  .chart-pair-visual {
+    min-height: 390px;
+  }
+
+  .chart-time-pair {
+    min-height: 370px;
+  }
+}

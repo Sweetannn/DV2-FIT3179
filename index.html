@@ -442,7 +442,12 @@
       </section>
 
       <!-- Section 3 -->
+      <!-- =========================================================
+     SECTION 3 — CHANGE THROUGH TIME
+     ========================================================= -->
+
       <section class="story-section" id="time">
+        <!-- SECTION HEADING -->
         <div class="section-heading">
           <span class="section-number">03</span>
 
@@ -450,164 +455,167 @@
             <p class="eyebrow">CHANGE THROUGH TIME</p>
 
             <h2>Recorded urban wildlife does not stand still.</h2>
+
+            <p class="section-intro">
+              Rankings show how cities moved relative to one another across the
+              decade, while the endpoint comparison reveals how much recorded
+              species richness actually changed between 2016 and 2025.
+            </p>
           </div>
         </div>
 
-        <!-- Chart 7 -->
-        <article class="chart-card chart-wide" id="chart-7">
-          <header class="chart-header">
-            <h3>
-              Brisbane, Melbourne and Sydney trade the lead in recorded wildlife
-              richness
-            </h3>
+        <!-- =======================================================
+       CHART PAIR — 1 : 1
+       ======================================================= -->
 
-            <p>
-              Annual rankings show how recorded species richness shifted among
-              eight urban areas from 2016–2025.
-            </p>
-          </header>
+        <div class="chart-pair chart-pair--1-1">
+          <!-- =====================================================
+         CHART 7 — BUMP CHART
+         ===================================================== -->
 
-          <div class="split-layout split-layout--2-1 split-layout--center">
-            <div class="split-main">
+          <article class="chart-card chart-pair-card" id="chart-7">
+            <!-- HEADER -->
+            <header class="chart-header">
+              <h3>
+                Brisbane, Melbourne and Sydney trade the lead in recorded
+                wildlife richness
+              </h3>
+
+              <p>
+                Annual rankings show how recorded species richness shifted among
+                eight urban areas from 2016–2025.
+              </p>
+            </header>
+
+            <!-- VISUALISATION -->
+            <div class="chart-pair-visual">
               <div
                 id="bump-chart"
-                class="chart"
+                class="chart chart-time-pair"
                 role="img"
-                aria-label="Bump chart showing how eight Australian urban
-      areas changed rank in annual recorded species richness
-      from 2016 to 2025."
+                aria-label="
+            Bump chart showing how eight Australian urban areas changed
+            rank in annual recorded species richness from 2016 to 2025.
+          "
               ></div>
             </div>
 
-            <aside class="green-context">
-              <span class="context-label"> WHO HELD THE LEAD? </span>
+            <!-- SUPPORTING TEXT -->
+            <div class="chart-support chart-support--compact">
+              <!-- KEY FINDING -->
+              <aside class="chart-insight">
+                <span class="insight-label"> KEY FINDING </span>
+
+                <p class="insight-main">
+                  No city held first place throughout the decade.
+                </p>
+
+                <p class="insight-context">
+                  Melbourne led in 2016–2017, Brisbane in 2018–2019 and Sydney
+                  in 2020–2021. Brisbane returned to first place in 2022–2023,
+                  Melbourne briefly regained the lead in 2024, and Brisbane
+                  finished first in 2025.
+                </p>
+              </aside>
+
+              <!-- HOW TO READ -->
+              <div class="chart-meta">
+                <span class="insight-label"> HOW TO READ THIS </span>
+
+                <p class="chart-note">
+                  Each line represents one urban area. Rank 1 indicates the
+                  highest recorded species richness for that year. A line moving
+                  upward means that the city ranked higher relative to the other
+                  seven urban areas.
+                </p>
+
+                <p class="chart-note chart-note--secondary">
+                  Rank shows relative position rather than the magnitude of the
+                  richness difference. Changes in rank should therefore not be
+                  interpreted as equivalent changes in biodiversity.
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <!-- =====================================================
+         CHART 8 — CONNECTED DOT PLOT
+         ===================================================== -->
+
+          <article class="chart-card chart-pair-card" id="chart-8">
+            <!-- HEADER -->
+            <header class="chart-header">
+              <h3>
+                How much did recorded wildlife richness change between 2016 and
+                2025?
+              </h3>
 
               <p>
-                Melbourne led in 2016–2017, Brisbane in 2018–2019 and Sydney in
-                2020–2021. Brisbane returned to first place in 2022–2023,
-                Melbourne briefly regained the lead in 2024, and Brisbane
-                finished first in 2025.
+                Connected dots compare total recorded species richness across
+                the eight urban areas at the beginning and end of the study
+                period.
               </p>
+            </header>
 
-              <p>
-                These movements show changes in cities' relative rankings for
-                recorded species richness. They do not necessarily represent
-                increases or declines in underlying biodiversity.
-              </p>
-            </aside>
-          </div>
-
-          <div class="chart-support">
-            <aside class="chart-insight">
-              <span class="insight-label"> KEY FINDING </span>
-
-              <p class="insight-main">
-                No city held first place throughout the decade. Brisbane,<br />
-                Melbourne and Sydney alternated at the top of the ranking.
-              </p>
-
-              <p class="insight-context">
-                Brisbane rose from #3 in 2016 to #1 in 2025, while <br />
-                Canberra–Queanbeyan remained consistently fourth. Lower-ranked
-                cities were comparatively stable, with Adelaide and Perth
-                exchanging positions and Darwin and Hobart alternating between
-                seventh and eighth.
-              </p>
-            </aside>
-
-            <div class="chart-meta">
-              <span class="insight-label"> HOW TO READ THIS </span>
-
-              <p class="chart-note">
-                Each line represents one urban area. Rank 1 indicates the<br />
-                highest recorded species richness for that year. A line
-                moving<br />
-                upward means the city ranked higher relative to the other
-                <br />seven urban areas; it does not show the magnitude of
-                <br />the richness difference.
-              </p>
-
-              <!--
-      <p class="chart-source">
-        Source: Atlas of Living Australia, 2016–2025.
-      </p>
-      -->
+            <!-- VISUALISATION -->
+            <div class="chart-pair-visual">
+              <div
+                id="connected-dot"
+                class="chart chart-time-pair"
+                role="img"
+                aria-label="
+            Connected dot plot comparing total recorded species richness
+            in 2016 and 2025 across eight Australian urban areas.
+            Grey dots represent 2016 and green dots represent 2025.
+          "
+              ></div>
             </div>
-          </div>
-        </article>
 
-        <!-- Chart 8 -->
-        <!-- <article class="chart-card chart-wide">
-          <div id="spiral-chart" class="chart"></div>
-        </article> -->
+            <!-- SUPPORTING TEXT -->
+            <div class="chart-support chart-support--compact">
+              <!-- KEY FINDING -->
+              <aside class="chart-insight">
+                <span class="insight-label"> KEY FINDING </span>
 
-        <!-- Chart 8 — Connected Dot Plot -->
-        <article class="chart-card chart-wide" id="chart-8">
-          <header class="chart-header">
-            <h3>
-              How much did recorded wildlife richness change between 2016 and
-              2025?
-            </h3>
+                <p class="insight-main">
+                  The endpoint comparison reveals the magnitude of change hidden
+                  by city rankings alone.
+                </p>
 
-            <p>
-              Connected dots compare total recorded species richness across the
-              eight urban areas at the beginning and end of the study period.
-            </p>
-          </header>
+                <p class="insight-context">
+                  While the bump chart shows which cities moved up or down
+                  relative to one another, this chart compares the actual number
+                  of distinct species recorded in each urban area in 2016 and
+                  2025.
+                </p>
+              </aside>
 
-          <div
-            id="connected-dot"
-            class="chart chart-connected-dot"
-            role="img"
-            aria-label="
-      Connected dot plot comparing total recorded species richness
-      in 2016 and 2025 across eight Australian urban areas.
-      Grey dots represent 2016 and green dots represent 2025.
-    "
-          ></div>
+              <!-- HOW TO READ -->
+              <div class="chart-meta">
+                <span class="insight-label"> HOW TO READ THIS </span>
 
-          <div class="chart-support">
-            <aside class="chart-insight">
-              <span class="insight-label"> KEY FINDING </span>
+                <p class="chart-note">
+                  Each row represents one urban area. Grey dots show recorded
+                  species richness in 2016 and green dots show 2025. The
+                  connecting line shows the size and direction of change between
+                  the two years.
+                </p>
 
-              <p class="insight-main">
-                The endpoint comparison reveals the magnitude of change hidden
-                by city rankings alone.
-              </p>
+                <p class="chart-note chart-note--secondary">
+                  Recorded species richness represents distinct species
+                  documented in Atlas of Living Australia records. It does not
+                  represent animal abundance or population size.
+                </p>
 
-              <p class="insight-context">
-                While the bump chart shows which cities moved up or down
-                relative to one another, this chart compares the actual number
-                of distinct species recorded in each urban area in 2016 and
-                2025.
-              </p>
-            </aside>
-
-            <div class="chart-meta">
-              <span class="insight-label"> HOW TO READ THIS </span>
-
-              <p class="chart-note">
-                Each row represents one urban area. Grey dots show recorded
-                species richness in 2016 and green dots show 2025. The
-                connecting line shows the size and direction of change between
-                the two years.
-              </p>
-
-              <p class="chart-note chart-note--secondary">
-                Recorded species richness is the number of distinct species
-                documented in Atlas of Living Australia records for that city
-                and year. It does not represent animal abundance or population
-                size.
-              </p>
-
-              <p class="chart-note chart-note--secondary">
-                Differences between years may also reflect changes in
-                observation effort, taxonomic coverage, digitisation and data
-                contributed to the Atlas of Living Australia.
-              </p>
+                <p class="chart-note chart-note--secondary">
+                  Differences between years may also reflect changes in
+                  observation effort, taxonomic coverage, digitisation and data
+                  contribution.
+                </p>
+              </div>
             </div>
-          </div>
-        </article>
+          </article>
+        </div>
       </section>
 
       <!-- Section 4 -->
