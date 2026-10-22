@@ -1857,3 +1857,56 @@ sidebar | visual
     grid-template-columns: minmax(0, 1fr);
   }
 }
+
+/* =========================================================
+   CHART 8 — CONNECTED DOT PLOT
+   ========================================================= */
+
+.chart-connected-dot {
+  width: 100%;
+  min-width: 0;
+
+  min-height: 470px;
+
+  margin: 0;
+  padding: 0;
+
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.chart-connected-dot .vega-embed,
+.chart-connected-dot .vega-embed > div {
+  width: 100%;
+  min-width: 0;
+}
+
+.chart-connected-dot svg,
+.chart-connected-dot canvas {
+  display: block;
+  max-width: none;
+}
+
+/* Additional explanatory paragraph */
+
+.chart-note--secondary {
+  margin-top: 0.8rem;
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 800px) {
+  .chart-connected-dot {
+    min-height: 450px;
+
+    /*
+      Preserve chart readability without creating
+      page-level horizontal scrolling.
+    */
+    overflow-x: auto;
+
+    padding-bottom: 0.5rem;
+  }
+}

@@ -48,6 +48,13 @@ const visualisations = [
     enabled: true
   },
 
+  /* Chart 8 : Connected Dot Plot */
+  {
+    container: "#connected-dot",
+    spec: "charts/13_connected_dot.vg.json",
+    enabled: true
+  },
+
   /* Chart 8 : Spiral Plot */
   {
     container: "#spiral-chart",

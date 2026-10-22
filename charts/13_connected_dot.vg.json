@@ -1,0 +1,249 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+  "description": "Connected dot plot comparing total recorded species richness in 2016 and 2025 across eight Australian urban areas.",
+
+  "data": {
+    "url": "data/final/15_city_endpoint_richness.csv"
+  },
+
+  "transform": [
+    {
+      "calculate": "datum.year == 2016 ? '2016' : '2025'",
+      "as": "year_label"
+    }
+  ],
+
+  "width": 820,
+  "height": 410,
+
+  "layer": [
+    {
+      "mark": {
+        "type": "rule",
+        "stroke": "#c9cfcb",
+        "strokeWidth": 3,
+        "strokeCap": "round"
+      },
+
+      "encoding": {
+        "y": {
+          "field": "CITY",
+          "type": "nominal",
+
+          "sort": {
+            "field": "rank_2025",
+            "order": "ascending"
+          },
+
+          "axis": {
+            "title": null,
+
+            "labelFont": "Source Sans 3",
+            "labelFontSize": 13,
+            "labelFontWeight": 600,
+            "labelColor": "#202622",
+            "labelPadding": 12,
+            "labelLimit": 180,
+
+            "ticks": false,
+            "domain": false
+          }
+        },
+
+        "x": {
+          "aggregate": "min",
+          "field": "species_richness",
+          "type": "quantitative",
+
+          "scale": {
+            "zero": true,
+            "nice": true
+          },
+
+          "axis": {
+            "title": "Recorded species richness",
+
+            "titleFont": "Source Sans 3",
+            "titleFontSize": 12,
+            "titleFontWeight": 600,
+            "titleColor": "#68706a",
+            "titlePadding": 14,
+
+            "labelFont": "Source Sans 3",
+            "labelFontSize": 11,
+            "labelColor": "#68706a",
+
+            "format": ",d",
+            "tickCount": 6,
+
+            "grid": true,
+            "gridColor": "#e8ebe8",
+            "gridOpacity": 1,
+
+            "tickColor": "#dfe3df",
+
+            "domain": false
+          }
+        },
+
+        "x2": {
+          "aggregate": "max",
+          "field": "species_richness"
+        }
+      }
+    },
+
+    {
+      "mark": {
+        "type": "point",
+        "filled": true,
+        "size": 180,
+        "stroke": "#ffffff",
+        "strokeWidth": 2,
+        "opacity": 0.9
+      },
+
+      "encoding": {
+        "x": {
+          "field": "species_richness",
+          "type": "quantitative",
+
+          "scale": {
+            "zero": true,
+            "nice": true
+          },
+
+          "axis": {
+            "title": "Recorded species richness",
+
+            "titleFont": "Source Sans 3",
+            "titleFontSize": 12,
+            "titleFontWeight": 600,
+            "titleColor": "#68706a",
+            "titlePadding": 14,
+
+            "labelFont": "Source Sans 3",
+            "labelFontSize": 11,
+            "labelColor": "#68706a",
+
+            "format": ",d",
+            "tickCount": 6,
+
+            "grid": true,
+            "gridColor": "#e8ebe8",
+
+            "tickColor": "#dfe3df",
+
+            "domain": false
+          }
+        },
+
+        "y": {
+          "field": "CITY",
+          "type": "nominal",
+
+          "sort": {
+            "field": "rank_2025",
+            "order": "ascending"
+          },
+
+          "axis": {
+            "title": null,
+
+            "labelFont": "Source Sans 3",
+            "labelFontSize": 13,
+            "labelFontWeight": 600,
+            "labelColor": "#202622",
+            "labelPadding": 12,
+            "labelLimit": 180,
+
+            "ticks": false,
+            "domain": false
+          }
+        },
+
+        "color": {
+          "field": "year_label",
+          "type": "nominal",
+
+          "sort": ["2016", "2025"],
+
+          "scale": {
+            "domain": ["2016", "2025"],
+
+            "range": ["#4f8217", "#3f5eba"]
+          },
+
+          "legend": {
+            "title": null,
+            "orient": "top",
+            "direction": "horizontal",
+
+            "labelFont": "Source Sans 3",
+            "labelFontSize": 12,
+            "labelColor": "#68706a",
+
+            "symbolType": "circle",
+            "symbolSize": 180,
+
+            "offset": 8
+          }
+        },
+
+        "tooltip": [
+          {
+            "field": "CITY",
+            "type": "nominal",
+            "title": "Urban area"
+          },
+
+          {
+            "field": "year",
+            "type": "ordinal",
+            "title": "Year"
+          },
+
+          {
+            "field": "species_richness",
+            "type": "quantitative",
+            "title": "Recorded species richness",
+            "format": ",d"
+          },
+
+          {
+            "field": "absolute_change",
+            "type": "quantitative",
+            "title": "2016–2025 change",
+            "format": "+d"
+          },
+
+          {
+            "field": "percent_change",
+            "type": "quantitative",
+            "title": "Percentage change",
+            "format": "+.1f"
+          }
+        ]
+      }
+    }
+  ],
+
+  "config": {
+    "background": null,
+
+    "view": {
+      "stroke": null
+    },
+
+    "axis": {
+      "labelFont": "Source Sans 3",
+      "titleFont": "Source Sans 3"
+    },
+
+    "legend": {
+      "labelFont": "Source Sans 3",
+      "titleFont": "Source Sans 3"
+    }
+  }
+}
