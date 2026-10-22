@@ -6,10 +6,9 @@
     "top": 50,
     "bottom": 50,
     "left": 12,
-    "right": -25
+    "right": 275
   },
-  "autosize": "fit",
-
+  "autosize": "pad",
   "signals": [
     {
       "name": "radius",
@@ -24,12 +23,14 @@
       "update": "height / 2"
     }
   ],
-
   "data": [
     {
       "name": "nodes",
       "url": "data/final/06_network_nodes.csv",
-      "format": { "type": "csv", "parse": "auto" },
+      "format": {
+        "type": "csv",
+        "parse": "auto"
+      },
       "transform": [
         {
           "type": "formula",
@@ -66,7 +67,10 @@
     {
       "name": "edges",
       "url": "data/final/07_network_edges.csv",
-      "format": { "type": "csv", "parse": "auto" },
+      "format": {
+        "type": "csv",
+        "parse": "auto"
+      },
       "transform": [
         {
           "type": "lookup",
@@ -82,18 +86,23 @@
       ]
     }
   ],
-
   "scales": [
     {
       "name": "nodeSize",
       "type": "linear",
-      "domain": { "data": "nodes", "field": "species_richness" },
+      "domain": {
+        "data": "nodes",
+        "field": "species_richness"
+      },
       "range": [200, 3500]
     },
     {
       "name": "edgeWidth",
       "type": "linear",
-      "domain": { "data": "edges", "field": "shared_species" },
+      "domain": {
+        "data": "edges",
+        "field": "shared_species"
+      },
       "range": [0.5, 12]
     },
     {
@@ -121,14 +130,70 @@
       ]
     }
   ],
-
+  "legends": [
+    {
+      "size": "nodeSize",
+      "type": "symbol",
+      "title": "City richness (species)",
+      "orient": "none",
+      "direction": "vertical",
+      "tickCount": 3,
+      "format": ",.0f",
+      "symbolType": "circle",
+      "symbolFillColor": "#67746D",
+      "symbolStrokeColor": "#FFFFFF",
+      "symbolStrokeWidth": 1,
+      "titleFont": "Source Sans 3",
+      "titleFontSize": 13,
+      "titleFontWeight": "bold",
+      "titleColor": "#202622",
+      "labelFont": "Source Sans 3",
+      "labelFontSize": 12,
+      "labelColor": "#202622",
+      "labelOffset": 8,
+      "rowPadding": 3,
+      "legendX": 690,
+      "legendY": 30,
+      "titleLimit": 230
+    },
+    {
+      "strokeWidth": "edgeWidth",
+      "type": "symbol",
+      "title": "Shared species (city pairs)",
+      "orient": "none",
+      "direction": "vertical",
+      "tickCount": 3,
+      "format": ",.0f",
+      "symbolType": "stroke",
+      "symbolSize": 900,
+      "symbolStrokeColor": "#68706A",
+      "symbolOpacity": 0.9,
+      "titleFont": "Source Sans 3",
+      "titleFontSize": 13,
+      "titleFontWeight": "bold",
+      "titleColor": "#202622",
+      "labelFont": "Source Sans 3",
+      "labelFontSize": 12,
+      "labelColor": "#202622",
+      "labelOffset": 8,
+      "rowPadding": 10,
+      "legendX": 690,
+      "legendY": 225,
+      "titleLimit": 230
+    }
+  ],
   "marks": [
     {
       "type": "path",
-      "from": { "data": "edges" },
+      "from": {
+        "data": "edges"
+      },
       "encode": {
         "enter": {
-          "strokeWidth": { "scale": "edgeWidth", "field": "shared_species" },
+          "strokeWidth": {
+            "scale": "edgeWidth",
+            "field": "shared_species"
+          },
           "tooltip": {
             "signal": "{'Connected cities': datum.source + ' & ' + datum.target, 'Shared recorded species': format(datum.shared_species, ','), 'Period': '2016–2025'}"
           }
@@ -137,44 +202,80 @@
           "path": {
             "signal": "'M' + datum.s.x + ',' + datum.s.y + ' L' + datum.t.x + ',' + datum.t.y"
           },
-          "stroke": { "value": "#68706A" },
-          "strokeOpacity": { "value": 0.25 }
+          "stroke": {
+            "value": "#68706A"
+          },
+          "strokeOpacity": {
+            "value": 0.25
+          }
         },
         "hover": {
-          "strokeOpacity": { "value": 0.9 },
-          "stroke": { "value": "#000000" }
+          "strokeOpacity": {
+            "value": 0.9
+          },
+          "stroke": {
+            "value": "#000000"
+          }
         }
       }
     },
     {
       "type": "symbol",
-      "from": { "data": "nodes" },
+      "from": {
+        "data": "nodes"
+      },
       "encode": {
         "enter": {
-          "fill": { "scale": "color", "field": "city" },
-          "stroke": { "value": "#FFFFFF" },
-          "strokeWidth": { "value": 2 },
+          "fill": {
+            "scale": "color",
+            "field": "city"
+          },
+          "stroke": {
+            "value": "#FFFFFF"
+          },
+          "strokeWidth": {
+            "value": 2
+          },
           "tooltip": {
             "signal": "{'Urban area': datum.city, 'Recorded species richness': format(datum.species_richness, ','), 'Period': '2016–2025'}"
           }
         },
         "update": {
-          "x": { "field": "x" },
-          "y": { "field": "y" },
-          "size": { "scale": "nodeSize", "field": "species_richness" }
+          "x": {
+            "field": "x"
+          },
+          "y": {
+            "field": "y"
+          },
+          "size": {
+            "scale": "nodeSize",
+            "field": "species_richness"
+          }
         }
       }
     },
     {
       "type": "text",
-      "from": { "data": "nodes" },
+      "from": {
+        "data": "nodes"
+      },
       "encode": {
         "enter": {
-          "text": { "field": "city" },
-          "font": { "value": "Source Sans 3" },
-          "fontSize": { "value": 14 },
-          "fontWeight": { "value": 600 },
-          "fill": { "value": "#202622" }
+          "text": {
+            "field": "city"
+          },
+          "font": {
+            "value": "Source Sans 3"
+          },
+          "fontSize": {
+            "value": 14
+          },
+          "fontWeight": {
+            "value": 600
+          },
+          "fill": {
+            "value": "#202622"
+          }
         },
         "update": {
           "x": {
@@ -183,8 +284,12 @@
           "y": {
             "signal": "cy + sin(datum.angle) * (radius + sqrt(scale('nodeSize', datum.species_richness))/2 + 10)"
           },
-          "align": { "field": "labelAlign" },
-          "baseline": { "field": "labelBaseline" }
+          "align": {
+            "field": "labelAlign"
+          },
+          "baseline": {
+            "field": "labelBaseline"
+          }
         }
       }
     }
