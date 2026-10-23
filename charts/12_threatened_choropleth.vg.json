@@ -8,7 +8,7 @@
     "contains": "padding",
     "resize": true
   },
-  "background": "#f2f8fc",
+  "background": "#fafbfc",
   "params": [
     {
       "name": "map_centre",
