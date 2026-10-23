@@ -8,7 +8,7 @@
     "contains": "padding",
     "resize": true
   },
-  "background": "#ffffff",
+  "background": "#f2f8fc",
   "params": [
     {
       "name": "map_centre",
@@ -51,11 +51,11 @@
     },
     {
       "name": "target_center",
-      "expr": "map_centre === 'Sydney' ? [150.932, -33.849] : map_centre === 'Melbourne' ? [145.046, -37.971] : map_centre === 'Brisbane' ? [152.993, -27.383] : map_centre === 'Adelaide' ? [138.599, -34.999] : map_centre === 'Perth' ? [115.928, -32.124] : map_centre === 'Hobart' ? [147.397, -42.845] : map_centre === 'Darwin' ? [130.933, -12.428] : [149.114, -35.309]"
+      "expr": "map_centre === 'Sydney' ? [150.9, -33.849] : map_centre === 'Melbourne' ? [145.01, -37.971] : map_centre === 'Brisbane' ? [153.05, -27.383] : map_centre === 'Adelaide' ? [138.5, -34.999] : map_centre === 'Perth' ? [115.7, -32.124] : map_centre === 'Hobart' ? [147.35, -42.845] : map_centre === 'Darwin' ? [130.95, -12.428] : [149.114, -35.309]"
     },
     {
       "name": "target_scale",
-      "expr": "map_centre === 'Sydney' ? 35000 : map_centre === 'Melbourne' ? 19000 : map_centre === 'Brisbane' ? 26000 : map_centre === 'Adelaide' ? 26000 : map_centre === 'Perth' ? 17500 : map_centre === 'Hobart' ? 49000 : map_centre === 'Darwin' ? 110000 : 53000"
+      "expr": "map_centre === 'Sydney' ? 28875 : map_centre === 'Melbourne' ? 25800 : map_centre === 'Brisbane' ? 34375 : map_centre === 'Adelaide' ? 64125 : map_centre === 'Perth' ? 28500 : map_centre === 'Hobart' ? 60562.5 : map_centre === 'Darwin' ? 82500 : 76050"
     },
     {
       "name": "effective_center",
@@ -67,7 +67,8 @@
     }
   ],
   "projection": {
-    "type": "equirectangular",
+    "type": "conicEqualArea",
+    "parallels": [-18, -36],
     "center": {
       "expr": "effective_center"
     },
@@ -92,12 +93,11 @@
       ],
       "mark": {
         "type": "geoshape",
-        "fill": "#e2e5e2",
+        "fill": "#d4d6d4",
         "stroke": "#ffffff",
-        "strokeWidth": 0.6,
+        "strokeWidth": 1,
         "clip": true
       },
-
       "encoding": {
         "tooltip": [
           {
@@ -168,7 +168,6 @@
           },
           "legend": null
         },
-
         "tooltip": [
           {
             "field": "properties.CITY",
