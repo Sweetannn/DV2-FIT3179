@@ -1,0 +1,754 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+  "description": "Seasonal line chart comparing historical monthly wildlife recording patterns from 2016 to 2024 with the complete 2025 pattern across eight Australian urban areas.",
+
+  "width": "container",
+  "height": 440,
+
+  "padding": {
+    "top": 25,
+    "right": 45,
+    "bottom": 0,
+    "left": 20
+  },
+
+  "autosize": {
+    "type": "fit",
+    "contains": "padding",
+    "resize": true
+  },
+
+  "background": null,
+
+  "data": {
+    "url": "data/final/10_monthly_spiral.csv",
+
+    "format": {
+      "type": "csv",
+
+      "parse": {
+        "year": "number",
+        "month": "number",
+        "record_count": "number"
+      }
+    }
+  },
+
+  "transform": [
+    {
+      "aggregate": [
+        {
+          "op": "sum",
+          "field": "record_count",
+          "as": "monthly_records"
+        }
+      ],
+
+      "groupby": ["year", "month", "month_name"]
+    },
+
+    {
+      "joinaggregate": [
+        {
+          "op": "sum",
+          "field": "monthly_records",
+          "as": "annual_records"
+        }
+      ],
+
+      "groupby": ["year"]
+    },
+
+    {
+      "calculate": "datum.monthly_records / datum.annual_records * 100",
+      "as": "monthly_share_pct"
+    }
+  ],
+
+  "layer": [
+    {
+      "mark": {
+        "type": "rect",
+        "color": "#fcf7c0",
+        "opacity": 0.1
+      },
+
+      "encoding": {
+        "x": {
+          "datum": "Oct",
+          "type": "ordinal",
+
+          "sort": [
+            "Jan",
+            "Feb",
+            "Mar",
+            "Apr",
+            "May",
+            "Jun",
+            "Jul",
+            "Aug",
+            "Sep",
+            "Oct",
+            "Nov",
+            "Dec"
+          ]
+        },
+
+        "y": {
+          "datum": 0
+        },
+
+        "y2": {
+          "datum": 14
+        }
+      }
+    },
+
+    {
+      "mark": {
+        "type": "rule",
+
+        "color": "#9da49f",
+
+        "strokeWidth": 1.2,
+
+        "strokeDash": [6, 5]
+      },
+
+      "encoding": {
+        "y": {
+          "datum": 8.3333333333
+        }
+      }
+    },
+
+    {
+      "mark": {
+        "type": "rule",
+
+        "color": "#9da49f",
+
+        "strokeWidth": 0.02
+      },
+
+      "encoding": {
+        "x": {
+          "datum": "Jan",
+          "type": "ordinal",
+
+          "sort": [
+            "Jan",
+            "Feb",
+            "Mar",
+            "Apr",
+            "May",
+            "Jun",
+            "Jul",
+            "Aug",
+            "Sep",
+            "Oct",
+            "Nov",
+            "Dec"
+          ]
+        },
+
+        "y": {
+          "datum": 8.25
+        },
+
+        "y2": {
+          "datum": 5.3
+        }
+      }
+    },
+
+    {
+      "mark": {
+        "type": "text",
+
+        "align": "right",
+        "baseline": "top",
+
+        "dx": -930,
+        "dy": 80,
+
+        "font": "Source Sans 3",
+        "fontSize": 11,
+        "fontWeight": 600,
+
+        "color": "#68706a"
+      },
+
+      "encoding": {
+        "x": {
+          "datum": "Dec"
+        },
+
+        "y": {
+          "datum": 8.3333333333
+        },
+
+        "text": {
+          "value": "Even monthly share: 8.33%"
+        }
+      }
+    },
+
+    {
+      "transform": [
+        {
+          "filter": "datum.year >= 2016 && datum.year <= 2024"
+        }
+      ],
+
+      "mark": {
+        "type": "line",
+
+        "color": "#856983",
+
+        "strokeWidth": 1.4,
+
+        "opacity": 0.5,
+
+        "point": {
+          "filled": true,
+
+          "fill": "#856983",
+
+          "size": 28,
+
+          "opacity": 0.55
+        }
+      },
+
+      "encoding": {
+        "x": {
+          "field": "month_name",
+          "type": "ordinal",
+
+          "sort": [
+            "Jan",
+            "Feb",
+            "Mar",
+            "Apr",
+            "May",
+            "Jun",
+            "Jul",
+            "Aug",
+            "Sep",
+            "Oct",
+            "Nov",
+            "Dec"
+          ],
+
+          "axis": {
+            "title": "Month",
+
+            "titleFont": "Source Sans 3",
+            "titleFontSize": 12,
+            "titleFontWeight": 600,
+            "titleColor": "#68706a",
+            "titlePadding": 14,
+
+            "labelFont": "Source Sans 3",
+            "labelFontSize": 12,
+            "labelColor": "#202622",
+            "labelPadding": 8,
+
+            "labelAngle": 0,
+
+            "ticks": false,
+
+            "domainColor": "#dfe3df",
+            "domainWidth": 1
+          }
+        },
+
+        "y": {
+          "field": "monthly_share_pct",
+          "type": "quantitative",
+
+          "scale": {
+            "zero": false,
+
+            "domain": [0, 14]
+          },
+
+          "axis": {
+            "title": "Share of annual occurrence records (%)",
+
+            "titleFont": "Source Sans 3",
+            "titleFontSize": 12,
+            "titleFontWeight": 600,
+            "titleColor": "#68706a",
+            "titlePadding": 14,
+
+            "labelFont": "Source Sans 3",
+            "labelFontSize": 11,
+            "labelColor": "#68706a",
+
+            "format": ".0f",
+
+            "values": [0, 2, 4, 6, 8, 10, 12, 14],
+
+            "grid": true,
+            "gridColor": "#e6e9e6",
+            "gridOpacity": 1,
+
+            "ticks": false,
+
+            "domain": false
+          }
+        },
+
+        "detail": {
+          "field": "year",
+          "type": "nominal"
+        },
+
+        "order": {
+          "field": "month",
+          "type": "quantitative"
+        },
+
+        "tooltip": [
+          {
+            "field": "year",
+            "type": "ordinal",
+            "title": "Year"
+          },
+
+          {
+            "field": "month_name",
+            "type": "nominal",
+            "title": "Month"
+          },
+
+          {
+            "field": "monthly_records",
+            "type": "quantitative",
+            "title": "Occurrence records",
+            "format": ",d"
+          },
+
+          {
+            "field": "annual_records",
+            "type": "quantitative",
+            "title": "Annual records",
+            "format": ",d"
+          },
+
+          {
+            "field": "monthly_share_pct",
+            "type": "quantitative",
+            "title": "Share of annual records (%)",
+            "format": ".2f"
+          }
+        ]
+      }
+    },
+
+    {
+      "transform": [
+        {
+          "filter": "datum.year >= 2016 && datum.year <= 2024"
+        },
+
+        {
+          "aggregate": [
+            {
+              "op": "mean",
+              "field": "monthly_share_pct",
+              "as": "historical_average"
+            }
+          ],
+
+          "groupby": ["month", "month_name"]
+        }
+      ],
+
+      "mark": {
+        "type": "line",
+
+        "color": "#8a1894",
+
+        "strokeWidth": 4,
+
+        "opacity": 1,
+
+        "point": {
+          "filled": true,
+
+          "fill": "#8a1894",
+
+          "stroke": "#ffffff",
+          "strokeWidth": 1.3,
+
+          "size": 100
+        }
+      },
+
+      "encoding": {
+        "x": {
+          "field": "month_name",
+          "type": "ordinal",
+
+          "sort": [
+            "Jan",
+            "Feb",
+            "Mar",
+            "Apr",
+            "May",
+            "Jun",
+            "Jul",
+            "Aug",
+            "Sep",
+            "Oct",
+            "Nov",
+            "Dec"
+          ]
+        },
+
+        "y": {
+          "field": "historical_average",
+          "type": "quantitative"
+        },
+
+        "order": {
+          "field": "month",
+          "type": "quantitative"
+        },
+
+        "tooltip": [
+          {
+            "field": "month_name",
+            "type": "nominal",
+            "title": "Month"
+          },
+
+          {
+            "field": "historical_average",
+            "type": "quantitative",
+            "title": "2016–2024 average (%)",
+            "format": ".2f"
+          }
+        ]
+      }
+    },
+
+    {
+      "transform": [
+        {
+          "filter": "datum.year >= 2016 && datum.year <= 2024"
+        },
+
+        {
+          "aggregate": [
+            {
+              "op": "mean",
+              "field": "monthly_share_pct",
+              "as": "historical_average"
+            }
+          ],
+
+          "groupby": ["month", "month_name"]
+        },
+
+        {
+          "filter": "datum.month == 1"
+        }
+      ],
+
+      "mark": {
+        "type": "text",
+
+        "align": "left",
+        "baseline": "bottom",
+
+        "dx": 960,
+        "dy": -15,
+
+        "font": "Source Sans 3",
+
+        "fontSize": 12,
+        "fontWeight": 700,
+
+        "color": "#8a1894"
+      },
+
+      "encoding": {
+        "x": {
+          "field": "month_name",
+          "type": "ordinal",
+
+          "sort": [
+            "Jan",
+            "Feb",
+            "Mar",
+            "Apr",
+            "May",
+            "Jun",
+            "Jul",
+            "Aug",
+            "Sep",
+            "Oct",
+            "Nov",
+            "Dec"
+          ]
+        },
+
+        "y": {
+          "field": "historical_average",
+          "type": "quantitative"
+        },
+
+        "text": {
+          "value": "2016–2024 average"
+        }
+      }
+    },
+
+    {
+      "transform": [
+        {
+          "filter": "datum.year == 2025"
+        }
+      ],
+
+      "mark": {
+        "type": "line",
+
+        "color": "#d46f34",
+
+        "strokeWidth": 3,
+
+        "opacity": 1,
+
+        "point": {
+          "filled": true,
+
+          "fill": "#d46f34",
+
+          "stroke": "#ffffff",
+          "strokeWidth": 1.5,
+
+          "size": 64
+        }
+      },
+
+      "encoding": {
+        "x": {
+          "field": "month_name",
+          "type": "ordinal",
+
+          "sort": [
+            "Jan",
+            "Feb",
+            "Mar",
+            "Apr",
+            "May",
+            "Jun",
+            "Jul",
+            "Aug",
+            "Sep",
+            "Oct",
+            "Nov",
+            "Dec"
+          ]
+        },
+
+        "y": {
+          "field": "monthly_share_pct",
+          "type": "quantitative"
+        },
+
+        "order": {
+          "field": "month",
+          "type": "quantitative"
+        },
+
+        "tooltip": [
+          {
+            "field": "year",
+            "type": "ordinal",
+            "title": "Year"
+          },
+
+          {
+            "field": "month_name",
+            "type": "nominal",
+            "title": "Month"
+          },
+
+          {
+            "field": "monthly_records",
+            "type": "quantitative",
+            "title": "Occurrence records",
+            "format": ",d"
+          },
+
+          {
+            "field": "annual_records",
+            "type": "quantitative",
+            "title": "Annual records",
+            "format": ",d"
+          },
+
+          {
+            "field": "monthly_share_pct",
+            "type": "quantitative",
+            "title": "Share of annual records (%)",
+            "format": ".2f"
+          }
+        ]
+      }
+    },
+
+    {
+      "transform": [
+        {
+          "filter": "datum.year >= 2016 && datum.year <= 2024"
+        },
+
+        {
+          "aggregate": [
+            {
+              "op": "mean",
+              "field": "monthly_share_pct",
+              "as": "historical_average"
+            }
+          ],
+
+          "groupby": ["month", "month_name"]
+        },
+
+        {
+          "filter": "datum.month == 10"
+        }
+      ],
+
+      "mark": {
+        "type": "text",
+
+        "align": "left",
+        "baseline": "bottom",
+
+        "dx": -41,
+        "dy": -55,
+
+        "font": "Source Sans 3",
+
+        "fontSize": 12,
+        "fontWeight": 700,
+
+        "color": "#856419"
+      },
+
+      "encoding": {
+        "x": {
+          "field": "month_name",
+          "type": "ordinal",
+
+          "sort": [
+            "Jan",
+            "Feb",
+            "Mar",
+            "Apr",
+            "May",
+            "Jun",
+            "Jul",
+            "Aug",
+            "Sep",
+            "Oct",
+            "Nov",
+            "Dec"
+          ]
+        },
+
+        "y": {
+          "field": "historical_average",
+          "type": "quantitative"
+        },
+
+        "text": {
+          "value": "Historical peak"
+        }
+      }
+    },
+
+    {
+      "transform": [
+        {
+          "filter": "datum.year == 2025 && datum.month == 1"
+        }
+      ],
+
+      "mark": {
+        "type": "text",
+
+        "align": "left",
+        "baseline": "bottom",
+
+        "dx": 10,
+        "dy": 5,
+
+        "font": "Source Sans 3",
+
+        "fontSize": 12,
+        "fontWeight": 700,
+
+        "color": "#d46f34"
+      },
+
+      "encoding": {
+        "x": {
+          "field": "month_name",
+          "type": "ordinal",
+
+          "sort": [
+            "Jan",
+            "Feb",
+            "Mar",
+            "Apr",
+            "May",
+            "Jun",
+            "Jul",
+            "Aug",
+            "Sep",
+            "Oct",
+            "Nov",
+            "Dec"
+          ]
+        },
+
+        "y": {
+          "field": "monthly_share_pct",
+          "type": "quantitative"
+        },
+
+        "text": {
+          "value": "2025"
+        }
+      }
+    }
+  ],
+
+  "config": {
+    "view": {
+      "stroke": null
+    },
+
+    "font": "Source Sans 3",
+
+    "axis": {
+      "labelFont": "Source Sans 3",
+      "titleFont": "Source Sans 3"
+    },
+
+    "legend": {
+      "labelFont": "Source Sans 3",
+      "titleFont": "Source Sans 3"
+    }
+  }
+}
