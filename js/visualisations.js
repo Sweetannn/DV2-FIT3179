@@ -59,7 +59,7 @@ const visualisations = [
   {
     container: "#spiral-chart",
     spec: "charts/08_spiral.vg.json",
-    enabled: false
+    enabled: true
   },
 
   /* Chart 9 : Network Diagram */
