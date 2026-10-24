@@ -794,7 +794,7 @@
       </section>
 
       <!-- Section 5 -->
-      <!-- <section class="story-section" id="geography">
+      <section class="story-section" id="geography">
         <div class="section-heading">
           <span class="section-number">05</span>
 
@@ -803,13 +803,193 @@
 
             <h2>Urban wildlife is concentrated unevenly across space.</h2>
           </div>
-        </div> -->
+        </div>
 
-      <!-- Chart 10 -->
-      <!-- <article class="chart-card chart-wide">
-          <div id="bin-map" class="chart"></div>
+        <!-- Chart 10 -->
+        <!-- =========================================================
+     CHART 10 — HEXAGONAL BIN MAP
+     ========================================================= -->
+
+        <article class="chart-card chart-wide" id="chart-10">
+          <!-- =====================================================
+       HEADER
+       ===================================================== -->
+
+          <header class="chart-header">
+            <h3>Wildlife observations cluster in distinct urban hotspots</h3>
+
+            <p>
+              Equal-resolution H3 hexagons reveal where Atlas of Living
+              Australia occurrence records are concentrated within eight
+              Australian urban areas from 2016–2025.
+            </p>
+          </header>
+
+          <!-- =====================================================
+       MAP + CONTEXT
+       ===================================================== -->
+
+          <div class="split-layout split-layout--2-1 split-layout--center">
+            <!-- ===================================================
+         LEFT — MAP + LEGEND
+         =================================================== -->
+
+            <div class="split-main">
+              <!-- MAP -->
+
+              <div class="map-panel">
+                <div
+                  id="bin-map"
+                  class="chart chart--geographic"
+                  role="img"
+                  aria-label="
+            Interactive hexagonal bin map showing the spatial concentration
+            of Atlas of Living Australia wildlife occurrence records across
+            eight Australian urban areas from 2016 to 2025. Users can choose
+            a city and animal group. Darker hexagons represent higher
+            occurrence-record count classes.
+          "
+                ></div>
+              </div>
+
+              <!-- =================================================
+           MANUAL BIN-MAP LEGEND
+           ================================================= -->
+
+              <div
+                class="map-legend"
+                aria-label="Legend for occurrence record classes"
+              >
+                <span class="insight-label"> OCCURRENCE RECORDS PER CELL </span>
+
+                <div class="map-legend-items">
+                  <span class="map-legend-item">
+                    <i
+                      class="map-legend-swatch"
+                      style="--swatch: #dcefd8"
+                      aria-hidden="true"
+                    ></i>
+                    1–9
+                  </span>
+
+                  <span class="map-legend-item">
+                    <i
+                      class="map-legend-swatch"
+                      style="--swatch: #bddfb8"
+                      aria-hidden="true"
+                    ></i>
+                    10–99
+                  </span>
+
+                  <span class="map-legend-item">
+                    <i
+                      class="map-legend-swatch"
+                      style="--swatch: #90c98b"
+                      aria-hidden="true"
+                    ></i>
+                    100–999
+                  </span>
+
+                  <span class="map-legend-item">
+                    <i
+                      class="map-legend-swatch"
+                      style="--swatch: #5fad69"
+                      aria-hidden="true"
+                    ></i>
+                    1,000–9,999
+                  </span>
+
+                  <span class="map-legend-item">
+                    <i
+                      class="map-legend-swatch"
+                      style="--swatch: #2f8f48"
+                      aria-hidden="true"
+                    ></i>
+                    10,000–99,999
+                  </span>
+
+                  <span class="map-legend-item">
+                    <i
+                      class="map-legend-swatch"
+                      style="--swatch: #0f5f2b"
+                      aria-hidden="true"
+                    ></i>
+                    100,000+
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- =====================================================
+       SUPPORT
+       ===================================================== -->
+
+          <div class="chart-support">
+            <!-- ===================================================
+         KEY FINDING
+         =================================================== -->
+
+            <aside class="chart-insight">
+              <span class="insight-label"> KEY FINDING </span>
+
+              <p class="insight-main">
+                Wildlife recording is highly uneven within Australia's urban
+                areas.
+              </p>
+
+              <p class="insight-context">
+                A small number of spatial cells contain very large numbers of
+                occurrence records, while many other recorded cells contain much
+                lower totals. Switching animal groups reveals that these
+                hotspots are not distributed identically across birds, mammals,
+                reptiles and insects.
+              </p>
+            </aside>
+
+            <!-- ===================================================
+         HOW TO READ
+         =================================================== -->
+
+            <div class="chart-meta">
+              <span class="insight-label"> HOW TO READ THIS </span>
+
+              <p class="chart-note">
+                Every hexagon uses the same H3 resolution. Darker green cells
+                represent higher numbers of occurrence records for the selected
+                animal group. Cells with no records for the selected group are
+                not displayed.
+              </p>
+
+              <p class="chart-note chart-note--secondary">
+                Colours use six fixed occurrence-count classes: 1–9, 10–99,
+                100–999, 1,000–9,999, 10,000–99,999 and 100,000 or more records.
+                The same class boundaries are used for every city and
+                animal-group selection, allowing direct comparison between
+                views.
+              </p>
+
+              <p class="chart-note chart-note--secondary">
+                Each hexagon represents a complete equal-resolution H3 cell.
+                Hexagons intersecting the edge of an urban area may therefore
+                extend slightly beyond its boundary. Counts include only
+                occurrence records assigned to the selected urban area.
+              </p>
+
+              <p class="chart-note chart-note--secondary">
+                Hover over a hexagon to see the exact occurrence count and the
+                animal-group breakdown. The map represents recording
+                concentration, not wildlife abundance or population density.
+              </p>
+
+              <!-- <p class="chart-source">
+                Source: Atlas of Living Australia, 2016–2025. Urban study areas
+                defined using ABS Urban Centres and Localities 2021.
+              </p> -->
+            </div>
+          </div>
         </article>
-      </section> -->
+      </section>
 
       <!-- Section 6 -->
       <section class="story-section" id="threatened">

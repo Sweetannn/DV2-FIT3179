@@ -1,0 +1,327 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+  "description": "Interactive classed H3 hexagonal bin map showing the spatial concentration of Atlas of Living Australia wildlife occurrence records within eight Australian urban areas.",
+
+  "width": "container",
+  "height": 510,
+
+  "padding": 5,
+
+  "autosize": {
+    "type": "fit",
+    "contains": "padding",
+    "resize": true
+  },
+
+  "background": "#f6f8fa",
+
+  "params": [
+    {
+      "name": "map_centre",
+
+      "value": "Melbourne",
+
+      "bind": {
+        "input": "select",
+
+        "options": [
+          "Melbourne",
+          "Sydney",
+          "Brisbane",
+          "Adelaide",
+          "Perth",
+          "Hobart",
+          "Darwin",
+          "Canberra–Queanbeyan"
+        ],
+
+        "labels": [
+          "Melbourne",
+          "Sydney",
+          "Brisbane",
+          "Adelaide",
+          "Perth",
+          "Hobart",
+          "Darwin",
+          "Canberra–Queanbeyan"
+        ],
+
+        "name": "Choose a city: "
+      }
+    },
+
+    {
+      "name": "group_filter",
+
+      "value": "All",
+
+      "bind": {
+        "input": "radio",
+
+        "options": ["All", "Bird", "Mammal", "Reptile", "Insect"],
+
+        "labels": ["All wildlife", "Birds", "Mammals", "Reptiles", "Insects"],
+
+        "name": "Animal group: "
+      }
+    },
+
+    {
+      "name": "zoom_level",
+
+      "value": 1,
+
+      "bind": {
+        "input": "range",
+
+        "min": 0.75,
+        "max": 1.5,
+        "step": 0.05,
+
+        "name": "Map zoom: "
+      }
+    },
+
+    {
+      "name": "target_center",
+
+      "expr": "map_centre === 'Sydney' ? [150.9, -33.849] : map_centre === 'Melbourne' ? [145.01, -37.971] : map_centre === 'Brisbane' ? [153.05, -27.383] : map_centre === 'Adelaide' ? [138.5, -34.999] : map_centre === 'Perth' ? [115.7, -32.124] : map_centre === 'Hobart' ? [147.35, -42.845] : map_centre === 'Darwin' ? [130.95, -12.428] : [149.114, -35.309]"
+    },
+
+    {
+      "name": "target_scale",
+
+      "expr": "map_centre === 'Sydney' ? 43312.5 : map_centre === 'Melbourne' ? 38700 : map_centre === 'Brisbane' ? 51562.5 : map_centre === 'Adelaide' ? 64125 : map_centre === 'Perth' ? 42750 : map_centre === 'Hobart' ? 75703.125 : map_centre === 'Darwin' ? 90750 : 83655"
+    },
+
+    {
+      "name": "effective_center",
+
+      "expr": "target_center"
+    },
+
+    {
+      "name": "effective_scale",
+
+      "expr": "target_scale * zoom_level * (width / 960)"
+    }
+  ],
+
+  "projection": {
+    "type": "conicEqualArea",
+
+    "parallels": [-18, -36],
+
+    "center": {
+      "expr": "effective_center"
+    },
+
+    "scale": {
+      "expr": "effective_scale"
+    }
+  },
+
+  "layer": [
+    {
+      "name": "regionalContext",
+
+      "data": {
+        "url": "geo/final/australia_lga_context.topojson",
+
+        "format": {
+          "type": "topojson",
+          "feature": "regional_lgas"
+        }
+      },
+
+      "transform": [
+        {
+          "filter": "indexof(datum.properties.contextCities, map_centre) >= 0"
+        }
+      ],
+
+      "mark": {
+        "type": "geoshape",
+
+        "fill": "#e7eae7",
+
+        "stroke": "#ffffff",
+
+        "strokeWidth": 0.7,
+
+        "clip": true
+      }
+    },
+
+    {
+      "name": "h3Bins",
+
+      "data": {
+        "url": "geo/final/10_h3_bins.geojson",
+
+        "format": {
+          "type": "json",
+          "property": "features"
+        }
+      },
+
+      "transform": [
+        {
+          "filter": "datum.properties.CITY === map_centre"
+        },
+
+        {
+          "calculate": "group_filter === 'All' ? datum.properties.total_count : group_filter === 'Bird' ? datum.properties.bird_count : group_filter === 'Mammal' ? datum.properties.mammal_count : group_filter === 'Reptile' ? datum.properties.reptile_count : datum.properties.insect_count",
+
+          "as": "selected_count"
+        },
+
+        {
+          "calculate": "group_filter === 'All' ? 'All wildlife' : group_filter === 'Bird' ? 'Birds' : group_filter === 'Mammal' ? 'Mammals' : group_filter === 'Reptile' ? 'Reptiles' : 'Insects'",
+
+          "as": "selected_group"
+        },
+
+        {
+          "filter": "datum.selected_count > 0"
+        }
+      ],
+
+      "mark": {
+        "type": "geoshape",
+
+        "stroke": "#ffffff",
+
+        "strokeWidth": 0.45,
+
+        "strokeOpacity": 0.85,
+
+        "opacity": 0.96,
+
+        "clip": true
+      },
+
+      "encoding": {
+        "shape": {
+          "field": "geometry",
+          "type": "geojson"
+        },
+
+        "color": {
+          "field": "selected_count",
+
+          "type": "quantitative",
+
+          "title": "Occurrence records",
+
+          "scale": {
+            "type": "threshold",
+            "domain": [10, 100, 1000, 10000, 100000],
+            "range": [
+              "#dcefd8",
+              "#bddfb8",
+              "#90c98b",
+              "#5fad69",
+              "#2f8f48",
+              "#0f5f2b"
+            ]
+          },
+
+          "legend": null
+        },
+
+        "tooltip": [
+          {
+            "field": "properties.CITY",
+
+            "type": "nominal",
+
+            "title": "Urban area"
+          },
+
+          {
+            "field": "selected_group",
+
+            "type": "nominal",
+
+            "title": "Animal group"
+          },
+
+          {
+            "field": "selected_count",
+
+            "type": "quantitative",
+
+            "title": "Occurrence records in bin",
+
+            "format": ",d"
+          },
+
+          {
+            "field": "properties.total_count",
+
+            "type": "quantitative",
+
+            "title": "All wildlife records",
+
+            "format": ",d"
+          },
+
+          {
+            "field": "properties.bird_count",
+
+            "type": "quantitative",
+
+            "title": "Bird records",
+
+            "format": ",d"
+          },
+
+          {
+            "field": "properties.mammal_count",
+
+            "type": "quantitative",
+
+            "title": "Mammal records",
+
+            "format": ",d"
+          },
+
+          {
+            "field": "properties.reptile_count",
+
+            "type": "quantitative",
+
+            "title": "Reptile records",
+
+            "format": ",d"
+          },
+
+          {
+            "field": "properties.insect_count",
+
+            "type": "quantitative",
+
+            "title": "Insect records",
+
+            "format": ",d"
+          }
+        ]
+      }
+    }
+  ],
+
+  "config": {
+    "view": {
+      "stroke": null
+    },
+
+    "font": "Source Sans 3",
+
+    "legend": {
+      "labelFont": "Source Sans 3",
+      "titleFont": "Source Sans 3"
+    }
+  }
+}

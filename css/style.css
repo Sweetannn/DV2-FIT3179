@@ -2049,3 +2049,130 @@ sidebar | visual
     min-height: 420px;
   }
 }
+
+/* =========================================================
+   BIN MAP
+   ========================================================= */
+
+#bin-map {
+  width: 100%;
+  min-width: 0;
+}
+
+/* Put Vega controls above the visualisation */
+
+#bin-map .vega-embed {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* Controls first */
+
+#bin-map .vega-bindings {
+  order: -1;
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  gap: 0.85rem 1.4rem;
+
+  width: 100%;
+
+  margin: 0 0 1rem;
+  padding: 0;
+}
+
+/* Each control */
+
+#bin-map .vega-bind {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  gap: 0.4rem;
+
+  margin: 0;
+
+  color: var(--color-muted);
+
+  font-family: inherit;
+  font-size: 0.9rem;
+}
+
+/* Control label */
+
+#bin-map .vega-bind-name {
+  margin-right: 0.2rem;
+
+  color: var(--color-text);
+
+  font-weight: 600;
+}
+
+/* City dropdown */
+
+#bin-map select {
+  min-height: 2.15rem;
+
+  padding: 0.3rem 2rem 0.3rem 0.65rem;
+
+  border: 1px solid var(--color-rule);
+  border-radius: 5px;
+
+  background: var(--color-surface);
+
+  color: var(--color-text);
+
+  font: inherit;
+}
+
+/* Radio controls */
+
+#bin-map input[type="radio"] {
+  margin: 0 0.1rem 0 0.45rem;
+
+  accent-color: var(--color-accent);
+}
+
+/* Zoom slider */
+
+#bin-map input[type="range"] {
+  width: 130px;
+
+  accent-color: var(--color-accent);
+}
+
+/* Keep Vega output responsive */
+
+#bin-map .vega-embed > div {
+  width: 100%;
+  min-width: 0;
+}
+
+#bin-map svg,
+#bin-map canvas {
+  display: block;
+
+  max-width: 100%;
+}
+
+/* Mobile */
+
+@media (max-width: 650px) {
+  #bin-map .vega-bindings {
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 0.7rem;
+  }
+
+  #bin-map .vega-bind {
+    width: 100%;
+  }
+
+  #bin-map input[type="range"] {
+    width: min(220px, 100%);
+  }
+}

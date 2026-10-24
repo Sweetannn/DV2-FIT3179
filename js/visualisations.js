@@ -73,7 +73,7 @@ const visualisations = [
   {
     container: "#bin-map",
     spec: "charts/10_bin_map.vg.json",
-    enabled: false
+    enabled: true
   },
 
   /* Chart 11 : Threatened Species Dot-Density Map */
