@@ -272,7 +272,7 @@ p {
 .chart-card {
   min-width: 0;
 
-  padding: 1.5rem;
+  padding: 2rem;
 
   background: var(--color-surface);
 
@@ -317,7 +317,7 @@ p {
 
   grid-template-columns: repeat(2, minmax(0, 1fr));
 
-  gap: 3rem;
+  gap: var(--editorial-column-gap);
 
   align-items: start;
 
@@ -336,18 +336,18 @@ p {
   width: 100%;
   min-width: 0;
 
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
+  padding-left: 0;
+  padding-right: 0;
 
   box-sizing: border-box;
 }
 
 .chart-insight {
-  border-left: 3px solid var(--color-accent);
+  border-left: none;
 }
 
 .chart-meta {
-  border-left: 3px solid transparent;
+  border-left: none;
 }
 
 /* =========================================================
@@ -621,10 +621,10 @@ sidebar | visual
 }
 
 .split-layout--reverse .chart-insight {
-  padding-left: 1.5rem;
+  padding-left: 0;
   padding-right: 0;
 
-  border-left: 3px solid var(--color-accent);
+  border-left: none;
 
   border-right: none;
 }
@@ -718,9 +718,9 @@ sidebar | visual
   */
 
   .split-layout--reverse .chart-insight {
-    padding-left: 1.5rem;
+    padding-left: 0;
 
-    border-left: 3px solid var(--color-accent);
+    border-left: none;
   }
 
   .split-sidebar .insight-main,
@@ -766,7 +766,7 @@ sidebar | visual
 
   .chart-insight,
   .chart-meta {
-    padding-right: 0.5rem;
+    padding-right: 0;
   }
 }
 
@@ -1121,16 +1121,16 @@ sidebar | visual
   width: 100%;
   min-width: 0;
 
-  padding-left: 1rem;
+  padding-left: 0;
   padding-right: 0;
 }
 
 .chart-support--compact .chart-insight {
-  border-left: 3px solid var(--color-accent);
+  border-left: none;
 }
 
 .chart-support--compact .chart-meta {
-  border-left: 3px solid transparent;
+  border-left: none;
 }
 
 .chart-support--compact .insight-main {
@@ -1365,7 +1365,7 @@ sidebar | visual
 
 #chart-5 > .chart-support {
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 3rem;
+  gap: var(--editorial-column-gap);
 
   margin-top: 1.5rem;
   padding-top: 1.5rem;
@@ -3097,6 +3097,20 @@ sidebar | visual
 #epilogue .footer-sources,
 #epilogue .footer-credits {
   max-width: 1100px;
+}
+
+/* Align full-width card explanations with the editorial columns above them. */
+.chart-support:not(.chart-support--compact) .insight-main,
+.chart-support:not(.chart-support--compact) .insight-context,
+.chart-support:not(.chart-support--compact) .chart-note {
+  max-width: var(--editorial-copy-width);
+}
+
+@media (min-width: 801px) {
+  .chart-card > .chart-support:not(.chart-support--compact) {
+    width: calc(100% + 3rem - var(--editorial-inset));
+    margin-left: calc(var(--editorial-inset) - 1.5rem);
+  }
 }
 
 @media (max-width: 950px) {
