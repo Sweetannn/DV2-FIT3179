@@ -4,7 +4,7 @@
 
 :root {
   /* Page colours */
-  --color-page: #ffffff;
+  --color-page: #f7f7f2;
   --color-surface: #ffffff;
   --color-text: #202622;
   --color-muted: #68706a;
@@ -21,6 +21,11 @@
 
   /* Layout */
   --page-width: 1280px;
+  --editorial-inset: 30px;
+  --editorial-column-gap: clamp(3rem, 5vw, 5rem);
+  --editorial-copy-width: 56ch;
+  --editorial-copy-size: calc(1.2rem - 2px);
+  --editorial-copy-leading: 1.65;
 
   /* Spacing scale */
   --space-xs: 0.5rem;
@@ -139,7 +144,7 @@ p {
 
 .hero {
   padding: 5rem 0 1rem;
-  padding-left: 30px;
+  padding-left: var(--editorial-inset);
 }
 
 .hero-intro {
@@ -2824,7 +2829,7 @@ sidebar | visual
     minmax(0, 1fr)
     minmax(0, 1fr);
 
-  column-gap: clamp(3rem, 5vw, 5rem);
+  column-gap: var(--editorial-column-gap);
 
   align-items: start;
 
@@ -2852,11 +2857,11 @@ sidebar | visual
 .hero-content__story .hero-intro {
   margin: 0;
 
-  max-width: 56ch;
+  max-width: var(--editorial-copy-width);
 
   font-size: 1.2rem;
   font-weight: 400;
-  line-height: 1.65;
+  line-height: var(--editorial-copy-leading);
 
   color: var(--color-muted);
 }
@@ -2901,11 +2906,11 @@ sidebar | visual
 .hero-context-text {
   margin: 0;
 
-  max-width: 56ch;
+  max-width: var(--editorial-copy-width);
 
   font-size: 1.2rem;
   font-weight: 400;
-  line-height: 1.65;
+  line-height: var(--editorial-copy-leading);
 
   letter-spacing: normal;
 
@@ -2992,7 +2997,7 @@ sidebar | visual
 /* Desktop: 19.2px → 17.2px */
 .hero-content__story .hero-intro,
 .hero-context-text {
-  font-size: calc(1.2rem - 2px);
+  font-size: var(--editorial-copy-size);
 }
 
 /* Goal and Target Audience labels */
@@ -3044,4 +3049,91 @@ sidebar | visual
 /* Preserve spacing between story paragraphs */
 .hero-content__story > .hero-intro + .hero-intro {
   margin-top: 1.5rem;
+}
+
+/* =========================================================
+   EDITORIAL COPY OUTSIDE CHART CARDS
+   ========================================================= */
+
+/* Give each section introduction the same usable width and inset as the hero. */
+.story-section > .section-heading,
+#epilogue > .section-content {
+  width: calc(100% - var(--editorial-inset));
+  max-width: none;
+  margin-left: var(--editorial-inset);
+  margin-right: 0;
+}
+
+/* Match the hero's two-column geometry in Section 1 and the epilogue. */
+#overview .overview-intro-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: var(--editorial-column-gap);
+  align-items: start;
+  width: 100%;
+  margin-top: 1.5rem;
+}
+
+#epilogue .prose-columns {
+  column-gap: var(--editorial-column-gap);
+}
+
+/* Use the hero paragraph treatment for editorial copy, but not copy in cards. */
+.story-section > .section-heading .section-intro,
+#epilogue .prose-column p {
+  max-width: var(--editorial-copy-width);
+  margin: 0;
+  font-size: var(--editorial-copy-size);
+  font-weight: 400;
+  line-height: var(--editorial-copy-leading);
+  color: var(--color-muted);
+}
+
+#epilogue .prose-column p + p {
+  margin-top: 1.5rem;
+}
+
+/* Keep source/reference widths independent from the wider editorial columns. */
+#epilogue .footer-sources,
+#epilogue .footer-credits {
+  max-width: 1100px;
+}
+
+@media (max-width: 950px) {
+  .story-section > .section-heading .section-intro,
+  #epilogue .prose-column p {
+    font-size: calc(1.08rem - 2px);
+  }
+}
+
+@media (max-width: 850px) {
+  #overview .overview-intro-grid {
+    grid-template-columns: minmax(0, 1fr);
+    row-gap: 1.5rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .story-section > .section-heading,
+  #epilogue > .section-content {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 700px) {
+  .story-section > .section-heading .section-intro,
+  #epilogue .prose-column p {
+    max-width: 100%;
+    font-size: calc(1.08rem - 2px);
+    line-height: 1.7;
+  }
+}
+
+@media (max-width: 480px) {
+  .story-section > .section-heading .section-intro,
+  #epilogue .prose-column p {
+    font-size: calc(1rem - 2px);
+    line-height: 1.7;
+  }
 }
