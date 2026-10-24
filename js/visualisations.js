@@ -76,11 +76,12 @@ const visualisations = [
     enabled: true
   },
 
-  /* Chart 11 : Threatened Species Dot-Density Map */
+  /* Chart 11 : Upset plot */
   {
-    container: "#threatened-dot-map",
-    spec: "charts/11_threatened_dot_density.vg.json",
-    enabled: false
+    container: "#upset-plot",
+    spec: "charts/11_upset.vg.json",
+    enabled: true,
+    responsiveVega: true
   },
 
   /* Chart 12 : Threatened Species Choropleth */

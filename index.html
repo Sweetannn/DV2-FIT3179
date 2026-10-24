@@ -862,7 +862,7 @@
               class="map-legend bin-map-legend"
               aria-label="Legend for occurrence record classes"
             >
-              <span class="insight-label"> OCCURRENCE RECORDS PER CELL </span>
+              <span class="insight-label"> Occurrence records per cell </span>
 
               <div class="map-legend-items">
                 <span class="map-legend-item">
@@ -987,12 +987,104 @@
             </div>
           </article>
         </div>
+
+        <!-- =========================================================
+     CHART 11 — UPSET PLOT
+     ========================================================= -->
+
+        <article class="chart-card chart-wide" id="chart-11">
+          <header class="chart-header chart-header--wide">
+            <h3>
+              Half of recorded urban wildlife species are documented in only one
+              studied city
+            </h3>
+
+            <p>
+              Exact intersections reveal whether species are recorded only
+              within individual urban areas or shared across particular
+              combinations of Australia's eight studied cities.
+            </p>
+          </header>
+
+          <div
+            id="upset-plot"
+            class="chart chart-upset"
+            role="img"
+            aria-label="
+      UpSet plot showing the fifteen largest exact recorded-species
+      intersections among Brisbane, Sydney, Melbourne,
+      Canberra–Queanbeyan, Adelaide, Perth, Hobart and Darwin.
+      Vertical bars show the number of distinct species recorded in each
+      exact city combination. Filled dots identify cities included in
+      each intersection, while horizontal bars show total recorded
+      species richness for each city.
+    "
+          ></div>
+
+          <div class="chart-support">
+            <aside class="chart-insight">
+              <span class="insight-label"> KEY FINDING </span>
+
+              <p class="insight-main">
+                Recorded urban wildlife is almost evenly divided between
+                city-specific and multi-city species.
+              </p>
+
+              <p class="insight-context">
+                Of 10,643 distinct species, 5,359 (50.35%) were recorded in
+                exactly one studied city, while 5,284 (49.65%) were recorded
+                across two or more cities. Only 121 species (1.14%) were
+                recorded in all eight urban areas, showing that widespread
+                occurrence across every studied city is uncommon in the dataset.
+              </p>
+            </aside>
+
+            <div class="chart-meta">
+              <span class="insight-label"> HOW TO READ THIS </span>
+
+              <p class="chart-note">
+                Each column represents one exact city intersection. The bar
+                above it shows the number of distinct species recorded in
+                exactly that combination of cities.
+              </p>
+
+              <p class="chart-note chart-note--secondary">
+                Filled green dots identify the cities included in the
+                intersection, while pale dots show cities that are excluded.
+                When multiple cities belong to an intersection, a vertical line
+                connects their filled dots.
+              </p>
+
+              <p class="chart-note chart-note--secondary">
+                The horizontal bars on the left show the total recorded species
+                richness of each city. These totals overlap because a species
+                recorded in several cities contributes to the richness of every
+                city in which it appears.
+              </p>
+
+              <p class="chart-note chart-note--secondary">
+                The plot displays the 15 largest of 176 observed exact
+                intersections, ranked by distinct-species count. For example,
+                the first column represents 1,405 species recorded only in
+                Brisbane, while the Brisbane–Sydney intersection contains 606
+                species recorded in exactly those two cities.
+              </p>
+
+              <p class="chart-note chart-note--secondary">
+                Recorded absence should not be interpreted as confirmed
+                biological absence. Differences in observation and reporting
+                effort may influence which species appear in the analysed
+                records.
+              </p>
+            </div>
+          </div>
+        </article>
       </section>
 
-      <!-- Section 6 -->
+      <!-- Section 5 -->
       <section class="story-section" id="threatened">
         <div class="section-heading">
-          <span class="section-number">06</span>
+          <span class="section-number">05</span>
 
           <div>
             <p class="eyebrow">SPECIES AT RISK</p>
@@ -1010,67 +1102,6 @@
             </p>
           </div>
         </div>
-
-        <!-- <article class="chart-card chart-wide" id="chart-11">
-          <header class="chart-header">
-            <h3>
-              Where are threatened wildlife records concentrated within
-              Australian cities?
-            </h3>
-
-            <p>
-              Select an urban area to explore the spatial concentration of
-              threatened wildlife records. Each equal-sized dot represents
-              approximately 50 occurrence records, 2016–2025.
-            </p>
-          </header>
-
-          <div
-            id="threatened-dot-map"
-            class="chart"
-            role="img"
-            aria-label="
-      Interactive one-to-many dot-density map showing one selected Australian
-      urban area. Each equal-sized synthetic dot represents approximately 50
-      nationally threatened wildlife occurrence records and is distributed
-      within its spatial cell. Denser dots indicate more documented records;
-      dots do not show exact wildlife locations.
-    "
-          ></div>
-
-          <div class="chart-support">
-            <aside class="chart-insight">
-              <span class="insight-label"> KEY FINDING </span>
-
-              <p class="insight-main">
-                Recorded threatened-wildlife occurrences cluster in particular
-                parts of every urban area rather than being evenly distributed.
-              </p>
-
-              <p class="insight-context">
-                Brisbane has the largest documented total and Hobart the
-                smallest. All nationally threatened categories are combined to
-                keep the same dot value useful across every city; the pattern
-                reflects records, not animal abundance.
-              </p>
-            </aside>
-
-            <div class="chart-meta">
-              <span class="insight-label"> HOW TO READ THIS </span>
-
-              <p class="chart-note">
-                Each equal-sized dot represents approximately 50 threatened
-                wildlife occurrence records. Dots are distributed within the
-                corresponding H3 spatial cell and urban boundary, so they show
-                broad recording concentration rather than exact observation
-                locations. Denser clusters indicate more documented records, not
-                greater animal abundance. Low-count cells may not generate a
-                dot. Each city is fitted separately, so do not compare
-                screen-space density directly between selections.
-              </p>
-            </div>
-          </div>
-        </article> -->
 
         <!-- Chart 10 -->
 
@@ -1182,7 +1213,7 @@
         <div class="section-content">
           <div class="section-heading">
             <div class="section-kicker">
-              <span class="section-number">07</span>
+              <span class="section-number">06</span>
               <span class="eyebrow">EPILOGUE</span>
             </div>
 

@@ -1,0 +1,926 @@
+{
+  "$schema": "https://vega.github.io/schema/vega/v5.json",
+
+  "width": 1100,
+  "height": 300,
+
+  "padding": {
+    "top": 0,
+    "right": 0,
+    "bottom": 10,
+    "left": 10
+  },
+
+  "autosize": "pad",
+
+  "signals": [
+    {
+      "name": "visible_intersections",
+      "update": "width < 760 ? 10 : 15"
+    },
+
+    {
+      "name": "matrixStart",
+      "update": "width < 800 ? 310 : 355"
+    },
+
+    {
+      "name": "setBarLeft",
+      "value": 50
+    },
+
+    {
+      "name": "setBarRight",
+      "value": 185
+    },
+
+    {
+      "name": "cityLabelX",
+      "value": 200
+    },
+
+    {
+      "name": "barTop",
+      "value": 45
+    },
+
+    {
+      "name": "barBase",
+      "value": 205
+    },
+
+    {
+      "name": "sectionLabelY",
+      "value": 225
+    },
+
+    {
+      "name": "matrixTop",
+      "value": 225
+    },
+
+    {
+      "name": "matrixBottom",
+      "value": 400
+    }
+  ],
+
+  "data": [
+    {
+      "name": "topIntersections",
+
+      "url": "data/final/11_upset_intersections.csv",
+
+      "format": {
+        "type": "csv",
+
+        "parse": {
+          "combination_size": "number",
+          "species_count": "number",
+          "pct_group_species": "number",
+          "total_species_in_group": "number",
+          "min_city_order": "number",
+          "max_city_order": "number",
+          "bitmask": "number",
+          "rank": "number"
+        }
+      },
+
+      "transform": [
+        {
+          "type": "filter",
+          "expr": "datum.group_filter === 'All'"
+        },
+
+        {
+          "type": "filter",
+          "expr": "datum.rank <= visible_intersections"
+        },
+
+        {
+          "type": "collect",
+
+          "sort": {
+            "field": "rank",
+            "order": "ascending"
+          }
+        }
+      ]
+    },
+
+    {
+      "name": "matrix",
+
+      "url": "data/final/11_upset_matrix.csv",
+
+      "format": {
+        "type": "csv",
+
+        "parse": {
+          "city_order": "number",
+          "member": "number"
+        }
+      },
+
+      "transform": [
+        {
+          "type": "filter",
+          "expr": "datum.group_filter === 'All'"
+        },
+
+        {
+          "type": "lookup",
+
+          "from": "topIntersections",
+
+          "key": "intersection_id",
+
+          "fields": ["intersection_id"],
+
+          "values": [
+            "rank",
+            "species_count",
+            "pct_group_species",
+            "combination_label",
+            "combination_size",
+            "min_city_order",
+            "max_city_order"
+          ],
+
+          "as": [
+            "rank",
+            "species_count",
+            "pct_group_species",
+            "combination_label",
+            "combination_size",
+            "min_city_order",
+            "max_city_order"
+          ]
+        },
+
+        {
+          "type": "filter",
+          "expr": "datum.rank != null"
+        }
+      ]
+    },
+
+    {
+      "name": "activeMatrix",
+
+      "source": "matrix",
+
+      "transform": [
+        {
+          "type": "filter",
+          "expr": "datum.member === 1"
+        }
+      ]
+    },
+
+    {
+      "name": "setSizes",
+
+      "url": "data/final/11_upset_set_sizes.csv",
+
+      "format": {
+        "type": "csv",
+
+        "parse": {
+          "city_order": "number",
+          "set_size": "number"
+        }
+      },
+
+      "transform": [
+        {
+          "type": "filter",
+          "expr": "datum.group_filter === 'All'"
+        },
+
+        {
+          "type": "collect",
+
+          "sort": {
+            "field": "city_order",
+            "order": "ascending"
+          }
+        }
+      ]
+    },
+
+    {
+      "name": "intersectionAxisTicks",
+
+      "values": [
+        {
+          "value": 0,
+          "label": "0"
+        },
+        {
+          "value": 500,
+          "label": "500"
+        },
+        {
+          "value": 1000,
+          "label": "1,000"
+        },
+        {
+          "value": 1500,
+          "label": "1,500"
+        }
+      ]
+    }
+  ],
+
+  "scales": [
+    {
+      "name": "xIntersection",
+
+      "type": "band",
+
+      "domain": {
+        "data": "topIntersections",
+        "field": "intersection_id"
+      },
+
+      "range": [
+        {
+          "signal": "matrixStart"
+        },
+        {
+          "signal": "width - 15"
+        }
+      ],
+
+      "paddingInner": 0.28,
+      "paddingOuter": 0.06
+    },
+
+    {
+      "name": "yIntersection",
+
+      "type": "linear",
+
+      "domain": [0, 1500],
+
+      "zero": true,
+
+      "range": [
+        {
+          "signal": "barBase"
+        },
+        {
+          "signal": "barTop"
+        }
+      ]
+    },
+
+    {
+      "name": "yCity",
+
+      "type": "linear",
+
+      "domain": [0, 7],
+
+      "range": [
+        {
+          "signal": "matrixTop"
+        },
+        {
+          "signal": "matrixBottom"
+        }
+      ]
+    },
+
+    {
+      "name": "xSetSize",
+
+      "type": "linear",
+
+      "domain": {
+        "data": "setSizes",
+        "field": "set_size"
+      },
+
+      "zero": true,
+      "nice": true,
+
+      "range": [
+        {
+          "signal": "setBarRight"
+        },
+        {
+          "signal": "setBarLeft"
+        }
+      ]
+    }
+  ],
+
+  "marks": [
+    {
+      "type": "rule",
+
+      "from": {
+        "data": "intersectionAxisTicks"
+      },
+
+      "encode": {
+        "enter": {
+          "x": {
+            "signal": "matrixStart"
+          },
+
+          "x2": {
+            "signal": "width - 15"
+          },
+
+          "y": {
+            "scale": "yIntersection",
+            "field": "value"
+          },
+
+          "stroke": {
+            "value": "#edf0ed"
+          },
+
+          "strokeWidth": {
+            "value": 1
+          }
+        }
+      }
+    },
+
+    {
+      "type": "rule",
+
+      "encode": {
+        "enter": {
+          "x": {
+            "signal": "matrixStart - 12"
+          },
+
+          "y": {
+            "signal": "barTop"
+          },
+
+          "y2": {
+            "signal": "barBase"
+          },
+
+          "stroke": {
+            "value": "#c8ceca"
+          },
+
+          "strokeWidth": {
+            "value": 1
+          }
+        }
+      }
+    },
+
+    {
+      "type": "rule",
+
+      "from": {
+        "data": "intersectionAxisTicks"
+      },
+
+      "encode": {
+        "enter": {
+          "x": {
+            "signal": "matrixStart - 17"
+          },
+
+          "x2": {
+            "signal": "matrixStart - 12"
+          },
+
+          "y": {
+            "scale": "yIntersection",
+            "field": "value"
+          },
+
+          "stroke": {
+            "value": "#c8ceca"
+          },
+
+          "strokeWidth": {
+            "value": 1
+          }
+        }
+      }
+    },
+
+    {
+      "type": "text",
+
+      "from": {
+        "data": "intersectionAxisTicks"
+      },
+
+      "encode": {
+        "enter": {
+          "x": {
+            "signal": "matrixStart - 22"
+          },
+
+          "y": {
+            "scale": "yIntersection",
+            "field": "value"
+          },
+
+          "text": {
+            "field": "label"
+          },
+
+          "align": {
+            "value": "right"
+          },
+
+          "baseline": {
+            "value": "middle"
+          },
+
+          "font": {
+            "value": "Source Sans 3"
+          },
+
+          "fontSize": {
+            "value": 11
+          },
+
+          "fill": {
+            "value": "#68706a"
+          }
+        }
+      }
+    },
+
+    {
+      "type": "text",
+
+      "encode": {
+        "enter": {
+          "x": {
+            "signal": "matrixStart - 66"
+          },
+
+          "y": {
+            "signal": "(barTop + barBase) / 2"
+          },
+
+          "text": {
+            "value": "Distinct species"
+          },
+
+          "angle": {
+            "value": -90
+          },
+
+          "align": {
+            "value": "center"
+          },
+
+          "baseline": {
+            "value": "middle"
+          },
+
+          "font": {
+            "value": "Source Sans 3"
+          },
+
+          "fontSize": {
+            "value": 12
+          },
+
+          "fontWeight": {
+            "value": 600
+          },
+
+          "fill": {
+            "value": "#68706a"
+          }
+        }
+      }
+    },
+
+    {
+      "type": "rect",
+
+      "from": {
+        "data": "topIntersections"
+      },
+
+      "encode": {
+        "enter": {
+          "x": {
+            "scale": "xIntersection",
+            "field": "intersection_id"
+          },
+
+          "width": {
+            "scale": "xIntersection",
+            "band": 1
+          },
+
+          "y": {
+            "scale": "yIntersection",
+            "field": "species_count"
+          },
+
+          "y2": {
+            "signal": "barBase"
+          },
+
+          "fill": {
+            "value": "#325c4b"
+          },
+
+          "cornerRadiusTopLeft": {
+            "value": 1
+          },
+
+          "cornerRadiusTopRight": {
+            "value": 1
+          },
+
+          "tooltip": {
+            "signal": "{'Exact city combination': datum.combination_label, 'Distinct species': format(datum.species_count, ','), 'Share of all recorded species': format(datum.pct_group_species, '.2f') + '%', 'Cities in intersection': datum.combination_size}"
+          }
+        },
+
+        "update": {
+          "fill": {
+            "value": "#325c4b"
+          }
+        },
+
+        "hover": {
+          "fill": {
+            "value": "#203f34"
+          }
+        }
+      }
+    },
+
+    {
+      "type": "text",
+
+      "from": {
+        "data": "topIntersections"
+      },
+
+      "encode": {
+        "enter": {
+          "x": {
+            "signal": "scale('xIntersection', datum.intersection_id) + bandwidth('xIntersection') / 2"
+          },
+
+          "y": {
+            "signal": "scale('yIntersection', datum.species_count) - 6"
+          },
+
+          "text": {
+            "signal": "format(datum.species_count, ',')"
+          },
+
+          "align": {
+            "value": "center"
+          },
+
+          "baseline": {
+            "value": "bottom"
+          },
+
+          "font": {
+            "value": "Source Sans 3"
+          },
+
+          "fontSize": {
+            "value": 10
+          },
+
+          "fontWeight": {
+            "value": 600
+          },
+
+          "fill": {
+            "value": "#68706a"
+          },
+
+          "opacity": {
+            "signal": "width >= 760 ? 1 : 0"
+          }
+        }
+      }
+    },
+
+    {
+      "type": "rect",
+
+      "from": {
+        "data": "setSizes"
+      },
+
+      "encode": {
+        "enter": {
+          "x": {
+            "scale": "xSetSize",
+            "field": "set_size"
+          },
+
+          "x2": {
+            "signal": "setBarRight"
+          },
+
+          "y": {
+            "signal": "scale('yCity', datum.city_order) - 7"
+          },
+
+          "y2": {
+            "signal": "scale('yCity', datum.city_order) + 7"
+          },
+
+          "fill": {
+            "value": "#9eb3a9"
+          },
+
+          "cornerRadius": {
+            "value": 1
+          },
+
+          "tooltip": {
+            "signal": "{'Urban area': datum.city, 'Distinct recorded species': format(datum.set_size, ',')}"
+          }
+        },
+
+        "update": {
+          "fill": {
+            "value": "#9eb3a9"
+          }
+        },
+
+        "hover": {
+          "fill": {
+            "value": "#7e998d"
+          }
+        }
+      }
+    },
+
+    {
+      "type": "text",
+
+      "from": {
+        "data": "setSizes"
+      },
+
+      "encode": {
+        "enter": {
+          "x": {
+            "signal": "scale('xSetSize', datum.set_size) - 6"
+          },
+
+          "y": {
+            "scale": "yCity",
+            "field": "city_order"
+          },
+
+          "text": {
+            "signal": "format(datum.set_size, ',')"
+          },
+
+          "align": {
+            "value": "right"
+          },
+
+          "baseline": {
+            "value": "middle"
+          },
+
+          "font": {
+            "value": "Source Sans 3"
+          },
+
+          "fontSize": {
+            "value": 11
+          },
+
+          "fill": {
+            "value": "#68706a"
+          }
+        }
+      }
+    },
+
+    {
+      "type": "text",
+
+      "from": {
+        "data": "setSizes"
+      },
+
+      "encode": {
+        "enter": {
+          "x": {
+            "signal": "cityLabelX"
+          },
+
+          "y": {
+            "scale": "yCity",
+            "field": "city_order"
+          },
+
+          "text": {
+            "field": "city"
+          },
+
+          "align": {
+            "value": "left"
+          },
+
+          "baseline": {
+            "value": "middle"
+          },
+
+          "font": {
+            "value": "Source Sans 3"
+          },
+
+          "fontSize": {
+            "value": 12
+          },
+
+          "fontWeight": {
+            "value": 600
+          },
+
+          "fill": {
+            "value": "#202622"
+          }
+        }
+      }
+    },
+
+    {
+      "type": "rule",
+
+      "from": {
+        "data": "topIntersections"
+      },
+
+      "encode": {
+        "enter": {
+          "x": {
+            "signal": "scale('xIntersection', datum.intersection_id) + bandwidth('xIntersection') / 2"
+          },
+
+          "y": {
+            "signal": "matrixTop - 12"
+          },
+
+          "y2": {
+            "signal": "matrixBottom + 12"
+          },
+
+          "stroke": {
+            "value": "#f0f2f0"
+          },
+
+          "strokeWidth": {
+            "value": 1
+          }
+        }
+      }
+    },
+
+    {
+      "type": "rule",
+
+      "from": {
+        "data": "topIntersections"
+      },
+
+      "encode": {
+        "enter": {
+          "x": {
+            "signal": "scale('xIntersection', datum.intersection_id) + bandwidth('xIntersection') / 2"
+          },
+
+          "y": {
+            "scale": "yCity",
+            "field": "min_city_order"
+          },
+
+          "y2": {
+            "scale": "yCity",
+            "field": "max_city_order"
+          },
+
+          "stroke": {
+            "value": "#325c4b"
+          },
+
+          "strokeWidth": {
+            "value": 2
+          },
+
+          "strokeOpacity": {
+            "value": 0.9
+          }
+        }
+      }
+    },
+
+    {
+      "type": "symbol",
+
+      "from": {
+        "data": "matrix"
+      },
+
+      "encode": {
+        "enter": {
+          "x": {
+            "signal": "scale('xIntersection', datum.intersection_id) + bandwidth('xIntersection') / 2"
+          },
+
+          "y": {
+            "scale": "yCity",
+            "field": "city_order"
+          },
+
+          "shape": {
+            "value": "circle"
+          },
+
+          "size": {
+            "value": 52
+          },
+
+          "fill": {
+            "value": "#dfe3df"
+          }
+        }
+      }
+    },
+
+    {
+      "type": "symbol",
+
+      "from": {
+        "data": "activeMatrix"
+      },
+
+      "encode": {
+        "enter": {
+          "x": {
+            "signal": "scale('xIntersection', datum.intersection_id) + bandwidth('xIntersection') / 2"
+          },
+
+          "y": {
+            "scale": "yCity",
+            "field": "city_order"
+          },
+
+          "shape": {
+            "value": "circle"
+          },
+
+          "size": {
+            "value": 125
+          },
+
+          "fill": {
+            "value": "#325c4b"
+          },
+
+          "stroke": {
+            "value": "#ffffff"
+          },
+
+          "strokeWidth": {
+            "value": 1
+          },
+
+          "tooltip": {
+            "signal": "{'Exact city combination': datum.combination_label, 'Distinct species': format(datum.species_count, ','), 'Share of all recorded species': format(datum.pct_group_species, '.2f') + '%'}"
+          }
+        },
+
+        "update": {
+          "fill": {
+            "value": "#325c4b"
+          }
+        },
+
+        "hover": {
+          "fill": {
+            "value": "#203f34"
+          }
+        }
+      }
+    }
+  ]
+}
