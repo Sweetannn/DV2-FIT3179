@@ -4,7 +4,7 @@
 
 :root {
   /* Page colours */
-  --color-page: #f7f7f2;
+  --color-page: #ffffff;
   --color-surface: #ffffff;
   --color-text: #202622;
   --color-muted: #68706a;
@@ -139,6 +139,7 @@ p {
 
 .hero {
   padding: 5rem 0 1rem;
+  padding-left: 30px;
 }
 
 .hero-intro {
@@ -152,7 +153,7 @@ p {
 
   grid-template-columns: repeat(3, 1fr);
 
-  gap: 1.5rem;
+  gap: 3.5rem;
 
   margin: 3rem 0;
 }
@@ -166,7 +167,7 @@ p {
 .stat-value {
   display: block;
 
-  font-size: 2.4rem;
+  font-size: 2rem;
   font-weight: 700;
 
   line-height: 1;
@@ -175,7 +176,7 @@ p {
 .stat-label {
   display: block;
 
-  margin-top: 0.45rem;
+  margin-top: 0.4rem;
 
   color: var(--color-muted);
 }
@@ -195,7 +196,7 @@ p {
    ========================================================= */
 
 .story-section {
-  padding: var(--space-xxl) 0;
+  padding: 50px 0;
 
   border-top: 1px solid var(--color-rule);
 }
