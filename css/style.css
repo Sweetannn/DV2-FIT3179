@@ -2809,3 +2809,238 @@ sidebar | visual
     min-width: 0;
   }
 }
+
+/* =========================================================
+   HERO INTRODUCTION — BALANCED TWO-COLUMN LAYOUT
+   ========================================================= */
+
+/* 1. TWO-COLUMN STRUCTURE */
+
+.hero-content {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(0, 1fr);
+
+  column-gap: clamp(3rem, 5vw, 5rem);
+
+  align-items: start;
+
+  width: 100%;
+  margin-top: 2.5rem;
+  margin-bottom: 3.5rem;
+}
+
+/* 2. SHARED COLUMN SETTINGS */
+
+.hero-content__story,
+.hero-content__context {
+  min-width: 0;
+}
+
+/* 3. LEFT COLUMN — STORY INTRODUCTION */
+
+.hero-content__story {
+  display: flex;
+  flex-direction: column;
+
+  gap: 1.5rem;
+}
+
+.hero-content__story .hero-intro {
+  margin: 0;
+
+  max-width: 56ch;
+
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 1.65;
+
+  color: var(--color-muted);
+}
+
+/* 4. RIGHT COLUMN — GOAL AND TARGET AUDIENCE */
+
+.hero-content__context {
+  display: flex;
+  flex-direction: column;
+
+  gap: 1.5rem;
+}
+
+.hero-context-item {
+  margin: 0;
+  padding: 0;
+}
+
+/* 5. SUBTLE TYPOGRAPHIC LABELS */
+
+.hero-context-label {
+  margin: 0 0 0.4rem;
+
+  max-width: none;
+
+  font-family: "Source Sans 3", "Segoe UI", Arial, sans-serif;
+
+  font-size: 0.82rem;
+  font-weight: 700;
+  line-height: 1.5;
+
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+
+  white-space: normal;
+
+  color: var(--color-accent);
+}
+
+/* 6. RIGHT COLUMN — PARAGRAPH TEXT */
+
+.hero-context-text {
+  margin: 0;
+
+  max-width: 56ch;
+
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 1.65;
+
+  letter-spacing: normal;
+
+  color: var(--color-muted);
+}
+
+/* 7. SEPARATION FROM EXISTING STATISTICS */
+
+.hero-content + .stat-grid {
+  margin-top: 0;
+}
+
+/* =========================================================
+   RESPONSIVE — TABLET
+   ========================================================= */
+
+@media (max-width: 950px) {
+  .hero-content {
+    column-gap: 2.5rem;
+
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  .hero-content__story .hero-intro,
+  .hero-context-text {
+    font-size: 1.08rem;
+    line-height: 1.65;
+  }
+}
+
+/* =========================================================
+   RESPONSIVE — MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+  .hero-content {
+    grid-template-columns: minmax(0, 1fr);
+
+    row-gap: 2.5rem;
+
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  .hero-content__story,
+  .hero-content__context {
+    gap: 1.25rem;
+  }
+
+  .hero-content__story .hero-intro,
+  .hero-context-text {
+    max-width: 100%;
+
+    font-size: 1.08rem;
+    line-height: 1.7;
+  }
+
+  .hero-context-label {
+    font-size: 0.8rem;
+  }
+}
+
+/* =========================================================
+   RESPONSIVE — SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+  .hero-content {
+    row-gap: 2rem;
+  }
+
+  .hero-content__story .hero-intro,
+  .hero-context-text {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+}
+
+/* =========================================================
+   HERO INTRODUCTION — REDUCE FONT SIZE BY 2PX
+   ========================================================= */
+
+/* Desktop: 19.2px → 17.2px */
+.hero-content__story .hero-intro,
+.hero-context-text {
+  font-size: calc(1.2rem - 2px);
+}
+
+/* Goal and Target Audience labels */
+.hero-context-label {
+  font-size: calc(0.82rem - 2px);
+}
+
+/* Tablet */
+@media (max-width: 950px) {
+  .hero-content__story .hero-intro,
+  .hero-context-text {
+    font-size: calc(1.08rem - 2px);
+  }
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+  .hero-content__story .hero-intro,
+  .hero-context-text {
+    font-size: calc(1.08rem - 2px);
+  }
+
+  .hero-context-label {
+    font-size: calc(0.8rem - 2px);
+  }
+}
+
+/* Small mobile */
+@media (max-width: 480px) {
+  .hero-content__story .hero-intro,
+  .hero-context-text {
+    font-size: calc(1rem - 2px);
+  }
+}
+
+/* =========================================================
+   HERO INTRODUCTION — STORY LABEL
+   ========================================================= */
+
+.hero-content__story {
+  gap: 0;
+}
+
+/* Match the GOAL and TARGET AUDIENCE labels */
+.hero-content__story > .hero-context-label {
+  margin: 0 0 0.4rem;
+}
+
+/* Preserve spacing between story paragraphs */
+.hero-content__story > .hero-intro + .hero-intro {
+  margin-top: 1.5rem;
+}
