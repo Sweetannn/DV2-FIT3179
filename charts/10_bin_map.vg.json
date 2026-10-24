@@ -4,7 +4,7 @@
   "description": "Interactive classed H3 hexagonal bin map showing the spatial concentration of Atlas of Living Australia wildlife occurrence records within eight Australian urban areas.",
 
   "width": "container",
-  "height": 510,
+  "height": 400,
 
   "padding": 5,
 

@@ -2176,3 +2176,585 @@ sidebar | visual
     width: min(220px, 100%);
   }
 }
+
+/* =========================================================
+   SECTION 4 — NETWORK + BIN MAP PAIR
+   ========================================================= */
+
+/* =========================================================
+   1. SHARED SPATIAL PAIR
+   ========================================================= */
+
+.spatial-chart-pair {
+  align-items: stretch;
+}
+
+/*
+  Allow both cards to occupy the same row cleanly
+  while retaining the reusable chart-pair behaviour.
+*/
+
+.spatial-pair-card {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  min-width: 0;
+}
+
+/* =========================================================
+   2. VISUAL AREA
+   ========================================================= */
+
+/*
+  Provides a consistent main visual region for
+  the network diagram and the interactive bin map.
+*/
+
+.spatial-pair-visual {
+  width: 100%;
+  min-width: 0;
+
+  margin: 0;
+  padding: 0;
+}
+
+/*
+  Do not vertically centre the map because its Vega
+  controls need to remain directly above the map.
+*/
+
+.spatial-pair-visual--map {
+  display: block;
+}
+
+/* Shared Vega chart sizing */
+
+.chart-spatial-pair {
+  width: 100%;
+  min-width: 0;
+
+  margin: 0;
+  padding: 0;
+}
+
+/* Network chart */
+
+.chart-network-pair {
+  width: 100%;
+  min-width: 0;
+
+  min-height: 0;
+
+  margin: 0;
+  padding: 0;
+}
+
+.chart-network-pair .vega-embed,
+.chart-network-pair .vega-embed > div {
+  width: 100%;
+  min-width: 0;
+}
+
+.chart-network-pair svg,
+.chart-network-pair canvas {
+  display: block;
+
+  width: 100%;
+  max-width: 100%;
+
+  height: auto;
+}
+
+/* =========================================================
+   3. LEGEND ALIGNMENT
+   ========================================================= */
+
+/*
+  Both legends use the existing reusable .map-legend
+  component, giving them the same typography,
+  spacing and visual hierarchy.
+*/
+
+.spatial-pair-card > .map-legend {
+  width: 100%;
+  min-width: 0;
+
+  margin-top: var(--space-sm);
+  padding-bottom: var(--space-sm);
+}
+
+/*
+  Bin-map legend remains one horizontal wrapping row.
+*/
+
+.bin-map-legend .map-legend-items {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  gap: 0.65rem 1rem;
+}
+
+/* =========================================================
+   4. NETWORK LEGEND
+   ========================================================= */
+
+.network-legend {
+  display: flex;
+  flex-direction: column;
+
+  gap: 0.9rem;
+}
+
+/*
+  One row for circle size,
+  one row for line width.
+*/
+
+.network-legend-row {
+  display: flex;
+  flex-direction: column;
+
+  gap: 0.45rem;
+
+  width: 100%;
+  min-width: 0;
+}
+
+/*
+  Compact label so the two rows do not become too tall.
+*/
+
+.network-legend-title {
+  display: block;
+
+  margin: 0;
+
+  font-size: 0.72rem;
+  font-weight: 700;
+
+  line-height: 1.35;
+  letter-spacing: 0.08em;
+
+  text-transform: uppercase;
+
+  color: var(--color-accent);
+}
+
+/*
+  Legend examples appear horizontally.
+*/
+
+.network-legend-items {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  gap: 0.55rem 1.15rem;
+
+  width: 100%;
+  min-width: 0;
+}
+
+.network-legend-item {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 0.45rem;
+
+  white-space: nowrap;
+
+  font-size: 0.82rem;
+  line-height: 1.4;
+
+  color: var(--color-muted);
+}
+
+/* =========================================================
+   5. NETWORK NODE-SIZE SYMBOLS
+   ========================================================= */
+
+.network-node-swatch {
+  display: inline-block;
+
+  flex: 0 0 auto;
+
+  border-radius: 50%;
+
+  background: #68706a;
+
+  border: 1.5px solid #ffffff;
+
+  box-shadow: 0 0 0 1px var(--color-rule);
+}
+
+/* Small node */
+
+.network-node-swatch--small {
+  width: 10px;
+  height: 10px;
+}
+
+/* Medium node */
+
+.network-node-swatch--medium {
+  width: 17px;
+  height: 17px;
+}
+
+/* Large node */
+
+.network-node-swatch--large {
+  width: 24px;
+  height: 24px;
+}
+
+/* =========================================================
+   6. NETWORK EDGE-WIDTH SYMBOLS
+   ========================================================= */
+
+.network-edge-swatch {
+  display: inline-block;
+
+  width: 42px;
+
+  flex: 0 0 auto;
+
+  border-radius: 999px;
+
+  background: #68706a;
+}
+
+/* Thin connection */
+
+.network-edge-swatch--thin {
+  height: 1px;
+}
+
+/* Medium connection */
+
+.network-edge-swatch--medium {
+  height: 4px;
+}
+
+/* Thick connection */
+
+.network-edge-swatch--thick {
+  height: 8px;
+}
+
+/* =========================================================
+   7. KEEP SUPPORT TEXT CONSISTENT
+   ========================================================= */
+
+.spatial-pair-card .chart-support--compact {
+  margin-top: 1.25rem;
+}
+
+/*
+  Give secondary paragraphs normal spacing.
+*/
+
+.spatial-pair-card .chart-note--secondary {
+  margin-top: 0.8rem;
+}
+
+/* =========================================================
+   8. MAP CONTROLS INSIDE HALF-WIDTH CARD
+   ========================================================= */
+
+/*
+  Existing .map-panel styling already places the
+  Vega bindings above the visualisation.
+
+  These small overrides allow the controls to wrap
+  naturally inside the narrower 1:1 card.
+*/
+
+.spatial-pair-card .map-panel .vega-bindings {
+  width: 100%;
+
+  gap: 0.65rem 1rem;
+}
+
+.spatial-pair-card .map-panel .vega-bind {
+  min-width: 0;
+
+  flex-wrap: wrap;
+}
+
+/*
+  Keep radio options from overflowing.
+*/
+
+.spatial-pair-card .map-panel label {
+  white-space: normal;
+}
+
+/* =========================================================
+   9. RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1200px) {
+  /*
+    .chart-pair already changes to one column
+    at this breakpoint.
+
+    Restore generous chart widths once stacked.
+  */
+
+  .chart-network-pair {
+    min-height: 500px;
+  }
+}
+
+@media (max-width: 650px) {
+  .network-legend-items,
+  .bin-map-legend .map-legend-items {
+    gap: 0.5rem 0.75rem;
+  }
+
+  .network-legend-item {
+    font-size: 0.76rem;
+  }
+
+  .network-node-swatch--small {
+    width: 9px;
+    height: 9px;
+  }
+
+  .network-node-swatch--medium {
+    width: 15px;
+    height: 15px;
+  }
+
+  .network-node-swatch--large {
+    width: 21px;
+    height: 21px;
+  }
+
+  .network-edge-swatch {
+    width: 34px;
+  }
+}
+
+/* =========================================================
+   NETWORK LEGEND
+   ========================================================= */
+
+.network-legend {
+  display: flex;
+  flex-direction: column;
+
+  gap: 0.9rem;
+
+  width: 100%;
+  min-width: 0;
+
+  margin-top: var(--space-sm);
+  padding-bottom: var(--space-sm);
+}
+
+/* =========================================================
+   LEGEND ROW
+   ========================================================= */
+
+.network-legend-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  gap: 0.65rem 1rem;
+
+  width: 100%;
+  min-width: 0;
+}
+
+/* =========================================================
+   TITLE
+   ========================================================= */
+
+.network-legend-title {
+  flex: 0 0 auto;
+
+  min-width: 175px;
+
+  font-size: 0.72rem;
+  font-weight: 700;
+
+  line-height: 1.35;
+  letter-spacing: 0.08em;
+
+  text-transform: uppercase;
+
+  color: var(--color-accent);
+}
+
+/* =========================================================
+   ITEMS
+   ========================================================= */
+
+.network-legend-items {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  gap: 0.6rem 1rem;
+
+  min-width: 0;
+}
+
+.network-legend-item {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 0.4rem;
+
+  white-space: nowrap;
+
+  font-size: 0.82rem;
+  line-height: 1.4;
+
+  color: var(--color-muted);
+}
+
+/* =========================================================
+   NODE SIZE LEGEND
+   ========================================================= */
+
+/*
+  Vega nodeSize scale:
+
+  domain: [1300, 4800]
+  range:  [200, 3500]
+
+  Approximate rendered diameters:
+  1,500 -> ~20 px
+  2,500 -> ~36 px
+  3,500 -> ~48 px
+  4,500 -> ~57 px
+*/
+
+.network-node-swatch {
+  display: inline-block;
+
+  flex: 0 0 auto;
+
+  border-radius: 50%;
+
+  background: #67746d;
+
+  border: 1.5px solid #ffffff;
+
+  box-shadow: 0 0 0 1px var(--color-rule);
+}
+
+.network-node-swatch--1500 {
+  width: 20px;
+  height: 20px;
+}
+
+.network-node-swatch--2500 {
+  width: 36px;
+  height: 36px;
+}
+
+.network-node-swatch--3500 {
+  width: 48px;
+  height: 48px;
+}
+
+.network-node-swatch--4500 {
+  width: 57px;
+  height: 57px;
+}
+
+/* =========================================================
+   EDGE WIDTH LEGEND
+   ========================================================= */
+
+/*
+  Vega edgeWidth scale:
+
+  domain: [159, 2649]
+  range:  [0.5, 12]
+
+  Approximate widths:
+  500   -> ~2.1 px
+  1,500 -> ~6.7 px
+  2,500 -> ~11.3 px
+*/
+
+.network-edge-swatch {
+  display: inline-block;
+
+  width: 52px;
+
+  flex: 0 0 auto;
+
+  border-radius: 999px;
+
+  background: #68706a;
+}
+
+.network-edge-swatch--500 {
+  height: 2px;
+}
+
+.network-edge-swatch--1500 {
+  height: 7px;
+}
+
+.network-edge-swatch--2500 {
+  height: 11px;
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 650px) {
+  .network-legend-row {
+    align-items: flex-start;
+  }
+
+  .network-legend-title {
+    flex-basis: 100%;
+
+    min-width: 0;
+  }
+
+  .network-legend-item {
+    font-size: 0.76rem;
+  }
+
+  /*
+    Scale circle examples slightly down on small screens
+    while preserving relative differences.
+  */
+
+  .network-node-swatch--1500 {
+    width: 16px;
+    height: 16px;
+  }
+
+  .network-node-swatch--2500 {
+    width: 28px;
+    height: 28px;
+  }
+
+  .network-node-swatch--3500 {
+    width: 37px;
+    height: 37px;
+  }
+
+  .network-node-swatch--4500 {
+    width: 44px;
+    height: 44px;
+  }
+
+  .network-edge-swatch {
+    width: 40px;
+  }
+}

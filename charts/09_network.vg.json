@@ -1,18 +1,22 @@
 {
   "$schema": "https://vega.github.io/schema/vega/v5.json",
+
   "width": 650,
-  "height": 380,
+  "height": 600,
+
   "padding": {
-    "top": 50,
-    "bottom": 50,
-    "left": 12,
-    "right": 275
+    "top": 10,
+    "bottom": 25,
+    "left": 0,
+    "right": 20
   },
+
   "autosize": "pad",
+
   "signals": [
     {
       "name": "radius",
-      "value": 180
+      "value": 160
     },
     {
       "name": "cx",
@@ -20,94 +24,136 @@
     },
     {
       "name": "cy",
-      "update": "height / 2"
+      "value": 400
     }
   ],
+
   "data": [
     {
       "name": "nodes",
+
       "url": "data/final/06_network_nodes.csv",
+
       "format": {
         "type": "csv",
         "parse": "auto"
       },
+
       "transform": [
         {
           "type": "formula",
+
           "expr": "indexof(['Darwin', 'Brisbane', 'Sydney', 'Canberra–Queanbeyan', 'Hobart', 'Melbourne', 'Adelaide', 'Perth'], datum.city)",
+
           "as": "geo_rank"
         },
+
         {
           "type": "formula",
+
           "expr": "datum.geo_rank * 2 * PI / 8 - PI/2",
+
           "as": "angle"
         },
+
         {
           "type": "formula",
+
           "expr": "cx + cos(datum.angle) * radius",
+
           "as": "x"
         },
+
         {
           "type": "formula",
+
           "expr": "cy + sin(datum.angle) * radius",
+
           "as": "y"
         },
+
         {
           "type": "formula",
+
           "expr": "cos(datum.angle) > 0.01 ? 'left' : (cos(datum.angle) < -0.01 ? 'right' : 'center')",
+
           "as": "labelAlign"
         },
+
         {
           "type": "formula",
+
           "expr": "sin(datum.angle) > 0.01 ? 'top' : (sin(datum.angle) < -0.01 ? 'bottom' : 'middle')",
+
           "as": "labelBaseline"
         }
       ]
     },
+
     {
       "name": "edges",
+
       "url": "data/final/07_network_edges.csv",
+
       "format": {
         "type": "csv",
         "parse": "auto"
       },
+
       "transform": [
         {
           "type": "lookup",
+
           "from": "nodes",
+
           "key": "city",
+
           "fields": ["source", "target"],
+
           "as": ["s", "t"]
         },
+
         {
           "type": "filter",
+
           "expr": "datum.s != null && datum.t != null"
         }
       ]
     }
   ],
+
   "scales": [
     {
       "name": "nodeSize",
+
       "type": "linear",
+
       "domain": {
         "data": "nodes",
         "field": "species_richness"
       },
+
       "range": [200, 3500]
     },
+
     {
       "name": "edgeWidth",
+
       "type": "linear",
+
       "domain": {
         "data": "edges",
         "field": "shared_species"
       },
+
       "range": [0.5, 12]
     },
+
     {
       "name": "color",
+
       "type": "ordinal",
+
       "domain": [
         "Brisbane",
         "Sydney",
@@ -118,6 +164,7 @@
         "Hobart",
         "Darwin"
       ],
+
       "range": [
         "#B52F18",
         "#FFB430",
@@ -130,123 +177,197 @@
       ]
     }
   ],
+
   "legends": [
     {
       "size": "nodeSize",
+
       "type": "symbol",
-      "title": "City richness (species)",
+
+      "title": "Recorded species richness",
+
       "orient": "none",
-      "direction": "vertical",
-      "tickCount": 3,
+
+      "direction": "horizontal",
+
+      "values": [1500, 2500, 3500, 4500],
+
       "format": ",.0f",
+
       "symbolType": "circle",
+
       "symbolFillColor": "#67746D",
+
       "symbolStrokeColor": "#FFFFFF",
-      "symbolStrokeWidth": 1,
+
+      "symbolStrokeWidth": 1.5,
+
+      "symbolOpacity": 1,
+
       "titleFont": "Source Sans 3",
-      "titleFontSize": 13,
+
+      "titleFontSize": 15,
+
       "titleFontWeight": "bold",
-      "titleColor": "#202622",
+
+      "titleColor": "#325C4B",
+
+      "titlePadding": 8,
+
       "labelFont": "Source Sans 3",
-      "labelFontSize": 12,
-      "labelColor": "#202622",
-      "labelOffset": 8,
-      "rowPadding": 3,
-      "legendX": 690,
-      "legendY": 30,
-      "titleLimit": 230
+
+      "labelFontSize": 15,
+
+      "labelColor": "#68706A",
+
+      "labelOffset": 7,
+
+      "columnPadding": 20,
+
+      "rowPadding": 2,
+
+      "columns": 4,
+
+      "legendX": 0,
+
+      "legendY": 5
     },
+
     {
       "strokeWidth": "edgeWidth",
+
       "type": "symbol",
-      "title": "Shared species (city pairs)",
+
+      "title": "Shared recorded species",
+
       "orient": "none",
-      "direction": "vertical",
-      "tickCount": 3,
+
+      "direction": "horizontal",
+
+      "values": [500, 1500, 2500],
+
       "format": ",.0f",
+
       "symbolType": "stroke",
-      "symbolSize": 900,
+
+      "symbolSize": 850,
+
       "symbolStrokeColor": "#68706A",
+
       "symbolOpacity": 0.9,
+
       "titleFont": "Source Sans 3",
-      "titleFontSize": 13,
+
+      "titleFontSize": 15,
+
       "titleFontWeight": "bold",
-      "titleColor": "#202622",
+
+      "titleColor": "#325C4B",
+
+      "titlePadding": 8,
+
       "labelFont": "Source Sans 3",
-      "labelFontSize": 12,
-      "labelColor": "#202622",
-      "labelOffset": 8,
-      "rowPadding": 10,
-      "legendX": 690,
-      "legendY": 225,
-      "titleLimit": 230
+
+      "labelFontSize": 15,
+
+      "labelColor": "#68706A",
+
+      "labelOffset": 7,
+
+      "columnPadding": 28,
+
+      "rowPadding": 2,
+
+      "columns": 3,
+
+      "legendX": 0,
+
+      "legendY": 105
     }
   ],
+
   "marks": [
     {
       "type": "path",
+
       "from": {
         "data": "edges"
       },
+
       "encode": {
         "enter": {
           "strokeWidth": {
             "scale": "edgeWidth",
             "field": "shared_species"
           },
+
           "tooltip": {
             "signal": "{'Connected cities': datum.source + ' & ' + datum.target, 'Shared recorded species': format(datum.shared_species, ','), 'Period': '2016–2025'}"
           }
         },
+
         "update": {
           "path": {
             "signal": "'M' + datum.s.x + ',' + datum.s.y + ' L' + datum.t.x + ',' + datum.t.y"
           },
+
           "stroke": {
             "value": "#68706A"
           },
+
           "strokeOpacity": {
             "value": 0.25
           }
         },
+
         "hover": {
           "strokeOpacity": {
             "value": 0.9
           },
+
           "stroke": {
             "value": "#000000"
           }
         }
       }
     },
+
     {
       "type": "symbol",
+
       "from": {
         "data": "nodes"
       },
+
       "encode": {
         "enter": {
           "fill": {
             "scale": "color",
             "field": "city"
           },
+
           "stroke": {
             "value": "#FFFFFF"
           },
+
           "strokeWidth": {
             "value": 2
           },
+
           "tooltip": {
             "signal": "{'Urban area': datum.city, 'Recorded species richness': format(datum.species_richness, ','), 'Period': '2016–2025'}"
           }
         },
+
         "update": {
           "x": {
             "field": "x"
           },
+
           "y": {
             "field": "y"
           },
+
           "size": {
             "scale": "nodeSize",
             "field": "species_richness"
@@ -254,39 +375,50 @@
         }
       }
     },
+
     {
       "type": "text",
+
       "from": {
         "data": "nodes"
       },
+
       "encode": {
         "enter": {
           "text": {
             "field": "city"
           },
+
           "font": {
             "value": "Source Sans 3"
           },
+
           "fontSize": {
             "value": 14
           },
+
           "fontWeight": {
             "value": 600
           },
+
           "fill": {
             "value": "#202622"
           }
         },
+
         "update": {
           "x": {
             "signal": "cx + cos(datum.angle) * (radius + sqrt(scale('nodeSize', datum.species_richness))/2 + 10)"
           },
+
           "y": {
             "signal": "cy + sin(datum.angle) * (radius + sqrt(scale('nodeSize', datum.species_richness))/2 + 10)"
           },
+
           "align": {
             "field": "labelAlign"
           },
+
           "baseline": {
             "field": "labelBaseline"
           }

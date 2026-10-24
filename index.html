@@ -691,304 +691,302 @@
       </section>
 
       <!-- Section 4 -->
+      <!-- =========================================================
+     SECTION 4 — CONNECTIONS & SPATIAL PATTERNS
+     ========================================================= -->
+
       <section class="story-section" id="connections">
+        <!-- =======================================================
+       SECTION HEADING
+       ======================================================= -->
+
         <div class="section-heading">
           <div class="section-kicker">
             <span class="section-number">04</span>
-            <span class="eyebrow">CONNECTED CITIES</span>
+            <span class="eyebrow">CONNECTIONS & SPATIAL PATTERNS</span>
           </div>
 
-          <h2>City boundaries do not define wildlife communities.</h2>
+          <h2>
+            Wildlife communities connect across cities<br />
+            and cluster unevenly within them.
+          </h2>
 
           <p class="section-intro">
-            Geographic layouts can suffer from severe overlapping, hiding the
-            true strength of the network. This circular layout reorganises the
-            cities by recorded richness to cleanly expose the relationships.
+            Shared species connect Australia's urban wildlife communities, while
+            fine-scale occurrence records reveal where wildlife observations
+            concentrate within individual cities.
           </p>
         </div>
 
-        <!-- CHART 9 -->
-        <article class="chart-card chart-wide" id="chart-9">
-          <header class="chart-header">
-            <h3>
-              Sydney and Brisbane lead Australia's recorded wildlife overlap
-            </h3>
+        <!-- =======================================================
+       CHART PAIR — NETWORK + BIN MAP
+       ======================================================= -->
 
-            <p>
-              Shared-species counts reveal differences in documented wildlife
-              overlap among eight Australian urban areas, 2016–2025.
-            </p>
-          </header>
+        <div class="chart-pair chart-pair--1-1 spatial-chart-pair">
+          <!-- =====================================================
+     CHART 9 — NETWORK DIAGRAM
+     ===================================================== -->
 
-          <div class="split-layout split-layout--2-1 split-layout--center">
-            <div class="split-main">
+          <article
+            class="chart-card chart-pair-card spatial-pair-card"
+            id="chart-9"
+          >
+            <!-- ===================================================
+       HEADER
+       =================================================== -->
+
+            <header class="chart-header">
+              <h3>
+                Sydney and Brisbane lead Australia's recorded wildlife overlap
+              </h3>
+
+              <p>
+                Shared-species counts reveal differences in documented wildlife
+                overlap among eight Australian urban areas, 2016–2025.
+              </p>
+            </header>
+
+            <!-- ===================================================
+       NETWORK VISUALISATION
+       =================================================== -->
+
+            <div class="spatial-pair-visual">
               <div
                 id="city-network"
-                class="chart"
+                class="chart chart-spatial-pair chart-network-pair"
                 role="img"
-                aria-label="Circular network diagram showing
-        shared recorded wildlife species among eight
-        Australian urban areas from 2016 to 2025."
+                aria-label="
+        Circular network diagram showing shared recorded wildlife
+        species among eight Australian urban areas from 2016 to 2025.
+        Circle size represents recorded species richness and line width
+        represents the number of species recorded in both connected cities.
+      "
               ></div>
             </div>
 
-            <!-- <aside class="green-context">
-              <span class="context-label">
-                WHAT DOES A STRONG CONNECTION MEAN?
-              </span>
-
-              <p>
-                Thicker connections indicate a greater number of species
-                recorded in both cities. However, raw shared-species counts do
-                not necessarily mean two wildlife communities are proportionally
-                more similar. Cities with longer recorded species lists may also
-                have larger overlaps.
-              </p>
-
-              <p>
-                These connections represent shared documented species, not
-                animal movement between cities. Observation effort may also
-                influence the measured overlap.
-              </p>
-            </aside> -->
-          </div>
-
-          <div class="chart-support">
-            <aside class="chart-insight">
-              <span class="insight-label"> KEY FINDING </span>
-
-              <p class="insight-main">
-                Sydney and Brisbane share the most recorded species among all 28
-                city pairs, with 2,649 documented in both cities.
-              </p>
-
-              <p class="insight-context">
-                Sydney–Melbourne (2,430 species) and
-                Melbourne–Canberra–Queanbeyan (2,285 species) rank next. At the
-                other extreme, Hobart and Darwin share only 159 recorded
-                species.
-              </p>
-            </aside>
-
-            <div class="chart-meta">
-              <span class="insight-label"> HOW TO READ THIS </span>
-
-              <p class="chart-note">
-                Each circle represents one urban area. Circle size indicates
-                recorded species richness, while colour identifies the city.
-              </p>
-
-              <p class="chart-note">
-                Grey lines connect city pairs. Thicker lines represent more
-                distinct species recorded in both cities.
-              </p>
-
-              <p class="chart-note">
-                The circular arrangement is schematic. Node positions and line
-                lengths do not represent geographic distances. Hover for exact
-                values.
-              </p>
-            </div>
-          </div>
-        </article>
-      </section>
-
-      <!-- Section 5 -->
-      <section class="story-section" id="geography">
-        <div class="section-heading">
-          <span class="section-number">05</span>
-
-          <div>
-            <p class="eyebrow">WHERE WILDLIFE IS RECORDED</p>
-
-            <h2>Urban wildlife is concentrated unevenly across space.</h2>
-          </div>
-        </div>
-
-        <!-- Chart 10 -->
-        <!-- =========================================================
-     CHART 10 — HEXAGONAL BIN MAP
-     ========================================================= -->
-
-        <article class="chart-card chart-wide" id="chart-10">
-          <!-- =====================================================
-       HEADER
-       ===================================================== -->
-
-          <header class="chart-header">
-            <h3>Wildlife observations cluster in distinct urban hotspots</h3>
-
-            <p>
-              Equal-resolution H3 hexagons reveal where Atlas of Living
-              Australia occurrence records are concentrated within eight
-              Australian urban areas from 2016–2025.
-            </p>
-          </header>
-
-          <!-- =====================================================
-       MAP + CONTEXT
-       ===================================================== -->
-
-          <div class="split-layout split-layout--2-1 split-layout--center">
             <!-- ===================================================
-         LEFT — MAP + LEGEND
-         =================================================== -->
+       SUPPORT TEXT
+       =================================================== -->
 
-            <div class="split-main">
-              <!-- MAP -->
+            <div class="chart-support chart-support--compact">
+              <!-- KEY FINDING -->
 
+              <aside class="chart-insight">
+                <span class="insight-label"> KEY FINDING </span>
+
+                <p class="insight-main">
+                  Sydney and Brisbane share the most recorded species among all
+                  28 city pairs.
+                </p>
+
+                <p class="insight-context">
+                  They share 2,649 documented species. Sydney–Melbourne follows
+                  with 2,430 species, while Melbourne–Canberra–Queanbeyan shares
+                  2,285. Hobart and Darwin sit at the other extreme, sharing
+                  only 159 recorded species.
+                </p>
+              </aside>
+
+              <!-- HOW TO READ -->
+
+              <div class="chart-meta">
+                <span class="insight-label"> HOW TO READ THIS </span>
+
+                <p class="chart-note">
+                  Each circle represents one urban area. Larger circles indicate
+                  greater recorded species richness, while colour identifies
+                  individual cities.
+                </p>
+
+                <p class="chart-note chart-note--secondary">
+                  Grey lines connect every city pair. Thicker lines indicate
+                  more distinct species recorded in both cities.
+                </p>
+
+                <p class="chart-note chart-note--secondary">
+                  The circular layout is schematic. Node positions and line
+                  lengths do not represent geographic distance. Hover over
+                  circles and links for exact values.
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <!-- =====================================================
+         CHART 10 — HEXAGONAL BIN MAP
+         ===================================================== -->
+
+          <article
+            class="chart-card chart-pair-card spatial-pair-card"
+            id="chart-10"
+          >
+            <!-- HEADER -->
+
+            <header class="chart-header">
+              <h3>Wildlife observations cluster in distinct urban hotspots</h3>
+
+              <p>
+                Equal-resolution hexagons reveal where Atlas of Living Australia
+                occurrence records concentrate within eight Australian urban
+                areas, 2016–2025.
+              </p>
+            </header>
+
+            <!-- ===================================================
+           MAP + INTERACTIVE CONTROLS
+           =================================================== -->
+
+            <div class="spatial-pair-visual spatial-pair-visual--map">
               <div class="map-panel">
                 <div
                   id="bin-map"
-                  class="chart chart--geographic"
+                  class="chart chart--geographic chart-spatial-pair"
                   role="img"
                   aria-label="
-            Interactive hexagonal bin map showing the spatial concentration
-            of Atlas of Living Australia wildlife occurrence records across
-            eight Australian urban areas from 2016 to 2025. Users can choose
-            a city and animal group. Darker hexagons represent higher
-            occurrence-record count classes.
-          "
+              Interactive hexagonal bin map showing the spatial
+              concentration of Atlas of Living Australia wildlife
+              occurrence records across eight Australian urban areas
+              from 2016 to 2025. Users can choose a city and animal
+              group. Darker hexagons represent higher occurrence-record
+              count classes.
+            "
                 ></div>
               </div>
+            </div>
 
-              <!-- =================================================
-           MANUAL BIN-MAP LEGEND
-           ================================================= -->
+            <!-- ===================================================
+           BIN-MAP LEGEND
+           =================================================== -->
 
-              <div
-                class="map-legend"
-                aria-label="Legend for occurrence record classes"
-              >
-                <span class="insight-label"> OCCURRENCE RECORDS PER CELL </span>
+            <div
+              class="map-legend bin-map-legend"
+              aria-label="Legend for occurrence record classes"
+            >
+              <span class="insight-label"> OCCURRENCE RECORDS PER CELL </span>
 
-                <div class="map-legend-items">
-                  <span class="map-legend-item">
-                    <i
-                      class="map-legend-swatch"
-                      style="--swatch: #dcefd8"
-                      aria-hidden="true"
-                    ></i>
-                    1–9
-                  </span>
+              <div class="map-legend-items">
+                <span class="map-legend-item">
+                  <i
+                    class="map-legend-swatch"
+                    style="--swatch: #dcefd8"
+                    aria-hidden="true"
+                  ></i>
 
-                  <span class="map-legend-item">
-                    <i
-                      class="map-legend-swatch"
-                      style="--swatch: #bddfb8"
-                      aria-hidden="true"
-                    ></i>
-                    10–99
-                  </span>
+                  1–9
+                </span>
 
-                  <span class="map-legend-item">
-                    <i
-                      class="map-legend-swatch"
-                      style="--swatch: #90c98b"
-                      aria-hidden="true"
-                    ></i>
-                    100–999
-                  </span>
+                <span class="map-legend-item">
+                  <i
+                    class="map-legend-swatch"
+                    style="--swatch: #bddfb8"
+                    aria-hidden="true"
+                  ></i>
 
-                  <span class="map-legend-item">
-                    <i
-                      class="map-legend-swatch"
-                      style="--swatch: #5fad69"
-                      aria-hidden="true"
-                    ></i>
-                    1,000–9,999
-                  </span>
+                  10–99
+                </span>
 
-                  <span class="map-legend-item">
-                    <i
-                      class="map-legend-swatch"
-                      style="--swatch: #2f8f48"
-                      aria-hidden="true"
-                    ></i>
-                    10,000–99,999
-                  </span>
+                <span class="map-legend-item">
+                  <i
+                    class="map-legend-swatch"
+                    style="--swatch: #90c98b"
+                    aria-hidden="true"
+                  ></i>
 
-                  <span class="map-legend-item">
-                    <i
-                      class="map-legend-swatch"
-                      style="--swatch: #0f5f2b"
-                      aria-hidden="true"
-                    ></i>
-                    100,000+
-                  </span>
-                </div>
+                  100–999
+                </span>
+
+                <span class="map-legend-item">
+                  <i
+                    class="map-legend-swatch"
+                    style="--swatch: #5fad69"
+                    aria-hidden="true"
+                  ></i>
+
+                  1,000–9,999
+                </span>
+
+                <span class="map-legend-item">
+                  <i
+                    class="map-legend-swatch"
+                    style="--swatch: #2f8f48"
+                    aria-hidden="true"
+                  ></i>
+
+                  10,000–99,999
+                </span>
+
+                <span class="map-legend-item">
+                  <i
+                    class="map-legend-swatch"
+                    style="--swatch: #0f5f2b"
+                    aria-hidden="true"
+                  ></i>
+
+                  100,000+
+                </span>
               </div>
             </div>
-          </div>
-
-          <!-- =====================================================
-       SUPPORT
-       ===================================================== -->
-
-          <div class="chart-support">
-            <!-- ===================================================
-         KEY FINDING
-         =================================================== -->
-
-            <aside class="chart-insight">
-              <span class="insight-label"> KEY FINDING </span>
-
-              <p class="insight-main">
-                Wildlife recording is highly uneven within Australia's urban
-                areas.
-              </p>
-
-              <p class="insight-context">
-                A small number of spatial cells contain very large numbers of
-                occurrence records, while many other recorded cells contain much
-                lower totals. Switching animal groups reveals that these
-                hotspots are not distributed identically across birds, mammals,
-                reptiles and insects.
-              </p>
-            </aside>
 
             <!-- ===================================================
-         HOW TO READ
-         =================================================== -->
+           BIN MAP SUPPORT TEXT
+           =================================================== -->
 
-            <div class="chart-meta">
-              <span class="insight-label"> HOW TO READ THIS </span>
+            <div class="chart-support chart-support--compact">
+              <!-- KEY FINDING -->
 
-              <p class="chart-note">
-                Every hexagon uses the same H3 resolution. Darker green cells
-                represent higher numbers of occurrence records for the selected
-                animal group. Cells with no records for the selected group are
-                not displayed.
-              </p>
+              <aside class="chart-insight">
+                <span class="insight-label"> KEY FINDING </span>
 
-              <p class="chart-note chart-note--secondary">
-                Colours use six fixed occurrence-count classes: 1–9, 10–99,
-                100–999, 1,000–9,999, 10,000–99,999 and 100,000 or more records.
-                The same class boundaries are used for every city and
-                animal-group selection, allowing direct comparison between
-                views.
-              </p>
+                <p class="insight-main">
+                  Wildlife recording is highly uneven within Australia's urban
+                  areas.
+                </p>
 
-              <p class="chart-note chart-note--secondary">
-                Each hexagon represents a complete equal-resolution H3 cell.
-                Hexagons intersecting the edge of an urban area may therefore
-                extend slightly beyond its boundary. Counts include only
-                occurrence records assigned to the selected urban area.
-              </p>
+                <p class="insight-context">
+                  Some H3 cells contain very large concentrations of occurrence
+                  records, while many other recorded cells contain much lower
+                  totals. Switching animal groups reveals that recording
+                  hotspots also vary between birds, mammals, reptiles and
+                  insects.
+                </p>
+              </aside>
 
-              <p class="chart-note chart-note--secondary">
-                Hover over a hexagon to see the exact occurrence count and the
-                animal-group breakdown. The map represents recording
-                concentration, not wildlife abundance or population density.
-              </p>
+              <!-- HOW TO READ -->
 
-              <!-- <p class="chart-source">
-                Source: Atlas of Living Australia, 2016–2025. Urban study areas
-                defined using ABS Urban Centres and Localities 2021.
-              </p> -->
+              <div class="chart-meta">
+                <span class="insight-label"> HOW TO READ THIS </span>
+
+                <p class="chart-note">
+                  Every hexagon uses the same H3 resolution. Darker green cells
+                  represent higher numbers of occurrence records for the
+                  selected animal group. Cells with no records for that group
+                  are not displayed.
+                </p>
+
+                <p class="chart-note chart-note--secondary">
+                  Colours use six fixed occurrence-count classes: 1–9, 10–99,
+                  100–999, 1,000–9,999, 10,000–99,999 and 100,000 or more
+                  records. The same classes are used for every city and
+                  animal-group selection, allowing direct comparison between
+                  views.
+                </p>
+
+                <p class="chart-note chart-note--secondary">
+                  Each hexagon represents a complete equal-resolution H3 cell.
+                  Edge cells may extend slightly beyond the urban boundary,
+                  while counts include only occurrence records assigned to the
+                  selected urban area.
+                </p>
+
+                <p class="chart-note chart-note--secondary">
+                  The map represents recording concentration rather than animal
+                  abundance. Hover over a hexagon for exact counts and the
+                  animal-group breakdown.
+                </p>
+              </div>
             </div>
-          </div>
-        </article>
+          </article>
+        </div>
       </section>
 
       <!-- Section 6 -->
