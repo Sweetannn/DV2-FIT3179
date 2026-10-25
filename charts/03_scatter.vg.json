@@ -2,7 +2,7 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
 
   "width": "container",
-  "height": 410,
+  "height": 380,
 
   "autosize": {
     "type": "fit",
@@ -142,7 +142,7 @@
     {
       "transform": [
         {
-          "filter": "datum.city !== 'Melbourne'"
+          "filter": "datum.city === 'Brisbane' || datum.city === 'Sydney'"
         }
       ],
 
@@ -204,7 +204,7 @@
         "align": "right",
         "baseline": "middle",
         "dx": -9,
-        "dy": -9
+        "dy": 9
       },
 
       "encoding": {

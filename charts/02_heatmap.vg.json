@@ -2,9 +2,11 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
 
   "width": "container",
-  "height": 300,
+  "height": 280,
   "padding": {
-    "left": 35
+    "top": 0,
+    "left": 30,
+    "right": 10
   },
 
   "data": {
@@ -113,7 +115,7 @@
 
             "format": ".0%",
 
-            "gradientLength": 450,
+            "gradientLength": 400,
             "gradientThickness": 14,
 
             "titleFont": "Source Sans 3",

@@ -105,7 +105,7 @@
           </h2>
 
           <!-- SECTION 1: BALANCED TWO-COLUMN INTRODUCTION -->
-          <div class="overview-intro-grid">
+          <div class="section-intro-grid">
             <!-- LEFT COLUMN -->
             <p class="section-intro">
               Start with the broadest comparison: where recorded species
@@ -183,127 +183,139 @@
           </div>
         </article>
 
-        <!-- Chart 2 -->
-        <article class="chart-card chart-wide">
-          <header class="chart-header">
-            <h3>
-              Different cities lead different parts of the recorded wildlife
-              community
-            </h3>
+        <div class="chart-pair chart-pair--1-1 overview-chart-pair">
+          <!-- Chart 2 -->
+          <article
+            class="chart-card chart-pair-card overview-pair-card"
+            id="chart-2"
+          >
+            <header class="chart-header">
+              <h3>
+                Different cities lead different parts of the recorded wildlife
+                community
+              </h3>
 
-            <p>
-              Colour compares recorded species richness across cities separately
-              for birds, mammals, reptiles and insects.
-            </p>
-          </header>
+              <p>
+                Colour compares recorded species richness across cities
+                separately for birds, mammals, reptiles and insects.
+              </p>
+            </header>
 
-          <div class="split-layout split-layout--2-1">
-            <div class="split-main">
-              <div
-                id="group-heatmap"
-                class="chart"
-                aria-label="
+            <div class="overview-pair-body">
+              <div class="overview-pair-visual">
+                <div
+                  id="group-heatmap"
+                  class="chart chart-overview-pair"
+                  aria-label="
           Heatmap comparing recorded species richness for birds,
           mammals, reptiles and insects across eight Australian
           urban areas
         "
-              ></div>
-            </div>
-
-            <aside class="split-sidebar">
-              <div class="split-sidebar-block chart-insight">
-                <span class="insight-label"> KEY FINDING </span>
-
-                <p class="insight-main">
-                  Sydney leads birds, mammals and reptiles, while Brisbane
-                  records the greatest insect richness.
-                </p>
-
-                <p class="insight-context">
-                  Brisbane's 4,097 recorded insect species help explain why it
-                  ranks highest overall in recorded species richness.
-                </p>
+                ></div>
               </div>
 
-              <div class="split-sidebar-block">
-                <span class="insight-label"> HOW TO READ THIS </span>
+              <div class="chart-support chart-support--compact">
+                <aside class="chart-insight">
+                  <span class="insight-label"> KEY FINDING </span>
 
-                <p class="chart-note">
-                  Colour is normalised separately within each animal group. A
-                  darker cell means higher recorded richness relative to other
-                  cities for that same group. Compare colour within an animal
-                  group, not between different groups.
-                </p>
+                  <p class="insight-main">
+                    Sydney leads birds, mammals and reptiles, while Brisbane
+                    records <br />the greatest insect richness.
+                  </p>
 
-                <!-- <p class="chart-source">
+                  <p class="insight-context">
+                    Brisbane's 4,097 recorded insect species help explain why it
+                    ranks <br />highest overall in recorded species richness.
+                  </p>
+                </aside>
+
+                <div class="chart-meta">
+                  <span class="insight-label"> HOW TO READ THIS </span>
+
+                  <p class="chart-note">
+                    Colour is normalised separately within each animal group. A
+                    darker <br />cell means higher recorded richness relative to
+                    other cities for <br />that same group. Compare colour
+                    within an animal group,<br />
+                    not between different groups.
+                  </p>
+
+                  <!-- <p class="chart-source">
                   Source: Atlas of Living Australia, 2016–2025.
                 </p> -->
+                </div>
               </div>
-            </aside>
-          </div>
-        </article>
+            </div>
+          </article>
 
-        <!-- Chart 3 -->
-        <article class="chart-card chart-wide">
-          <header class="chart-header">
-            <h3>More observations do not always mean more recorded species</h3>
-
-            <p>
-              Comparing occurrence-record totals with recorded species richness
-              shows how recording intensity can influence the biodiversity
-              record.
-            </p>
-          </header>
-
-          <div
-            class="split-layout split-layout--1-2 split-layout--reverse split-layout--center"
+          <!-- Chart 3 -->
+          <article
+            class="chart-card chart-pair-card overview-pair-card"
+            id="chart-3"
           >
-            <div class="split-main">
-              <div
-                id="effort-scatter"
-                class="chart"
-                aria-label="
+            <header class="chart-header">
+              <h3>
+                More observations do not always mean more recorded species
+              </h3>
+
+              <p>
+                Comparing occurrence-record totals with recorded species
+                richness shows how recording intensity can influence the
+                biodiversity record.
+              </p>
+            </header>
+
+            <div class="overview-pair-body">
+              <div class="overview-pair-visual">
+                <div
+                  id="effort-scatter"
+                  class="chart chart-overview-pair"
+                  aria-label="
                   Scatterplot comparing Atlas of Living Australia occurrence
                   records with recorded species richness across eight
                   Australian urban areas
                 "
-              ></div>
-            </div>
-
-            <aside class="split-sidebar">
-              <div class="split-sidebar-block chart-insight">
-                <span class="insight-label"> KEY FINDING </span>
-
-                <p class="insight-main">
-                  More observations are generally associated with greater
-                  recorded species richness, but the relationship is not
-                  one-to-one.
-                </p>
-
-                <p class="insight-context">
-                  Melbourne has the most occurrence records, yet Brisbane and
-                  Sydney record greater species richness. Observation volume
-                  therefore does not fully explain differences in recorded
-                  richness.
-                </p>
+                ></div>
               </div>
 
-              <div class="split-sidebar-block">
-                <span class="insight-label"> HOW TO READ THIS </span>
+              <div class="chart-support chart-support--compact">
+                <aside class="chart-insight">
+                  <span class="insight-label"> KEY FINDING </span>
 
-                <p class="chart-note">
-                  Each point represents one urban area. Moving right means more
-                  Atlas of Living Australia occurrence records, while moving
-                  upward means greater recorded species richness.
-                </p>
+                  <p class="insight-main">
+                    More observations are generally associated with greater
+                    recorded <br />species richness, but the relationship is not
+                    one-to-one.
+                  </p>
 
-                <!-- <p class="chart-source">
+                  <p class="insight-context">
+                    Melbourne has the most occurrence records, yet Brisbane and
+                    Sydney<br />
+                    record greater species richness. Observation volume
+                    therefore does not fully <br />explain differences in
+                    recorded richness.
+                  </p>
+                </aside>
+
+                <div class="chart-meta">
+                  <span class="insight-label"> HOW TO READ THIS </span>
+
+                  <p class="chart-note">
+                    Each point represents one urban area. Moving right means
+                    more<br />
+                    Atlas of Living Australia occurrence records, while moving
+                    upward means<br />
+                    greater recorded species richness.
+                  </p>
+
+                  <!-- <p class="chart-source">
                   Source: Atlas of Living Australia, 2016–2025.
                 </p> -->
+                </div>
               </div>
-            </aside>
-          </div>
-        </article>
+            </div>
+          </article>
+        </div>
       </section>
 
       <!-- SECTION 2 -->
@@ -316,11 +328,23 @@
 
           <h2>Some recorded species appear across every <br />studied city.</h2>
 
-          <p class="section-intro">
-            Move from city totals to individual species. Which wildlife is
-            documented across all eight urban areas, and which of those
-            widespread species is recorded most frequently?
-          </p>
+          <!-- SECTION 2: BALANCED TWO-COLUMN INTRODUCTION -->
+          <div class="section-intro-grid">
+            <!-- LEFT COLUMN -->
+            <p class="section-intro">
+              Move from city totals to individual species. Which wildlife is
+              documented across all eight urban areas, and which of those
+              widespread species is recorded most frequently?
+            </p>
+
+            <!-- RIGHT COLUMN -->
+            <p class="section-intro">
+              Species recorded in every city reveal shared patterns of urban
+              wildlife. However, frequent sightings reflect recording activity,
+              not necessarily larger populations or greater ecological
+              importance.
+            </p>
+          </div>
         </div>
 
         <!-- Chart 5 -->
@@ -415,20 +439,27 @@
       <section class="story-section" id="time">
         <!-- SECTION HEADING -->
         <div class="section-heading">
-          <span class="section-number">03</span>
+          <div class="section-kicker">
+            <span class="section-number">03</span>
+            <span class="eyebrow">CHANGE THROUGH TIME</span>
+          </div>
 
-          <div>
-            <p class="eyebrow">CHANGE THROUGH TIME</p>
+          <h2>
+            Recorded urban wildlife changes across years
+            <br />and across seasons.
+          </h2>
 
-            <h2>
-              Recorded urban wildlife changes across years
-              <br />and across seasons.
-            </h2>
-
+          <div class="section-intro-grid">
             <p class="section-intro">
               Annual rankings reveal which cities moved relative to one another,
-              endpoint values show the magnitude of change between 2016 and
-              2025, and monthly records reveal recurring seasonal patterns.
+              while endpoint values show the magnitude of change between 2016
+              and 2025.
+            </p>
+
+            <p class="section-intro">
+              Monthly records reveal recurring seasonal patterns. These patterns
+              describe recording activity and may reflect both ecological
+              seasonality and changes in observation or reporting behaviour.
             </p>
           </div>
         </div>
@@ -675,12 +706,19 @@
             remain spatially uneven.
           </h2>
 
-          <p class="section-intro">
-            Pairwise overlap shows which cities share the most species, exact
-            intersections reveal how those species are distributed across city
-            combinations, and hexagonal bins expose where observations
-            concentrate within individual urban areas.
-          </p>
+          <div class="section-intro-grid">
+            <p class="section-intro">
+              Pairwise overlap shows which cities share the most species, while
+              exact intersections reveal how those species are distributed
+              across city combinations.
+            </p>
+
+            <p class="section-intro">
+              Hexagonal bins expose where observations concentrate within
+              individual urban areas. These hotspots reflect recorded activity
+              rather than complete measures of wildlife abundance.
+            </p>
+          </div>
         </div>
 
         <!-- =======================================================
@@ -1038,21 +1076,27 @@
       <!-- Section 5 -->
       <section class="story-section" id="threatened">
         <div class="section-heading">
-          <span class="section-number">05</span>
+          <div class="section-kicker">
+            <span class="section-number">05</span>
+            <span class="eyebrow">SPECIES AT RISK</span>
+          </div>
 
-          <div>
-            <p class="eyebrow">SPECIES AT RISK</p>
+          <h2>
+            Nationally threatened wildlife is still recorded<br />inside
+            Australia's cities.
+          </h2>
 
-            <h2>
-              Nationally threatened wildlife is still recorded<br />inside
-              Australia's cities.
-            </h2>
-
+          <div class="section-intro-grid">
             <p class="section-intro">
               Threatened species occur in the analysed urban records across all
               eight cities, but their share of local recorded species varies
-              substantially. The final map asks where those proportions are
-              highest.
+              substantially.
+            </p>
+
+            <p class="section-intro">
+              The final map compares those proportions across local government
+              areas. Recorded presence provides geographic context, not a
+              measure of population size or conservation condition.
             </p>
           </div>
         </div>

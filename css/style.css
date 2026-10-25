@@ -1044,12 +1044,58 @@ sidebar | visual
   flex-direction: column;
 }
 
+/* Charts 2 and 3: balanced 1:1 overview pair. */
+.overview-chart-pair {
+  align-items: stretch;
+}
+
+.overview-pair-card {
+  height: 100%;
+}
+
+.overview-pair-card .chart-header {
+  min-height: 8.75rem;
+}
+
+.overview-pair-body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+
+  min-width: 0;
+}
+
+.overview-pair-visual {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+
+  width: 100%;
+  min-width: 0;
+  height: 410px;
+  min-height: 410px;
+}
+
+.chart-overview-pair {
+  width: 100%;
+  min-width: 0;
+  min-height: 0;
+}
+
 /* =========================================================
    HEADINGS
    ========================================================= */
 
 .chart-pair-card .chart-header {
   margin-bottom: 1.25rem;
+}
+
+.overview-pair-card .chart-header {
+  margin-bottom: 1rem;
+}
+
+.overview-pair-card .chart-support--compact {
+  margin-top: 0.5rem;
 }
 
 .chart-pair-card .chart-header h3 {
@@ -1178,6 +1224,10 @@ sidebar | visual
 
   .chart-pair {
     gap: 1.5rem;
+  }
+
+  .overview-pair-card .chart-header {
+    min-height: 0;
   }
 
   .chart-ranking-compact,
@@ -3064,8 +3114,8 @@ sidebar | visual
   margin-right: 0;
 }
 
-/* Match the hero's two-column geometry in Section 1 and the epilogue. */
-#overview .overview-intro-grid {
+/* Match the hero's two-column geometry in every section introduction. */
+.section-heading > .section-intro-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   column-gap: var(--editorial-column-gap);
@@ -3121,7 +3171,7 @@ sidebar | visual
 }
 
 @media (max-width: 850px) {
-  #overview .overview-intro-grid {
+  .section-heading > .section-intro-grid {
     grid-template-columns: minmax(0, 1fr);
     row-gap: 1.5rem;
   }
