@@ -338,7 +338,7 @@
           "mark": {
             "type": "text",
             "font": "Source Sans 3",
-            "fontSize": 13,
+            "fontSize": 14,
             "fontWeight": 700,
             "color": "#202622",
             "align": "left",
@@ -376,7 +376,7 @@
           "mark": {
             "type": "text",
             "font": "Source Sans 3",
-            "fontSize": 12,
+            "fontSize": 13,
             "fontWeight": 400,
             "color": "#68706A",
             "align": "left",
