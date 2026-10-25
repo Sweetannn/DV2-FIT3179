@@ -136,8 +136,10 @@
                 "padding": 30,
                 "labelOffset": 10,
                 "symbolOpacity": 0.72,
+                "titleFont": "Source Sans 3",
                 "titleFontSize": 14,
                 "titleFontWeight": 600,
+                "labelFont": "Source Sans 3",
                 "labelFontSize": 12,
                 "labelColor": "#68706A",
                 "titleColor": "#202622"

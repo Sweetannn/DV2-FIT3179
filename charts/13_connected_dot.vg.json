@@ -179,7 +179,7 @@
           "scale": {
             "domain": ["2016", "2025"],
 
-            "range": ["#4f8217", "#3f5eba"]
+            "range": ["#4f8217", "#872e7b"]
           },
 
           "legend": {
@@ -190,9 +190,11 @@
             "labelFont": "Source Sans 3",
             "labelFontSize": 12,
             "labelColor": "#68706a",
+            "labelOffset": 10,
 
             "symbolType": "circle",
             "symbolSize": 180,
+            "symbolOpacity": 0.72,
 
             "offset": 8
           }
@@ -228,7 +230,7 @@
           {
             "field": "percent_change",
             "type": "quantitative",
-            "title": "Percentage change",
+            "title": "Percentage change (%)",
             "format": "+.1f"
           }
         ]

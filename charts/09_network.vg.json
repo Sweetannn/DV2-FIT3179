@@ -2,7 +2,7 @@
   "$schema": "https://vega.github.io/schema/vega/v5.json",
 
   "width": 650,
-  "height": 600,
+  "height": 715,
 
   "padding": {
     "top": 10,
@@ -16,7 +16,7 @@
   "signals": [
     {
       "name": "radius",
-      "value": 160
+      "value": 205
     },
     {
       "name": "cx",
@@ -24,7 +24,7 @@
     },
     {
       "name": "cy",
-      "value": 400
+      "value": 450
     }
   ],
 
@@ -202,25 +202,25 @@
 
       "symbolStrokeWidth": 1.5,
 
-      "symbolOpacity": 1,
+      "symbolOpacity": 0.72,
 
       "titleFont": "Source Sans 3",
 
-      "titleFontSize": 15,
+      "titleFontSize": 16,
 
-      "titleFontWeight": "bold",
+      "titleFontWeight": 600,
 
-      "titleColor": "#325C4B",
+      "titleColor": "#202622",
 
-      "titlePadding": 8,
+      "titlePadding": 10,
 
       "labelFont": "Source Sans 3",
 
-      "labelFontSize": 15,
+      "labelFontSize": 14,
 
       "labelColor": "#68706A",
 
-      "labelOffset": 7,
+      "labelOffset": 10,
 
       "columnPadding": 20,
 
@@ -254,25 +254,25 @@
 
       "symbolStrokeColor": "#68706A",
 
-      "symbolOpacity": 0.9,
+      "symbolOpacity": 0.72,
 
       "titleFont": "Source Sans 3",
 
-      "titleFontSize": 15,
+      "titleFontSize": 16,
 
-      "titleFontWeight": "bold",
+      "titleFontWeight": 600,
 
-      "titleColor": "#325C4B",
+      "titleColor": "#202622",
 
-      "titlePadding": 8,
+      "titlePadding": 10,
 
       "labelFont": "Source Sans 3",
 
-      "labelFontSize": 15,
+      "labelFontSize": 14,
 
       "labelColor": "#68706A",
 
-      "labelOffset": 7,
+      "labelOffset": 10,
 
       "columnPadding": 28,
 

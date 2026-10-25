@@ -1575,7 +1575,15 @@ sidebar | visual
 }
 
 .map-legend .insight-label {
-  margin-bottom: var(--space-xs);
+  margin-bottom: 10px;
+
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.35;
+  letter-spacing: 0;
+
+  text-transform: none;
+  color: var(--color-text);
 }
 
 .map-legend-items {
@@ -1588,8 +1596,8 @@ sidebar | visual
 .map-legend-item {
   display: inline-flex;
   align-items: center;
-  gap: 0.45rem;
-  font-size: 0.85rem;
+  gap: 10px;
+  font-size: 12px;
   color: var(--color-muted);
 }
 
@@ -1601,6 +1609,7 @@ sidebar | visual
   background: var(--swatch);
   border: 1px solid var(--color-rule);
   border-radius: 3px;
+  opacity: 0.72;
 }
 
 @media (max-width: 650px) {
@@ -1609,7 +1618,7 @@ sidebar | visual
   }
 
   .map-legend-item {
-    font-size: 0.78rem;
+    font-size: 12px;
   }
 }
 
@@ -2398,16 +2407,15 @@ sidebar | visual
   padding-bottom: var(--space-sm);
 }
 
-/*
-  Bin-map legend remains one horizontal wrapping row.
-*/
+/* Arrange the six bin classes as two balanced rows of three. */
 
 .bin-map-legend .map-legend-items {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   align-items: center;
 
-  gap: 0.65rem 1rem;
+  column-gap: 2rem;
+  row-gap: 0.85rem;
 }
 
 /* =========================================================
@@ -2627,6 +2635,10 @@ sidebar | visual
   .network-legend-items,
   .bin-map-legend .map-legend-items {
     gap: 0.5rem 0.75rem;
+  }
+
+  .bin-map-legend .map-legend-items {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .network-legend-item {

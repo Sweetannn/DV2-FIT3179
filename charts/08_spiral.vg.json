@@ -37,6 +37,11 @@
 
   "transform": [
     {
+      "calculate": "['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'][datum.month - 1]",
+      "as": "month_full"
+    },
+
+    {
       "aggregate": [
         {
           "op": "sum",
@@ -45,7 +50,7 @@
         }
       ],
 
-      "groupby": ["year", "month", "month_name"]
+      "groupby": ["year", "month", "month_full"]
     },
 
     {
@@ -76,22 +81,22 @@
 
       "encoding": {
         "x": {
-          "datum": "Oct",
+          "datum": "October",
           "type": "ordinal",
 
           "sort": [
-            "Jan",
-            "Feb",
-            "Mar",
-            "Apr",
+            "January",
+            "February",
+            "March",
+            "April",
             "May",
-            "Jun",
-            "Jul",
-            "Aug",
-            "Sep",
-            "Oct",
-            "Nov",
-            "Dec"
+            "June",
+            "July",
+            "August",
+            "September",
+            "October",
+            "November",
+            "December"
           ]
         },
 
@@ -159,14 +164,14 @@
 
         "font": "Source Sans 3",
         "fontSize": 12,
-        "fontWeight": 600,
+        "fontWeight": 500,
 
         "color": "#68706a"
       },
 
       "encoding": {
         "x": {
-          "datum": "Dec"
+          "datum": "December"
         },
 
         "y": {
@@ -211,22 +216,22 @@
 
       "encoding": {
         "x": {
-          "field": "month_name",
+          "field": "month_full",
           "type": "ordinal",
 
           "sort": [
-            "Jan",
-            "Feb",
-            "Mar",
-            "Apr",
+            "January",
+            "February",
+            "March",
+            "April",
             "May",
-            "Jun",
-            "Jul",
-            "Aug",
-            "Sep",
-            "Oct",
-            "Nov",
-            "Dec"
+            "June",
+            "July",
+            "August",
+            "September",
+            "October",
+            "November",
+            "December"
           ],
 
           "axis": {
@@ -315,8 +320,10 @@
             "labelFont": "Source Sans 3",
             "labelFontSize": 12,
             "labelColor": "#68706a",
+            "labelOffset": 10,
             "symbolType": "stroke",
-            "symbolStrokeWidth": 10,
+            "symbolStrokeWidth": 8,
+            "symbolOpacity": 1,
             "offset": 10
           }
         },
@@ -329,7 +336,7 @@
           },
 
           {
-            "field": "month_name",
+            "field": "month_full",
             "type": "nominal",
             "title": "Month"
           },
@@ -390,22 +397,22 @@
 
       "encoding": {
         "x": {
-          "field": "month_name",
+          "field": "month_full",
           "type": "ordinal",
 
           "sort": [
-            "Jan",
-            "Feb",
-            "Mar",
-            "Apr",
+            "January",
+            "February",
+            "March",
+            "April",
             "May",
-            "Jun",
-            "Jul",
-            "Aug",
-            "Sep",
-            "Oct",
-            "Nov",
-            "Dec"
+            "June",
+            "July",
+            "August",
+            "September",
+            "October",
+            "November",
+            "December"
           ]
         },
 
@@ -435,8 +442,10 @@
             "labelFont": "Source Sans 3",
             "labelFontSize": 12,
             "labelColor": "#68706a",
+            "labelOffset": 10,
             "symbolType": "stroke",
             "symbolStrokeWidth": 3,
+            "symbolOpacity": 0.72,
             "offset": 10
           }
         },
@@ -449,7 +458,7 @@
           },
 
           {
-            "field": "month_name",
+            "field": "month_full",
             "type": "nominal",
             "title": "Month"
           },
@@ -493,7 +502,7 @@
             }
           ],
 
-          "groupby": ["month", "month_name"]
+          "groupby": ["month", "month_full"]
         },
 
         {
@@ -520,22 +529,22 @@
 
       "encoding": {
         "x": {
-          "field": "month_name",
+          "field": "month_full",
           "type": "ordinal",
 
           "sort": [
-            "Jan",
-            "Feb",
-            "Mar",
-            "Apr",
+            "January",
+            "February",
+            "March",
+            "April",
             "May",
-            "Jun",
-            "Jul",
-            "Aug",
-            "Sep",
-            "Oct",
-            "Nov",
-            "Dec"
+            "June",
+            "July",
+            "August",
+            "September",
+            "October",
+            "November",
+            "December"
           ]
         },
 
@@ -565,7 +574,7 @@
             }
           ],
 
-          "groupby": ["month", "month_name"]
+          "groupby": ["month", "month_full"]
         },
 
         {
@@ -592,22 +601,22 @@
 
       "encoding": {
         "x": {
-          "field": "month_name",
+          "field": "month_full",
           "type": "ordinal",
 
           "sort": [
-            "Jan",
-            "Feb",
-            "Mar",
-            "Apr",
+            "January",
+            "February",
+            "March",
+            "April",
             "May",
-            "Jun",
-            "Jul",
-            "Aug",
-            "Sep",
-            "Oct",
-            "Nov",
-            "Dec"
+            "June",
+            "July",
+            "August",
+            "September",
+            "October",
+            "November",
+            "December"
           ]
         },
 
@@ -648,22 +657,22 @@
 
       "encoding": {
         "x": {
-          "field": "month_name",
+          "field": "month_full",
           "type": "ordinal",
 
           "sort": [
-            "Jan",
-            "Feb",
-            "Mar",
-            "Apr",
+            "January",
+            "February",
+            "March",
+            "April",
             "May",
-            "Jun",
-            "Jul",
-            "Aug",
-            "Sep",
-            "Oct",
-            "Nov",
-            "Dec"
+            "June",
+            "July",
+            "August",
+            "September",
+            "October",
+            "November",
+            "December"
           ]
         },
 
