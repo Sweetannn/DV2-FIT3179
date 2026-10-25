@@ -1632,6 +1632,11 @@ sidebar | visual
   opacity: 0.72;
 }
 
+/* Match the bin-map legend to the darker map marks. */
+.bin-map-legend .map-legend-swatch {
+  opacity: 0.96;
+}
+
 @media (max-width: 650px) {
   .map-legend-items {
     gap: 0.5rem 0.8rem;
