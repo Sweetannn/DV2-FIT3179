@@ -83,7 +83,7 @@
           "title": "Recorded species richness",
 
           "scale": {
-            "domain": [1000, 5000],
+            "domain": [0, 5000],
             "nice": false,
             "zero": false
           },
@@ -113,7 +113,9 @@
 
             "format": ",.0f",
 
-            "values": [1000, 1500, 2000, 2500, 3000, 3500, 4000, 4500, 5000]
+            "values": [
+              0, 500, 1000, 1500, 2000, 2500, 3000, 3500, 4000, 4500, 5000
+            ]
           }
         },
 
@@ -175,7 +177,7 @@
           "type": "quantitative",
 
           "scale": {
-            "domain": [1000, 5000],
+            "domain": [0, 5000],
             "nice": false,
             "zero": false
           }
@@ -224,7 +226,7 @@
           "type": "quantitative",
 
           "scale": {
-            "domain": [1000, 5000],
+            "domain": [0, 5000],
             "nice": false,
             "zero": false
           }
