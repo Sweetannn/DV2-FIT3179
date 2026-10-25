@@ -345,7 +345,7 @@
             "baseline": "bottom",
             "dy": 100,
             "lineBreak": "\n",
-            "lineHeight": 16
+            "lineHeight": 18
           },
 
           "encoding": {
@@ -381,9 +381,9 @@
             "color": "#68706A",
             "align": "left",
             "baseline": "top",
-            "dy": 118,
+            "dy": 125,
             "lineBreak": "\n",
-            "lineHeight": 16
+            "lineHeight": 18
           },
 
           "encoding": {

@@ -83,6 +83,7 @@
           "axis": {
             "labelFont": "Source Sans 3",
             "labelFontSize": 13,
+            "labelFontWeight": 600,
             "labelColor": "#202622",
             "labelPadding": 12,
             "labelLimit": 190,

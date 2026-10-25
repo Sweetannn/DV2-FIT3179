@@ -534,7 +534,7 @@ Equal columns
 }
 
 .split-sidebar .insight-main {
-  max-width: 32ch;
+  max-width: none;
 
   margin: 0 0 0.85rem;
 
@@ -547,7 +547,7 @@ Equal columns
 
 .split-sidebar .insight-context,
 .split-sidebar .chart-note {
-  max-width: 34ch;
+  max-width: none;
 
   margin: 0;
 
@@ -558,7 +558,7 @@ Equal columns
 }
 
 .split-sidebar .chart-source {
-  max-width: 34ch;
+  max-width: none;
 
   margin-top: 0.85rem;
 
@@ -617,7 +617,7 @@ sidebar | visual
 .split-layout--reverse .split-sidebar .insight-context,
 .split-layout--reverse .split-sidebar .chart-note,
 .split-layout--reverse .split-sidebar .chart-source {
-  max-width: 40ch;
+  max-width: none;
 }
 
 .split-layout--reverse .chart-insight {
