@@ -1,317 +1,407 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
 
-  "width": "container",
-  "height": 500,
+  "spacing": 10,
+  "bounds": "full",
 
-  "projection": {
-    "type": "conicEqualArea",
-    "parallels": [-18, -36],
-    "rotate": [-132, 0, 0],
-    "center": [0, -27]
-  },
-
-  "layer": [
+  "hconcat": [
     {
-      "data": {
-        "url": "geo/final/countries-110m.json",
-        "format": {
-          "type": "topojson",
-          "feature": "countries"
-        }
+      "width": 800,
+      "height": 500,
+
+      "projection": {
+        "type": "conicEqualArea",
+        "parallels": [-18, -36],
+        "rotate": [-132, 0, 0],
+        "center": [0, -27]
       },
 
-      "transform": [
+      "layer": [
         {
-          "filter": "toNumber(datum.id) == 36"
-        }
-      ],
-
-      "mark": {
-        "type": "geoshape",
-        "fill": "#ecf2ee",
-        "stroke": "#6e7772",
-        "strokeWidth": 0.8
-      }
-    },
-
-    {
-      "data": {
-        "url": "geo/final/city_boundaries.topojson",
-        "format": {
-          "type": "topojson",
-          "feature": "cities"
-        }
-      },
-
-      "mark": {
-        "type": "geoshape",
-        "fill": "#e7f7ed",
-        "stroke": "#7b847f",
-        "strokeWidth": 0.9,
-        "opacity": 0.7
-      }
-    },
-
-    {
-      "data": {
-        "url": "data/final/01_city_label_positions.csv"
-      },
-
-      "mark": {
-        "type": "rule",
-        "stroke": "#76837B",
-        "strokeWidth": 0.75,
-        "opacity": 0.6
-      },
-
-      "encoding": {
-        "longitude": {
-          "field": "longitude",
-          "type": "quantitative"
-        },
-
-        "latitude": {
-          "field": "latitude",
-          "type": "quantitative"
-        },
-
-        "longitude2": {
-          "field": "label_longitude"
-        },
-
-        "latitude2": {
-          "field": "label_latitude"
-        }
-      }
-    },
-
-    {
-      "data": {
-        "url": "data/final/01_city_summary.csv"
-      },
-
-      "mark": {
-        "type": "circle",
-        "opacity": 0.72,
-        "fill": "#e6df8e",
-        "stroke": "#bdb558",
-        "strokeWidth": 0.8
-      },
-
-      "encoding": {
-        "longitude": {
-          "field": "longitude",
-          "type": "quantitative"
-        },
-
-        "latitude": {
-          "field": "latitude",
-          "type": "quantitative"
-        },
-
-        "size": {
-          "field": "species_richness",
-          "type": "quantitative",
-          "title": "Species richness",
-
-          "scale": {
-            "domain": [1300, 4800],
-            "range": [500, 3400]
+          "data": {
+            "url": "geo/final/countries-110m.json",
+            "format": {
+              "type": "topojson",
+              "feature": "countries"
+            }
           },
 
-          "legend": {
-            "title": "Species richness",
-            "titlePadding": 10,
-            "values": [1500, 2500, 3500, 4500],
-            "format": ",.0f",
-            "orient": "right",
-            "direction": "vertical",
-            "offset": 8,
-            "padding": 30,
-            "labelOffset": 10,
-            "symbolOpacity": 0.72,
-            "titleFontSize": 14,
-            "titleFontWeight": 600,
-            "labelFontSize": 12,
-            "labelColor": "#68706A",
-            "titleColor": "#202622"
+          "transform": [
+            {
+              "filter": "toNumber(datum.id) == 36"
+            }
+          ],
+
+          "mark": {
+            "type": "geoshape",
+            "fill": "#e9ecea",
+            "stroke": "#6e7772",
+            "strokeWidth": 0.8
           }
         },
 
-        "color": {
-          "value": "#325C4B"
-        },
-
-        "tooltip": [
-          {
-            "field": "city",
-            "type": "nominal",
-            "title": "City"
+        {
+          "data": {
+            "url": "geo/final/city_boundaries.topojson",
+            "format": {
+              "type": "topojson",
+              "feature": "cities"
+            }
           },
 
-          {
-            "field": "species_richness",
-            "type": "quantitative",
-            "title": "Species richness",
-            "format": ","
-          },
-
-          {
-            "field": "record_count",
-            "type": "quantitative",
-            "title": "Occurrence records",
-            "format": ","
-          },
-
-          {
-            "field": "bird_species",
-            "type": "quantitative",
-            "title": "Bird species",
-            "format": ","
-          },
-
-          {
-            "field": "mammal_species",
-            "type": "quantitative",
-            "title": "Mammal species",
-            "format": ","
-          },
-
-          {
-            "field": "reptile_species",
-            "type": "quantitative",
-            "title": "Reptile species",
-            "format": ","
-          },
-
-          {
-            "field": "insect_species",
-            "type": "quantitative",
-            "title": "Insect species",
-            "format": ","
+          "mark": {
+            "type": "geoshape",
+            "fill": "#e7f7ed",
+            "stroke": "#7b847f",
+            "strokeWidth": 0.9,
+            "opacity": 0.7
           }
-        ]
-      }
+        },
+
+        {
+          "data": {
+            "url": "data/final/01_city_label_positions.csv"
+          },
+
+          "mark": {
+            "type": "rule",
+            "stroke": "#76837B",
+            "strokeWidth": 0.75,
+            "opacity": 0.6
+          },
+
+          "encoding": {
+            "longitude": {
+              "field": "longitude",
+              "type": "quantitative"
+            },
+
+            "latitude": {
+              "field": "latitude",
+              "type": "quantitative"
+            },
+
+            "longitude2": {
+              "field": "label_longitude"
+            },
+
+            "latitude2": {
+              "field": "label_latitude"
+            }
+          }
+        },
+
+        {
+          "data": {
+            "url": "data/final/01_city_summary.csv"
+          },
+
+          "mark": {
+            "type": "circle",
+            "opacity": 0.72,
+            "fill": "#53a172",
+            "stroke": "#357d6f",
+            "strokeWidth": 0.8
+          },
+
+          "encoding": {
+            "longitude": {
+              "field": "longitude",
+              "type": "quantitative"
+            },
+
+            "latitude": {
+              "field": "latitude",
+              "type": "quantitative"
+            },
+
+            "size": {
+              "field": "species_richness",
+              "type": "quantitative",
+              "title": "Species richness",
+
+              "scale": {
+                "domain": [1300, 4800],
+                "range": [500, 3400]
+              },
+
+              "legend": {
+                "title": "Species richness",
+                "titlePadding": 10,
+                "values": [1500, 2500, 3500, 4500],
+                "format": ",.0f",
+                "orient": "left",
+                "direction": "vertical",
+                "offset": 4,
+                "padding": 30,
+                "labelOffset": 10,
+                "symbolOpacity": 0.72,
+                "titleFontSize": 14,
+                "titleFontWeight": 600,
+                "labelFontSize": 12,
+                "labelColor": "#68706A",
+                "titleColor": "#202622"
+              }
+            },
+
+            "color": {
+              "value": "#325C4B"
+            },
+
+            "tooltip": [
+              {
+                "field": "city",
+                "type": "nominal",
+                "title": "City"
+              },
+
+              {
+                "field": "species_richness",
+                "type": "quantitative",
+                "title": "Species richness",
+                "format": ","
+              },
+
+              {
+                "field": "record_count",
+                "type": "quantitative",
+                "title": "Occurrence records",
+                "format": ","
+              },
+
+              {
+                "field": "bird_species",
+                "type": "quantitative",
+                "title": "Bird species",
+                "format": ","
+              },
+
+              {
+                "field": "mammal_species",
+                "type": "quantitative",
+                "title": "Mammal species",
+                "format": ","
+              },
+
+              {
+                "field": "reptile_species",
+                "type": "quantitative",
+                "title": "Reptile species",
+                "format": ","
+              },
+
+              {
+                "field": "insect_species",
+                "type": "quantitative",
+                "title": "Insect species",
+                "format": ","
+              }
+            ]
+          }
+        },
+
+        {
+          "data": {
+            "url": "data/final/01_city_label_positions.csv"
+          },
+
+          "transform": [
+            {
+              "filter": "datum.label_side == 'left'"
+            }
+          ],
+
+          "mark": {
+            "type": "text",
+            "font": "Source Sans 3",
+            "fontSize": 12,
+            "fontWeight": 600,
+            "color": "#202622",
+            "align": "right",
+            "baseline": "middle",
+            "dx": -4
+          },
+
+          "encoding": {
+            "longitude": {
+              "field": "label_longitude",
+              "type": "quantitative"
+            },
+
+            "latitude": {
+              "field": "label_latitude",
+              "type": "quantitative"
+            },
+
+            "text": {
+              "field": "city",
+              "type": "nominal"
+            }
+          }
+        },
+
+        {
+          "data": {
+            "url": "data/final/01_city_label_positions.csv"
+          },
+
+          "transform": [
+            {
+              "filter": "datum.label_side == 'right'"
+            }
+          ],
+
+          "mark": {
+            "type": "text",
+            "font": "Source Sans 3",
+            "fontSize": 12,
+            "fontWeight": 600,
+            "color": "#202622",
+            "align": "left",
+            "baseline": "middle",
+            "dx": 4
+          },
+
+          "encoding": {
+            "longitude": {
+              "field": "label_longitude",
+              "type": "quantitative"
+            },
+
+            "latitude": {
+              "field": "label_latitude",
+              "type": "quantitative"
+            },
+
+            "text": {
+              "field": "city",
+              "type": "nominal"
+            }
+          }
+        },
+
+        {
+          "data": {
+            "url": "data/final/01_city_label_positions.csv"
+          },
+
+          "transform": [
+            {
+              "filter": "datum.label_side == 'center'"
+            }
+          ],
+
+          "mark": {
+            "type": "text",
+            "font": "Source Sans 3",
+            "fontSize": 12,
+            "fontWeight": 600,
+            "color": "#202622",
+            "align": "center",
+            "baseline": "middle"
+          },
+
+          "encoding": {
+            "longitude": {
+              "field": "label_longitude",
+              "type": "quantitative"
+            },
+
+            "latitude": {
+              "field": "label_latitude",
+              "type": "quantitative"
+            },
+
+            "text": {
+              "field": "city",
+              "type": "nominal"
+            }
+          }
+        }
+      ]
     },
 
     {
-      "data": {
-        "url": "data/final/01_city_label_positions.csv"
-      },
+      "width": 260,
+      "height": 500,
 
-      "transform": [
+      "layer": [
         {
-          "filter": "datum.label_side == 'left'"
-        }
-      ],
+          "data": {
+            "values": [
+              {
+                "text": "The top four cities cluster in \neastern Australia"
+              }
+            ]
+          },
 
-      "mark": {
-        "type": "text",
-        "font": "Source Sans 3",
-        "fontSize": 12,
-        "fontWeight": 600,
-        "color": "#202622",
-        "align": "right",
-        "baseline": "middle",
-        "dx": -4
-      },
+          "mark": {
+            "type": "text",
+            "font": "Source Sans 3",
+            "fontSize": 13,
+            "fontWeight": 700,
+            "color": "#202622",
+            "align": "left",
+            "baseline": "bottom",
+            "dy": 100,
+            "lineBreak": "\n",
+            "lineHeight": 16
+          },
 
-      "encoding": {
-        "longitude": {
-          "field": "label_longitude",
-          "type": "quantitative"
+          "encoding": {
+            "x": {
+              "value": 0
+            },
+
+            "y": {
+              "value": 220
+            },
+
+            "text": {
+              "field": "text",
+              "type": "nominal"
+            }
+          }
         },
 
-        "latitude": {
-          "field": "label_latitude",
-          "type": "quantitative"
-        },
-
-        "text": {
-          "field": "city",
-          "type": "nominal"
-        }
-      }
-    },
-
-    {
-      "data": {
-        "url": "data/final/01_city_label_positions.csv"
-      },
-
-      "transform": [
         {
-          "filter": "datum.label_side == 'right'"
+          "data": {
+            "values": [
+              {
+                "text": "Brisbane, Sydney, Melbourne and \nCanberra–Queanbeyan record \nthe four highest species-richness \ntotals among the eight studied \nurban areas."
+              }
+            ]
+          },
+
+          "mark": {
+            "type": "text",
+            "font": "Source Sans 3",
+            "fontSize": 12,
+            "fontWeight": 400,
+            "color": "#68706A",
+            "align": "left",
+            "baseline": "top",
+            "dy": 118,
+            "lineBreak": "\n",
+            "lineHeight": 16
+          },
+
+          "encoding": {
+            "x": {
+              "value": 0
+            },
+
+            "y": {
+              "value": 224
+            },
+
+            "text": {
+              "field": "text",
+              "type": "nominal"
+            }
+          }
         }
-      ],
-
-      "mark": {
-        "type": "text",
-        "font": "Source Sans 3",
-        "fontSize": 12,
-        "fontWeight": 600,
-        "color": "#202622",
-        "align": "left",
-        "baseline": "middle",
-        "dx": 4
-      },
-
-      "encoding": {
-        "longitude": {
-          "field": "label_longitude",
-          "type": "quantitative"
-        },
-
-        "latitude": {
-          "field": "label_latitude",
-          "type": "quantitative"
-        },
-
-        "text": {
-          "field": "city",
-          "type": "nominal"
-        }
-      }
-    },
-
-    {
-      "data": {
-        "url": "data/final/01_city_label_positions.csv"
-      },
-
-      "transform": [
-        {
-          "filter": "datum.label_side == 'center'"
-        }
-      ],
-
-      "mark": {
-        "type": "text",
-        "font": "Source Sans 3",
-        "fontSize": 12,
-        "fontWeight": 600,
-        "color": "#202622",
-        "align": "center",
-        "baseline": "middle"
-      },
-
-      "encoding": {
-        "longitude": {
-          "field": "label_longitude",
-          "type": "quantitative"
-        },
-
-        "latitude": {
-          "field": "label_latitude",
-          "type": "quantitative"
-        },
-
-        "text": {
-          "field": "city",
-          "type": "nominal"
-        }
-      }
+      ]
     }
   ],
 
