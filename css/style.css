@@ -1601,6 +1601,12 @@ sidebar | visual
   color: var(--color-muted);
 }
 
+/* Larger legend typography for the threatened-species choropleth only. */
+
+.threatened-map-legend .map-legend-item {
+  font-size: 13px;
+}
+
 .map-legend-swatch {
   display: inline-block;
   width: 22px;
@@ -1628,6 +1634,15 @@ sidebar | visual
 
 .chart-header--wide h3 {
   max-width: 42ch;
+}
+
+/* Keep the UpSet chart title on one line when the card has room. */
+#chart-11 .chart-header--wide h3 {
+  max-width: none;
+}
+
+#chart-10 .chart-header--wide h3 {
+  max-width: none;
 }
 
 .chart-header--wide p {

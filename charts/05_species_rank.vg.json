@@ -9,7 +9,7 @@
   },
 
   "padding": {
-    "left": 55,
+    "left": 30,
     "right": 20
   },
 
@@ -81,7 +81,7 @@
 
       "axis": {
         "labelFont": "Source Sans 3",
-        "labelFontSize": 14,
+        "labelFontSize": 12,
         "labelFontWeight": 500,
         "labelColor": "#202622",
         "labelPadding": 14,
@@ -113,7 +113,7 @@
         "labelPadding": 10,
 
         "titleFont": "Source Sans 3",
-        "titleFontSize": 14,
+        "titleFontSize": 12,
         "titleFontWeight": 600,
         "titleColor": "#202622",
         "titlePadding": 20,
@@ -194,7 +194,7 @@
         "baseline": "middle",
         "dx": 15,
         "font": "Source Sans 3",
-        "fontSize": 13,
+        "fontSize": 12,
         "fontWeight": 600,
         "color": "#202622"
       },

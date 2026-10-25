@@ -3,7 +3,22 @@
 const WILD_CITIES_CONFIG = {
   embedOptions: {
     actions: false,
-    renderer: "svg"
+    renderer: "svg",
+
+    config: {
+      legend: {
+        titleFont: "Source Sans 3",
+        titleFontSize: 14,
+        titleFontWeight: 600,
+        titleColor: "#202622",
+        titlePadding: 10,
+        labelFont: "Source Sans 3",
+        labelFontSize: 12,
+        labelColor: "#68706A",
+        labelOffset: 10,
+        symbolOpacity: 0.72
+      }
+    }
   },
 
   /*

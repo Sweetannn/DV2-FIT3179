@@ -1,6 +1,5 @@
 {
   "$schema": "https://vega.github.io/schema/vega/v5.json",
-
   "width": 1100,
   "height": 300,
 
@@ -8,7 +7,7 @@
     "top": 0,
     "right": 0,
     "bottom": 10,
-    "left": 10
+    "left": 88
   },
 
   "autosize": "pad",
@@ -20,48 +19,49 @@
     },
 
     {
-      "name": "matrixStart",
-      "update": "width < 800 ? 310 : 355"
-    },
-
-    {
       "name": "setBarLeft",
-      "value": 50
+      "value": 40
     },
-
     {
       "name": "setBarRight",
-      "value": 185
+      "value": 290
     },
-
+    {
+      "name": "setValueX",
+      "update": "setBarLeft - 10"
+    },
     {
       "name": "cityLabelX",
-      "value": 200
+      "update": "setBarRight + 18"
+    },
+    {
+      "name": "matrixStart",
+      "value": 480
     },
 
     {
       "name": "barTop",
-      "value": 45
+      "value": 5
     },
 
     {
       "name": "barBase",
-      "value": 205
+      "value": 165
     },
 
     {
       "name": "sectionLabelY",
-      "value": 225
+      "value": 185
     },
 
     {
       "name": "matrixTop",
-      "value": 225
+      "value": 185
     },
 
     {
       "name": "matrixBottom",
-      "value": 400
+      "value": 360
     }
   ],
 
@@ -230,6 +230,37 @@
           "label": "1,500"
         }
       ]
+    },
+
+    {
+      "name": "setSizeAxisTicks",
+
+      "values": [
+        {
+          "value": 0,
+          "label": "0"
+        },
+        {
+          "value": 1000,
+          "label": "1,000"
+        },
+        {
+          "value": 2000,
+          "label": "2,000"
+        },
+        {
+          "value": 3000,
+          "label": "3,000"
+        },
+        {
+          "value": 4000,
+          "label": "4,000"
+        },
+        {
+          "value": 5000,
+          "label": "5,000"
+        }
+      ]
     }
   ],
 
@@ -262,7 +293,7 @@
 
       "type": "linear",
 
-      "domain": [0, 1500],
+      "domain": [0, 1700],
 
       "zero": true,
 
@@ -298,13 +329,9 @@
 
       "type": "linear",
 
-      "domain": {
-        "data": "setSizes",
-        "field": "set_size"
-      },
+      "domain": [0, 5500],
 
       "zero": true,
-      "nice": true,
 
       "range": [
         {
@@ -447,7 +474,7 @@
           },
 
           "fontSize": {
-            "value": 11
+            "value": 12
           },
 
           "fill": {
@@ -491,7 +518,7 @@
           },
 
           "fontSize": {
-            "value": 12
+            "value": 14
           },
 
           "fontWeight": {
@@ -598,7 +625,7 @@
           },
 
           "fontSize": {
-            "value": 10
+            "value": 12
           },
 
           "fontWeight": {
@@ -611,6 +638,189 @@
 
           "opacity": {
             "signal": "width >= 760 ? 1 : 0"
+          }
+        }
+      }
+    },
+
+    {
+      "type": "rule",
+
+      "encode": {
+        "enter": {
+          "x": {
+            "signal": "setBarLeft"
+          },
+
+          "x2": {
+            "signal": "setBarRight"
+          },
+
+          "y": {
+            "signal": "matrixBottom + 18"
+          },
+
+          "stroke": {
+            "value": "#c8ceca"
+          },
+
+          "strokeWidth": {
+            "value": 1
+          }
+        }
+      }
+    },
+
+    {
+      "type": "rule",
+
+      "from": {
+        "data": "setSizeAxisTicks"
+      },
+
+      "encode": {
+        "enter": {
+          "x": {
+            "scale": "xSetSize",
+            "field": "value"
+          },
+
+          "y": {
+            "signal": "matrixBottom + 18"
+          },
+
+          "y2": {
+            "signal": "matrixBottom + 24"
+          },
+
+          "stroke": {
+            "value": "#c8ceca"
+          },
+
+          "strokeWidth": {
+            "value": 1
+          }
+        }
+      }
+    },
+
+    {
+      "type": "text",
+
+      "from": {
+        "data": "setSizeAxisTicks"
+      },
+
+      "encode": {
+        "enter": {
+          "x": {
+            "scale": "xSetSize",
+            "field": "value"
+          },
+
+          "y": {
+            "signal": "matrixBottom + 33"
+          },
+
+          "text": {
+            "field": "label"
+          },
+
+          "align": {
+            "value": "center"
+          },
+
+          "baseline": {
+            "value": "top"
+          },
+
+          "font": {
+            "value": "Source Sans 3"
+          },
+
+          "fontSize": {
+            "value": 12
+          },
+
+          "fill": {
+            "value": "#68706a"
+          }
+        }
+      }
+    },
+
+    {
+      "type": "text",
+
+      "encode": {
+        "enter": {
+          "x": {
+            "signal": "(setBarLeft + setBarRight) / 2"
+          },
+
+          "y": {
+            "signal": "matrixBottom + 60"
+          },
+
+          "text": {
+            "value": "Recorded species richness"
+          },
+
+          "align": {
+            "value": "center"
+          },
+
+          "baseline": {
+            "value": "top"
+          },
+
+          "font": {
+            "value": "Source Sans 3"
+          },
+
+          "fontSize": {
+            "value": 14
+          },
+
+          "fontWeight": {
+            "value": 600
+          },
+
+          "fill": {
+            "value": "#68706a"
+          }
+        }
+      }
+    },
+
+    {
+      "type": "rule",
+
+      "from": {
+        "data": "setSizeAxisTicks"
+      },
+
+      "encode": {
+        "enter": {
+          "x": {
+            "scale": "xSetSize",
+            "field": "value"
+          },
+
+          "y": {
+            "signal": "matrixTop - 9"
+          },
+
+          "y2": {
+            "signal": "matrixBottom + 8"
+          },
+
+          "stroke": {
+            "value": "#edf0ed"
+          },
+
+          "strokeWidth": {
+            "value": 1
           }
         }
       }
@@ -704,7 +914,7 @@
           },
 
           "fontSize": {
-            "value": 11
+            "value": 12
           },
 
           "fill": {
@@ -749,7 +959,7 @@
           },
 
           "fontSize": {
-            "value": 12
+            "value": 14
           },
 
           "fontWeight": {
