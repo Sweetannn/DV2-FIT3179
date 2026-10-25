@@ -23,9 +23,19 @@
   --page-width: 1280px;
   --editorial-inset: 30px;
   --editorial-column-gap: clamp(3rem, 5vw, 5rem);
+  --section-right-column-shift: 0.75rem;
   --editorial-copy-width: 56ch;
   --editorial-copy-size: calc(1.2rem - 2px);
   --editorial-copy-leading: 1.65;
+
+  /* Chart-card spacing */
+  --chart-card-padding: 2rem;
+  --chart-card-gap: 1.5rem;
+
+  /* Chart support typography */
+  --support-label-size: 0.75rem;
+  --support-main-size: 1.05rem;
+  --support-copy-size: 0.95rem;
 
   /* Spacing scale */
   --space-xs: 0.5rem;
@@ -272,7 +282,7 @@ p {
 .chart-card {
   min-width: 0;
 
-  padding: 2rem;
+  padding: var(--chart-card-padding);
 
   background: var(--color-surface);
 
@@ -286,7 +296,22 @@ p {
 }
 
 .chart-card + .chart-card {
-  margin-top: 2rem;
+  margin-top: var(--chart-card-gap);
+}
+
+/* Use the same gap when a chart pair follows another chart card. */
+.chart-card + .chart-pair {
+  margin-top: var(--chart-card-gap);
+}
+
+/* Match the vertical spacing when a full-width card follows a chart pair. */
+.chart-pair + .chart-card {
+  margin-top: var(--chart-card-gap);
+}
+
+/* Let card padding—not a trailing child margin—set the ending whitespace. */
+.chart-card > :last-child {
+  margin-bottom: 0;
 }
 
 .chart-header {
@@ -359,7 +384,7 @@ p {
 
   margin-bottom: 0.9rem;
 
-  font-size: 0.75rem;
+  font-size: var(--support-label-size);
   font-weight: 700;
 
   letter-spacing: 0.1em;
@@ -377,7 +402,7 @@ p {
 
   margin: 0 0 0.5rem;
 
-  font-size: 1.05rem;
+  font-size: var(--support-main-size);
   font-weight: 700;
   line-height: 1.5;
 
@@ -389,7 +414,7 @@ p {
 
   margin: 0;
 
-  font-size: 0.95rem;
+  font-size: var(--support-copy-size);
   font-weight: 400;
   line-height: 1.6;
 
@@ -405,7 +430,7 @@ p {
 
   margin: 0;
 
-  font-size: 0.95rem;
+  font-size: var(--support-copy-size);
   font-weight: 400;
   line-height: 1.6;
 
@@ -538,7 +563,7 @@ Equal columns
 
   margin: 0 0 0.85rem;
 
-  font-size: 1.05rem;
+  font-size: var(--support-main-size);
   font-weight: 700;
   line-height: 1.5;
 
@@ -551,7 +576,7 @@ Equal columns
 
   margin: 0;
 
-  font-size: 0.92rem;
+  font-size: var(--support-copy-size);
   line-height: 1.6;
 
   color: var(--color-muted);
@@ -972,7 +997,7 @@ sidebar | visual
 
   grid-template-columns: repeat(2, minmax(0, 1fr));
 
-  gap: 1.5rem;
+  gap: var(--chart-card-gap);
 
   align-items: start;
 
@@ -1182,7 +1207,7 @@ sidebar | visual
 .chart-support--compact .insight-main {
   margin-bottom: 0.65rem;
 
-  font-size: 1rem;
+  font-size: var(--support-main-size);
   line-height: 1.5;
 }
 
@@ -1190,7 +1215,7 @@ sidebar | visual
 .chart-support--compact .chart-note {
   max-width: none;
 
-  font-size: 0.9rem;
+  font-size: var(--support-copy-size);
   line-height: 1.6;
 }
 
@@ -1327,7 +1352,7 @@ sidebar | visual
 
 .ranking-layout {
   gap: 2rem;
-  align-items: center;
+  align-items: start;
 
   margin-top: 0.5rem;
 }
@@ -1361,12 +1386,25 @@ sidebar | visual
 
   margin: 0;
 
-  padding: 1.5rem;
+  padding: 1.75rem;
 
   background: #f0f3ef;
 
   border-left: 3px solid var(--color-accent);
   border-radius: 0 6px 6px 0;
+}
+
+/* Chart 5: connect the explanatory callout to the bird series. */
+.green-context--bird {
+  width: calc(100% - 1rem);
+  justify-self: start;
+
+  background: rgba(57, 120, 168, 0.09);
+  border-left-color: var(--bird-color);
+}
+
+.green-context--bird .context-label {
+  color: var(--bird-color);
 }
 
 /* =========================================================
@@ -1378,13 +1416,13 @@ sidebar | visual
 
   margin: 0 0 1rem;
 
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: 700;
 
   line-height: 1.4;
 
   letter-spacing: 0.01em;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 
   color: var(--color-accent);
 }
@@ -1431,6 +1469,10 @@ sidebar | visual
 
     align-items: start;
     gap: 1.5rem;
+  }
+
+  .green-context--bird {
+    width: 100%;
   }
 
   .ranking-context {
@@ -1972,6 +2014,15 @@ sidebar | visual
    Shared by Chart 7 and Chart 8
    ========================================================= */
 
+/* Keep both temporal chart cards balanced from top to bottom. */
+.time-chart-pair {
+  align-items: stretch;
+}
+
+.time-chart-pair > .chart-pair-card {
+  height: 100%;
+}
+
 /*
   Creates a consistent visual area inside both cards.
 
@@ -1992,6 +2043,17 @@ sidebar | visual
   min-height: 430px;
 }
 
+/* Remove excess space below the shorter time-series plots. */
+.time-chart-pair .chart-pair-visual {
+  align-items: flex-start;
+  height: 360px;
+  min-height: 360px;
+}
+
+.time-chart-pair .chart-support--compact {
+  margin-top: 0.3rem;
+}
+
 /*
   Shared chart container for both temporal charts.
 */
@@ -2006,6 +2068,10 @@ sidebar | visual
   padding: 0;
 
   overflow: hidden;
+}
+
+.time-chart-pair .chart-time-pair {
+  min-height: 0;
 }
 
 /*
@@ -3124,6 +3190,11 @@ sidebar | visual
   margin-top: 1.5rem;
 }
 
+/* Align the right introduction with the title inside the right chart card. */
+.section-heading > .section-intro-grid > .section-intro:nth-child(2) {
+  transform: translateX(calc(-1 * var(--section-right-column-shift)));
+}
+
 #epilogue .prose-columns {
   column-gap: var(--editorial-column-gap);
 }
@@ -3174,6 +3245,10 @@ sidebar | visual
   .section-heading > .section-intro-grid {
     grid-template-columns: minmax(0, 1fr);
     row-gap: 1.5rem;
+  }
+
+  .section-heading > .section-intro-grid > .section-intro:nth-child(2) {
+    transform: none;
   }
 }
 

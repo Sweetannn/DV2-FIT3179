@@ -2,7 +2,7 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
 
   "width": "container",
-  "height": 390,
+  "height": 320,
   "autosize": {
     "type": "fit",
     "contains": "padding"
@@ -138,10 +138,23 @@
       },
       "encoding": {
         "tooltip": [
-          { "field": "display_name", "type": "nominal", "title": "Common name" },
+          {
+            "field": "display_name",
+            "type": "nominal",
+            "title": "Common name"
+          },
           { "field": "species", "type": "nominal", "title": "Scientific name" },
-          { "field": "animal_group", "type": "nominal", "title": "Animal group" },
-          { "field": "records_num", "type": "quantitative", "title": "Occurrence records", "format": ",.0f" }
+          {
+            "field": "animal_group",
+            "type": "nominal",
+            "title": "Animal group"
+          },
+          {
+            "field": "records_num",
+            "type": "quantitative",
+            "title": "Occurrence records",
+            "format": ",.0f"
+          }
         ]
       }
     },
@@ -154,10 +167,23 @@
       },
       "encoding": {
         "tooltip": [
-          { "field": "display_name", "type": "nominal", "title": "Common name" },
+          {
+            "field": "display_name",
+            "type": "nominal",
+            "title": "Common name"
+          },
           { "field": "species", "type": "nominal", "title": "Scientific name" },
-          { "field": "animal_group", "type": "nominal", "title": "Animal group" },
-          { "field": "records_num", "type": "quantitative", "title": "Occurrence records", "format": ",.0f" }
+          {
+            "field": "animal_group",
+            "type": "nominal",
+            "title": "Animal group"
+          },
+          {
+            "field": "records_num",
+            "type": "quantitative",
+            "title": "Occurrence records",
+            "format": ",.0f"
+          }
         ]
       }
     },
