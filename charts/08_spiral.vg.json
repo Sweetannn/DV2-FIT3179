@@ -246,9 +246,11 @@
             "labelFont": "Source Sans 3",
             "labelFontSize": 12,
             "labelColor": "#202622",
-            "labelPadding": 8,
+            "labelPadding": 14,
 
             "labelAngle": 0,
+            "labelAlign": "center",
+            "labelBaseline": "top",
 
             "ticks": false,
 

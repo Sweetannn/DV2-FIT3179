@@ -1785,16 +1785,16 @@ sidebar | visual
   color: var(--color-text);
 }
 
-/* Three equally sized source columns */
+/* Four equally sized project/source columns */
 
 .source-grid {
   display: grid;
 
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
 
   gap: var(--space-lg);
 
-  align-items: start;
+  align-items: stretch;
 
   width: 100%;
   min-width: 0;
@@ -1945,11 +1945,17 @@ sidebar | visual
   column-gap: var(--space-lg);
 }
 
-/* Compact three-column source layout */
+/* Balanced four-column source layout */
 
 .section-content .source-grid {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   column-gap: var(--space-md);
+}
+
+@media (max-width: 1000px) {
+  .section-content .source-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 /* Responsive alignment */
@@ -3132,10 +3138,10 @@ sidebar | visual
    HERO INTRODUCTION — REDUCE FONT SIZE BY 2PX
    ========================================================= */
 
-/* Desktop: 19.2px → 17.2px */
+/* Keep hero body copy 2px smaller without changing titles or labels. */
 .hero-content__story .hero-intro,
 .hero-context-text {
-  font-size: var(--editorial-copy-size);
+  font-size: calc(var(--editorial-copy-size) - 2px);
 }
 
 /* Goal and Target Audience labels */
@@ -3147,7 +3153,7 @@ sidebar | visual
 @media (max-width: 950px) {
   .hero-content__story .hero-intro,
   .hero-context-text {
-    font-size: calc(1.08rem - 2px);
+    font-size: calc(1.08rem - 4px);
   }
 }
 
@@ -3155,7 +3161,7 @@ sidebar | visual
 @media (max-width: 700px) {
   .hero-content__story .hero-intro,
   .hero-context-text {
-    font-size: calc(1.08rem - 2px);
+    font-size: calc(1.08rem - 4px);
   }
 
   .hero-context-label {
@@ -3167,7 +3173,7 @@ sidebar | visual
 @media (max-width: 480px) {
   .hero-content__story .hero-intro,
   .hero-context-text {
-    font-size: calc(1rem - 2px);
+    font-size: calc(1rem - 4px);
   }
 }
 
@@ -3212,11 +3218,6 @@ sidebar | visual
   margin-top: 1.5rem;
 }
 
-/* Keep both introduction columns on the same unshifted grid. */
-.section-heading > .section-intro-grid > .section-intro:nth-child(2) {
-  transform: none;
-}
-
 #epilogue .prose-columns {
   column-gap: var(--editorial-column-gap);
 }
@@ -3233,14 +3234,21 @@ sidebar | visual
   color: var(--color-muted);
 }
 
+/* Align every right editorial column with the right chart title below it. */
+.hero-content__context,
+.section-heading > .section-intro-grid > .section-intro:nth-child(2),
+#epilogue .prose-columns > .prose-column:nth-child(2) {
+  width: calc(100% + var(--section-right-column-shift));
+  transform: translateX(calc(-1 * var(--section-right-column-shift)));
+}
+
 #epilogue .prose-column p + p {
   margin-top: 1.5rem;
 }
 
-/* Keep source/reference widths independent from the wider editorial columns. */
-#epilogue .footer-sources,
-#epilogue .footer-credits {
-  max-width: 1100px;
+/* Let all four source columns use the full editorial width. */
+#epilogue .footer-sources {
+  max-width: none;
 }
 
 /* Let both full-width support columns use their complete equal grid tracks. */
@@ -3271,6 +3279,7 @@ sidebar | visual
   }
 
   .section-heading > .section-intro-grid > .section-intro:nth-child(2) {
+    width: 100%;
     transform: none;
   }
 }
@@ -3284,6 +3293,12 @@ sidebar | visual
 }
 
 @media (max-width: 700px) {
+  .hero-content__context,
+  #epilogue .prose-columns > .prose-column:nth-child(2) {
+    width: 100%;
+    transform: none;
+  }
+
   .story-section > .section-heading .section-intro,
   #epilogue .prose-column p {
     max-width: 100%;
