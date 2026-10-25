@@ -404,6 +404,7 @@ p {
 
 .insight-main {
   width: 100%;
+  max-width: none;
 
   margin: 0 0 0.5rem;
 
@@ -416,6 +417,7 @@ p {
 
 .insight-context {
   width: 100%;
+  max-width: none;
 
   margin: 0;
 
@@ -432,6 +434,7 @@ p {
 
 .chart-note {
   width: 100%;
+  max-width: none;
 
   margin: 0;
 
@@ -2992,7 +2995,7 @@ sidebar | visual
 .hero-content__story .hero-intro {
   margin: 0;
 
-  max-width: var(--editorial-copy-width);
+  max-width: none;
 
   font-size: 1.2rem;
   font-weight: 400;
@@ -3041,7 +3044,7 @@ sidebar | visual
 .hero-context-text {
   margin: 0;
 
-  max-width: var(--editorial-copy-width);
+  max-width: none;
 
   font-size: 1.2rem;
   font-weight: 400;
@@ -3209,9 +3212,9 @@ sidebar | visual
   margin-top: 1.5rem;
 }
 
-/* Align the right introduction with the title inside the right chart card. */
+/* Keep both introduction columns on the same unshifted grid. */
 .section-heading > .section-intro-grid > .section-intro:nth-child(2) {
-  transform: translateX(calc(-1 * var(--section-right-column-shift)));
+  transform: none;
 }
 
 #epilogue .prose-columns {
@@ -3221,7 +3224,8 @@ sidebar | visual
 /* Keep section copy 2px smaller than the hero, without affecting card copy. */
 .story-section > .section-heading .section-intro,
 #epilogue .prose-column p {
-  max-width: var(--editorial-copy-width);
+  width: 100%;
+  max-width: none;
   margin: 0;
   font-size: calc(var(--editorial-copy-size) - 2px);
   font-weight: 400;
@@ -3239,17 +3243,17 @@ sidebar | visual
   max-width: 1100px;
 }
 
-/* Align full-width card explanations with the editorial columns above them. */
+/* Let both full-width support columns use their complete equal grid tracks. */
 .chart-support:not(.chart-support--compact) .insight-main,
 .chart-support:not(.chart-support--compact) .insight-context,
 .chart-support:not(.chart-support--compact) .chart-note {
-  max-width: var(--editorial-copy-width);
+  max-width: none;
 }
 
 @media (min-width: 801px) {
   .chart-card > .chart-support:not(.chart-support--compact) {
-    width: calc(100% + 3rem - var(--editorial-inset));
-    margin-left: calc(var(--editorial-inset) - 1.5rem);
+    width: 100%;
+    margin-left: 0;
   }
 }
 
