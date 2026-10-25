@@ -9,7 +9,7 @@
   "padding": {
     "top": 10,
     "left": 5,
-    "right": 20,
+    "right": 30,
     "bottom": 0
   },
 
@@ -255,7 +255,7 @@
         "dx": 9,
 
         "font": "Source Sans 3",
-        "fontSize": 12,
+        "fontSize": 13,
         "fontWeight": 600
       },
 

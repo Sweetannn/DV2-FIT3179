@@ -4,7 +4,7 @@
   "description": "Seasonal line chart comparing historical monthly wildlife recording patterns from 2016 to 2024 with the complete 2025 pattern across eight Australian urban areas.",
 
   "width": "container",
-  "height": 440,
+  "height": 380,
 
   "padding": {
     "top": 25,
@@ -170,8 +170,8 @@
         "align": "right",
         "baseline": "top",
 
-        "dx": -930,
-        "dy": 80,
+        "dx": -910,
+        "dy": 75,
 
         "font": "Source Sans 3",
         "fontSize": 11,
@@ -474,7 +474,7 @@
         "baseline": "bottom",
 
         "dx": -41,
-        "dy": -55,
+        "dy": -45,
 
         "font": "Source Sans 3",
 

@@ -43,7 +43,7 @@ const WILD_CITIES_CONFIG = {
     "Melbourne": "#47CAE6",
     "Perth": "#122170",
     "Sydney": "#FFB430",
-    "Hobart": "#FD5DD8",
+    "Hobart": "#9307b3",
     "Darwin": "#CC025A"
   }
 };

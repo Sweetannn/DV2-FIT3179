@@ -10,6 +10,9 @@
   --color-muted: #68706a;
   --color-rule: #dfe3df;
 
+  /* Typography */
+  --font-sans: "Source Sans 3", "Segoe UI", Arial, sans-serif;
+
   /* Accent */
   --color-accent: #325c4b;
 
@@ -67,7 +70,7 @@ body {
   background: var(--color-page);
   color: var(--color-text);
 
-  font-family: "Source Sans 3", "Segoe UI", Arial, sans-serif;
+  font-family: var(--font-sans);
 
   font-size: 17px;
   line-height: 1.55;
@@ -350,6 +353,8 @@ p {
   padding-top: 1.5rem;
 
   border-top: 1px solid var(--color-rule);
+
+  font-family: var(--font-sans);
 }
 
 /* =========================================================
@@ -562,12 +567,6 @@ Equal columns
   max-width: none;
 
   margin: 0 0 0.85rem;
-
-  font-size: var(--support-main-size);
-  font-weight: 700;
-  line-height: 1.5;
-
-  color: var(--color-text);
 }
 
 .split-sidebar .insight-context,
@@ -575,11 +574,6 @@ Equal columns
   max-width: none;
 
   margin: 0;
-
-  font-size: var(--support-copy-size);
-  line-height: 1.6;
-
-  color: var(--color-muted);
 }
 
 .split-sidebar .chart-source {
@@ -1206,17 +1200,11 @@ sidebar | visual
 
 .chart-support--compact .insight-main {
   margin-bottom: 0.65rem;
-
-  font-size: var(--support-main-size);
-  line-height: 1.5;
 }
 
 .chart-support--compact .insight-context,
 .chart-support--compact .chart-note {
   max-width: none;
-
-  font-size: var(--support-copy-size);
-  line-height: 1.6;
 }
 
 /* =========================================================
@@ -2046,12 +2034,12 @@ sidebar | visual
 /* Remove excess space below the shorter time-series plots. */
 .time-chart-pair .chart-pair-visual {
   align-items: flex-start;
-  height: 360px;
-  min-height: 360px;
+  height: 330px;
+  min-height: 330px;
 }
 
 .time-chart-pair .chart-support--compact {
-  margin-top: 0.3rem;
+  margin-top: 1.4rem;
 }
 
 /*
