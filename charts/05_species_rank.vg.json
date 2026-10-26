@@ -94,7 +94,7 @@
     "x": {
       "field": "records_num",
       "type": "quantitative",
-      "title": "ALA occurrence records",
+      "title": "Atlas of Living Australia occurrence records",
 
       "scale": {
         "domain": [0, 650000],
