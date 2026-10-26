@@ -1,82 +1,60 @@
 "use strict";
 
 const visualisations = [
-  /* Chart 1 : Proportional Symbol Map */
   {
     container: "#symbol-map",
     spec: "charts/01_symbol_map.vg.json",
     enabled: true
   },
 
-  /* Chart 2 : Heatmap */
   {
     container: "#group-heatmap",
     spec: "charts/02_heatmap.vg.json",
     enabled: true
   },
 
-  /* Chart 3 : Scatterplot */
   {
     container: "#effort-scatter",
     spec: "charts/03_scatter.vg.json",
     enabled: true
   },
 
-  /*
-    Chart 4 uses js/treemap.js
-  */
-
-  /* Chart 5 : Species Coverage Ranking */
   {
     container: "#species-ranking",
     spec: "charts/05_species_rank.vg.json",
     enabled: true
   },
 
-  /* Chart 6 : Alluvial Diagram */
-  {
-    container: "#alluvial",
-    spec: "charts/06_alluvial.vg.json",
-    enabled: true,
-    responsiveVega: true
-  },
-
-  /* Chart 7 : Bump Chart */
   {
     container: "#bump-chart",
     spec: "charts/07_bump.vg.json",
     enabled: true
   },
 
-  /* Chart 8 : Connected Dot Plot */
   {
     container: "#connected-dot",
     spec: "charts/13_connected_dot.vg.json",
     enabled: true
   },
 
-  /* Chart 8 : Spiral Plot */
   {
     container: "#spiral-chart",
     spec: "charts/08_spiral.vg.json",
     enabled: true
   },
 
-  /* Chart 9 : Network Diagram */
   {
     container: "#city-network",
     spec: "charts/09_network.vg.json",
     enabled: true
   },
 
-  /* Chart 10 : Bin Map */
   {
     container: "#bin-map",
     spec: "charts/10_bin_map.vg.json",
     enabled: true
   },
 
-  /* Chart 11 : Upset plot */
   {
     container: "#upset-plot",
     spec: "charts/11_upset.vg.json",
@@ -84,7 +62,6 @@ const visualisations = [
     responsiveVega: true
   },
 
-  /* Chart 12 : Threatened Species Choropleth */
   {
     container: "#threatened-choropleth",
     spec: "charts/12_threatened_choropleth.vg.json",
