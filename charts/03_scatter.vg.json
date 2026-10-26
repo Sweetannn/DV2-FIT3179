@@ -71,7 +71,7 @@
             "tickColor": "#BFC6C1",
             "tickSize": 4,
 
-            "format": ".2~s",
+            "labelExpr": "datum.value === 0 ? '0' : format(datum.value / 1000000, '.0f') + ' million'",
 
             "values": [0, 1000000, 2000000, 3000000, 4000000, 5000000]
           }
