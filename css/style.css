@@ -3081,6 +3081,7 @@ sidebar | visual
 
 .hero-content + .stat-grid {
   margin-top: 0;
+  margin-left: calc(-1.5rem - 1px);
 }
 
 /* =========================================================
